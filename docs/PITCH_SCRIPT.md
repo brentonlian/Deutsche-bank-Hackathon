@@ -18,13 +18,11 @@ Lines in *italics* are stage directions, not spoken.
 
 *Slide 1 on screen: "Rooted".*
 
-"Good morning. We're Rooted: financial education that speaks your language, and knows your world.
+"Good morning. We created Rooted, a financial education platform that speaks your language, and knows your world.
 
-Here's the idea in one sentence. Money skills are universal, but money itself is local. A savings account, a scam, a pension, even the word 'interest' look different in New York, Bengaluru and Cologne.
+Here's the idea in one sentence. Money skills are universal, but money itself is local. A savings account, a scam, a pension, even the word 'interest' look different in New York, Bengaluru and Berlin.
 
-So we built one learning line, the green line you see here, that every learner travels: **Context, Learn, Practice, Decide, Compare, Replay.** The line is the same for everyone. What changes is everything on it: the country, the language and the stage of life.
-
-One learning line, many local realities. [Speaker 2] will show you why that matters."
+So we built one learning line, the green line you see here, that every learner travels: **Context, Learn, Practice, Decide, Compare, Replay.** The line is the same for everyone. What changes is everything on it: the country, the language and the stage of life."
 
 ---
 
@@ -38,7 +36,7 @@ One learning line, many local realities. [Speaker 2] will show you why that matt
 
 **Second, language.** The same idea has to stay clear across scripts and currencies. We support English, German, Spanish and Hindi, and money is written the local way: dollars with commas, rupees in lakhs, euros with a decimal comma.
 
-**Third, life stage.** A 24-year-old with a first paycheck and a 68-year-old living on a pension need completely different starting points. In German we even switch to the formal 'Sie' for our senior learner.
+**Third, life stage.** A 24-year-old with a first paycheck and a 68-year-old living on a pension need completely different starting points. In German we even switch formalities to address senior learners.
 
 Rooted answers with two things: **localized facts**, every one with a source and a date, and **decisions you can practice and revisit**. Let's show you. [Speaker 3]."
 
