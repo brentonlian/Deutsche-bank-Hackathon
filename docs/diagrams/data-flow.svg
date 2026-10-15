@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1060" width="1700" height="1060" font-family="Atkinson Hyperlegible Next, Atkinson Hyperlegible, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F1B2D"/>
+    </marker>
+    <style>
+      .lane { font-size: 22px; font-weight: 800; fill: #0F1B2D; }
+      .sub { font-size: 15px; fill: #3B4656; }
+      .t { font-size: 16px; fill: #0F1B2D; }
+      .b { font-weight: 800; }
+      .box { fill: #FFFFFF; stroke: #0F1B2D; stroke-width: 2.5; }
+      .arrow { stroke: #0F1B2D; stroke-width: 3; fill: none; marker-end: url(#a); }
+      .n { font-size: 14px; font-weight: 800; fill: #FFFFFF; }
+    </style>
+  </defs>
+  <rect width="1700" height="1060" fill="#F2F3F0"/>
+  <text x="50" y="66" font-size="38" font-weight="800" fill="#0F1B2D">How data moves through Rooted</text>
+  <text x="50" y="102" font-size="19" fill="#3B4656">Personal data stays in the browser. Only lesson requests (topic, country, language, age group) reach the server.</text>
+
+  <!-- Lane A -->
+  <rect x="40" y="130" width="1620" height="200" rx="8" fill="#FFE1D3"/>
+  <text x="62" y="176" class="lane">A · Onboarding</text>
+  <text x="62" y="200" class="sub">browser only</text>
+  <g>
+    <rect x="290" y="160" width="230" height="140" rx="6" class="box"/>
+    <circle cx="312" cy="182" r="13" fill="#0F1B2D"/><text x="307" y="187" class="n">1</text>
+    <text x="334" y="188" class="t b">Pick context</text>
+    <text x="306" y="222" class="t">country + city, language,</text>
+    <text x="306" y="244" class="t">age group, monthly</text>
+    <text x="306" y="266" class="t">income and leftover</text>
+    <path d="M520 230 L560 230" class="arrow"/>
+    <rect x="562" y="160" width="230" height="140" rx="6" class="box"/>
+    <circle cx="584" cy="182" r="13" fill="#0F1B2D"/><text x="579" y="187" class="n">2</text>
+    <text x="606" y="188" class="t b">Saved locally</text>
+    <text x="578" y="222" class="t">profile + progress in</text>
+    <text x="578" y="244" class="t">localStorage; nothing</text>
+    <text x="578" y="266" class="t">is sent to a server</text>
+    <path d="M792 230 L832 230" class="arrow"/>
+    <rect x="834" y="160" width="230" height="140" rx="6" class="box"/>
+    <circle cx="856" cy="182" r="13" fill="#0F1B2D"/><text x="851" y="187" class="n">3</text>
+    <text x="878" y="188" class="t b">Persona match?</text>
+    <text x="850" y="222" class="t">US+young, IN+middle,</text>
+    <text x="850" y="244" class="t">DE+senior → fixed seed</text>
+    <text x="850" y="266" class="t">and saved lessons</text>
+    <path d="M1064 230 L1104 230" class="arrow"/>
+    <rect x="1106" y="160" width="250" height="140" rx="6" class="box"/>
+    <circle cx="1128" cy="182" r="13" fill="#0F1B2D"/><text x="1123" y="187" class="n">4</text>
+    <text x="1150" y="188" class="t b">Learning line built</text>
+    <text x="1122" y="222" class="t">guide → lesson → tool →</text>
+    <text x="1122" y="244" class="t">lesson → tool → game</text>
+    <text x="1122" y="266" class="t">(topics by age group)</text>
+    <path d="M1356 230 L1396 230" class="arrow"/>
+    <rect x="1398" y="160" width="242" height="140" rx="6" class="box"/>
+    <circle cx="1420" cy="182" r="13" fill="#0F1B2D"/><text x="1415" y="187" class="n">5</text>
+    <text x="1442" y="188" class="t b">Localized UI</text>
+    <text x="1414" y="222" class="t">t() picks language;</text>
+    <text x="1414" y="244" class="t">Intl formats money:</text>
+    <text x="1414" y="266" class="t">$3,200 · ₹95,000 · 3.200 €</text>
+  </g>
+
+  <!-- Lane B -->
+  <rect x="40" y="350" width="1620" height="220" rx="8" fill="#DCE5F5"/>
+  <text x="62" y="396" class="lane">B · Lessons</text>
+  <text x="62" y="420" class="sub">browser → server → AI</text>
+  <g>
+    <rect x="290" y="380" width="230" height="160" rx="6" class="box"/>
+    <circle cx="312" cy="402" r="13" fill="#0F1B2D"/><text x="307" y="407" class="n">1</text>
+    <text x="334" y="408" class="t b">Request</text>
+    <text x="306" y="442" class="t">POST /api/lesson:</text>
+    <text x="306" y="464" class="t">topic, country, language,</text>
+    <text x="306" y="486" class="t">age group, simple mode.</text>
+    <text x="306" y="508" class="t">No personal data.</text>
+    <path d="M520 460 L560 460" class="arrow"/>
+    <rect x="562" y="380" width="230" height="160" rx="6" class="box"/>
+    <circle cx="584" cy="402" r="13" fill="#0F1B2D"/><text x="579" y="407" class="n">2</text>
+    <text x="606" y="408" class="t b">Validate + cache</text>
+    <text x="578" y="442" class="t">Zod checks the request;</text>
+    <text x="578" y="464" class="t">a saved, reviewed lesson</text>
+    <text x="578" y="486" class="t">is returned right away</text>
+    <path d="M792 460 L832 460" class="arrow"/>
+    <rect x="834" y="380" width="230" height="160" rx="6" class="box"/>
+    <circle cx="856" cy="402" r="13" fill="#0F1B2D"/><text x="851" y="407" class="n">3</text>
+    <text x="878" y="408" class="t b">Grounded prompt</text>
+    <text x="850" y="442" class="t">only the country's</text>
+    <text x="850" y="464" class="t">vetted facts, no advice,</text>
+    <text x="850" y="486" class="t">glossary terms kept</text>
+    <path d="M1064 460 L1104 460" class="arrow"/>
+    <rect x="1106" y="380" width="250" height="160" rx="6" class="box"/>
+    <circle cx="1128" cy="402" r="13" fill="#0F1B2D"/><text x="1123" y="407" class="n">4</text>
+    <text x="1150" y="408" class="t b">LLM adapter</text>
+    <text x="1122" y="442" class="t">Gemini Flash → Flash-Lite</text>
+    <text x="1122" y="464" class="t">on quota or overload.</text>
+    <text x="1122" y="486" class="t">Output validated as JSON,</text>
+    <text x="1122" y="508" class="t">then saved for review</text>
+    <path d="M1356 460 L1396 460" class="arrow"/>
+    <rect x="1398" y="380" width="242" height="160" rx="6" class="box"/>
+    <circle cx="1420" cy="402" r="13" fill="#0F1B2D"/><text x="1415" y="407" class="n">5</text>
+    <text x="1442" y="408" class="t b">Shown with sources</text>
+    <text x="1414" y="442" class="t">facts used + links,</text>
+    <text x="1414" y="464" class="t">quiz, read-aloud.</text>
+    <text x="1414" y="486" class="t">Failure → nearest</text>
+    <text x="1414" y="508" class="t">saved lesson</text>
+  </g>
+
+  <!-- Lane C -->
+  <rect x="40" y="590" width="1620" height="220" rx="8" fill="#D6EBDF"/>
+  <text x="62" y="636" class="lane">C · Life Path game</text>
+  <text x="62" y="660" class="sub">pure TypeScript, in the browser</text>
+  <g>
+    <rect x="290" y="620" width="230" height="160" rx="6" class="box"/>
+    <circle cx="312" cy="642" r="13" fill="#0F1B2D"/><text x="307" y="647" class="n">1</text>
+    <text x="334" y="648" class="t b">Choice</text>
+    <text x="306" y="682" class="t">life event with local</text>
+    <text x="306" y="704" class="t">products and rates; no</text>
+    <text x="306" y="726" class="t">preview of what's next</text>
+    <path d="M520 700 L560 700" class="arrow"/>
+    <rect x="562" y="620" width="230" height="160" rx="6" class="box"/>
+    <circle cx="584" cy="642" r="13" fill="#0F1B2D"/><text x="579" y="647" class="n">2</text>
+    <text x="606" y="648" class="t b">Apply decision</text>
+    <text x="578" y="682" class="t">its own random stream,</text>
+    <text x="578" y="704" class="t">so changing one choice</text>
+    <text x="578" y="726" class="t">never shifts later events</text>
+    <path d="M792 700 L832 700" class="arrow"/>
+    <rect x="834" y="620" width="230" height="160" rx="6" class="box"/>
+    <circle cx="856" cy="642" r="13" fill="#0F1B2D"/><text x="851" y="647" class="n">3</text>
+    <text x="878" y="648" class="t b">Years pass</text>
+    <text x="850" y="682" class="t">pay, costs, savings,</text>
+    <text x="850" y="704" class="t">interest, market, debt,</text>
+    <text x="850" y="726" class="t">inflation → a ledger</text>
+    <path d="M1064 700 L1104 700" class="arrow"/>
+    <rect x="1106" y="620" width="250" height="160" rx="6" class="box"/>
+    <circle cx="1128" cy="642" r="13" fill="#0F1B2D"/><text x="1123" y="647" class="n">4</text>
+    <text x="1150" y="648" class="t b">Money story</text>
+    <text x="1122" y="682" class="t">full screen: where every</text>
+    <text x="1122" y="704" class="t">unit of money went,</text>
+    <text x="1122" y="726" class="t">each with its rate</text>
+    <path d="M1356 700 L1396 700" class="arrow"/>
+    <rect x="1398" y="620" width="242" height="160" rx="6" class="box"/>
+    <circle cx="1420" cy="642" r="13" fill="#0F1B2D"/><text x="1415" y="647" class="n">5</text>
+    <text x="1442" y="648" class="t b">Results</text>
+    <text x="1414" y="682" class="t">tries every safe path</text>
+    <text x="1414" y="704" class="t">(~140k) for the express</text>
+    <text x="1414" y="726" class="t">line; what-if, replay</text>
+  </g>
+
+  <!-- Lane D -->
+  <rect x="40" y="830" width="1620" height="200" rx="8" fill="#FCEFC4"/>
+  <text x="62" y="876" class="lane">D · Content</text>
+  <text x="62" y="900" class="sub">build time, in Git</text>
+  <g>
+    <rect x="290" y="860" width="230" height="140" rx="6" class="box"/>
+    <circle cx="312" cy="882" r="13" fill="#0F1B2D"/><text x="307" y="887" class="n">1</text>
+    <text x="334" y="888" class="t b">Edit region pack</text>
+    <text x="306" y="922" class="t">facts with source URL</text>
+    <text x="306" y="944" class="t">and "verified" month</text>
+    <path d="M520 930 L560 930" class="arrow"/>
+    <rect x="562" y="860" width="230" height="140" rx="6" class="box"/>
+    <circle cx="584" cy="882" r="13" fill="#0F1B2D"/><text x="579" y="887" class="n">2</text>
+    <text x="606" y="888" class="t b">AI drafts translations</text>
+    <text x="578" y="922" class="t">npm run localize</text>
+    <text x="578" y="944" class="t">(de · es · hi)</text>
+    <path d="M792 930 L832 930" class="arrow"/>
+    <rect x="834" y="860" width="230" height="140" rx="6" class="box"/>
+    <circle cx="856" cy="882" r="13" fill="#0F1B2D"/><text x="851" y="887" class="n">3</text>
+    <text x="878" y="888" class="t b">Automatic checks</text>
+    <text x="850" y="922" class="t">schema, placeholders,</text>
+    <text x="850" y="944" class="t">glossary, cited facts</text>
+    <path d="M1064 930 L1104 930" class="arrow"/>
+    <rect x="1106" y="860" width="250" height="140" rx="6" class="box"/>
+    <circle cx="1128" cy="882" r="13" fill="#0F1B2D"/><text x="1123" y="887" class="n">4</text>
+    <text x="1150" y="888" class="t b">Human review</text>
+    <text x="1122" y="922" class="t">native speaker and</text>
+    <text x="1122" y="944" class="t">compliance in the PR</text>
+    <path d="M1356 930 L1396 930" class="arrow"/>
+    <rect x="1398" y="860" width="242" height="140" rx="6" class="box"/>
+    <circle cx="1420" cy="882" r="13" fill="#0F1B2D"/><text x="1415" y="887" class="n">5</text>
+    <text x="1442" y="888" class="t b">CI → deploy</text>
+    <text x="1414" y="922" class="t">lint, types, 64 tests,</text>
+    <text x="1414" y="944" class="t">build, then release</text>
+  </g>
+</svg>
