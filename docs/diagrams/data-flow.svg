@@ -181,7 +181,7 @@
     <rect x="1398" y="860" width="242" height="140" rx="6" class="box"/>
     <circle cx="1420" cy="882" r="13" fill="#0F1B2D"/><text x="1415" y="887" class="n">5</text>
     <text x="1442" y="888" class="t b">CI → deploy</text>
-    <text x="1414" y="922" class="t">lint, types, 84 tests,</text>
+    <text x="1414" y="922" class="t">lint, types, 80+ tests,</text>
     <text x="1414" y="944" class="t">build, then release</text>
   </g>
 </svg>

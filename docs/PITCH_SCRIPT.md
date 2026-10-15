@@ -1,6 +1,6 @@
 # Rooted: pitch script for 5 speakers
 
-About 10 minutes, which fills the slot: rehearse with a timer, and if you run long, trim the demo first. Follows `rooted_slides.pdf` (5 slides), with a live demo between slides 2 and 3, because the demo is where most of the "prompt accuracy" points are won.
+About 9½ minutes, leaving a little buffer inside the 10-minute slot. Follows `rooted_slides.pdf` (5 slides), with a live demo between slides 2 and 3, because the demo is where most of the "prompt accuracy" points are won.
 
 | # | Speaker | Covers | Time |
 |---|---|---|---|
@@ -8,7 +8,7 @@ About 10 minutes, which fills the slot: rehearse with a timer, and if you run lo
 | 2 | Speaker 2 | Slide 2: the problem | 1:30 |
 | 3 | Speaker 3 | Live demo | 3:00 |
 | 4 | Speaker 4 | Slides 3 and 4: architecture, security, data flow | 2:30 |
-| 5 | Speaker 5 | Slide 5: scaling, the wellness store, then the close | 2:00 |
+| 5 | Speaker 5 | Slide 5: scaling, the wellness store, then the close | 1:30 |
 
 Lines in *italics* are stage directions, not spoken.
 
@@ -86,7 +86,7 @@ Read it left to right. **Learners** are anonymous by default; their profile stay
 
 On the right: **Vertex AI on an EU endpoint**, with personal data stripped out before anything reaches a model. Our AI layer is provider-agnostic, so Claude or Gemini sit behind the same adapter. Below that: **Cloud Storage** holds the shared, versioned lesson catalog with a **Redis** cache in front of it, **Cloud Tasks** queues AI drafts so no learner ever waits on a live model call, and **BigQuery** gets anonymized analytics only.
 
-On the left are the rules it's built to meet: **GDPR, DORA, the EU AI Act, the European Accessibility Act and MaRisk**. And one rule of our own: education, not advice. We never recommend a specific product.
+On the left are the rules it's built to meet: **GDPR, DORA and the EU AI Act**. And one rule of our own: education, not advice. We never recommend a specific product.
 
 Along the bottom: a **zero-trust** perimeter with customer-managed keys; **content released separately from code**, going draft, expert review, compliance, published, with four eyes on every change; and a DevSecOps pipeline with secret scanning, signed images and canary releases.
 
@@ -100,43 +100,37 @@ This slide shows how data moves, in four lanes.
 
 **C, the game**, runs entirely in the browser in TypeScript. Every decision has its own random stream, so changing one choice never changes the events that follow, which is what makes the 'what if' comparison fair.
 
-**D, content**: facts are edited with a source and a 'verified' date, AI drafts the translations, automated checks run, then a native speaker and compliance review it. Our 84 automated tests run on every change before anything ships.
+**D, content**: facts are edited with a source and a 'verified' date, AI drafts the translations, automated checks run, then a native speaker and compliance review it. More than 80 automated tests run on every change before anything ships.
 
 [Speaker 5] will explain how this scales."
 
 ---
 
-## Speaker 5: Slide 5, scaling, the wellness store and the close (2:00)
+## Speaker 5: Slide 5, scaling, the wellness store and the close (1:30)
 
 *Slide 5: "Scale content once. Serve learners everywhere."*
 
-The key idea for scale is that The content we generated should serve everyone.
+"So how does this scale? Simple: we make each piece of content once, and every learner reuses it.
 
-The top row is learner delivery, and it's cache-first. **Browser**: the game, budget and progress run on the learner's device, so there's no game server to pay for. **Edge**: approved lessons are cached at the CDN, which absorbs most traffic, and API requests are rate-limited. **Application**: a stateless API on Cloud Run that autoscales, with cost limits. **Content**: one shared, versioned, reviewed lesson catalog, with regional data controls.
+Look at the top row. The game, your budget and your progress all run on your own device, so there's no game server to pay for. Approved lessons sit in the CDN cache, which soaks up most of the traffic. Behind that, a small stateless API on Cloud Run scales up and down on its own, with a cost cap. And all the content lives in one shared, versioned catalog.
 
-The bottom row is how content gets made, and it's asynchronous. **No learner ever waits on a live AI call.** We start from verified country facts with sources and dates, queue AI drafts on an EU model, validate them against our schema and get expert approval, then publish one version that's reused by every learner.
+The bottom row is how that content gets made. Nobody ever waits for an AI to answer live. We start from verified facts, an EU-hosted model drafts the lesson in the background, an expert checks it, and we publish it once for everyone.
 
-The guardrails: EU data residency and least-privilege access, service-level objectives with logs and cost alerts, and review gates with safe rollbacks.
+We'd launch in one EU region, with tight access controls, cost alerts and safe rollbacks, and only add a second region and bank sign-in when demand calls for it.
 
-The rollout is deliberately modest: launch in one region, then add regional failover and enterprise single sign-on when demand justifies it.
-
-One more thing on our roadmap: a **wellness store**. In the Life Path game, wellbeing is one of your stats, and today the only way to raise it is through your decisions. The store lets players spend their in-game money on things that boost their wellbeing: a gym membership, a weekend away, a cooking class, a concert with friends.
-
-Every item has a local price and a real trade-off. It lifts your wellbeing bar, but it comes out of the same budget as your savings. So the store teaches the lesson itself: spending on yourself isn't wrong, it just has a price, and you can watch what it does to your future self. A weekend away might be worth it. A third streaming subscription might not.
-
-And it scales like everything else on this slide. The store catalog is just more versioned, reviewed content, priced per country and served from the same cache, with no new servers. Later it could link to real partner offers, like a bank's own wellbeing benefits, but always opt-in and never presented as financial advice.
+One idea on our roadmap: a **wellness store** inside the game. You could spend your in-game money on a gym membership or a weekend away to lift your wellbeing, but it comes out of the same budget as your savings. That's the lesson: treating yourself is fine, it just has a price. It's simply more content in the same catalog, so it scales the same way. Later it could link to real partner offers, always opt-in and never advice.
 
 *Back to slide 1, or stay on slide 5.*
 
-To close: adding a new country is one data file, checked against a schema, plus a line color. A new language is an AI draft plus a native speaker's review. Same learning line, any local reality.
+To wrap up: a new country is one data file, and a new language is an AI draft plus a native speaker's check. Same learning line, any local reality.
 
-That's Rooted. Thank you. We'd love your questions."
+That's Rooted. Thank you, and we'd love your questions."
 
 ---
 
 ## Notes for the team
 
-- **Slides 3 and 4 are up to date** in `rooted_slides.pptx`: correct numbers (up to 46,656 paths, 84 tests), American spelling, the new Age +1 game flow, and the same production plan as slide 5 (Cloud Storage + Redis, Cloud Tasks, one region first, SSO later). If the deck is re-exported, use `docs/diagrams/architecture-production.svg` and `docs/diagrams/data-flow.svg`.
+- **Slides 3 and 4 are up to date** in `rooted_slides.pptx`: correct numbers (up to 46,656 paths, 80+ tests), American spelling, the new Age +1 game flow, and the same production plan as slide 5 (Cloud Storage + Redis, Cloud Tasks, one region first, SSO later). If the deck is re-exported, use `docs/diagrams/architecture-production.svg` and `docs/diagrams/data-flow.svg`.
 - **Likely questions and who answers:**
   - "Is the AI making up numbers?" (Speaker 4: lessons only use sourced facts, a test checks that every cited fact exists, and every product links to its regulator.)
   - "How do you add a country?" (Speaker 5.)

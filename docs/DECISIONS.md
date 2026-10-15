@@ -58,6 +58,8 @@ This file is a running log of ideas and decisions, so we can reference them in t
 
 | 42 | 2026-10-15 | **One production plan across the slides and docs.** Slide 3 now matches slide 5: Cloud Storage as the versioned lesson catalog with a Redis (Memorystore) cache, as on Brenton's updated slide 5, Cloud Tasks for queued AI drafts (no live model call per learner), one EU region first with failover and enterprise SSO added as demand grows. Slide 4 refreshed (46,656 paths, 84 tests, Age +1 flow, quizzes only on demo lessons) and fitted to the slide instead of cropped; slide 3 speaker notes rewritten (they described the MVP diagram) | The judges would see two different databases and rollout plans otherwise | `rooted_slides.pptx`, `docs/diagrams/`, `PRODUCTION_SECURITY.md` |
 
+| 43 | 2026-10-15 | **Slide 3 trimmed** to the essentials: removed OIDC, strict CSP + HSTS, Zod on every route, OpenTelemetry, the European Accessibility Act, MaRisk and CodeQL (they stay in `PRODUCTION_SECURITY.md`). Slide 4 and the script say "80+ tests" instead of an exact count that changes as tests are added. Speaker 5's part shortened and made more conversational | Team request: a lighter slide and a more natural close | `rooted_slides.pptx`, `PITCH_SCRIPT.md` |
+
 ## Parked ideas (not in MVP, keep for roadmap slide)
 - Remittance Navigator: a migrant-focused tool for comparing home and host financial systems
 - Community-sourced region packs (a "Wikipedia for local finance" with reviewer approval)

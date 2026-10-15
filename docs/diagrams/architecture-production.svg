@@ -42,10 +42,9 @@
     <text x="710" y="228" font-weight="800">Same code as the MVP, containerized</text>
     <text x="710" y="254" fill="#3B4656">stateless, autoscaling, nothing to patch on the host</text>
     <text x="710" y="286" font-weight="800">Security in the app</text>
-    <text x="710" y="312" fill="#3B4656">Anonymous by default · bank SSO (OIDC) later</text>
-    <text x="710" y="336" fill="#3B4656">Roles: learner, editor, reviewer, admin</text>
-    <text x="710" y="360" fill="#3B4656">Zod on every route · strict CSP + HSTS</text>
-    <text x="710" y="384" fill="#3B4656">AI output sanitized · PII-redacted logs</text>
+    <text x="710" y="316" fill="#3B4656">Anonymous by default · bank sign-in later</text>
+    <text x="710" y="346" fill="#3B4656">Roles: learner, editor, reviewer, admin</text>
+    <text x="710" y="376" fill="#3B4656">AI output sanitized · PII-redacted logs</text>
   </g>
 
   <!-- Services -->
@@ -89,17 +88,13 @@
   <rect x="60" y="320" width="580" height="280" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
   <text x="80" y="358" font-size="22" font-weight="800" fill="#0F1B2D">Rules it is built to meet</text>
   <g font-size="17" fill="#0F1B2D">
-    <text x="80" y="394" font-weight="800">GDPR</text>
-    <text x="200" y="394" fill="#3B4656">data minimization, EU residency, export/delete</text>
-    <text x="80" y="428" font-weight="800">DORA</text>
-    <text x="200" y="428" fill="#3B4656">ICT risk, incident reporting, provider exit plan</text>
-    <text x="80" y="462" font-weight="800">EU AI Act</text>
-    <text x="200" y="462" fill="#3B4656">AI labels, human oversight, logging</text>
-    <text x="80" y="496" font-weight="800">EAA</text>
-    <text x="200" y="496" fill="#3B4656">WCAG 2.1 AA as a release gate</text>
-    <text x="80" y="530" font-weight="800">MaRisk</text>
-    <text x="200" y="530" fill="#3B4656">cloud + LLM as outsourcing, audit rights</text>
-    <text x="80" y="572" font-weight="800" fill="#127A4B">Education, not advice: no product recommendations</text>
+    <text x="80" y="404" font-weight="800">GDPR</text>
+    <text x="200" y="404" fill="#3B4656">data minimization, EU residency, export/delete</text>
+    <text x="80" y="450" font-weight="800">DORA</text>
+    <text x="200" y="450" fill="#3B4656">ICT risk, incident reporting, provider exit plan</text>
+    <text x="80" y="496" font-weight="800">EU AI Act</text>
+    <text x="200" y="496" fill="#3B4656">AI labels, human oversight, logging</text>
+    <text x="80" y="560" font-weight="800" fill="#127A4B">Education, not advice: no product recommendations</text>
   </g>
 
   <!-- Perimeter band -->
@@ -126,7 +121,7 @@
   <text x="844" y="746" font-size="20" font-weight="800" fill="#0F1B2D">Delivery: DevSecOps</text>
   <g font-size="16" fill="#3B4656">
     <text x="844" y="776">Terraform: dev → test → UAT → prod, one project each</text>
-    <text x="844" y="802">CI: gitleaks · CodeQL · dependency scan · SBOM · Trivy · axe</text>
+    <text x="844" y="802">CI: gitleaks · dependency scan · SBOM · Trivy · axe</text>
     <text x="844" y="828">Signed images (cosign) · OWASP ZAP on staging</text>
     <text x="844" y="854">2 approvals on main · canary 5% → 50% → 100% with rollback</text>
   </g>
