@@ -66,6 +66,7 @@ This file is a running log of ideas and decisions, so we can reference them in t
 - Adaptive quizzes and a tutor chat grounded in the region pack
 - Admin page for editing region packs, with a compliance approval workflow
 - Mini-games marked as stretch: Credit Pet, Send Money Home, Market Stall
+- **Wellness store** in Life Path (pitched by Speaker 5): spend in-game money on wellbeing boosts (gym, a weekend away, a class), priced per country, so each purchase is a visible trade-off against saving. Store catalog is versioned content served from the same cache. Later, opt-in links to real partner offers, never presented as advice
 
 ## Open questions
 - How long is the build window, and when is the demo?

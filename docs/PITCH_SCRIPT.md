@@ -1,6 +1,6 @@
 # Rooted: pitch script for 5 speakers
 
-About 9½ minutes, leaving a little buffer inside the 10-minute slot. Follows `rooted_slides.pdf` (5 slides), with a live demo between slides 2 and 3, because the demo is where most of the "prompt accuracy" points are won.
+About 10 minutes, which fills the slot: rehearse with a timer, and if you run long, trim the demo first. Follows `rooted_slides.pdf` (5 slides), with a live demo between slides 2 and 3, because the demo is where most of the "prompt accuracy" points are won.
 
 | # | Speaker | Covers | Time |
 |---|---|---|---|
@@ -8,7 +8,7 @@ About 9½ minutes, leaving a little buffer inside the 10-minute slot. Follows `r
 | 2 | Speaker 2 | Slide 2: the problem | 1:30 |
 | 3 | Speaker 3 | Live demo | 3:00 |
 | 4 | Speaker 4 | Slides 3 and 4: architecture, security, data flow | 2:30 |
-| 5 | Speaker 5 | Slide 5: scaling, then the close | 1:30 |
+| 5 | Speaker 5 | Slide 5: scaling, the wellness store, then the close | 2:00 |
 
 Lines in *italics* are stage directions, not spoken.
 
@@ -106,7 +106,7 @@ This slide shows how data moves, in four lanes.
 
 ---
 
-## Speaker 5: Slide 5, scaling and the close (1:30)
+## Speaker 5: Slide 5, scaling, the wellness store and the close (2:00)
 
 *Slide 5: "Scale content once. Serve learners everywhere."*
 
@@ -119,6 +119,12 @@ The bottom row is how content gets made, and it's asynchronous. **No learner eve
 The guardrails: EU data residency and least-privilege access, service-level objectives with logs and cost alerts, and review gates with safe rollbacks.
 
 The rollout is deliberately modest: launch in one region, then add regional failover and enterprise single sign-on when demand justifies it.
+
+One more thing on our roadmap: a **wellness store**. In the Life Path game, wellbeing is one of your stats, and today the only way to raise it is through your decisions. The store lets players spend their in-game money on things that boost their wellbeing: a gym membership, a weekend away, a cooking class, a concert with friends.
+
+Every item has a local price and a real trade-off. It lifts your wellbeing bar, but it comes out of the same budget as your savings. So the store teaches the lesson itself: spending on yourself isn't wrong, it just has a price, and you can watch what it does to your future self. A weekend away might be worth it. A third streaming subscription might not.
+
+And it scales like everything else on this slide. The store catalog is just more versioned, reviewed content, priced per country and served from the same cache, with no new servers. Later it could link to real partner offers, like a bank's own wellbeing benefits, but always opt-in and never presented as financial advice.
 
 *Back to slide 1, or stay on slide 5.*
 
@@ -136,3 +142,5 @@ That's Rooted. Thank you. We'd love your questions."
   - "How do you add a country?" (Speaker 5.)
   - "Is this financial advice?" (Speaker 2: no. We explain trade-offs and never recommend products.)
   - "What if the AI service is down?" (Speaker 3: saved lessons. The demo runs fully offline.)
+  - "Isn't a store at odds with financial education?" (Speaker 5: purchases use in-game money from the player's simulated budget, so every item is a visible trade-off against saving. Real partner offers would be opt-in and never advice.)
+- **The wellness store is a roadmap idea, not built and not on slide 5.** Speaker 5 should say "on our roadmap" so nobody expects it in the demo. If the team wants it on the slide, add one line under the content row.
