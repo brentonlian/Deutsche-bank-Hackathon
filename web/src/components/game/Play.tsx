@@ -99,7 +99,7 @@ export function Play() {
 
           {stage.id === "where-to-save" && reveal === null && (
             <aside className="mt-6 max-w-[62ch] rounded-sign bg-line-soft px-5 py-4">
-              <p className="font-bold">{t("game.localFact", { country: region.name })}</p>
+              <p className="font-bold">{t("game.localFact", { countryIn: region.nameIn })}</p>
               <p className="mt-1">{region.institutions.depositInsurance.value}</p>
               <a href={region.institutions.depositInsurance.source} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 text-sm text-ink-2 underline">
                 {t("game.source")} <ExternalLink aria-hidden="true" size={14} /> · {t("game.verified", { date: region.institutions.depositInsurance.verified })}

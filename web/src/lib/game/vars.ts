@@ -14,6 +14,7 @@ export function stageVars(
   const p = region.products;
   return {
     country: region.name,
+    countryIn: region.nameIn,
     income: money(s.income),
     cash: money(s.cash),
     cashName: p.cashAtHome.name,

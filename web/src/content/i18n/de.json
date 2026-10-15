@@ -69,7 +69,7 @@
     "choose": "Was tust du?",
     "yearsPass": "{years} Jahre vergehen…",
     "learnWhy": "Erfahre warum",
-    "localFact": "In {country}",
+    "localFact": "In {countryIn}",
     "source": "Quelle",
     "verified": "geprüft {date}",
     "minigame": "Minispiel"
@@ -97,7 +97,7 @@
   },
   "results": {
     "title": "Dein Weg",
-    "subtitle": "Von Alter {start} bis {end} in {country}.",
+    "subtitle": "Von Alter {start} bis {end} in {countryIn}.",
     "yourLine": "Dein Weg",
     "express": "Express-Weg (optimal)",
     "whatIf": "Was wäre wenn",
@@ -124,7 +124,7 @@
     "scoreNote": "Die Bewertung belohnt ein ausgeglichenes Leben, nicht nur den größten Geldhaufen."
   },
   "learn": {
-    "title": "Lektionen für {country}",
+    "title": "Deine Lektionen in {countryIn}",
     "intro": "Kurze Lektionen, geschrieben für dein Land, deine Sprache und deine Lebensphase, basierend auf geprüften Fakten.",
     "compare": "Länder vergleichen",
     "compareTitle": "Dieselbe Lektion in verschiedenen Ländern",
@@ -208,7 +208,7 @@
     },
     "where-to-save": {
       "title": "Wo wohnt das Geld?",
-      "body": "Deine Ersparnisse brauchen ein Zuhause. In {country} wählen die Leute zwischen diesen Optionen.",
+      "body": "Deine Ersparnisse brauchen ein Zuhause. In {countryIn} wählen die Leute zwischen diesen Optionen.",
       "options": {
         "cash": {
           "label": "{cashName}",
@@ -266,7 +266,7 @@
     },
     "pension": {
       "title": "An später denken",
-      "body": "In {country} ist das System: {retirementSystem}. Legst du deine eigenen Ersparnisse in ein {retirementName} an?",
+      "body": "In {countryIn} ist das System: {retirementSystem}. Legst du deine eigenen Ersparnisse zusätzlich in ein {retirementName} an?",
       "options": {
         "none": {
           "label": "Jetzt noch nicht",
@@ -298,7 +298,7 @@
     },
     "scam": {
       "title": "Dein Handy vibriert ständig",
-      "body": "Betrüger zielen in {country} mit sehr lokalen Tricks auf Menschen ab. Kannst du erkennen, welche Nachrichten echt sind?",
+      "body": "Betrüger nehmen Menschen in {countryIn} mit sehr lokalen Tricks ins Visier. Erkennst du, welche Nachrichten echt sind?",
       "options": {
         "pass": {
           "label": "Erkannt",

@@ -1,6 +1,7 @@
 {
   "id": "MX",
   "name": "Mexico",
+  "nameIn": "Mexico",
   "flag": "🇲🇽",
   "locale": "es-MX",
   "currency": "MXN",

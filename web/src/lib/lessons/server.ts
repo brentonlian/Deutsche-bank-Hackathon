@@ -17,7 +17,8 @@ export interface LessonRequest {
   simple: boolean;
 }
 
-export type LessonResult = { lesson: Lesson; cached: boolean; model?: string };
+/** `lang` is the language actually served, which differs from the request when a fallback was used. */
+export type LessonResult = { lesson: Lesson; lang: Lang; cached: boolean; model?: string };
 
 /**
  * Lessons are generated once per (country, language, age group, topic, reading level) and saved.
@@ -55,7 +56,7 @@ async function nearestSaved(req: LessonRequest): Promise<LessonResult | null> {
 async function getExactLesson(req: LessonRequest, opts: { allowGenerate?: boolean }): Promise<LessonResult | null> {
   const file = path.join(CACHE_DIR, lessonCachePath(req));
   try {
-    return { lesson: lessonSchema.parse(JSON.parse(await readFile(file, "utf8"))), cached: true };
+    return { lesson: lessonSchema.parse(JSON.parse(await readFile(file, "utf8"))), lang: req.lang, cached: true };
   } catch {
     // not cached yet (or invalid): fall through to generation
   }
@@ -72,5 +73,5 @@ async function getExactLesson(req: LessonRequest, opts: { allowGenerate?: boolea
   } catch {
     // read-only filesystem (e.g. serverless): serve without caching
   }
-  return { lesson, cached: false, model: llm.name };
+  return { lesson, lang: req.lang, cached: false, model: llm.name };
 }

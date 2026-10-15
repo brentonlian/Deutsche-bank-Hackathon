@@ -1,6 +1,7 @@
 {
   "id": "IN",
   "name": "India",
+  "nameIn": "India",
   "flag": "🇮🇳",
   "locale": "en-IN",
   "currency": "INR",

@@ -1,6 +1,7 @@
 {
   "id": "DE",
   "name": "Germany",
+  "nameIn": "Germany",
   "flag": "🇩🇪",
   "locale": "de-DE",
   "currency": "EUR",

@@ -12,7 +12,7 @@ import { useApp } from "../AppState";
 import { ReadAloud } from "../ReadAloud";
 import { RequireProfile } from "../RequireProfile";
 
-type Load = { status: "loading" } | { status: "error" } | { status: "ready"; lesson: Lesson };
+type Load = { status: "loading" } | { status: "error" } | { status: "ready"; lesson: Lesson; lang: Lang };
 
 interface Slot {
   key: string;
@@ -33,8 +33,8 @@ function useLesson(req: { topic: Topic; regionId: RegionId; lang: Lang; group: A
     fetch("/api/lesson", { method: "POST", headers: { "Content-Type": "application/json" }, body })
       .then(async (res) => {
         if (!res.ok) throw new Error(String(res.status));
-        const data = (await res.json()) as { lesson: Lesson };
-        if (!cancelled) setState({ key, load: { status: "ready", lesson: data.lesson } });
+        const data = (await res.json()) as { lesson: Lesson; lang: Lang };
+        if (!cancelled) setState({ key, load: { status: "ready", lesson: data.lesson, lang: data.lang } });
       })
       .catch(() => !cancelled && setState({ key, load: { status: "error" } }));
     return () => {
@@ -124,7 +124,8 @@ function LessonSlot({ topic, slot, compact }: { topic: Topic; slot: Slot; compac
         </button>
       </div>
     );
-  return <LessonBody lesson={load.lesson} slot={slot} compact={compact} />;
+  // The server may have served a saved lesson in another language; label and read it in that language.
+  return <LessonBody lesson={load.lesson} slot={{ ...slot, lang: load.lang }} compact={compact} />;
 }
 
 export function LessonView({ topic }: { topic: Topic }) {

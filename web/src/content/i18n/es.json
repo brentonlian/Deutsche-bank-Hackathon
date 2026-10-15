@@ -69,7 +69,7 @@
     "choose": "¿Qué haces?",
     "yearsPass": "Pasan {years} años…",
     "learnWhy": "Aprende por qué",
-    "localFact": "En {country}",
+    "localFact": "En {countryIn}",
     "source": "Fuente",
     "verified": "verificado el {date}",
     "minigame": "Mini-juego"
@@ -97,7 +97,7 @@
   },
   "results": {
     "title": "Tu línea",
-    "subtitle": "Desde los {start} hasta los {end} años en {country}.",
+    "subtitle": "Desde los {start} hasta los {end} años en {countryIn}.",
     "yourLine": "Tu línea",
     "express": "Línea exprés (óptima)",
     "whatIf": "¿Qué pasaría si...?",
@@ -124,7 +124,7 @@
     "scoreNote": "La puntuación recompensa una vida equilibrada, no solo la mayor cantidad de dinero."
   },
   "learn": {
-    "title": "Lecciones para {country}",
+    "title": "Tus lecciones en {countryIn}",
     "intro": "Lecciones cortas escritas para tu país, idioma y etapa de vida, usando solo datos verificados.",
     "compare": "Comparar países",
     "compareTitle": "La misma lección en distintos países",
@@ -208,7 +208,7 @@
     },
     "where-to-save": {
       "title": "¿Dónde guardas el dinero?",
-      "body": "Tus ahorros necesitan un lugar. En {country}, la gente elige entre estas opciones.",
+      "body": "Tus ahorros necesitan un lugar. En {countryIn}, la gente elige entre estas opciones.",
       "options": {
         "cash": {
           "label": "{cashName}",
@@ -266,7 +266,7 @@
     },
     "pension": {
       "title": "Pensando en el futuro",
-      "body": "En {country}, el sistema es: {retirementSystem}. ¿Añades tus propios ahorros a una {retirementName}?",
+      "body": "En {countryIn}, el sistema es: {retirementSystem}. ¿Añades tus propios ahorros a una {retirementName}?",
       "options": {
         "none": {
           "label": "Ahora no",
@@ -298,7 +298,7 @@
     },
     "scam": {
       "title": "Tu teléfono no deja de sonar",
-      "body": "Los estafadores atacan a la gente en {country} con trucos muy locales. ¿Puedes decir qué mensajes son reales?",
+      "body": "Los estafadores atacan a la gente en {countryIn} con trucos muy locales. ¿Puedes decir qué mensajes son reales?",
       "options": {
         "pass": {
           "label": "Los detectaste",

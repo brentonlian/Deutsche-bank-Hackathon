@@ -1,5 +1,6 @@
 {
   "DE": {
+    "nameIn": "Deutschland",
     "name": "Deutschland",
     "institutions.depositInsurance.value": "Bis zu 100.000 € pro Person und Bank, gesetzlich geschützt (Einlagensicherung).",
     "institutions.retirementSystem": "Gesetzliche Rente (Deutsche Rentenversicherung) plus Betriebs- und private Altersvorsorge.",
@@ -36,6 +37,7 @@
     "scams.5.tell": "Du hast sie angefordert; die DSGVO gibt dir eine kostenlose Kopie deiner Schufa-Daten. Logge dich direkt ein, nicht über E-Mail-Links."
   },
   "IN": {
+    "nameIn": "Indien",
     "name": "Indien",
     "institutions.depositInsurance.value": "Bis zu ₹5 lakh pro Einleger und Bank (DICGC)",
     "institutions.retirementSystem": "EPF für Angestellte, plus NPS und PPF",
@@ -72,6 +74,7 @@
     "scams.5.tell": "Ein OTP, das du selbst angefordert hast, ist legitim. Die Nachricht selbst warnt dich davor, es zu teilen."
   },
   "MX": {
+    "nameIn": "Mexiko",
     "name": "Mexiko",
     "institutions.depositInsurance.value": "Bis zu 400.000 UDIs pro Person und Bank (ungefähr 3,4 Millionen MXN), durch IPAB",
     "institutions.retirementSystem": "Individuelle Afore-Konten, mit freiwilligen Beiträgen",
@@ -108,6 +111,7 @@
     "scams.5.tell": "Eine Antwort auf eine Beschwerde, die du eingereicht hast, von der offiziellen .gob.mx-Domain, ohne Zahlungsaufforderung."
   },
   "US": {
+    "nameIn": "den Vereinigten Staaten",
     "name": "Vereinigte Staaten",
     "institutions.depositInsurance.value": "Bis zu 250.000 $ pro Einleger, pro versicherter Bank und Kontoart (FDIC)",
     "institutions.retirementSystem": "Social Security, dazu betriebliche 401(k)-Pläne und private IRAs",

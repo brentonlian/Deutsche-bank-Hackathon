@@ -1,5 +1,6 @@
 {
   "DE": {
+    "nameIn": "जर्मनी",
     "name": "जर्मनी",
     "institutions.depositInsurance.value": "कानून के अनुसार, प्रति व्यक्ति प्रति बैंक €100,000 तक की सुरक्षा मिलती है (Einlagensicherung)।",
     "institutions.retirementSystem": "सरकारी पेंशन (Deutsche Rentenversicherung) के साथ-साथ कंपनी और निजी पेंशन भी मिलती है।",
@@ -36,6 +37,7 @@
     "scams.5.tell": "आपने इसका अनुरोध किया था; GDPR आपको आपके Schufa डेटा की एक मुफ्त कॉपी देता है। सीधे लॉग इन करें, ईमेल लिंक के ज़रिए नहीं।"
   },
   "IN": {
+    "nameIn": "भारत",
     "name": "भारत",
     "institutions.depositInsurance.value": "प्रति जमाकर्ता प्रति बैंक ₹5 लाख तक (DICGC)",
     "institutions.retirementSystem": "वेतनभोगी कर्मचारियों के लिए EPF, साथ ही NPS और PPF",
@@ -72,6 +74,7 @@
     "scams.5.tell": "आपके द्वारा स्वयं अनुरोध किया गया OTP वैध होता है। संदेश स्वयं आपको इसे साझा न करने की चेतावनी देता है।"
   },
   "MX": {
+    "nameIn": "मेक्सिको",
     "name": "मेक्सिको",
     "institutions.depositInsurance.value": "प्रति व्यक्ति प्रति बैंक 400,000 UDIs तक (लगभग 3.4 मिलियन MXN), IPAB द्वारा।",
     "institutions.retirementSystem": "Afore व्यक्तिगत खाते, स्वैच्छिक योगदान के साथ।",
@@ -108,6 +111,7 @@
     "scams.5.tell": "आपकी दर्ज की गई शिकायत का जवाब, आधिकारिक .gob.mx डोमेन से, और बिना किसी भुगतान अनुरोध के।"
   },
   "US": {
+    "nameIn": "संयुक्त राज्य अमेरिका",
     "name": "संयुक्त राज्य अमेरिका",
     "institutions.depositInsurance.value": "हर जमाकर्ता के लिए, हर बीमित बैंक में, हर खाता प्रकार पर $250,000 तक (FDIC)",
     "institutions.retirementSystem": "Social Security, साथ ही नौकरी से जुड़े 401(k) प्लान और निजी IRA",

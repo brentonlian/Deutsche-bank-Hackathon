@@ -84,8 +84,8 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = LANGUAGES[lang].bcp47;
     document.documentElement.dir = LANGUAGES[lang].dir;
+    // Without a profile, onboarding owns the colour (it previews the country being picked).
     if (stored.profile) document.body.dataset.region = stored.profile.regionId;
-    else delete document.body.dataset.region;
   }, [lang, stored.profile]);
 
   const t = useCallback((key: string, vars?: Vars) => translate(lang, key, vars), [lang]);
@@ -118,7 +118,10 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     setLang: (l) => setStored((s) => ({ ...s, lang: l, profile: s.profile ? { ...s.profile, lang: l } : null })),
     setGame: (game) => setStored((s) => ({ ...s, game })),
     setSettings: (p) => setStored((s) => ({ ...s, settings: { ...s.settings, ...p } })),
-    reset: () => setStored((s) => ({ profile: null, game: null, settings: s.settings, lang: s.profile?.lang ?? s.lang })),
+    reset: () => {
+      delete document.body.dataset.region;
+      setStored((s) => ({ profile: null, game: null, settings: s.settings, lang: s.profile?.lang ?? s.lang }));
+    },
     t,
     money,
     percent,

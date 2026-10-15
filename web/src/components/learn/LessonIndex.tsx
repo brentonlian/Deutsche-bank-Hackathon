@@ -15,7 +15,7 @@ export function LessonIndex() {
   return (
     <RequireProfile>
       <h1 className="text-[clamp(2.25rem,5vw,3.75rem)] font-extrabold leading-none tracking-[-0.03em]">
-        {t("learn.title", { country: region?.name ?? "" })}
+        {t("learn.title", { countryIn: region?.nameIn ?? "" })}
       </h1>
       <p className="mt-4 max-w-[60ch] text-xl text-ink-2">{t("learn.intro")}</p>
       <ol className="mt-10 max-w-2xl">

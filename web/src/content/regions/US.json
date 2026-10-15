@@ -1,6 +1,7 @@
 {
   "id": "US",
   "name": "United States",
+  "nameIn": "the United States",
   "flag": "🇺🇸",
   "locale": "en-US",
   "currency": "USD",

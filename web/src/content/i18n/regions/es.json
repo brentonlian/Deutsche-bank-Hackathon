@@ -1,5 +1,6 @@
 {
   "DE": {
+    "nameIn": "Alemania",
     "name": "Alemania",
     "institutions.depositInsurance.value": "Hasta 100,000 € por persona por banco, por ley (Einlagensicherung)",
     "institutions.retirementSystem": "Pensión legal (Deutsche Rentenversicherung) más pensiones de empresa y privadas",
@@ -36,6 +37,7 @@
     "scams.5.tell": "Tú la solicitaste; el GDPR te da una copia gratuita de tus datos Schufa. Inicia sesión directamente, no a través de enlaces de correo electrónico."
   },
   "IN": {
+    "nameIn": "India",
     "name": "India",
     "institutions.depositInsurance.value": "Hasta ₹5 lakh por depositante por banco (DICGC)",
     "institutions.retirementSystem": "EPF para trabajadores asalariados, además de NPS y PPF",
@@ -72,6 +74,7 @@
     "scams.5.tell": "Un OTP que tú mismo pediste es legítimo. El mensaje mismo te advierte que no lo compartas."
   },
   "MX": {
+    "nameIn": "México",
     "name": "México",
     "institutions.depositInsurance.value": "Hasta 400,000 UDIs por persona por banco (aproximadamente 3.4 millones de pesos mexicanos), por el IPAB",
     "institutions.retirementSystem": "Cuentas individuales de Afore, con aportaciones voluntarias",
@@ -108,6 +111,7 @@
     "scams.5.tell": "Una respuesta a una queja que presentaste, desde el dominio oficial .gob.mx, sin solicitud de pago."
   },
   "US": {
+    "nameIn": "Estados Unidos",
     "name": "Estados Unidos",
     "institutions.depositInsurance.value": "Hasta 250,000 dólares por depositante, por banco asegurado y por cada tipo de cuenta (FDIC)",
     "institutions.retirementSystem": "Social Security, más planes 401(k) del trabajo y cuentas IRA individuales",

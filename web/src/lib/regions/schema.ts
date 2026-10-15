@@ -31,6 +31,8 @@ const scamCard = z.object({
 export const regionPackSchema = z.object({
   id: z.string().regex(/^[A-Z]{2}$/),
   name: z.string(),
+  /** The name as it reads after "in" (e.g. "the United States"). */
+  nameIn: z.string(),
   flag: z.string(),
   locale: z.string(), // BCP 47 for number/currency formatting
   currency: z.string().length(3),

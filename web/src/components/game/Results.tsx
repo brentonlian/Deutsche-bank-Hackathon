@@ -111,7 +111,7 @@ export function Results({ ctx, choices }: { ctx: GameContext; choices: string[] 
     <div>
       <header className="rise">
         <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-none tracking-[-0.03em]">{t("results.title")}</h1>
-        <p className="mt-3 text-xl text-ink-2">{t("results.subtitle", { start: ctx.startAge, end: endAge, country: profile?.city ? `${profile.city}, ${region.name}` : region.name })}</p>
+        <p className="mt-3 text-xl text-ink-2">{t("results.subtitle", { start: ctx.startAge, end: endAge, countryIn: profile?.city ? `${profile.city}, ${region.name}` : region.nameIn })}</p>
         <p className="mt-6 max-w-3xl text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold leading-tight tracking-[-0.02em]">
           {t("results.percent", { percent: pct })}{" "}
           <span className="text-ink-2">{t("results.stationsDiffer", { count: differ })}</span>

@@ -69,7 +69,7 @@
     "choose": "What do you do?",
     "yearsPass": "{years} years pass…",
     "learnWhy": "Learn why",
-    "localFact": "In {country}",
+    "localFact": "In {countryIn}",
     "source": "Source",
     "verified": "checked {date}",
     "minigame": "Mini-game"
@@ -97,7 +97,7 @@
   },
   "results": {
     "title": "Your line",
-    "subtitle": "From age {start} to {end} in {country}.",
+    "subtitle": "From age {start} to {end} in {countryIn}.",
     "yourLine": "Your line",
     "express": "Express line (optimal)",
     "whatIf": "What if",
@@ -124,7 +124,7 @@
     "scoreNote": "The score rewards a balanced life, not just the biggest pile of money."
   },
   "learn": {
-    "title": "Lessons for {country}",
+    "title": "Your lessons in {countryIn}",
     "intro": "Short lessons written for your country, language and stage of life, using only checked facts.",
     "compare": "Compare countries",
     "compareTitle": "The same lesson in different countries",
@@ -208,7 +208,7 @@
     },
     "where-to-save": {
       "title": "Where does the money live?",
-      "body": "Your savings need a home. In {country}, people choose between these.",
+      "body": "Your savings need a home. In {countryIn}, people choose between these.",
       "options": {
         "cash": {
           "label": "{cashName}",
@@ -266,7 +266,7 @@
     },
     "pension": {
       "title": "Thinking about later",
-      "body": "In {country}, the system is: {retirementSystem}. Do you add your own savings to a {retirementName}?",
+      "body": "In {countryIn}, the system is: {retirementSystem}. Do you add your own savings to a {retirementName}?",
       "options": {
         "none": {
           "label": "Not now",
@@ -298,7 +298,7 @@
     },
     "scam": {
       "title": "Your phone keeps buzzing",
-      "body": "Fraudsters target people in {country} with very local tricks. Can you tell which messages are real?",
+      "body": "Fraudsters target people in {countryIn} with very local tricks. Can you tell which messages are real?",
       "options": {
         "pass": {
           "label": "Spotted them",
