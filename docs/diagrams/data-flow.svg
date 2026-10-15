@@ -91,7 +91,8 @@
     <text x="1122" y="442" class="t">Gemini Flash → Flash-Lite</text>
     <text x="1122" y="464" class="t">on quota or overload.</text>
     <text x="1122" y="486" class="t">Output validated as JSON,</text>
-    <text x="1122" y="508" class="t">then saved for review</text>
+    <text x="1122" y="508" class="t">saved for review; traced</text>
+    <text x="1122" y="530" class="t">in Langfuse if enabled</text>
     <path d="M1356 460 L1396 460" class="arrow"/>
     <rect x="1398" y="380" width="242" height="160" rx="6" class="box"/>
     <circle cx="1420" cy="402" r="13" fill="#0F1B2D"/><text x="1415" y="407" class="n">5</text>
@@ -139,8 +140,8 @@
     <circle cx="1420" cy="642" r="13" fill="#0F1B2D"/><text x="1415" y="647" class="n">5</text>
     <text x="1442" y="648" class="t b">Results</text>
     <text x="1414" y="682" class="t">tries every safe path</text>
-    <text x="1414" y="704" class="t">(~140k) for the express</text>
-    <text x="1414" y="726" class="t">line; what-if, replay</text>
+    <text x="1414" y="704" class="t">(up to 46,656) for the</text>
+    <text x="1414" y="726" class="t">express line; what-if</text>
   </g>
 
   <!-- Lane D -->
@@ -152,7 +153,9 @@
     <circle cx="312" cy="882" r="13" fill="#0F1B2D"/><text x="307" y="887" class="n">1</text>
     <text x="334" y="888" class="t b">Edit region pack</text>
     <text x="306" y="922" class="t">facts with source URL</text>
-    <text x="306" y="944" class="t">and "verified" month</text>
+    <text x="306" y="944" class="t">and "verified" month;</text>
+    <text x="306" y="966" class="t">npm run worldbank</text>
+    <text x="306" y="988" class="t">refreshes open data</text>
     <path d="M520 930 L560 930" class="arrow"/>
     <rect x="562" y="860" width="230" height="140" rx="6" class="box"/>
     <circle cx="584" cy="882" r="13" fill="#0F1B2D"/><text x="579" y="887" class="n">2</text>
@@ -164,7 +167,9 @@
     <circle cx="856" cy="882" r="13" fill="#0F1B2D"/><text x="851" y="887" class="n">3</text>
     <text x="878" y="888" class="t b">Automatic checks</text>
     <text x="850" y="922" class="t">schema, placeholders,</text>
-    <text x="850" y="944" class="t">glossary, cited facts</text>
+    <text x="850" y="944" class="t">glossary, cited facts,</text>
+    <text x="850" y="966" class="t">product sources, World</text>
+    <text x="850" y="988" class="t">Bank drift</text>
     <path d="M1064 930 L1104 930" class="arrow"/>
     <rect x="1106" y="860" width="250" height="140" rx="6" class="box"/>
     <circle cx="1128" cy="882" r="13" fill="#0F1B2D"/><text x="1123" y="887" class="n">4</text>
@@ -175,7 +180,7 @@
     <rect x="1398" y="860" width="242" height="140" rx="6" class="box"/>
     <circle cx="1420" cy="882" r="13" fill="#0F1B2D"/><text x="1415" y="887" class="n">5</text>
     <text x="1442" y="888" class="t b">CI → deploy</text>
-    <text x="1414" y="922" class="t">lint, types, 64 tests,</text>
+    <text x="1414" y="922" class="t">lint, types, 78 tests,</text>
     <text x="1414" y="944" class="t">build, then release</text>
   </g>
 </svg>

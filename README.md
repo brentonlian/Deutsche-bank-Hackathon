@@ -41,15 +41,18 @@ npm run dev                  # http://localhost:3000
 | `npm run typecheck` / `npm run lint` | TypeScript and ESLint |
 | `npm run localize` | AI-drafts de/es/hi translations of the UI and region packs, protecting placeholders and glossary terms |
 | `npm run lessons` | Pre-generates lessons into `web/src/content/lessons` (paced for free-tier quotas) |
+| `npm run worldbank` | Snapshots World Bank indicators (inflation, account ownership) into `web/src/content/worldbank.json` |
 
 ## How it's built
 - `web/src/content/regions/*.json`: **region packs**, schema-validated country data with sources and "verified" dates. Adding a country means adding a file.
 - `web/src/lib/game`: deterministic Life Path engine (seeded events, exhaustive optimal-path search, what-if).
 - `web/src/lib/ai/provider.ts`: provider-agnostic LLM layer (Gemini default with model fallback, Ollama, OpenAI).
+- `web/src/lib/ai/tracing.ts`: optional Langfuse tracing of every generation (set `LANGFUSE_*` keys to turn it on).
 - `web/src/lib/lessons`: grounded lesson prompts, schema validation, file cache.
 - `web/src/content/i18n`: UI strings (en source, AI-drafted de/es/hi) plus region-pack overlays.
 
 ## Docs
+- [Presentation material](docs/PRESENTATION.md): diagrams, technologies, scalability, adding countries and languages, security, challenges
 - [Approach and concept](docs/APPROACH.md): the challenge, scoring strategy, concept, MVP scope, pitch outline
 - [Decision log](docs/DECISIONS.md): every idea and decision so far, plus parked ideas and open questions
 - [Productionizing in a bank](docs/PRODUCTION_SECURITY.md): security, compliance, architecture, DevSecOps, SDLC

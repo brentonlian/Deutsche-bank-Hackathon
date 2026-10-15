@@ -1,6 +1,6 @@
 # Claude handoff: Rooted (Innovate with DB 2026)
 
-Read this first, then `docs/DECISIONS.md` (the full decision log, rows 1–33). Last updated 2026-10-15. `main` is at `9ed04f9`.
+Read this first, then `docs/DECISIONS.md` (the full decision log, rows 1–38). Last updated 2026-10-15. Section 7 (tasks A–D) is done; see rows 34–38.
 
 ## 1. What this is
 **Rooted** is a hackathon MVP for the prompt "Localized Financial Education". It adapts financial education to a user's country, language and stage of life.
@@ -30,12 +30,14 @@ cd web
 npm install
 cp .env.example .env.local   # GEMINI_API_KEY (optional: saved lessons work offline)
 npm run dev                  # http://localhost:3000
-npm test                     # 64 tests
+npm test                     # 78 tests
 npm run typecheck && npm run lint
 ```
 Other scripts:
 - `npm run localize` drafts de/es/hi translations with Gemini.
 - `npm run lessons` pre-generates lessons (paced and retried).
+- `npm run worldbank` refreshes the World Bank snapshot (no key needed).
+- Optional AI tracing: set `LANGFUSE_PUBLIC_KEY`, `LANGFUSE_SECRET_KEY` and `LANGFUSE_BASE_URL` in `.env.local`.
 
 **Dev server gotcha:** don't run `next build` while `next dev` is running, because it corrupts the dev cache and serves stale CSS. Stop dev first, or let CI build.
 
@@ -60,7 +62,7 @@ Any other combination still works: random events, and the nearest saved lesson a
    4. Lesson and quiz
    5. Calculator
    6. Life Path game
-3. **Country guide** (`/learn/guide`): built entirely from region-pack facts, with a source link and "verified" date on every figure.
+3. **Country guide** (`/learn/guide`): built entirely from region-pack facts, with a source link and "verified" date on every figure and product, plus World Bank figures (inflation, account ownership) shown beside the pack's figures with their own year.
 4. **Lessons** (`/learn/[topic]`): grounded in country facts, with sources, read-aloud, a 3-question quiz, and a compare view across personas who share a topic.
 5. **Calculators** (`/tools/...`): budget (50/30/20 plus emergency cushion), savings growth (cash vs savings vs index fund, inflation-adjusted) and debt payoff (card vs double payment vs lender). The math is tested in `web/src/lib/tools.ts`.
 6. **Life Path game** (`/play`): 10–11 life events per age group.
@@ -77,7 +79,9 @@ Any other combination still works: random events, and the nearest saved lesson a
 
 **Engineering:**
 - Next.js 16 (App Router, cacheComponents), TypeScript, Tailwind v4, Zod, Vitest.
-- GitHub Actions CI: lint, typecheck, tests, build.
+- GitHub Actions CI: lint, typecheck (runs `next typegen` first), tests, build.
+- Optional Langfuse tracing of lesson generation (`web/src/lib/ai/tracing.ts`), off without keys.
+- Every product links to an official regulator or insurer page (`SourceLink.tsx`), in the guide, game choices, investing pick and calculators.
 
 **Key files:**
 - `web/src/content/regions/*.json`: region packs (facts, sources, products, scams, culture, cities, `nameIn`).
@@ -89,7 +93,7 @@ Any other combination still works: random events, and the nearest saved lesson a
 
 **Design:** transit-line world (life as a metro line, express line = optimal path), Atkinson Hyperlegible font, one line colour per country. See `PRODUCT.md`, `DESIGN.md` and `design/BRIEF.md`. The design skills (Impeccable, taste-skill) are vendored as instruction files only, in `.claude/skills/`.
 
-**Docs:** `docs/APPROACH.md`, `docs/PRODUCTION_SECURITY.md`, `docs/DEUTSCHE_BANK_ALIGNMENT.md`, `docs/DECISIONS.md`.
+**Docs:** `docs/PRESENTATION.md` (slide material), `docs/APPROACH.md`, `docs/PRODUCTION_SECURITY.md`, `docs/DEUTSCHE_BANK_ALIGNMENT.md`, `docs/DECISIONS.md`. Diagrams in `docs/diagrams/`: MVP architecture, production architecture, data flow.
 
 ## 6. Problems we hit (useful for the "challenges" slide)
 - **Gemini free-tier limits:** only 20 requests a day per model, and 503 "high demand" errors. Fixed with model fallback (Flash → Flash-Lite), pacing and retries, saved lessons so the demo never depends on quota, and the 6 demo lessons hand-written and grounded in pack facts.
@@ -106,10 +110,12 @@ Any other combination still works: random events, and the nearest saved lesson a
 - **Data freshness:** the World Bank API's latest inflation (US 2.9% for 2024, India 2.4% for 2025) lags behind the central-bank figures in our packs (US 3.4% Aug 2026, India 5.2% RBI projection). Show both with their dates instead of silently swapping.
 - **Security choice:** third-party skill scripts weren't vendored (Impeccable's launcher downloads a binary), so design rules were applied manually.
 
-## 7. Next tasks (not started; wait for the user's go-ahead)
+## 7. Tasks A–D (done 2026-10-15)
+Kept for reference. What was built: A → `docs/PRESENTATION.md` and the three diagrams; B → `web/src/lib/ai/tracing.ts`; C → `scripts/worldbank.ts` + `web/src/lib/worldbank/`; D → product `source`/`verified` fields + `SourceLink`. Details in decision rows 34–38.
+
 **A. Presentation materials** (separate from the website, for slides; not shown in the app)
-1. **Architecture diagram** for the MVP and the production target (Google Cloud, EU). A draft exists at `docs/diagrams/architecture-mvp.svg` (uncommitted, 1600×900, checked in a browser).
-2. **Technical flow / data-flow diagram:** how data moves (onboarding stays in the browser; the lesson request goes browser → API → cache or LLM; the game loop; the content and translation pipeline). A draft exists at `docs/diagrams/data-flow.svg` (uncommitted, not yet visually checked).
+1. **Architecture diagram** for the MVP and the production target (Google Cloud, EU): `docs/diagrams/architecture-mvp.svg` and `architecture-production.svg`, both 1600×900, rendered and checked.
+2. **Technical flow / data-flow diagram:** `docs/diagrams/data-flow.svg`, rendered and checked.
 3. **Technologies used and why** (Next.js, TypeScript, Zod, Vitest, Tailwind, the provider-agnostic LLM layer, JSON region packs, localStorage).
 4. **Scalability** of what we used: static pre-rendering and CDN, stateless API, lessons generated once and cached, a client-side engine (no server cost per game), and a JSON → database path in production.
 5. **Ease of adding languages and countries:** a new country is one region-pack JSON (schema-checked) plus a line colour. A new language is `npm run localize` plus native review. Tests catch missing keys and placeholders.
@@ -122,6 +128,7 @@ Any other combination still works: random events, and the nearest saved lesson a
 - **Plan:** wrap `LLMProvider.generateJson` in `web/src/lib/ai/provider.ts` to trace model, prompt version, latency, tokens, fallback used, schema-validation pass or fail, and which facts were cited. Optionally move prompts into Langfuse prompt management.
 - **Data rule:** keep it optional when no keys are set, and send no personal data (requests already contain none).
 - **Unverified:** one 2026 source claims Langfuse was acquired by ClickHouse; confirm on langfuse.com before mentioning it.
+- **Not yet tried against a real Langfuse project** (no keys here). The span attributes are checked in `tracing.test.ts`.
 - Docs: https://langfuse.com/docs/observability/sdk/typescript/overview
 
 **C. World Bank Indicators API**
@@ -147,5 +154,7 @@ Any other combination still works: random events, and the nearest saved lesson a
 - **Translations:** de/es/hi strings are AI-drafted or hand-written and need native review. Hindi and Spanish are least reviewed.
 - **Lesson coverage:** only the 6 persona lessons have quizzes. Other saved lessons have no quiz (they show a "mark as read" button).
 - **Approximate figures:** some product rates in the packs are approximations dated "2026-10"; verify before the demo. The Fed rate is shown as "about 3.9%" (actual range 3.75–4.00%).
-- **Production build:** `next build` wasn't run locally after the latest rework; check that CI on `9ed04f9` is green.
+- **Production build:** passes locally (2026-10-15). CI status couldn't be read from here (private repo, no `gh`).
+- **Product source links** point to regulator and insurer pages, often a home or section page rather than a page about that exact product. Deeper links would be better where they're stable.
+- **World Bank snapshot** is from 2026-10-15; rerun `npm run worldbank` before the demo if it's much later.
 - **Not done:** Impeccable's final design review (critique and audit pass) hasn't been run.

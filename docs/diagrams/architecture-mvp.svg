@@ -80,46 +80,58 @@
     <text x="1204" y="440" fill="#127A4B" font-weight="800">Production: Vertex AI (EU)</text>
   </g>
 
+  <!-- Observability -->
+  <rect x="1180" y="492" width="360" height="56" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="1196" y="515" font-size="16" font-weight="800" fill="#0F1B2D">Langfuse tracing (optional, off without keys)</text>
+  <text x="1196" y="537" font-size="14" fill="#3B4656">model, tokens, latency, fallback, schema, facts</text>
+
   <!-- Content layer -->
   <rect x="680" y="560" width="860" height="150" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3" stroke-dasharray="0"/>
   <text x="704" y="598" font-size="22" font-weight="800" fill="#0F1B2D">Content layer: JSON in Git, schema-validated in CI</text>
   <g font-size="17" fill="#0F1B2D">
-    <rect x="704" y="616" width="196" height="76" rx="6" fill="#FFE1D3"/>
-    <text x="718" y="644" font-weight="800">Region packs</text>
-    <text x="718" y="668" fill="#3B4656">US · IN · DE · MX</text>
-    <text x="718" y="686" fill="#3B4656" font-size="14">facts + sources + dates</text>
-    <rect x="912" y="616" width="196" height="76" rx="6" fill="#FCEFC4"/>
-    <text x="926" y="644" font-weight="800">Translations</text>
-    <text x="926" y="668" fill="#3B4656">en · de · es · hi</text>
-    <text x="926" y="686" fill="#3B4656" font-size="14">+ region overlays</text>
-    <rect x="1120" y="616" width="196" height="76" rx="6" fill="#DCE5F5"/>
-    <text x="1134" y="644" font-weight="800">Saved lessons</text>
-    <text x="1134" y="668" fill="#3B4656">+ quizzes</text>
-    <text x="1134" y="686" fill="#3B4656" font-size="14">offline demo</text>
-    <rect x="1328" y="616" width="196" height="76" rx="6" fill="#D6EBDF"/>
-    <text x="1342" y="644" font-weight="800">Personas</text>
-    <text x="1342" y="668" fill="#3B4656">fixed seeds for</text>
-    <text x="1342" y="686" fill="#3B4656" font-size="14">a repeatable demo</text>
+    <rect x="704" y="616" width="156" height="76" rx="6" fill="#FFE1D3"/>
+    <text x="716" y="644" font-weight="800">Region packs</text>
+    <text x="716" y="668" fill="#3B4656" font-size="15">US · IN · DE · MX</text>
+    <text x="716" y="686" fill="#3B4656" font-size="14">facts, sources, dates</text>
+    <rect x="870" y="616" width="156" height="76" rx="6" fill="#FCEFC4"/>
+    <text x="882" y="644" font-weight="800">Translations</text>
+    <text x="882" y="668" fill="#3B4656" font-size="15">en · de · es · hi</text>
+    <text x="882" y="686" fill="#3B4656" font-size="14">+ region overlays</text>
+    <rect x="1036" y="616" width="156" height="76" rx="6" fill="#DCE5F5"/>
+    <text x="1048" y="644" font-weight="800">Saved lessons</text>
+    <text x="1048" y="668" fill="#3B4656" font-size="15">+ quizzes</text>
+    <text x="1048" y="686" fill="#3B4656" font-size="14">offline demo</text>
+    <rect x="1202" y="616" width="156" height="76" rx="6" fill="#D6EBDF"/>
+    <text x="1214" y="644" font-weight="800">Personas</text>
+    <text x="1214" y="668" fill="#3B4656" font-size="15">fixed seeds</text>
+    <text x="1214" y="686" fill="#3B4656" font-size="14">repeatable demo</text>
+    <rect x="1368" y="616" width="156" height="76" rx="6" fill="#E6E8E3"/>
+    <text x="1380" y="644" font-weight="800">World Bank</text>
+    <text x="1380" y="668" fill="#3B4656" font-size="15">snapshot</text>
+    <text x="1380" y="686" fill="#3B4656" font-size="14">inflation, accounts</text>
   </g>
 
   <!-- Pipelines & CI -->
-  <rect x="60" y="760" width="760" height="100" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
-  <text x="84" y="796" font-size="20" font-weight="800" fill="#0F1B2D">Build-time pipelines</text>
-  <text x="84" y="824" font-size="17" fill="#3B4656">npm run localize: AI-drafted translations, placeholder + glossary checks</text>
-  <text x="84" y="848" font-size="17" fill="#3B4656">npm run lessons: pre-generates lessons, paced for free-tier quotas</text>
-  <rect x="860" y="760" width="680" height="100" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
-  <text x="884" y="796" font-size="20" font-weight="800" fill="#0F1B2D">CI: GitHub Actions on every push</text>
-  <text x="884" y="824" font-size="17" fill="#3B4656">lint · typecheck · 64 unit tests (engine, packs, translations,</text>
-  <text x="884" y="848" font-size="17" fill="#3B4656">lessons cite only real facts, tool math) · production build</text>
+  <rect x="60" y="745" width="760" height="130" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="84" y="781" font-size="20" font-weight="800" fill="#0F1B2D">Build-time pipelines</text>
+  <text x="84" y="809" font-size="17" fill="#3B4656">npm run localize: AI-drafted translations, placeholder + glossary checks</text>
+  <text x="84" y="833" font-size="17" fill="#3B4656">npm run lessons: pre-generates lessons, paced for free-tier quotas</text>
+  <text x="84" y="857" font-size="17" fill="#3B4656">npm run worldbank: snapshots World Bank indicators (no key needed)</text>
+  <rect x="860" y="745" width="680" height="130" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="884" y="781" font-size="20" font-weight="800" fill="#0F1B2D">CI: GitHub Actions on every push</text>
+  <text x="884" y="809" font-size="17" fill="#3B4656">lint · typecheck · 78 unit tests (engine, packs, translations,</text>
+  <text x="884" y="833" font-size="17" fill="#3B4656">lessons cite only real facts, every product has a source,</text>
+  <text x="884" y="857" font-size="17" fill="#3B4656">tool math, tracing, World Bank drift) · production build</text>
 
   <!-- Arrows -->
   <path d="M580 400 L676 360" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-  <text x="590" y="352" font-size="15" fill="#0F1B2D" font-weight="800">lesson request</text>
+  <text x="592" y="322" font-size="15" fill="#0F1B2D" font-weight="800">lesson</text>
+  <text x="592" y="340" font-size="15" fill="#0F1B2D" font-weight="800">request</text>
   <path d="M1080 330 L1176 330" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
   <path d="M880 480 L880 556" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
   <text x="892" y="525" font-size="15" fill="#0F1B2D" font-weight="800">read / save</text>
   <path d="M580 640 L676 640" stroke="#0F1B2D" stroke-width="3" fill="none" marker-start="url(#arrow)"/>
   <text x="590" y="628" font-size="15" fill="#0F1B2D" font-weight="800">bundled</text>
-  <path d="M820 790 L1000 714" stroke="#6B7686" stroke-width="2.5" fill="none" stroke-dasharray="8 6" marker-end="url(#arrowGrey)"/>
-  <text x="620" y="745" font-size="15" fill="#6B7686" font-weight="800">writes content (reviewed in a PR)</text>
+  <path d="M640 745 L720 714" stroke="#6B7686" stroke-width="2.5" fill="none" stroke-dasharray="8 6" marker-end="url(#arrowGrey)"/>
+  <text x="380" y="733" font-size="15" fill="#6B7686" font-weight="800">writes content (reviewed in a PR)</text>
 </svg>

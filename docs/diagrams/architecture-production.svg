@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Atkinson Hyperlegible Next, Atkinson Hyperlegible, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0F1B2D"/>
+    </marker>
+    <marker id="arrowGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7686"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="#F2F3F0"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="800" fill="#0F1B2D">Rooted: production target on Google Cloud (EU)</text>
+  <text x="60" y="108" font-size="20" fill="#3B4656">europe-west3 (Frankfurt) · secondary EU region for disaster recovery · a plan, not built in the MVP</text>
+
+  <!-- Users -->
+  <rect x="60" y="150" width="230" height="130" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+  <text x="80" y="188" font-size="22" font-weight="800" fill="#0F1B2D">Learners</text>
+  <g font-size="17" fill="#3B4656">
+    <text x="80" y="216">phone or desktop</text>
+    <text x="80" y="240">anonymous by default;</text>
+    <text x="80" y="264">profile stays in browser</text>
+  </g>
+
+  <!-- Edge -->
+  <rect x="340" y="150" width="300" height="130" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+  <rect x="340" y="150" width="300" height="48" rx="8" fill="#0F1B2D"/>
+  <rect x="340" y="182" width="300" height="16" fill="#0F1B2D"/>
+  <text x="360" y="182" font-size="20" font-weight="800" fill="#FFFFFF">Edge</text>
+  <g font-size="17" fill="#0F1B2D">
+    <text x="360" y="226" font-weight="800">Cloud CDN + Cloud Armor</text>
+    <text x="360" y="250" fill="#3B4656">WAF, DDoS, rate limits</text>
+    <text x="360" y="272" fill="#3B4656">Global HTTPS load balancer</text>
+  </g>
+
+  <!-- App -->
+  <rect x="690" y="150" width="430" height="250" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+  <rect x="690" y="150" width="430" height="48" rx="8" fill="#1F5FBF"/>
+  <rect x="690" y="182" width="430" height="16" fill="#1F5FBF"/>
+  <text x="710" y="182" font-size="20" font-weight="800" fill="#FFFFFF">Cloud Run: Next.js web + API</text>
+  <g font-size="17" fill="#0F1B2D">
+    <text x="710" y="228" font-weight="800">Same code as the MVP, containerised</text>
+    <text x="710" y="254" fill="#3B4656">stateless, autoscaling, nothing to patch on the host</text>
+    <text x="710" y="286" font-weight="800">Security in the app</text>
+    <text x="710" y="312" fill="#3B4656">OIDC to the bank's IdP · roles: learner, editor,</text>
+    <text x="710" y="336" fill="#3B4656">compliance reviewer, admin · strict CSP + HSTS</text>
+    <text x="710" y="360" fill="#3B4656">Zod on every route · AI output sanitised</text>
+    <text x="710" y="384" fill="#3B4656">PII-redacted logs (pino) · OpenTelemetry traces</text>
+  </g>
+
+  <!-- Services -->
+  <g font-size="17" fill="#0F1B2D">
+    <rect x="1180" y="150" width="360" height="120" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+    <rect x="1180" y="150" width="12" height="120" rx="4" fill="#127A4B"/>
+    <text x="1210" y="184" font-size="20" font-weight="800">Vertex AI (EU endpoint)</text>
+    <text x="1210" y="210" fill="#3B4656">Claude or Gemini behind the same</text>
+    <text x="1210" y="232" fill="#3B4656">adapter; Sensitive Data Protection</text>
+    <text x="1210" y="254" fill="#3B4656">redacts PII before the model</text>
+
+    <rect x="1180" y="290" width="360" height="100" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+    <rect x="1180" y="290" width="12" height="100" rx="4" fill="#1F5FBF"/>
+    <text x="1210" y="324" font-size="20" font-weight="800">Cloud SQL (PostgreSQL)</text>
+    <text x="1210" y="350" fill="#3B4656">region packs, approved lessons,</text>
+    <text x="1210" y="372" fill="#3B4656">versions + audit history</text>
+
+    <rect x="1180" y="410" width="360" height="80" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+    <rect x="1180" y="410" width="12" height="80" rx="4" fill="#F2B705"/>
+    <text x="1210" y="444" font-size="20" font-weight="800">Memorystore (Redis)</text>
+    <text x="1210" y="470" fill="#3B4656">cached lessons, open data</text>
+
+    <rect x="1180" y="510" width="360" height="80" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+    <rect x="1180" y="510" width="12" height="80" rx="4" fill="#6B7686"/>
+    <text x="1210" y="544" font-size="20" font-weight="800">BigQuery</text>
+    <text x="1210" y="570" fill="#3B4656">anonymised, aggregated events only</text>
+  </g>
+
+  <!-- Jobs + observability under the app -->
+  <g font-size="17" fill="#0F1B2D">
+    <rect x="690" y="430" width="430" height="76" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
+    <text x="710" y="462" font-weight="800">Open-data job: Cloud Scheduler</text>
+    <text x="710" y="488" fill="#3B4656">World Bank + ECB APIs → Cloud SQL, dated</text>
+
+    <rect x="690" y="524" width="430" height="76" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
+    <text x="710" y="556" font-weight="800">Observability</text>
+    <text x="710" y="582" fill="#3B4656">Cloud Logging + Monitoring · Langfuse (EU)</text>
+  </g>
+
+  <!-- Regulation -->
+  <rect x="60" y="320" width="580" height="280" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+  <text x="80" y="358" font-size="22" font-weight="800" fill="#0F1B2D">Rules it is built to meet</text>
+  <g font-size="17" fill="#0F1B2D">
+    <text x="80" y="394" font-weight="800">GDPR</text>
+    <text x="200" y="394" fill="#3B4656">data minimisation, EU residency, export/delete</text>
+    <text x="80" y="428" font-weight="800">DORA</text>
+    <text x="200" y="428" fill="#3B4656">ICT risk, incident reporting, provider exit plan</text>
+    <text x="80" y="462" font-weight="800">EU AI Act</text>
+    <text x="200" y="462" fill="#3B4656">AI labels, human oversight, logging</text>
+    <text x="80" y="496" font-weight="800">EAA</text>
+    <text x="200" y="496" fill="#3B4656">WCAG 2.1 AA as a release gate</text>
+    <text x="80" y="530" font-weight="800">MaRisk</text>
+    <text x="200" y="530" fill="#3B4656">cloud + LLM as outsourcing, audit rights</text>
+    <text x="80" y="572" font-weight="800" fill="#127A4B">Education, not advice: no product recommendations</text>
+  </g>
+
+  <!-- Perimeter band -->
+  <rect x="60" y="626" width="1480" height="56" rx="8" fill="#0F1B2D"/>
+  <text x="84" y="662" font-size="18" font-weight="800" fill="#FFFFFF">Zero trust perimeter</text>
+  <text x="320" y="662" font-size="17" fill="#E6E8E3">VPC Service Controls · Secret Manager · Cloud KMS (customer-managed keys) · Workload Identity, no long-lived keys</text>
+
+  <!-- Content workflow -->
+  <rect x="60" y="710" width="720" height="160" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+  <text x="84" y="746" font-size="20" font-weight="800" fill="#0F1B2D">Content release (separate from code)</text>
+  <g font-size="16" font-weight="800" fill="#0F1B2D">
+    <rect x="84" y="768" width="150" height="50" rx="6" fill="#E6E8E3"/><text x="104" y="799">Draft</text>
+    <rect x="258" y="768" width="150" height="50" rx="6" fill="#E6E8E3"/><text x="272" y="799">Expert review</text>
+    <rect x="432" y="768" width="150" height="50" rx="6" fill="#FCEFC4"/><text x="446" y="799">Compliance</text>
+    <rect x="606" y="768" width="150" height="50" rx="6" fill="#D6EBDF"/><text x="620" y="799">Published</text>
+  </g>
+  <path d="M234 793 L254 793" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M408 793 L428 793" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M582 793 L602 793" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="84" y="850" font-size="16" fill="#3B4656">Region packs, lessons and translations: versioned, four-eyes, every fact sourced</text>
+
+  <!-- Delivery -->
+  <rect x="820" y="710" width="720" height="160" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
+  <text x="844" y="746" font-size="20" font-weight="800" fill="#0F1B2D">Delivery: DevSecOps</text>
+  <g font-size="16" fill="#3B4656">
+    <text x="844" y="776">Terraform: dev → test → UAT → prod, one project each</text>
+    <text x="844" y="802">CI: gitleaks · CodeQL · dependency scan · SBOM · Trivy · axe</text>
+    <text x="844" y="828">Signed images (cosign) · OWASP ZAP on staging</text>
+    <text x="844" y="854">2 approvals on main · canary 5% → 50% → 100% with rollback</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M290 215 L336 215" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M640 215 L686 215" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1120 210 L1176 210" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1120 300 L1176 330" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1120 360 L1176 440" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1120 390 L1176 540" stroke="#0F1B2D" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1120 468 L1176 360" stroke="#6B7686" stroke-width="2.5" fill="none" stroke-dasharray="8 6" marker-end="url(#arrowGrey)"/>
+</svg>
