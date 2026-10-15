@@ -2,6 +2,7 @@
 
 import { ArrowLeft, Check, ShieldAlert, ShieldCheck } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { worldBankFor } from "@/lib/worldbank";
 import { useApp } from "../AppState";
@@ -29,6 +30,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
  */
 export function CountryGuide() {
   const { t, region, percent, progress, markDone } = useApp();
+  const router = useRouter();
   if (!region) return <RequireProfile>{null}</RequireProfile>;
   const p = region.products;
   const e = region.economy;
@@ -162,11 +164,14 @@ export function CountryGuide() {
 
         <button
           type="button"
-          onClick={() => markDone("guide")}
-          disabled={Boolean(progress.guide)}
-          className="mt-4 flex items-center gap-2 rounded-sign bg-ink px-6 py-3 text-lg font-bold text-ground hover:bg-ink-2 disabled:bg-express disabled:text-white"
+          onClick={() => {
+            // Finishing the guide completes its station and returns to the money line.
+            markDone("guide");
+            router.push("/learn");
+          }}
+          className="mt-4 flex items-center gap-2 rounded-sign bg-ink px-6 py-3 text-lg font-bold text-ground hover:bg-ink-2"
         >
-          <Check aria-hidden="true" size={20} strokeWidth={3} /> {progress.guide ? t("guide.done") : t("guide.markDone")}
+          <Check aria-hidden="true" size={20} strokeWidth={3} /> {progress.guide ? t("quiz.continue") : t("guide.markDone")}
         </button>
       </div>
     </RequireProfile>
