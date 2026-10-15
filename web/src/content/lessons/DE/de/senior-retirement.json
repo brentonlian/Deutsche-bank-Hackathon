@@ -1,0 +1,24 @@
+{
+  "title": "Ruhestand: Rente und Erspartes klug einteilen",
+  "summary": "Ihre Rente ist die feste Grundlage, Ihr Erspartes die Reserve. Wer beides bewusst aufteilt, genießt den Ruhestand und behält trotzdem einen Puffer.",
+  "sections": [
+    {
+      "heading": "Ihr Einkommen im Ruhestand",
+      "body": "In Deutschland kommt das Einkommen im Alter meist aus der gesetzlichen Rente der Deutschen Rentenversicherung, oft ergänzt durch eine Betriebs- oder Privatrente. Diese Zahlungen sind Ihre feste monatliche Basis. Ihr Erspartes ergänzt sie, für Wünsche und für Unvorhergesehenes."
+    },
+    {
+      "heading": "Ein Puffer, der jederzeit verfügbar ist",
+      "body": "Halten Sie einige Monatsausgaben auf einem Tagesgeldkonto. Es bringt derzeit etwa 2,3 % Zinsen, das Geld ist sofort verfügbar und durch die Einlagensicherung bis 100.000 € pro Person und Bank geschützt. Bedenken Sie: Die Inflation liegt bei etwa 2,8 %, Geld verliert also langsam an Kaufkraft."
+    },
+    {
+      "heading": "Geld, das Sie länger nicht brauchen",
+      "body": "Ein breiter ETF schwankt im Wert, war langfristig aber im Durchschnitt positiv, in unseren Zahlen etwa 7 % pro Jahr. Er eignet sich nur für Geld, das viele Jahre liegen bleiben kann. Den Dispo sollten Sie meiden: Er kostet etwa 11,5 % im Jahr."
+    }
+  ],
+  "example": {
+    "title": "Brigittes Plan",
+    "body": "Brigitte bekommt 1.650 € Rente im Monat. Sechs Monatsausgaben liegen als Puffer auf ihrem Tagesgeldkonto. Jeden Monat nimmt sie einen festen Betrag von 150 € aus ihrem Ersparten für Reisen und Geschenke für die Enkel. Den Rest lässt sie in Ruhe, damit das Geld auch in zehn Jahren noch reicht."
+  },
+  "takeaway": "Die Rente deckt den Alltag, ein Tagesgeld-Puffer die Überraschungen, und vom Ersparten entnehmen Sie nur einen festen, maßvollen Betrag.",
+  "factsUsed": ["retirement-system", "savings-account", "deposit-insurance", "inflation", "index-fund", "expensive-credit", "culture-1", "currency"]
+}

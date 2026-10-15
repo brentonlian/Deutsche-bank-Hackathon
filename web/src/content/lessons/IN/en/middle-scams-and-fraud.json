@@ -1,0 +1,28 @@
+{
+  "title": "Four scams aimed at UPI users, and how to see through them",
+  "summary": "Fraudsters in India use UPI, KYC warnings and fake officials to rush you. Knowing what real messages look like is the best protection for you and your family.",
+  "sections": [
+    {
+      "heading": "Your UPI PIN only ever sends money",
+      "body": "A 'buyer' sends a UPI collect request and asks you to enter your PIN to receive payment. You never need a PIN to receive money; entering it sends money out of your account."
+    },
+    {
+      "heading": "Urgency is the scammer's main tool",
+      "body": "An SMS says your account will be blocked today unless you update your KYC through a link. Banks ask you to use the branch or the official app. A video call from a 'CBI officer' claiming a 'digital arrest' is always fake: it does not exist in Indian law, and police never ask you to transfer money. Report it at cybercrime.gov.in or call 1930."
+    },
+    {
+      "heading": "If you must pay to earn, walk away",
+      "body": "WhatsApp 'jobs' that pay ₹5,000 a day for liking videos start by asking for a small registration fee, then ask for bigger deposits. Real jobs never charge you to start."
+    },
+    {
+      "heading": "What real messages look like",
+      "body": "A debit alert for a payment you made, with no link, is normal. An OTP you requested yourself is real too, and the bank's message warns you never to share it with anyone, including bank staff."
+    }
+  ],
+  "example": {
+    "title": "The call Ananya's father got",
+    "body": "Ananya's father receives a video call from a man in uniform saying a parcel with drugs was booked on his Aadhaar and he is under 'digital arrest'. Because Ananya had explained this scam at dinner, he hangs up, calls her, and they report it together on 1930. No money leaves his account."
+  },
+  "takeaway": "Never enter your UPI PIN or share an OTP because someone asked: hang up, check for yourself, and report on 1930.",
+  "factsUsed": ["scam-in-upi-collect", "scam-in-kyc", "scam-in-digital-arrest", "scam-in-job", "scam-in-upi-debit", "scam-in-otp", "payment-rails"]
+}

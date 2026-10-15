@@ -1,10 +1,11 @@
 import DE from "@/content/regions/DE.json";
 import IN from "@/content/regions/IN.json";
 import MX from "@/content/regions/MX.json";
+import US from "@/content/regions/US.json";
 import { regionPackSchema, type RegionPack } from "./schema";
 
 // Adding a country = add a JSON file and list it here. Schema validation runs at load and in CI.
-const raw = { DE, IN, MX } as const;
+const raw = { US, IN, DE, MX } as const;
 
 export type RegionId = keyof typeof raw;
 

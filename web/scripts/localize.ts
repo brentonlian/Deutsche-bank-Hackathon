@@ -73,10 +73,13 @@ async function main() {
       writeFileSync(uiFile, JSON.stringify(out, null, 2) + "\n");
     }
 
+    // Region packs: translate any country that is new (or everything with --force).
     const regionFile = path.join(i18nDir, "regions", `${lang}.json`);
-    if (force || !existsSync(regionFile) || readFileSync(regionFile, "utf8").trim() === "{}") {
-      const result: Record<string, Record<string, string>> = {};
-      for (const region of Object.values(REGIONS)) {
+    const result: Record<string, Record<string, string>> =
+      !force && existsSync(regionFile) ? JSON.parse(readFileSync(regionFile, "utf8")) : {};
+    const missing = Object.values(REGIONS).filter((r) => !result[r.id]);
+    if (missing.length) {
+      for (const region of missing) {
         console.log(`- ${region.id} region pack → ${lang}`);
         const source = translatableRegionStrings(region);
         const out = parseJson<Record<string, string>>(

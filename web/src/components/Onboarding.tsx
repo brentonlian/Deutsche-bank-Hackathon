@@ -75,7 +75,7 @@ export function Onboarding() {
           <>
             <h2 className="text-3xl font-extrabold tracking-[-0.02em]">{t("onboarding.countryQuestion")}</h2>
             <p className="mt-2 text-lg text-ink-2">{t("onboarding.countryHelp")}</p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-3" role="radiogroup" aria-label={t("onboarding.countryQuestion")}>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2" role="radiogroup" aria-label={t("onboarding.countryQuestion")}>
               {REGION_IDS.map((id) => {
                 const r = localizeRegion(REGIONS[id], uiLang);
                 return (

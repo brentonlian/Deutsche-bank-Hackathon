@@ -24,6 +24,18 @@ export type LessonResult = { lesson: Lesson; cached: boolean; model?: string };
  * Saved lessons are what a reviewer approves and what the offline demo serves.
  */
 export async function getLesson(req: LessonRequest, opts: { allowGenerate?: boolean } = {}): Promise<LessonResult | null> {
+  if (!req.simple) return getExactLesson(req, opts);
+  // A simple-language version that can't be produced right now falls back to the saved standard one.
+  try {
+    const simple = await getExactLesson(req, opts);
+    if (simple) return simple;
+  } catch {
+    // generation failed (quota, network): fall through
+  }
+  return getExactLesson({ ...req, simple: false }, { allowGenerate: false });
+}
+
+async function getExactLesson(req: LessonRequest, opts: { allowGenerate?: boolean }): Promise<LessonResult | null> {
   const file = path.join(CACHE_DIR, lessonCachePath(req));
   try {
     return { lesson: lessonSchema.parse(JSON.parse(await readFile(file, "utf8"))), cached: true };

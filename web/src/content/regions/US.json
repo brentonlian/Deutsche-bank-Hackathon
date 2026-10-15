@@ -1,0 +1,65 @@
+{
+  "id": "US",
+  "name": "United States",
+  "flag": "🇺🇸",
+  "locale": "en-US",
+  "currency": "USD",
+  "languages": ["en", "es"],
+  "typicalMonthlyIncome": 3200,
+  "economy": {
+    "inflationPct": 3.4,
+    "policyRatePct": 3.9,
+    "worldBankCode": "USA",
+    "sources": [
+      "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "https://www.bls.gov/cpi/"
+    ],
+    "verified": "2026-10"
+  },
+  "institutions": {
+    "centralBank": "Federal Reserve (the Fed)",
+    "regulator": "CFPB, with bank regulators such as the OCC and FDIC",
+    "depositInsurance": {
+      "value": "Up to $250,000 per depositor, per insured bank, for each account ownership category (FDIC)",
+      "source": "https://www.fdic.gov/resources/deposit-insurance",
+      "verified": "2026-10"
+    },
+    "creditBureau": "Equifax, Experian and TransUnion (FICO score)",
+    "paymentRails": ["debit card", "ACH transfer", "Zelle", "Venmo / Cash App"],
+    "retirementSystem": "Social Security, plus workplace 401(k) plans and individual IRAs",
+    "unemploymentCover": 0.45,
+    "unemploymentNote": "State unemployment insurance usually replaces part of your wages, often around 40–50%, for up to about 26 weeks. Rules differ by state."
+  },
+  "products": {
+    "cashAtHome": { "id": "cash", "name": "Cash at home", "ratePct": 0, "liquidity": "instant", "risk": "medium", "insured": false, "note": "Loses value to inflation and can be lost or stolen." },
+    "everydayAccount": { "id": "checking", "name": "Checking account", "ratePct": 0, "liquidity": "instant", "risk": "none", "insured": true, "note": "For your paycheck and debit card, usually little or no interest." },
+    "savingsAccount": { "id": "hysa", "name": "High-yield savings account", "ratePct": 3.6, "liquidity": "instant", "risk": "none", "insured": true, "note": "Interest roughly follows the Fed rate; FDIC-insured at insured banks." },
+    "indexFund": { "id": "index-fund", "name": "Broad stock index fund", "ratePct": 8, "liquidity": "days", "risk": "medium", "insured": false, "note": "Owns small pieces of hundreds of companies. Value goes up and down; long-term average historically positive." },
+    "retirementProduct": { "id": "401k", "name": "401(k) with employer match", "ratePct": 8, "liquidity": "locked", "risk": "medium", "insured": false, "note": "Paid in from your paycheck before tax. Many employers add a match. Early withdrawals before age 59½ usually cost a 10% penalty plus tax." },
+    "expensiveCreditApr": 22.4,
+    "informalLenderApr": 390
+  },
+  "informalSavings": {
+    "name": "Lending circle",
+    "description": "Friends or community members each pay in a fixed amount every month and take turns receiving the pot, a tradition in many immigrant communities (tandas, susus, huis). Some nonprofits run lending circles that report payments to credit bureaus.",
+    "ratePct": 0
+  },
+  "culture": {
+    "bigLifeEvent": { "name": "A wedding", "typicalCostMonths": 6, "note": "Weddings are among the largest costs young couples face, and are often partly paid for with credit cards." },
+    "grandchildMilestone": "college graduation",
+    "familySupport": "A family member back home needs help with a medical bill",
+    "notes": [
+      "Your FICO credit score affects renting an apartment, loans, and sometimes car insurance.",
+      "Many workplaces match 401(k) contributions; not taking the match leaves part of your pay on the table."
+    ]
+  },
+  "scams": [
+    { "id": "us-toll", "channel": "sms", "sender": "+1 (802) 555-0148", "message": "Toll Services: You have an unpaid toll of $6.99. Pay today to avoid a $50 late fee: ezpass-tollpay.info", "isScam": true, "tell": "Fake unpaid-toll texts are one of the most common US scams. Toll agencies don't text links to pay; check your account on the official site." },
+    { "id": "us-irs", "channel": "call", "sender": "\"IRS Agent\"", "message": "You owe back taxes. Pay $1,800 today with gift cards or a warrant will be issued for your arrest.", "isScam": true, "tell": "The IRS contacts you by mail first and never demands gift cards or threatens immediate arrest by phone." },
+    { "id": "us-zelle", "channel": "sms", "sender": "Unknown number", "message": "Oops! I sent you $500 on Zelle by mistake. Can you please send it back to this number?", "isScam": true, "tell": "The 'mistaken payment' is often stolen or fake. Don't send money back yourself; contact your bank." },
+    { "id": "us-job", "channel": "social", "sender": "Text from 'Recruiter'", "message": "Remote job: earn $300/day rating products online. Deposit $100 in crypto to unlock your first tasks.", "isScam": true, "tell": "Real jobs never ask you to pay to start. 'Task' jobs ask for bigger and bigger deposits." },
+    { "id": "us-paycheck", "channel": "app", "sender": "Your banking app", "message": "Direct deposit received: $1,604.22 from ACME Logistics payroll.", "isScam": false, "tell": "A notification inside your own banking app, with no link or request, is normal." },
+    { "id": "us-fraud-alert", "channel": "sms", "sender": "Your bank (number on your card)", "message": "Did you attempt a $48.20 purchase at a grocery store? Reply YES or NO. We will never ask for your PIN or password.", "isScam": false, "tell": "A yes/no fraud check that asks for no codes or links is a normal bank alert. If unsure, call the number on your card." }
+  ],
+  "glossaryKeep": ["FDIC", "FICO", "401(k)", "IRA", "Roth IRA", "Social Security", "Zelle", "Venmo", "Cash App", "ACH", "IRS", "CFPB", "APR", "OCC", "Equifax", "Experian", "TransUnion"]
+}

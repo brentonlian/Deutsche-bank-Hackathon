@@ -35,6 +35,12 @@
   --line-ink: #0f1b2d;
   --line-soft: #fcefc4;
 }
+/* NYC subway orange (B/D/F/M); navy text keeps contrast above 4.5:1. */
+[data-region="US"] {
+  --line: #ff6319;
+  --line-ink: #0f1b2d;
+  --line-soft: #ffe1d3;
+}
 [data-region="MX"] {
   --line: #d6006f;
   --line-ink: #ffffff;

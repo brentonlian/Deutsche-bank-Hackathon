@@ -27,6 +27,11 @@ This file is a running log of ideas and decisions, so we can reference them in t
 | 20 | 2026-10-15 | Gemini's free tier allows only **20 requests/day per model**. The provider now falls back across models (`gemini-2.5-flash` → `gemini-2.5-flash-lite`), and the generator paces and retries | Found while pre-generating lessons. Saved lessons mean the demo never depends on quota | `web/src/lib/ai/provider.ts` |
 | 21 | 2026-10-15 | CI on GitHub Actions: lint, typecheck, unit tests, build | SDLC points in the rubric | [.github/workflows/ci.yml](../.github/workflows/ci.yml) |
 
+| 22 | 2026-10-15 | **Demo personas replace open onboarding on the home screen:** Maya (24, US, English), Ananya (42, Bengaluru, India, English), Brigitte (68, Köln, Germany, German). Each has a fixed seed so the demo can be rehearsed. "Create your own" stays at `/start` | A 10-minute demo needs a guaranteed path; three age groups, three countries, two languages | `web/src/content/personas.ts` |
+| 23 | 2026-10-15 | Added a **United States** region pack (FDIC, Fed rate 3.75–4.00%, card interest about 22.4%, payday loans, 401(k)/IRA, toll-text, IRS and Zelle scams), with NYC-subway orange as its line colour | The young-adult persona is American | `web/src/content/regions/US.json` |
+| 24 | 2026-10-15 | **6 demo lessons written by Claude** (2 per persona), grounded only in region-pack facts and checked by a test that every cited fact exists. The senior German lessons use formal "Sie", unlike the app's casual "du" | No dependency on Gemini quota during the demo. Matching how formally you address someone to their age is itself a localization point | `web/src/content/lessons`, `web/src/content/personas.test.ts` |
+| 25 | 2026-10-15 | Compare view in persona mode compares the **personas who share a topic** (scams: Ananya, India, English vs Brigitte, Germany, German) | Shows the same lesson localized for country, age and language side by side | `web/src/components/learn/LessonView.tsx` |
+
 ## Parked ideas (not in MVP, keep for roadmap slide)
 - Remittance Navigator: a migrant-focused tool for comparing home and host financial systems
 - Community-sourced region packs (a "Wikipedia for local finance" with reviewer approval)

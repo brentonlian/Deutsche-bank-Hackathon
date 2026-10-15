@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { createContext, initialState, simulate } from "@/lib/game/engine";
 import { stageVars } from "@/lib/game/vars";
+import { getPersona } from "@/content/personas";
 import { REGIONS } from "@/lib/regions";
 import { useApp } from "../AppState";
 import { ReadAloud } from "../ReadAloud";
@@ -55,6 +56,9 @@ export function Play() {
   const title = t(`stages.${stage.id}.title`, varsAtStage);
   const body = t(`stages.${stage.id}.body`, varsAtStage);
   const options = stage.options(ctx);
+  // Demo personas only link to the lessons prepared for them.
+  const persona = getPersona(profile.personaId);
+  const hasLesson = !persona || (persona.topics as readonly string[]).includes(stage.topic);
 
   return (
     <div className="grid gap-8 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-12">
@@ -86,9 +90,11 @@ export function Play() {
               key={`${showing}-${reveal}`}
               text={[title, body, ...options.map((o) => t(`stages.${stage.id}.options.${o.id}.label`, varsAtStage))].join(". ")}
             />
+            {hasLesson && (
             <Link href={`/learn/${stage.topic}`} className="inline-flex items-center gap-2 rounded-sign px-3 py-1.5 text-sm font-bold text-ink-2 underline hover:text-ink">
               <BookOpen aria-hidden="true" size={18} /> {t("game.learnWhy")}: {t(`topics.${stage.topic}`)}
             </Link>
+            )}
           </div>
 
           {stage.id === "where-to-save" && reveal === null && (

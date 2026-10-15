@@ -1,0 +1,28 @@
+{
+  "title": "Enkeltrick, falsche Polizei & Co.: So schützen Sie sich",
+  "summary": "Betrüger nehmen gezielt ältere Menschen ins Visier, per SMS, Messenger und Telefon. Die gute Nachricht: Die Maschen folgen immer denselben Mustern.",
+  "sections": [
+    {
+      "heading": "Der Enkeltrick: neue Nummer, große Eile",
+      "body": "„Hallo Mama, mein Handy ist kaputt, das ist meine neue Nummer.“ Danach kommt schnell die Bitte um eine Überweisung. Rufen Sie Ihr Kind oder Enkelkind unter der alten, bekannten Nummer an, bevor Sie irgendetwas bezahlen."
+    },
+    {
+      "heading": "Falsche Polizei am Telefon",
+      "body": "Anrufer behaupten, in Ihrer Straße seien Einbrecher unterwegs, und wollen Bargeld und Karten „in Sicherheit bringen“. Die echte Polizei holt niemals Geld oder Karten ab und ruft auch nicht von der Nummer 110 an. Legen Sie auf."
+    },
+    {
+      "heading": "Links zur Bank und kleine „Gebühren“",
+      "body": "Banken schicken keine Links, um Ihr pushTAN-Verfahren neu zu registrieren. Und DHL verlangt keine Zollgebühren per SMS-Link. Öffnen Sie solche Links nicht, sondern gehen Sie direkt in Ihre Banking-App oder rufen Sie Ihre Bank an."
+    },
+    {
+      "heading": "So sehen echte Nachrichten aus",
+      "body": "Eine Mitteilung in Ihrer eigenen Banking-App ohne Link und ohne Aufforderung ist normal. Auch die kostenlose Schufa-Datenkopie, die Sie selbst angefordert haben, ist echt; melden Sie sich dafür direkt an und nicht über einen Link in der E-Mail."
+    }
+  ],
+  "example": {
+    "title": "Brigittes Nachricht am Sonntag",
+    "body": "Brigitte bekommt eine WhatsApp: „Hallo Mama, das ist meine neue Nummer. Kannst du schnell 1.450 € für eine Rechnung überweisen?“ Statt zu zahlen, ruft sie ihren Sohn unter seiner alten Nummer an. Er sitzt gerade beim Frühstück, sein Handy ist heil, und Brigitte meldet die Nachricht."
+  },
+  "takeaway": "Wenn jemand per Nachricht oder Telefon Geld will: auflegen, selbst unter der bekannten Nummer zurückrufen und niemals Bargeld oder Karten herausgeben.",
+  "factsUsed": ["scam-de-enkeltrick", "scam-de-police", "scam-de-pushtan", "scam-de-parcel", "scam-de-salary", "scam-de-schufa"]
+}

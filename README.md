@@ -1,13 +1,23 @@
 # Rooted: Localized Financial Education (Innovate with DB 2026)
 
-Rooted teaches money skills adapted to your **country, language and stage of life**:
+Rooted teaches money skills adapted to your **country, language and stage of life**.
 
-1. **Onboarding:** country, language, age group and monthly budget. Everything stays in the browser.
+**Demo personas** (home screen):
+
+| Persona | Age, country | Language | Lessons |
+|---|---|---|---|
+| Maya | 24, United States | English | Credit and debt · Saving vs investing |
+| Ananya | 42, Bengaluru, India | English | Budgeting · Scams and fraud |
+| Brigitte | 68, Köln, Germany | German | Retirement · Scams and fraud |
+
+Each persona has fixed life events, so the demo plays the same every time.
+
+1. **Onboarding:** pick a persona, or set up your own profile at `/start` (country, language, age group, monthly budget). Everything stays in the browser.
 2. **Life Path:** a Game-of-Life-style series of 10–11 decisions drawn as a metro line. Each country's real products, rates, scams, savings groups and safety nets change the outcome. A *Scam or Legit?* mini-game appears as a life event.
 3. **Results:** your line beside the green **express line** (the optimal path). Tap any station to see the best choice from where you stood, show the what-if on the chart, or replay from there.
 4. **Lessons:** 13 topics written by AI **only from vetted country facts**, with sources. *Compare countries* shows the same lesson for Germany, India and Mexico side by side.
 
-Demo countries: Germany (Deutsch/English), India (हिन्दी/English) and Mexico (Español/English). Any of the four languages works with any country.
+Countries: United States, India, Germany and Mexico. Languages: English, Deutsch, Español and हिन्दी; any language works with any country.
 
 ## Run it
 

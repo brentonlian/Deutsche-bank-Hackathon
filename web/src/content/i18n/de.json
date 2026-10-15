@@ -126,7 +126,7 @@
     "title": "Lektionen für {country}",
     "intro": "Kurze Lektionen, geschrieben für dein Land, deine Sprache und deine Lebensphase, basierend auf geprüften Fakten.",
     "compare": "Länder vergleichen",
-    "compareTitle": "Dieselbe Lektion in drei Ländern",
+    "compareTitle": "Dieselbe Lektion in verschiedenen Ländern",
     "loading": "Deine Lektion wird geschrieben…",
     "error": "Diese Lektion konnte nicht geladen werden. Versuche es erneut oder lies eine gespeicherte Version.",
     "retry": "Erneut versuchen",
@@ -520,6 +520,30 @@
           "hint": "Kostenlos, aber die Familie könnte später streiten."
         }
       }
+    }
+  },
+  "home": {
+    "title": "Drei Leben, drei Länder.",
+    "intro": "Alle spielen denselben Lebensweg, aber nach den Regeln ihres eigenen Landes: Banken, Preise, Absicherung und Betrugsmaschen.",
+    "play": "Als {name} spielen",
+    "lessons": "Lektionen: {topics}",
+    "custom": "Oder eigenes Profil anlegen"
+  },
+  "personas": {
+    "maya": {
+      "name": "Maya",
+      "where": "Columbus, Ohio, USA",
+      "about": "24, erster Vollzeitjob in der Logistik. Hat Schulden auf der Kreditkarte und einen neuen 401(k) bei der Arbeit."
+    },
+    "ananya": {
+      "name": "Ananya",
+      "where": "Bengaluru, Indien",
+      "about": "42, arbeitet in der IT, zwei Kinder in der Schule. Bezahlt fast alles mit UPI."
+    },
+    "brigitte": {
+      "name": "Brigitte",
+      "where": "Köln, Deutschland",
+      "about": "68, pensionierte Lehrerin, lebt von Rente und Erspartem. Spielt auf Deutsch."
     }
   }
 }

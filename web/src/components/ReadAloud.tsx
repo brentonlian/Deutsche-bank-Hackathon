@@ -2,7 +2,7 @@
 
 import { Volume2, VolumeX } from "lucide-react";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { LANGUAGES } from "@/lib/i18n";
+import { LANGUAGES, type Lang } from "@/lib/i18n";
 import { useApp } from "./AppState";
 
 const noop = () => () => {};
@@ -12,8 +12,9 @@ const speechSupported = () => "speechSynthesis" in window;
  * Reads text with the browser's own speech engine in the current language. No audio leaves the device.
  * Give it a `key` tied to the text so a new screen starts silent.
  */
-export function ReadAloud({ text }: { text: string }) {
-  const { lang, region, t } = useApp();
+export function ReadAloud({ text, lang: textLang }: { text: string; lang?: Lang }) {
+  const { lang: uiLang, region, t } = useApp();
+  const lang = textLang ?? uiLang;
   const supported = useSyncExternalStore(noop, speechSupported, () => false);
   const [speaking, setSpeaking] = useState(false);
 
@@ -32,7 +33,7 @@ export function ReadAloud({ text }: { text: string }) {
       return;
     }
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = region ? `${LANGUAGES[lang].bcp47}-${region.id}` : LANGUAGES[lang].bcp47;
+    utterance.lang = region && !textLang ? `${LANGUAGES[lang].bcp47}-${region.id}` : LANGUAGES[lang].bcp47;
     utterance.rate = 0.95;
     utterance.onend = () => setSpeaking(false);
     utterance.onerror = () => setSpeaking(false);

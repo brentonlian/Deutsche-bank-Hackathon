@@ -1,0 +1,24 @@
+{
+  "title": "A family budget that survives school fees, weddings and family needs",
+  "summary": "With children, parents and big family events, a household budget needs more than a spending limit. It needs a pot for every big cost, planned before the month starts.",
+  "sections": [
+    {
+      "heading": "Start with what's fixed",
+      "body": "List the costs that come every month: rent or EMI, school fees, groceries, bills. UPI makes paying effortless, which also makes overspending effortless. Look through your UPI history once a month to see where the money really went."
+    },
+    {
+      "heading": "Give every big cost its own pot",
+      "body": "Family weddings are major expenses and a common reason households take on debt. Save for them monthly in a recurring deposit, which earns about 6.5% and is protected up to ₹5 lakh by DICGC. With inflation around 5.2%, money left in a savings account at about 2.7% slowly loses value."
+    },
+    {
+      "heading": "Family support and the long run",
+      "body": "Supporting parents is a widely shared expectation, so give it its own line in the budget instead of taking it from savings each time. For goals ten or more years away, a Nifty 50 index fund SIP has historically averaged about 11% a year with ups and downs, and PPF pays about 7.1% with a 15-year lock-in. Avoid credit card debt at about 42% and money lenders at 60% or more."
+    }
+  ],
+  "example": {
+    "title": "Ananya's month in Bengaluru",
+    "body": "Ananya's household takes home ₹95,000. Rent, school fees and bills take ₹50,000, daily spending ₹25,000, and ₹5,000 goes to her parents. The last ₹15,000 is split before the month starts: ₹6,000 into a recurring deposit for a cousin's wedding next year, ₹6,000 into a Nifty 50 SIP for her children's college, and ₹3,000 into PPF."
+  },
+  "takeaway": "Decide where every rupee goes before the month starts, and give each big family cost its own pot.",
+  "factsUsed": ["payment-rails", "big-life-event", "savings-account", "deposit-insurance", "inflation", "everyday-account", "culture-1", "index-fund", "retirement-product", "expensive-credit", "informal-lender", "currency"]
+}

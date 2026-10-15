@@ -1,0 +1,24 @@
+{
+  "title": "Savings account or index fund? Use both, for different jobs",
+  "summary": "Money you might need soon belongs somewhere safe and instant. Money you won't touch for years can be invested. Your 401(k) match comes first.",
+  "sections": [
+    {
+      "heading": "Money for the next few years: savings",
+      "body": "A high-yield savings account pays about 3.6% a year, you can take money out instantly, and it is FDIC-insured up to $250,000 per depositor at insured banks. With inflation around 3.4%, that roughly keeps pace with prices. A checking account pays little or nothing, so keep only spending money there."
+    },
+    {
+      "heading": "Money for the long run: index funds",
+      "body": "A broad stock index fund owns small pieces of hundreds of companies. Its value goes up and down, sometimes a lot, but the long-term average has historically been positive, about 8% a year in our figures. Only invest money you won't need for many years."
+    },
+    {
+      "heading": "Don't skip the 401(k) match",
+      "body": "A 401(k) is paid in from your paycheck before tax, and many employers add a match. Not taking the match leaves part of your pay on the table. Withdrawing before age 59½ usually costs a 10% penalty plus tax, so treat it as retirement money. Individual IRAs are another option on top of Social Security."
+    }
+  ],
+  "example": {
+    "title": "Maya's three pots",
+    "body": "Maya takes home $3,200 a month and has about $450 left after essentials. She first builds a cushion of three months' expenses in a high-yield savings account. At work, she raises her 401(k) contribution just enough to get her employer's full match. Once the cushion is full, she sends $150 a month into a broad index fund and doesn't check it every day."
+  },
+  "takeaway": "Cushion first, match second, invest the rest for the long run: each pot has its own job.",
+  "factsUsed": ["savings-account", "deposit-insurance", "inflation", "everyday-account", "index-fund", "retirement-product", "culture-2", "retirement-system"]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Credit scores, card balances and the real cost of borrowing",
+  "summary": "In the US, your FICO score follows you into apartments and loans, and a credit card balance costs about 22.4% a year. Here is how to make credit work for you instead of against you.",
+  "sections": [
+    {
+      "heading": "What your credit score does",
+      "body": "Your FICO score is built from your history at three credit bureaus: Equifax, Experian and TransUnion. Landlords, lenders and sometimes car insurers look at it. You build it slowly by paying every bill on time, month after month."
+    },
+    {
+      "heading": "Why a card balance is so expensive",
+      "body": "Cards that carry a balance cost about 22.4% a year. Paying only the minimum keeps most of the balance growing. If you can, pay the full statement every month; if you can't, pay as much as you can and stop adding new spending until it's gone."
+    },
+    {
+      "heading": "Borrowing to avoid, and a safer way to build credit",
+      "body": "Payday lenders can charge about 390% a year or more, so a small loan can become hard to escape. Ask your bank about options first. If you're new to credit, some nonprofit lending circles report your on-time payments to the credit bureaus, which helps your score."
+    }
+  ],
+  "example": {
+    "title": "Maya's $1,800 balance",
+    "body": "Maya owes $1,800 on her card. At about 22.4% a year, carrying it costs her roughly $400 in interest over a year. She moves $150 a month from her budget to the card and stops using it for now. In a little over a year the balance is gone, and that $150 starts going into savings instead."
+  },
+  "takeaway": "Pay your card in full whenever you can: a balance at 22.4% grows faster than almost any savings can earn.",
+  "factsUsed": ["credit-bureau", "culture-1", "expensive-credit", "informal-lender", "informal-savings", "currency"]
+}

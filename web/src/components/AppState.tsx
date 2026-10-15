@@ -14,6 +14,8 @@ export interface Profile {
   age: number;
   income: number;
   free: number;
+  /** Set when playing one of the hardcoded demo personas. */
+  personaId?: string;
 }
 
 export interface GameSave {

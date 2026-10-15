@@ -1,0 +1,30 @@
+{
+  "title": "Spotting Common Scams",
+  "summary": "Learn to identify and avoid common scams that target people with fake messages about tolls, taxes, or mistaken payments.",
+  "sections": [
+    {
+      "heading": "Fake Toll and Payment Scams",
+      "body": "Be wary of texts claiming you owe money for tolls, like the fake 'Toll Services' message asking for payment via a link. Real toll agencies usually don't send payment requests through text links. Also, if someone texts claiming they sent you money on Zelle by mistake, don't just send it back. Contact your bank directly instead."
+    },
+    {
+      "heading": "IRS and Job Scams",
+      "body": "The IRS will always contact you by mail first and never demands payment via gift cards or threatens immediate arrest over the phone. Similarly, legitimate remote jobs won't ask you to pay money upfront to start working or to unlock tasks. If a job asks for a deposit, it's likely a scam."
+    },
+    {
+      "heading": "Protecting Your Money",
+      "body": "Scammers try to trick you into sending money or giving up personal information. Always check messages carefully, especially those with links or urgent payment demands. For any suspicious contact, it's best to contact the company or agency directly using official contact information, not what's provided in the message."
+    }
+  ],
+  "example": {
+    "title": "The Fake Job Offer",
+    "body": "Maria, who just started her first job, received a social media message about a remote job earning $300 a day rating products. The message said she needed to deposit $100 in crypto to unlock her first tasks. Maria remembered her financial literacy class and knew that real jobs don't ask for money to start. She ignored the message and continued her job search on legitimate platforms."
+  },
+  "takeaway": "Be skeptical of unexpected messages asking for money or personal information, and always verify with the official source.",
+  "factsUsed": [
+    "scam-us-toll",
+    "scam-us-zelle",
+    "scam-us-irs",
+    "scam-us-job",
+    "payment-rails"
+  ]
+}

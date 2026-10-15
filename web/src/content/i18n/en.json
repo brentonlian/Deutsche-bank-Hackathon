@@ -126,7 +126,7 @@
     "title": "Lessons for {country}",
     "intro": "Short lessons written for your country, language and stage of life, using only checked facts.",
     "compare": "Compare countries",
-    "compareTitle": "The same lesson in three countries",
+    "compareTitle": "The same lesson in different countries",
     "loading": "Writing your lesson…",
     "error": "This lesson could not be loaded. Try again, or read a saved version.",
     "retry": "Try again",
@@ -520,6 +520,30 @@
           "hint": "Free, but family may argue later."
         }
       }
+    }
+  },
+  "home": {
+    "title": "Three lives, three countries.",
+    "intro": "Each person plays the same Life Path, but by their own country's rules: its banks, prices, safety nets and scams.",
+    "play": "Play as {name}",
+    "lessons": "Lessons: {topics}",
+    "custom": "Or set up your own profile"
+  },
+  "personas": {
+    "maya": {
+      "name": "Maya",
+      "where": "Columbus, Ohio, United States",
+      "about": "24, first full-time job in logistics. Has a credit card balance and a new 401(k) at work."
+    },
+    "ananya": {
+      "name": "Ananya",
+      "where": "Bengaluru, India",
+      "about": "42, works in IT, two children in school. Pays for almost everything with UPI."
+    },
+    "brigitte": {
+      "name": "Brigitte",
+      "where": "Köln, Germany",
+      "about": "68, retired teacher living on her pension and savings. Plays in German."
     }
   }
 }
