@@ -35,6 +35,8 @@ export const regionPackSchema = z.object({
   locale: z.string(), // BCP 47 for number/currency formatting
   currency: z.string().length(3),
   languages: z.array(z.string()).min(1),
+  /** Cities offered in onboarding (proper nouns, not translated). */
+  cities: z.array(z.string()).min(1),
   /** Typical monthly take-home pay for a young adult, used as the onboarding default. */
   typicalMonthlyIncome: z.number().positive(),
   economy: z.object({

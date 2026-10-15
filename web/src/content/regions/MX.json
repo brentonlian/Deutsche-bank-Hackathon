@@ -4,7 +4,16 @@
   "flag": "🇲🇽",
   "locale": "es-MX",
   "currency": "MXN",
-  "languages": ["es", "en"],
+  "languages": [
+    "es",
+    "en"
+  ],
+  "cities": [
+    "Ciudad de México",
+    "Guadalajara",
+    "Monterrey",
+    "Puebla"
+  ],
   "typicalMonthlyIncome": 12000,
   "economy": {
     "inflationPct": 3.4,
@@ -25,17 +34,61 @@
       "verified": "2026-10"
     },
     "creditBureau": "Buró de Crédito / Círculo de Crédito",
-    "paymentRails": ["SPEI", "CoDi / DiMo", "OXXO cash deposits"],
+    "paymentRails": [
+      "SPEI",
+      "CoDi / DiMo",
+      "OXXO cash deposits"
+    ],
     "retirementSystem": "Afore individual accounts, with voluntary contributions",
     "unemploymentCover": 0,
     "unemploymentNote": "There is no general unemployment insurance. You can make a partial unemployment withdrawal from your Afore, but it reduces your retirement savings."
   },
   "products": {
-    "cashAtHome": { "id": "cash", "name": "Cash at home (bajo el colchón)", "ratePct": 0, "liquidity": "instant", "risk": "medium", "insured": false, "note": "Loses value to inflation and can be lost or stolen." },
-    "everydayAccount": { "id": "debito", "name": "Debit account", "ratePct": 0, "liquidity": "instant", "risk": "none", "insured": true, "note": "For payments and SPEI transfers, usually no interest." },
-    "savingsAccount": { "id": "cetes", "name": "CETES (via cetesdirecto)", "ratePct": 6.3, "liquidity": "days", "risk": "none", "insured": true, "note": "Government treasury bills you can buy from 100 pesos; backed by the federal government." },
-    "indexFund": { "id": "index-fund", "name": "Index fund / ETF", "ratePct": 10, "liquidity": "days", "risk": "medium", "insured": false, "note": "Broad index fund bought monthly. Value goes up and down; long-term average historically positive." },
-    "retirementProduct": { "id": "afore-voluntary", "name": "Afore voluntary contributions", "ratePct": 8, "liquidity": "locked", "risk": "low", "insured": false, "note": "Extra savings into your Afore; may give tax deductions." },
+    "cashAtHome": {
+      "id": "cash",
+      "name": "Cash at home (bajo el colchón)",
+      "ratePct": 0,
+      "liquidity": "instant",
+      "risk": "medium",
+      "insured": false,
+      "note": "Loses value to inflation and can be lost or stolen."
+    },
+    "everydayAccount": {
+      "id": "debito",
+      "name": "Debit account",
+      "ratePct": 0,
+      "liquidity": "instant",
+      "risk": "none",
+      "insured": true,
+      "note": "For payments and SPEI transfers, usually no interest."
+    },
+    "savingsAccount": {
+      "id": "cetes",
+      "name": "CETES (via cetesdirecto)",
+      "ratePct": 6.3,
+      "liquidity": "days",
+      "risk": "none",
+      "insured": true,
+      "note": "Government treasury bills you can buy from 100 pesos; backed by the federal government."
+    },
+    "indexFund": {
+      "id": "index-fund",
+      "name": "Index fund / ETF",
+      "ratePct": 10,
+      "liquidity": "days",
+      "risk": "medium",
+      "insured": false,
+      "note": "Broad index fund bought monthly. Value goes up and down; long-term average historically positive."
+    },
+    "retirementProduct": {
+      "id": "afore-voluntary",
+      "name": "Afore voluntary contributions",
+      "ratePct": 8,
+      "liquidity": "locked",
+      "risk": "low",
+      "insured": false,
+      "note": "Extra savings into your Afore; may give tax deductions."
+    },
     "expensiveCreditApr": 65,
     "informalLenderApr": 120
   },
@@ -45,7 +98,11 @@
     "ratePct": 0
   },
   "culture": {
-    "bigLifeEvent": { "name": "Quinceañera or wedding", "typicalCostMonths": 6, "note": "Big celebrations are important family moments and are often paid for with credit." },
+    "bigLifeEvent": {
+      "name": "Quinceañera or wedding",
+      "typicalCostMonths": 6,
+      "note": "Big celebrations are important family moments and are often paid for with credit."
+    },
     "grandchildMilestone": "quinceañera",
     "familySupport": "A cousin abroad lost their job and family back home needs support",
     "notes": [
@@ -54,12 +111,70 @@
     ]
   },
   "scams": [
-    { "id": "mx-sat", "channel": "email", "sender": "SAT Notificaciones", "message": "You have a pending tax debt. Download your invoice to avoid seizure: sat-gob-mx.info/factura.zip", "isScam": true, "tell": "SAT uses sat.gob.mx and the Buzón Tributario, never .zip downloads from other domains." },
-    { "id": "mx-premio", "channel": "social", "sender": "WhatsApp: 'Bodega Promociones'", "message": "Congratulations! You won a 10,000 peso gift card. Pay 299 pesos shipping to claim it.", "isScam": true, "tell": "Prizes you never entered for, plus a fee to claim them, are a scam." },
-    { "id": "mx-extorsion", "channel": "call", "sender": "Unknown number", "message": "We have your cousin. Deposit 15,000 pesos at OXXO now and do not hang up.", "isScam": true, "tell": "Virtual kidnapping (extorsión telefónica): they keep you on the line so you cannot check. Hang up and call your relative. Report to 089." },
-    { "id": "mx-token", "channel": "call", "sender": "'Your bank, fraud department'", "message": "We detected a suspicious charge. To cancel it, read me your NIP and the code from your token.", "isScam": true, "tell": "Banks never ask for your NIP or token codes. Hang up and call the number on your card." },
-    { "id": "mx-spei", "channel": "app", "sender": "Your banking app", "message": "SPEI transfer received: 1,200 pesos from Ana López, concept 'tanda week 3'.", "isScam": false, "tell": "A transfer notification inside your own app, with no request, is normal." },
-    { "id": "mx-condusef", "channel": "email", "sender": "CONDUSEF (condusef.gob.mx)", "message": "Your complaint folio 2026-04817 has been received and assigned to an advisor.", "isScam": false, "tell": "A reply to a complaint you filed, from the official .gob.mx domain, with no payment request." }
+    {
+      "id": "mx-sat",
+      "channel": "email",
+      "sender": "SAT Notificaciones",
+      "message": "You have a pending tax debt. Download your invoice to avoid seizure: sat-gob-mx.info/factura.zip",
+      "isScam": true,
+      "tell": "SAT uses sat.gob.mx and the Buzón Tributario, never .zip downloads from other domains."
+    },
+    {
+      "id": "mx-premio",
+      "channel": "social",
+      "sender": "WhatsApp: 'Bodega Promociones'",
+      "message": "Congratulations! You won a 10,000 peso gift card. Pay 299 pesos shipping to claim it.",
+      "isScam": true,
+      "tell": "Prizes you never entered for, plus a fee to claim them, are a scam."
+    },
+    {
+      "id": "mx-extorsion",
+      "channel": "call",
+      "sender": "Unknown number",
+      "message": "We have your cousin. Deposit 15,000 pesos at OXXO now and do not hang up.",
+      "isScam": true,
+      "tell": "Virtual kidnapping (extorsión telefónica): they keep you on the line so you cannot check. Hang up and call your relative. Report to 089."
+    },
+    {
+      "id": "mx-token",
+      "channel": "call",
+      "sender": "'Your bank, fraud department'",
+      "message": "We detected a suspicious charge. To cancel it, read me your NIP and the code from your token.",
+      "isScam": true,
+      "tell": "Banks never ask for your NIP or token codes. Hang up and call the number on your card."
+    },
+    {
+      "id": "mx-spei",
+      "channel": "app",
+      "sender": "Your banking app",
+      "message": "SPEI transfer received: 1,200 pesos from Ana López, concept 'tanda week 3'.",
+      "isScam": false,
+      "tell": "A transfer notification inside your own app, with no request, is normal."
+    },
+    {
+      "id": "mx-condusef",
+      "channel": "email",
+      "sender": "CONDUSEF (condusef.gob.mx)",
+      "message": "Your complaint folio 2026-04817 has been received and assigned to an advisor.",
+      "isScam": false,
+      "tell": "A reply to a complaint you filed, from the official .gob.mx domain, with no payment request."
+    }
   ],
-  "glossaryKeep": ["SPEI", "CoDi", "DiMo", "OXXO", "CETES", "cetesdirecto", "Afore", "SAT", "CONDUSEF", "IPAB", "UDIs", "NIP", "Buró de Crédito", "tanda", "CAT"]
+  "glossaryKeep": [
+    "SPEI",
+    "CoDi",
+    "DiMo",
+    "OXXO",
+    "CETES",
+    "cetesdirecto",
+    "Afore",
+    "SAT",
+    "CONDUSEF",
+    "IPAB",
+    "UDIs",
+    "NIP",
+    "Buró de Crédito",
+    "tanda",
+    "CAT"
+  ]
 }

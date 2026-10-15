@@ -18,7 +18,7 @@ export function PersonaPicker() {
   const router = useRouter();
 
   function start(p: Persona) {
-    app.setProfile({ regionId: p.regionId, lang: p.lang, group: p.group, age: p.age, income: p.income, free: p.free, personaId: p.id });
+    app.setProfile({ regionId: p.regionId, lang: p.lang, group: p.group, age: p.age, income: p.income, free: p.free, city: p.city, personaId: p.id });
     app.setGame({ seed: p.seed, choices: [] });
     router.push("/play");
   }
@@ -64,7 +64,7 @@ export function PersonaPicker() {
         })}
       </ol>
 
-      <Link href="/start" className="mt-8 inline-block font-bold text-ink-2 underline hover:text-ink">
+      <Link href="/" className="mt-8 inline-block font-bold text-ink-2 underline hover:text-ink">
         {t("home.custom")}
       </Link>
     </div>

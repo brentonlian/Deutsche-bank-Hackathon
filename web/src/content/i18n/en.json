@@ -53,7 +53,8 @@
     "back": "Back",
     "next": "Next",
     "start": "Start my Life Path",
-    "privacy": "Nothing you enter leaves this browser."
+    "privacy": "Nothing you enter leaves this browser.",
+    "cityLabel": "City"
   },
   "game": {
     "stationOf": "Station {current} of {total}",

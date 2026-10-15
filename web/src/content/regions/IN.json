@@ -4,7 +4,17 @@
   "flag": "🇮🇳",
   "locale": "en-IN",
   "currency": "INR",
-  "languages": ["hi", "en"],
+  "languages": [
+    "hi",
+    "en"
+  ],
+  "cities": [
+    "Bengaluru",
+    "Mumbai",
+    "Delhi",
+    "Chennai",
+    "Hyderabad"
+  ],
   "typicalMonthlyIncome": 30000,
   "economy": {
     "inflationPct": 5.2,
@@ -25,17 +35,62 @@
       "verified": "2026-10"
     },
     "creditBureau": "CIBIL (TransUnion CIBIL)",
-    "paymentRails": ["UPI", "IMPS", "NEFT", "RuPay"],
+    "paymentRails": [
+      "UPI",
+      "IMPS",
+      "NEFT",
+      "RuPay"
+    ],
     "retirementSystem": "EPF for salaried workers, plus NPS and PPF",
     "unemploymentCover": 0,
     "unemploymentNote": "Most workers have no general unemployment benefit, so savings and family are the main safety net. Some insured workers can claim limited ESIC support."
   },
   "products": {
-    "cashAtHome": { "id": "cash", "name": "Cash at home", "ratePct": 0, "liquidity": "instant", "risk": "medium", "insured": false, "note": "Loses value to inflation and can be lost or stolen." },
-    "everydayAccount": { "id": "savings-ac", "name": "Bank savings account", "ratePct": 2.7, "liquidity": "instant", "risk": "none", "insured": true, "note": "Linked to UPI for daily payments; low interest." },
-    "savingsAccount": { "id": "recurring-deposit", "name": "Recurring deposit / FD", "ratePct": 6.5, "liquidity": "days", "risk": "none", "insured": true, "note": "Fixed monthly deposit at a bank; protected up to ₹5 lakh by DICGC." },
-    "indexFund": { "id": "nifty-sip", "name": "Nifty 50 index fund SIP", "ratePct": 11, "liquidity": "days", "risk": "medium", "insured": false, "note": "Systematic Investment Plan into an index fund. Value goes up and down; long-term average historically positive." },
-    "retirementProduct": { "id": "ppf", "name": "PPF (Public Provident Fund)", "ratePct": 7.1, "liquidity": "locked", "risk": "none", "insured": true, "note": "Government-backed, 15-year lock-in, tax benefits." },
+    "cashAtHome": {
+      "id": "cash",
+      "name": "Cash at home",
+      "ratePct": 0,
+      "liquidity": "instant",
+      "risk": "medium",
+      "insured": false,
+      "note": "Loses value to inflation and can be lost or stolen."
+    },
+    "everydayAccount": {
+      "id": "savings-ac",
+      "name": "Bank savings account",
+      "ratePct": 2.7,
+      "liquidity": "instant",
+      "risk": "none",
+      "insured": true,
+      "note": "Linked to UPI for daily payments; low interest."
+    },
+    "savingsAccount": {
+      "id": "recurring-deposit",
+      "name": "Recurring deposit / FD",
+      "ratePct": 6.5,
+      "liquidity": "days",
+      "risk": "none",
+      "insured": true,
+      "note": "Fixed monthly deposit at a bank; protected up to ₹5 lakh by DICGC."
+    },
+    "indexFund": {
+      "id": "nifty-sip",
+      "name": "Nifty 50 index fund SIP",
+      "ratePct": 11,
+      "liquidity": "days",
+      "risk": "medium",
+      "insured": false,
+      "note": "Systematic Investment Plan into an index fund. Value goes up and down; long-term average historically positive."
+    },
+    "retirementProduct": {
+      "id": "ppf",
+      "name": "PPF (Public Provident Fund)",
+      "ratePct": 7.1,
+      "liquidity": "locked",
+      "risk": "none",
+      "insured": true,
+      "note": "Government-backed, 15-year lock-in, tax benefits."
+    },
     "expensiveCreditApr": 42,
     "informalLenderApr": 60
   },
@@ -45,7 +100,11 @@
     "ratePct": 5
   },
   "culture": {
-    "bigLifeEvent": { "name": "Family wedding", "typicalCostMonths": 12, "note": "Weddings are major family expenses and a common reason households take on debt." },
+    "bigLifeEvent": {
+      "name": "Family wedding",
+      "typicalCostMonths": 12,
+      "note": "Weddings are major family expenses and a common reason households take on debt."
+    },
     "grandchildMilestone": "wedding",
     "familySupport": "Your parents need money for a sibling's education",
     "notes": [
@@ -54,12 +113,70 @@
     ]
   },
   "scams": [
-    { "id": "in-upi-collect", "channel": "app", "sender": "UPI request from 'OLX Buyer'", "message": "Collect request ₹4,999. Enter your UPI PIN to RECEIVE payment for your sofa.", "isScam": true, "tell": "You never enter your UPI PIN to receive money. A PIN only ever sends money." },
-    { "id": "in-kyc", "channel": "sms", "sender": "VM-SBIBNK", "message": "Dear customer, your account will be BLOCKED today. Update PAN KYC here: sbi-kyc-update.in", "isScam": true, "tell": "Urgency plus a lookalike link. Banks ask you to visit the branch or official app for KYC." },
-    { "id": "in-digital-arrest", "channel": "call", "sender": "Video call: 'CBI Officer'", "message": "A parcel with drugs was booked on your Aadhaar. You are under digital arrest. Transfer funds for verification.", "isScam": true, "tell": "'Digital arrest' does not exist in Indian law. Police never ask you to transfer money. Report at cybercrime.gov.in or call 1930." },
-    { "id": "in-job", "channel": "social", "sender": "WhatsApp: 'HR Team'", "message": "Earn ₹5,000/day liking YouTube videos! Pay ₹999 registration to start.", "isScam": true, "tell": "Paying to get a job is a red flag. Task scams start small and then ask for bigger deposits." },
-    { "id": "in-upi-debit", "channel": "sms", "sender": "AD-HDFCBK", "message": "₹250 debited from A/c XX1234 to Swiggy via UPI. Not you? Call the number on your card.", "isScam": false, "tell": "A debit alert for a payment you made, with no link, is normal. If unsure, call the number on your card." },
-    { "id": "in-otp", "channel": "sms", "sender": "AX-ICICIB", "message": "OTP 482913 for your login on iMobile. Do NOT share it with anyone, including bank staff.", "isScam": false, "tell": "An OTP you requested yourself is legitimate. The message itself warns you not to share it." }
+    {
+      "id": "in-upi-collect",
+      "channel": "app",
+      "sender": "UPI request from 'OLX Buyer'",
+      "message": "Collect request ₹4,999. Enter your UPI PIN to RECEIVE payment for your sofa.",
+      "isScam": true,
+      "tell": "You never enter your UPI PIN to receive money. A PIN only ever sends money."
+    },
+    {
+      "id": "in-kyc",
+      "channel": "sms",
+      "sender": "VM-SBIBNK",
+      "message": "Dear customer, your account will be BLOCKED today. Update PAN KYC here: sbi-kyc-update.in",
+      "isScam": true,
+      "tell": "Urgency plus a lookalike link. Banks ask you to visit the branch or official app for KYC."
+    },
+    {
+      "id": "in-digital-arrest",
+      "channel": "call",
+      "sender": "Video call: 'CBI Officer'",
+      "message": "A parcel with drugs was booked on your Aadhaar. You are under digital arrest. Transfer funds for verification.",
+      "isScam": true,
+      "tell": "'Digital arrest' does not exist in Indian law. Police never ask you to transfer money. Report at cybercrime.gov.in or call 1930."
+    },
+    {
+      "id": "in-job",
+      "channel": "social",
+      "sender": "WhatsApp: 'HR Team'",
+      "message": "Earn ₹5,000/day liking YouTube videos! Pay ₹999 registration to start.",
+      "isScam": true,
+      "tell": "Paying to get a job is a red flag. Task scams start small and then ask for bigger deposits."
+    },
+    {
+      "id": "in-upi-debit",
+      "channel": "sms",
+      "sender": "AD-HDFCBK",
+      "message": "₹250 debited from A/c XX1234 to Swiggy via UPI. Not you? Call the number on your card.",
+      "isScam": false,
+      "tell": "A debit alert for a payment you made, with no link, is normal. If unsure, call the number on your card."
+    },
+    {
+      "id": "in-otp",
+      "channel": "sms",
+      "sender": "AX-ICICIB",
+      "message": "OTP 482913 for your login on iMobile. Do NOT share it with anyone, including bank staff.",
+      "isScam": false,
+      "tell": "An OTP you requested yourself is legitimate. The message itself warns you not to share it."
+    }
   ],
-  "glossaryKeep": ["UPI", "SIP", "PPF", "NPS", "EPF", "CIBIL", "KYC", "Aadhaar", "PAN", "RBI", "SEBI", "DICGC", "Nifty 50", "OTP", "lakh"]
+  "glossaryKeep": [
+    "UPI",
+    "SIP",
+    "PPF",
+    "NPS",
+    "EPF",
+    "CIBIL",
+    "KYC",
+    "Aadhaar",
+    "PAN",
+    "RBI",
+    "SEBI",
+    "DICGC",
+    "Nifty 50",
+    "OTP",
+    "lakh"
+  ]
 }

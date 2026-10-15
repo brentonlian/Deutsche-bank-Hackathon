@@ -53,7 +53,8 @@
     "back": "Zurück",
     "next": "Weiter",
     "start": "Meinen Lebensweg starten",
-    "privacy": "Nichts, was du eingibst, verlässt diesen Browser."
+    "privacy": "Nichts, was du eingibst, verlässt diesen Browser.",
+    "cityLabel": "Stadt"
   },
   "game": {
     "stationOf": "Station {current} von {total}",

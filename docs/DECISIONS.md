@@ -32,6 +32,8 @@ This file is a running log of ideas and decisions, so we can reference them in t
 | 24 | 2026-10-15 | **6 demo lessons written by Claude** (2 per persona), grounded only in region-pack facts and checked by a test that every cited fact exists. The senior German lessons use formal "Sie", unlike the app's casual "du" | No dependency on Gemini quota during the demo. Matching how formally you address someone to their age is itself a localization point | `web/src/content/lessons`, `web/src/content/personas.test.ts` |
 | 25 | 2026-10-15 | Compare view in persona mode compares the **personas who share a topic** (scams: Ananya, India, English vs Brigitte, Germany, German) | Shows the same lesson localized for country, age and language side by side | `web/src/components/learn/LessonView.tsx` |
 
+| 26 | 2026-10-15 | **Full onboarding is the home screen again**, now with a city step. Choosing United States + young adult, India + middle age, or Germany + senior quietly loads the matching persona: fixed life events, pre-filled money and the 2 saved lessons. Any other combination still works with random events and the nearest saved lesson. The one-tap persona page moved to `/demo` as a backup | The demo should look like the full product while staying predictable | `web/src/components/Onboarding.tsx`, `web/src/lib/lessons/server.ts` |
+
 ## Parked ideas (not in MVP, keep for roadmap slide)
 - Remittance Navigator: a migrant-focused tool for comparing home and host financial systems
 - Community-sourced region packs (a "Wikipedia for local finance" with reviewer approval)

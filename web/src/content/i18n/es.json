@@ -53,7 +53,8 @@
     "back": "Atrás",
     "next": "Siguiente",
     "start": "Empezar mi Camino de vida",
-    "privacy": "Nada de lo que ingreses sale de este navegador."
+    "privacy": "Nada de lo que ingreses sale de este navegador.",
+    "cityLabel": "Ciudad"
   },
   "game": {
     "stationOf": "Estación {current} de {total}",

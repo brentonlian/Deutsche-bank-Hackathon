@@ -3,6 +3,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { PERSONAS } from "@/content/personas";
 import { AGE_GROUPS } from "@/lib/game/engine";
 import type { AgeGroup } from "@/lib/game/types";
 import { LANGUAGES, LANG_IDS, localizeRegion, translate, type Lang } from "@/lib/i18n";
@@ -22,6 +23,7 @@ export function Onboarding() {
   const router = useRouter();
   const [step, setStep] = useState(0);
   const [regionId, setRegionId] = useState<RegionId | null>(null);
+  const [city, setCity] = useState<string | null>(null);
   const [lang, setLangLocal] = useState<Lang | null>(null);
   const [group, setGroup] = useState<AgeGroup | null>(null);
   const [ageText, setAgeText] = useState("23");
@@ -48,15 +50,26 @@ export function Onboarding() {
       maximumFractionDigits: 0,
     }).format(v);
 
-  const canNext = [regionId !== null, lang !== null, group !== null, Number(income) > 0][step];
+  const canNext = [regionId !== null && city !== null, lang !== null, group !== null, Number(income) > 0][step];
+  // Choices that match a prepared demo persona reuse its fixed life events and saved lessons.
+  const persona = PERSONAS.find((p) => p.regionId === regionId && p.group === group);
 
   function start() {
     if (!regionId || !lang || !group) return;
     const incomeValue = Number(income);
     const { min, max, defaultAge } = AGE_GROUPS[group];
     const age = Math.min(max, Math.max(min, Number(ageText) || defaultAge));
-    app.setProfile({ regionId, lang, group, age, income: incomeValue, free: Math.max(0, Number(free) || 0) });
-    app.setGame({ seed: Math.floor(Math.random() * 2 ** 31), choices: [] });
+    app.setProfile({
+      regionId,
+      lang,
+      group,
+      age,
+      income: incomeValue,
+      free: Math.max(0, Number(free) || 0),
+      city: city ?? undefined,
+      personaId: persona?.id,
+    });
+    app.setGame({ seed: persona?.seed ?? Math.floor(Math.random() * 2 ** 31), choices: [] });
     router.push("/play");
   }
 
@@ -86,6 +99,7 @@ export function Onboarding() {
                     aria-checked={regionId === id}
                     onClick={() => {
                       setRegionId(id);
+                      setCity(null);
                       setIncome(String(REGIONS[id].typicalMonthlyIncome));
                     }}
                     className={choiceClass(regionId === id)}
@@ -100,6 +114,25 @@ export function Onboarding() {
                 );
               })}
             </div>
+            {region && (
+              <fieldset className="mt-6">
+                <legend className="font-bold">{t("onboarding.cityLabel")}</legend>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {region.cities.map((c) => (
+                    <button
+                      key={c}
+                      type="button"
+                      role="radio"
+                      aria-checked={city === c}
+                      onClick={() => setCity(c)}
+                      className={`rounded-sign border-[3px] px-4 py-2 font-bold ${city === c ? "border-ink bg-ink text-ground" : "border-panel-strong bg-panel hover:border-ink"}`}
+                    >
+                      {c}
+                    </button>
+                  ))}
+                </div>
+              </fieldset>
+            )}
           </>
         )}
 
@@ -141,7 +174,12 @@ export function Onboarding() {
                   aria-checked={group === g}
                   onClick={() => {
                     setGroup(g);
-                    setAgeText(String(AGE_GROUPS[g].defaultAge));
+                    const match = PERSONAS.find((p) => p.regionId === regionId && p.group === g);
+                    setAgeText(String(match?.age ?? AGE_GROUPS[g].defaultAge));
+                    if (match) {
+                      setIncome(String(match.income));
+                      setFree(String(match.free));
+                    }
                   }}
                   className={choiceClass(group === g)}
                 >

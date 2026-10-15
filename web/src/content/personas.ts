@@ -10,6 +10,7 @@ import type { RegionId } from "@/lib/regions";
 export interface Persona {
   id: string;
   regionId: RegionId;
+  city: string;
   lang: Lang;
   group: AgeGroup;
   age: number;
@@ -24,6 +25,7 @@ export const PERSONAS: Persona[] = [
   {
     id: "maya",
     regionId: "US",
+    city: "Columbus, Ohio",
     lang: "en",
     group: "young",
     age: 24,
@@ -35,6 +37,7 @@ export const PERSONAS: Persona[] = [
   {
     id: "ananya",
     regionId: "IN",
+    city: "Bengaluru",
     lang: "en",
     group: "middle",
     age: 42,
@@ -46,6 +49,7 @@ export const PERSONAS: Persona[] = [
   {
     id: "brigitte",
     regionId: "DE",
+    city: "Köln",
     lang: "de",
     group: "senior",
     age: 68,

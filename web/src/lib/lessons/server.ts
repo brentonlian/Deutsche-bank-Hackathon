@@ -24,15 +24,32 @@ export type LessonResult = { lesson: Lesson; cached: boolean; model?: string };
  * Saved lessons are what a reviewer approves and what the offline demo serves.
  */
 export async function getLesson(req: LessonRequest, opts: { allowGenerate?: boolean } = {}): Promise<LessonResult | null> {
-  if (!req.simple) return getExactLesson(req, opts);
-  // A simple-language version that can't be produced right now falls back to the saved standard one.
   try {
-    const simple = await getExactLesson(req, opts);
-    if (simple) return simple;
-  } catch {
-    // generation failed (quota, network): fall through
+    const exact = await getExactLesson(req, opts);
+    if (exact) return exact;
+  } catch (err) {
+    // Generation failed (quota, network). Serve the closest saved lesson if there is one.
+    const nearest = await nearestSaved(req);
+    if (nearest) return nearest;
+    throw err;
   }
-  return getExactLesson({ ...req, simple: false }, { allowGenerate: false });
+  return nearestSaved(req);
+}
+
+/**
+ * Closest saved lesson for the same country and topic: standard reading level first, then the same
+ * language for another age group, then English, then the country's own languages.
+ */
+async function nearestSaved(req: LessonRequest): Promise<LessonResult | null> {
+  const groups: AgeGroup[] = [req.group, ...(["young", "middle", "senior"] as AgeGroup[]).filter((g) => g !== req.group)];
+  const langs = [...new Set<Lang>([req.lang, "en", ...(REGIONS[req.regionId].languages as Lang[])])];
+  for (const lang of langs) {
+    for (const group of groups) {
+      const found = await getExactLesson({ ...req, lang, group, simple: false }, { allowGenerate: false });
+      if (found) return found;
+    }
+  }
+  return null;
 }
 
 async function getExactLesson(req: LessonRequest, opts: { allowGenerate?: boolean }): Promise<LessonResult | null> {

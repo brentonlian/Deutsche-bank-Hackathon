@@ -1,5 +1,5 @@
-import { PersonaPicker } from "@/components/PersonaPicker";
+import { Onboarding } from "@/components/Onboarding";
 
 export default function Home() {
-  return <PersonaPicker />;
+  return <Onboarding />;
 }

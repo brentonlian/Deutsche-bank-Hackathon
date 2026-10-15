@@ -4,7 +4,17 @@
   "flag": "🇩🇪",
   "locale": "de-DE",
   "currency": "EUR",
-  "languages": ["de", "en"],
+  "languages": [
+    "de",
+    "en"
+  ],
+  "cities": [
+    "Köln",
+    "Berlin",
+    "Hamburg",
+    "München",
+    "Frankfurt am Main"
+  ],
   "typicalMonthlyIncome": 2200,
   "economy": {
     "inflationPct": 2.8,
@@ -25,17 +35,63 @@
       "verified": "2026-10"
     },
     "creditBureau": "Schufa",
-    "paymentRails": ["SEPA transfer", "SEPA Instant", "girocard", "PayPal", "Wero"],
+    "paymentRails": [
+      "SEPA transfer",
+      "SEPA Instant",
+      "girocard",
+      "PayPal",
+      "Wero"
+    ],
     "retirementSystem": "Statutory pension (Deutsche Rentenversicherung) plus company and private pensions",
     "unemploymentCover": 0.6,
     "unemploymentNote": "Arbeitslosengeld I pays about 60% of your previous net pay (67% with children) if you paid in for at least 12 months."
   },
   "products": {
-    "cashAtHome": { "id": "cash", "name": "Cash at home", "ratePct": 0, "liquidity": "instant", "risk": "medium", "insured": false, "note": "Loses value to inflation and can be lost or stolen." },
-    "everydayAccount": { "id": "girokonto", "name": "Girokonto (current account)", "ratePct": 0, "liquidity": "instant", "risk": "none", "insured": true, "note": "For salary and payments, usually no interest." },
-    "savingsAccount": { "id": "tagesgeld", "name": "Tagesgeld (instant-access savings)", "ratePct": 2.3, "liquidity": "instant", "risk": "none", "insured": true, "note": "Interest follows the ECB rate; protected by deposit insurance." },
-    "indexFund": { "id": "etf-sparplan", "name": "ETF-Sparplan (monthly index fund plan)", "ratePct": 7, "liquidity": "days", "risk": "medium", "insured": false, "note": "Broad global index fund bought monthly. Value goes up and down; long-term average historically positive." },
-    "retirementProduct": { "id": "private-pension", "name": "Private pension (e.g. company pension / ETF-based plan)", "ratePct": 6, "liquidity": "locked", "risk": "low", "insured": false, "note": "Locked until retirement; may come with employer or state top-ups." },
+    "cashAtHome": {
+      "id": "cash",
+      "name": "Cash at home",
+      "ratePct": 0,
+      "liquidity": "instant",
+      "risk": "medium",
+      "insured": false,
+      "note": "Loses value to inflation and can be lost or stolen."
+    },
+    "everydayAccount": {
+      "id": "girokonto",
+      "name": "Girokonto (current account)",
+      "ratePct": 0,
+      "liquidity": "instant",
+      "risk": "none",
+      "insured": true,
+      "note": "For salary and payments, usually no interest."
+    },
+    "savingsAccount": {
+      "id": "tagesgeld",
+      "name": "Tagesgeld (instant-access savings)",
+      "ratePct": 2.3,
+      "liquidity": "instant",
+      "risk": "none",
+      "insured": true,
+      "note": "Interest follows the ECB rate; protected by deposit insurance."
+    },
+    "indexFund": {
+      "id": "etf-sparplan",
+      "name": "ETF-Sparplan (monthly index fund plan)",
+      "ratePct": 7,
+      "liquidity": "days",
+      "risk": "medium",
+      "insured": false,
+      "note": "Broad global index fund bought monthly. Value goes up and down; long-term average historically positive."
+    },
+    "retirementProduct": {
+      "id": "private-pension",
+      "name": "Private pension (e.g. company pension / ETF-based plan)",
+      "ratePct": 6,
+      "liquidity": "locked",
+      "risk": "low",
+      "insured": false,
+      "note": "Locked until retirement; may come with employer or state top-ups."
+    },
     "expensiveCreditApr": 11.5,
     "informalLenderApr": 30
   },
@@ -45,7 +101,11 @@
     "ratePct": 0
   },
   "culture": {
-    "bigLifeEvent": { "name": "Moving into your first own flat (rental deposit + furniture)", "typicalCostMonths": 3, "note": "Landlords can ask for a rental deposit (Mietkaution) of up to three months' base rent." },
+    "bigLifeEvent": {
+      "name": "Moving into your first own flat (rental deposit + furniture)",
+      "typicalCostMonths": 3,
+      "note": "Landlords can ask for a rental deposit (Mietkaution) of up to three months' base rent."
+    },
     "grandchildMilestone": "start at university",
     "familySupport": "Your sibling has an unexpected bill",
     "notes": [
@@ -54,12 +114,66 @@
     ]
   },
   "scams": [
-    { "id": "de-enkeltrick", "channel": "sms", "sender": "Unknown number", "message": "Hi Mum, my phone broke, this is my new number. Can you quickly transfer €1,450 for a bill? I'll pay you back tomorrow.", "isScam": true, "tell": "The classic 'grandchild trick' (Enkeltrick): new number, urgency, money request. Call the old number to check." },
-    { "id": "de-pushtan", "channel": "sms", "sender": "Sparkasse-Info", "message": "Your pushTAN procedure expires today. Re-register now: sparkasse-verify-tan.com", "isScam": true, "tell": "Banks never send links to 're-register' TAN apps. The domain is not your bank's." },
-    { "id": "de-parcel", "channel": "sms", "sender": "DHL", "message": "Your parcel could not be delivered. Pay €1.99 customs fee here: dhl-zoll-paket.info", "isScam": true, "tell": "Fake customs fee with a lookalike domain. DHL does not ask for fees by SMS link." },
-    { "id": "de-police", "channel": "call", "sender": "+49 110", "message": "Police here. Burglars are active in your street. Hand your cash and cards to our officer for safekeeping.", "isScam": true, "tell": "Real police never collect money or cards, and never call from 110." },
-    { "id": "de-salary", "channel": "app", "sender": "Your banking app", "message": "Incoming transfer: Salary October, €2,214.50.", "isScam": false, "tell": "A notification inside your own banking app with no link or request is normal." },
-    { "id": "de-schufa", "channel": "email", "sender": "meineSCHUFA.de", "message": "Your free data copy (Datenkopie nach Art. 15 DSGVO) you requested is ready in your account.", "isScam": false, "tell": "You requested it; GDPR gives you one free copy of your Schufa data. Log in directly, not via email links." }
+    {
+      "id": "de-enkeltrick",
+      "channel": "sms",
+      "sender": "Unknown number",
+      "message": "Hi Mum, my phone broke, this is my new number. Can you quickly transfer €1,450 for a bill? I'll pay you back tomorrow.",
+      "isScam": true,
+      "tell": "The classic 'grandchild trick' (Enkeltrick): new number, urgency, money request. Call the old number to check."
+    },
+    {
+      "id": "de-pushtan",
+      "channel": "sms",
+      "sender": "Sparkasse-Info",
+      "message": "Your pushTAN procedure expires today. Re-register now: sparkasse-verify-tan.com",
+      "isScam": true,
+      "tell": "Banks never send links to 're-register' TAN apps. The domain is not your bank's."
+    },
+    {
+      "id": "de-parcel",
+      "channel": "sms",
+      "sender": "DHL",
+      "message": "Your parcel could not be delivered. Pay €1.99 customs fee here: dhl-zoll-paket.info",
+      "isScam": true,
+      "tell": "Fake customs fee with a lookalike domain. DHL does not ask for fees by SMS link."
+    },
+    {
+      "id": "de-police",
+      "channel": "call",
+      "sender": "+49 110",
+      "message": "Police here. Burglars are active in your street. Hand your cash and cards to our officer for safekeeping.",
+      "isScam": true,
+      "tell": "Real police never collect money or cards, and never call from 110."
+    },
+    {
+      "id": "de-salary",
+      "channel": "app",
+      "sender": "Your banking app",
+      "message": "Incoming transfer: Salary October, €2,214.50.",
+      "isScam": false,
+      "tell": "A notification inside your own banking app with no link or request is normal."
+    },
+    {
+      "id": "de-schufa",
+      "channel": "email",
+      "sender": "meineSCHUFA.de",
+      "message": "Your free data copy (Datenkopie nach Art. 15 DSGVO) you requested is ready in your account.",
+      "isScam": false,
+      "tell": "You requested it; GDPR gives you one free copy of your Schufa data. Log in directly, not via email links."
+    }
   ],
-  "glossaryKeep": ["Schufa", "Tagesgeld", "Girokonto", "ETF-Sparplan", "Mietkaution", "Dispo", "BaFin", "pushTAN", "SEPA", "Sparverein", "Enkeltrick"]
+  "glossaryKeep": [
+    "Schufa",
+    "Tagesgeld",
+    "Girokonto",
+    "ETF-Sparplan",
+    "Mietkaution",
+    "Dispo",
+    "BaFin",
+    "pushTAN",
+    "SEPA",
+    "Sparverein",
+    "Enkeltrick"
+  ]
 }
