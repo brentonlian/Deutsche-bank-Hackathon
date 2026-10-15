@@ -110,7 +110,7 @@ This slide shows how data moves, in four lanes.
 
 *Slide 5: "Scale content once. Serve learners everywhere."*
 
-"The key idea for scale: **we generate content once and serve it to everyone.**
+The key idea for scale is that The content we generated should serve everyone.
 
 The top row is learner delivery, and it's cache-first. **Browser**: the game, budget and progress run on the learner's device, so there's no game server to pay for. **Edge**: approved lessons are cached at the CDN, which absorbs most traffic, and API requests are rate-limited. **Application**: a stateless API on Cloud Run that autoscales, with cost limits. **Content**: one shared, versioned, reviewed lesson catalog, with regional data controls.
 
