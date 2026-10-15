@@ -11,7 +11,7 @@
 
   <!-- Title -->
   <text x="60" y="70" font-size="40" font-weight="800" fill="#0F1B2D">Rooted: production target on Google Cloud (EU)</text>
-  <text x="60" y="108" font-size="20" fill="#3B4656">europe-west3 (Frankfurt) · secondary EU region for disaster recovery · a plan, not built in the MVP</text>
+  <text x="60" y="108" font-size="20" fill="#3B4656">europe-west3 (Frankfurt) first · a second EU region for failover as demand grows · a plan, not built in the MVP</text>
 
   <!-- Users -->
   <rect x="60" y="150" width="230" height="130" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
@@ -29,8 +29,8 @@
   <text x="360" y="182" font-size="20" font-weight="800" fill="#FFFFFF">Edge</text>
   <g font-size="17" fill="#0F1B2D">
     <text x="360" y="226" font-weight="800">Cloud CDN + Cloud Armor</text>
-    <text x="360" y="250" fill="#3B4656">WAF, DDoS, rate limits</text>
-    <text x="360" y="272" fill="#3B4656">Global HTTPS load balancer</text>
+    <text x="360" y="250" fill="#3B4656">caches approved lessons</text>
+    <text x="360" y="272" fill="#3B4656">WAF, DDoS + rate limits</text>
   </g>
 
   <!-- App -->
@@ -39,13 +39,13 @@
   <rect x="690" y="182" width="430" height="16" fill="#1F5FBF"/>
   <text x="710" y="182" font-size="20" font-weight="800" fill="#FFFFFF">Cloud Run: Next.js web + API</text>
   <g font-size="17" fill="#0F1B2D">
-    <text x="710" y="228" font-weight="800">Same code as the MVP, containerised</text>
+    <text x="710" y="228" font-weight="800">Same code as the MVP, containerized</text>
     <text x="710" y="254" fill="#3B4656">stateless, autoscaling, nothing to patch on the host</text>
     <text x="710" y="286" font-weight="800">Security in the app</text>
-    <text x="710" y="312" fill="#3B4656">OIDC to the bank's IdP · roles: learner, editor,</text>
-    <text x="710" y="336" fill="#3B4656">compliance reviewer, admin · strict CSP + HSTS</text>
-    <text x="710" y="360" fill="#3B4656">Zod on every route · AI output sanitised</text>
-    <text x="710" y="384" fill="#3B4656">PII-redacted logs (pino) · OpenTelemetry traces</text>
+    <text x="710" y="312" fill="#3B4656">Anonymous by default · bank SSO (OIDC) later</text>
+    <text x="710" y="336" fill="#3B4656">Roles: learner, editor, reviewer, admin</text>
+    <text x="710" y="360" fill="#3B4656">Zod on every route · strict CSP + HSTS</text>
+    <text x="710" y="384" fill="#3B4656">AI output sanitized · PII-redacted logs</text>
   </g>
 
   <!-- Services -->
@@ -59,14 +59,14 @@
 
     <rect x="1180" y="290" width="360" height="100" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
     <rect x="1180" y="290" width="12" height="100" rx="4" fill="#1F5FBF"/>
-    <text x="1210" y="324" font-size="20" font-weight="800">Cloud SQL (PostgreSQL)</text>
-    <text x="1210" y="350" fill="#3B4656">region packs, approved lessons,</text>
-    <text x="1210" y="372" fill="#3B4656">versions + audit history</text>
+    <text x="1210" y="324" font-size="20" font-weight="800">Cloud Storage + Redis</text>
+    <text x="1210" y="350" fill="#3B4656">versioned lesson catalog + packs;</text>
+    <text x="1210" y="372" fill="#3B4656">Memorystore cache for fast reads</text>
 
     <rect x="1180" y="410" width="360" height="80" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
     <rect x="1180" y="410" width="12" height="80" rx="4" fill="#F2B705"/>
-    <text x="1210" y="444" font-size="20" font-weight="800">Memorystore (Redis)</text>
-    <text x="1210" y="470" fill="#3B4656">cached lessons, open data</text>
+    <text x="1210" y="444" font-size="20" font-weight="800">Cloud Tasks (EU)</text>
+    <text x="1210" y="470" fill="#3B4656">queued AI drafts, reviewed first</text>
 
     <rect x="1180" y="510" width="360" height="80" rx="8" fill="#FFFFFF" stroke="#0F1B2D" stroke-width="3"/>
     <rect x="1180" y="510" width="12" height="80" rx="4" fill="#6B7686"/>
@@ -78,7 +78,7 @@
   <g font-size="17" fill="#0F1B2D">
     <rect x="690" y="430" width="430" height="76" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
     <text x="710" y="462" font-weight="800">Open-data job: Cloud Scheduler</text>
-    <text x="710" y="488" fill="#3B4656">World Bank + ECB APIs → Cloud SQL, dated</text>
+    <text x="710" y="488" fill="#3B4656">World Bank + ECB APIs → Cloud Storage, dated</text>
 
     <rect x="690" y="524" width="430" height="76" rx="8" fill="#FFFFFF" stroke="#6B7686" stroke-width="2.5" stroke-dasharray="10 7"/>
     <text x="710" y="556" font-weight="800">Observability</text>

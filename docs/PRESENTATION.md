@@ -41,7 +41,7 @@ All three use the app's own palette and font, so they match the demo. Open them 
 - **The game runs in the browser.** The Life Path engine is pure TypeScript on the learner's device, including the optimal-path search (up to 46,656 paths). No server cost per game.
 - **Lessons are generated once, then cached.** One lesson per country × language × age group × topic × reading level. The model is called once per combination, never per view, and the result is reviewed before it ships.
 - **Stateless API.** `/api/lesson` holds no session state, so it scales horizontally (Cloud Run in production).
-- **Content path to a database.** JSON files in Git work for 4 countries. In production the same schemas move to Cloud SQL with versioning and an approval workflow; Redis caches rendered lessons.
+- **Content path to a database.** JSON files in Git work for 4 countries. In production the same schemas move to a shared, versioned lesson catalog in Cloud Storage with an approval workflow; Redis (Memorystore) and the CDN cache approved lessons and Cloud Tasks queues AI drafts, so no learner waits on a live model call.
 - **Open data is batched.** World Bank figures are fetched by a scheduled job, not on every page view.
 
 ## 4. Adding a country or a language

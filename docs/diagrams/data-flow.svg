@@ -15,7 +15,7 @@
   </defs>
   <rect width="1700" height="1060" fill="#F2F3F0"/>
   <text x="50" y="66" font-size="38" font-weight="800" fill="#0F1B2D">How data moves through Rooted</text>
-  <text x="50" y="102" font-size="19" fill="#3B4656">Personal data stays in the browser. Only lesson requests (topic, country, language, age group) reach the server.</text>
+  <text x="50" y="102" font-size="19" fill="#3B4656">Personal data stays in the browser. Only lesson requests (topic, country, language, age group, reading level) reach the server.</text>
 
   <!-- Lane A -->
   <rect x="40" y="130" width="1620" height="200" rx="8" fill="#FFE1D3"/>
@@ -98,9 +98,9 @@
     <circle cx="1420" cy="402" r="13" fill="#0F1B2D"/><text x="1415" y="407" class="n">5</text>
     <text x="1442" y="408" class="t b">Shown with sources</text>
     <text x="1414" y="442" class="t">facts used + links,</text>
-    <text x="1414" y="464" class="t">quiz, read-aloud.</text>
-    <text x="1414" y="486" class="t">Failure → nearest</text>
-    <text x="1414" y="508" class="t">saved lesson</text>
+    <text x="1414" y="464" class="t">read-aloud; quiz on</text>
+    <text x="1414" y="486" class="t">demo lessons. Failure</text>
+    <text x="1414" y="508" class="t">→ nearest saved lesson</text>
   </g>
 
   <!-- Lane C -->
@@ -110,10 +110,10 @@
   <g>
     <rect x="290" y="620" width="230" height="160" rx="6" class="box"/>
     <circle cx="312" cy="642" r="13" fill="#0F1B2D"/><text x="307" y="647" class="n">1</text>
-    <text x="334" y="648" class="t b">Choice</text>
-    <text x="306" y="682" class="t">life event with local</text>
-    <text x="306" y="704" class="t">products and rates; no</text>
-    <text x="306" y="726" class="t">preview of what's next</text>
+    <text x="334" y="648" class="t b">Life event</text>
+    <text x="306" y="682" class="t">pops up at its age, with</text>
+    <text x="306" y="704" class="t">local products and rates;</text>
+    <text x="306" y="726" class="t">no preview of what's next</text>
     <path d="M520 700 L560 700" class="arrow"/>
     <rect x="562" y="620" width="230" height="160" rx="6" class="box"/>
     <circle cx="584" cy="642" r="13" fill="#0F1B2D"/><text x="579" y="647" class="n">2</text>
@@ -124,24 +124,25 @@
     <path d="M792 700 L832 700" class="arrow"/>
     <rect x="834" y="620" width="230" height="160" rx="6" class="box"/>
     <circle cx="856" cy="642" r="13" fill="#0F1B2D"/><text x="851" y="647" class="n">3</text>
-    <text x="878" y="648" class="t b">Years pass</text>
-    <text x="850" y="682" class="t">pay, costs, savings,</text>
-    <text x="850" y="704" class="t">interest, market, debt,</text>
-    <text x="850" y="726" class="t">inflation → a ledger</text>
+    <text x="878" y="648" class="t b">Age +1</text>
+    <text x="850" y="682" class="t">one year per tap: pay,</text>
+    <text x="850" y="704" class="t">savings, interest, market,</text>
+    <text x="850" y="726" class="t">debt, inflation → life log</text>
     <path d="M1064 700 L1104 700" class="arrow"/>
     <rect x="1106" y="620" width="250" height="160" rx="6" class="box"/>
     <circle cx="1128" cy="642" r="13" fill="#0F1B2D"/><text x="1123" y="647" class="n">4</text>
     <text x="1150" y="648" class="t b">Money story</text>
-    <text x="1122" y="682" class="t">full screen: where every</text>
-    <text x="1122" y="704" class="t">unit of money went,</text>
-    <text x="1122" y="726" class="t">each with its rate</text>
+    <text x="1122" y="682" class="t">from the log: where every</text>
+    <text x="1122" y="704" class="t">unit of money went, each</text>
+    <text x="1122" y="726" class="t">with its rate</text>
     <path d="M1356 700 L1396 700" class="arrow"/>
     <rect x="1398" y="620" width="242" height="160" rx="6" class="box"/>
     <circle cx="1420" cy="642" r="13" fill="#0F1B2D"/><text x="1415" y="647" class="n">5</text>
     <text x="1442" y="648" class="t b">Results</text>
     <text x="1414" y="682" class="t">tries every safe path</text>
     <text x="1414" y="704" class="t">(up to 46,656) for the</text>
-    <text x="1414" y="726" class="t">express line; what-if</text>
+    <text x="1414" y="726" class="t">express line; what-if,</text>
+    <text x="1414" y="748" class="t">replay</text>
   </g>
 
   <!-- Lane D -->
@@ -180,7 +181,7 @@
     <rect x="1398" y="860" width="242" height="140" rx="6" class="box"/>
     <circle cx="1420" cy="882" r="13" fill="#0F1B2D"/><text x="1415" y="887" class="n">5</text>
     <text x="1442" y="888" class="t b">CI → deploy</text>
-    <text x="1414" y="922" class="t">lint, types, 78 tests,</text>
+    <text x="1414" y="922" class="t">lint, types, 84 tests,</text>
     <text x="1414" y="944" class="t">build, then release</text>
   </g>
 </svg>

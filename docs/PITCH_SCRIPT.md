@@ -80,11 +80,11 @@ At the end Maya sees her life as a metro line, next to the green **express line*
 
 *Slide 3: "Rooted: production target on Google Cloud (EU)".*
 
-"What you just saw is a working MVP. This slide is how we'd run it inside a bank. It's a plan, not something we've built yet. It's designed for Google Cloud in Frankfurt, with a second EU region for disaster recovery.
+"What you just saw is a working MVP. This slide is how we'd run it inside a bank. It's a plan, not something we've built yet. It's designed for Google Cloud in Frankfurt: one region first, with a second EU region for failover as demand grows.
 
-Read it left to right. **Learners** are anonymous by default; their profile stays in the browser. The **edge**, Cloud CDN and Cloud Armor, gives us a firewall, DDoS protection and rate limits. Behind it, **Cloud Run** runs the same Next.js code as the MVP, in containers: stateless and autoscaling. It signs people in through the bank's own identity provider, with roles for learners, editors and compliance reviewers.
+Read it left to right. **Learners** are anonymous by default; their profile stays in the browser. The **edge**, Cloud CDN and Cloud Armor, caches approved lessons and gives us a firewall, DDoS protection and rate limits. Behind it, **Cloud Run** runs the same Next.js code as the MVP, in containers: stateless and autoscaling. Learners stay anonymous; sign-in through the bank's own identity provider comes later, with roles for learners, editors, reviewers and admins.
 
-On the right: **Vertex AI on an EU endpoint**, with personal data stripped out before anything reaches a model. Our AI layer is provider-agnostic, so Claude or Gemini sit behind the same adapter. Below that are the content database, a cache and anonymized analytics only.
+On the right: **Vertex AI on an EU endpoint**, with personal data stripped out before anything reaches a model. Our AI layer is provider-agnostic, so Claude or Gemini sit behind the same adapter. Below that: **Cloud Storage** holds the shared, versioned lesson catalog with a **Redis** cache in front of it, **Cloud Tasks** queues AI drafts so no learner ever waits on a live model call, and **BigQuery** gets anonymized analytics only.
 
 On the left are the rules it's built to meet: **GDPR, DORA, the EU AI Act, the European Accessibility Act and MaRisk**. And one rule of our own: education, not advice. We never recommend a specific product.
 
@@ -130,9 +130,7 @@ That's Rooted. Thank you. We'd love your questions."
 
 ## Notes for the team
 
-- **Slide 4 needs updating before the pitch:** it's an old export that says "~140k" paths (the correct figure is up to 46,656) and "64 tests" (now 84), and its title is cut off at the top. Re-export it from `docs/diagrams/data-flow.svg`. The production slide has a current version too: `docs/diagrams/architecture-production.svg`.
-- **Slides 3 and 4 use British spellings** (containerised, anonymised, minimisation); the current SVGs use American spelling.
-- **Slides 3 and 5 name different databases:** Cloud SQL and Redis on slide 3, Cloud Storage and Firestore on slide 5. The script says "content database" and "lesson catalog" to avoid the clash, but pick one before the judges ask.
+- **Slides 3 and 4 are up to date** in `rooted_slides.pptx`: correct numbers (up to 46,656 paths, 84 tests), American spelling, the new Age +1 game flow, and the same production plan as slide 5 (Cloud Storage + Redis, Cloud Tasks, one region first, SSO later). If the deck is re-exported, use `docs/diagrams/architecture-production.svg` and `docs/diagrams/data-flow.svg`.
 - **Likely questions and who answers:**
   - "Is the AI making up numbers?" (Speaker 4: lessons only use sourced facts, a test checks that every cited fact exists, and every product links to its regulator.)
   - "How do you add a country?" (Speaker 5.)

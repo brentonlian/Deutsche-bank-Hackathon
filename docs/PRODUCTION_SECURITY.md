@@ -22,17 +22,19 @@
 Deutsche Bank has a strategic multi-year cloud partnership with Google Cloud (announced 2020), so we design for GCP in EU regions (e.g. `europe-west3`, Frankfurt).
 
 ```
-Users ─► Cloud CDN + Cloud Armor (WAF, DDoS, rate limits, geo rules)
+Users ─► Cloud CDN + Cloud Armor (caches approved lessons; WAF, DDoS, rate limits, geo rules)
            └─► Global HTTPS Load Balancer
-                 └─► Cloud Run / GKE Autopilot  (Next.js web + BFF API, containerised)
-                       ├─► Content service ── Cloud SQL (PostgreSQL)  [region packs, lessons, versions]
-                       ├─► Cache ──────────── Memorystore (Redis)      [rendered lessons, open-data responses]
+                 └─► Cloud Run  (Next.js web + BFF API, containerized, stateless, cost-capped autoscaling)
+                       ├─► Lesson catalog ─── Cloud Storage (versioned)  [region packs, approved lessons, version history]
+                       ├─► Cache ──────────── Memorystore (Redis)        [fast reads of approved lessons and open data]
+                       ├─► Draft queue ────── Cloud Tasks (EU)           [AI drafts generated asynchronously; no live model call per learner]
                        ├─► AI gateway ─────── Vertex AI (Claude and/or Gemini, EU endpoint)
                        │                       + Sensitive Data Protection (PII redaction)
-                       ├─► Open-data fetcher ─ Cloud Scheduler job → World Bank / ECB APIs → Cloud SQL
+                       ├─► Open-data fetcher ─ Cloud Scheduler job → World Bank / ECB APIs → Cloud Storage
                        └─► Analytics ──────── BigQuery (anonymized, aggregated events only)
 Secrets: Secret Manager · Keys: Cloud KMS (CMEK) · Perimeter: VPC Service Controls
-Identity: OIDC to the bank's identity provider (IAM / Workload Identity for services)
+Identity: anonymous by default; enterprise SSO (OIDC to the bank's identity provider) added when demand justifies it
+Rollout: one EU region first; a second EU region for failover added as demand grows
 Observability: Cloud Logging + Monitoring + OpenTelemetry traces, alerting to on-call
 IaC: Terraform · Images: Artifact Registry (signed) · Deploy: Cloud Deploy / GitHub Actions
 ```
@@ -51,7 +53,7 @@ IaC: Terraform · Images: Artifact Registry (signed) · Deploy: Cloud Deploy / G
 | Auth (optional accounts, admin/editor roles) | `next-auth` (Auth.js) with OIDC to the bank IdP; RBAC roles: learner, content editor, compliance reviewer, admin |
 | Security headers / CSP | Strict Content-Security-Policy with nonces, HSTS, `X-Frame-Options`, `Referrer-Policy`, set in Next.js middleware |
 | Rendering AI output safely | Markdown → sanitised HTML via `isomorphic-dompurify`; AI output is never injected as raw HTML |
-| Rate limiting / abuse | Cloud Armor rules + app-level limiter (`rate-limiter-flexible` on Redis) |
+| Rate limiting / abuse | Cloud Armor rules at the edge, plus Cloud Run instance caps |
 | CSRF | SameSite cookies + Auth.js CSRF tokens |
 | Logging | `pino` with redaction of PII fields; structured JSON to Cloud Logging |
 | Tracing | `@opentelemetry/sdk-node` |
@@ -102,7 +104,7 @@ IaC: Terraform · Images: Artifact Registry (signed) · Deploy: Cloud Deploy / G
    - **SLOs:** 99.9% availability, p95 page load < 2.5s on 3G.
    - **On-call:** runbooks for incidents, with incident classification aligned to DORA reporting.
 6. **Resilience:**
-   - Multi-zone by default and a secondary EU region for DR.
+   - Multi-zone by default; a second EU region for failover once demand justifies it.
    - Backups with tested restores.
    - Chaos and failover tests at least yearly.
 7. **Security testing:** annual penetration test before go-live and after major changes; a vulnerability disclosure process.

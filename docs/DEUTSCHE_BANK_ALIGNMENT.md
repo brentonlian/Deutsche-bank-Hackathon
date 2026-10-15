@@ -26,7 +26,7 @@ Deutsche Bank's code of conduct names six values. Here is how each one shaped a 
 | **Partnership** | Region packs are designed to be contributed and verified by local partners (NGOs, schools, DB country teams). The open structure is easy to extend. |
 
 ## 3. Technology choices aligned with Deutsche Bank's direction
-- **Google Cloud, EU regions.** Deutsche Bank and Google Cloud announced a strategic multi-year partnership in 2020 to move the bank's systems to the cloud. Our production design targets GCP in Frankfurt (`europe-west3`) using Cloud Run, Cloud SQL, Secret Manager, Cloud KMS and Cloud Armor.
+- **Google Cloud, EU regions.** Deutsche Bank and Google Cloud announced a strategic multi-year partnership in 2020 to move the bank's systems to the cloud. Our production design targets GCP in Frankfurt (`europe-west3`) using Cloud Run, Cloud Storage, Memorystore (Redis), Cloud Tasks, Secret Manager, Cloud KMS and Cloud Armor.
 - **AI through Vertex AI.** Model calls go through the bank's existing cloud platform instead of a separate vendor contract. This keeps data residency, auditing and outsourcing oversight in one place. Claude and Gemini are both available there behind the same interface.
 - **Containerised and stateless.** This matches the bank's stated approach of lifting and shifting container-based apps.
 - **Enterprise integration path.** If the app ever hands off to banking services, that layer is a separate backend service. Java/Spring Boot is a common enterprise standard for it. The learning app stays decoupled.
