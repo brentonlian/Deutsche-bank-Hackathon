@@ -159,7 +159,7 @@ In production, Google Cloud Translation with glossaries is acceptable for interf
 
 ## Open datasets and sources
 - **World Bank Indicators API**: inflation (`FP.CPI.TOTL.ZG`), lending/deposit rates, GDP per capita
-- **World Bank Global Findex**: account ownership, mobile money and borrowing behaviour by country (good for the "why this matters" slide and for personalization defaults)
+- **World Bank Global Findex**: account ownership, mobile money and borrowing behavior by country (good for the "why this matters" slide and for personalization defaults)
 - **S&P Global FinLit Survey / OECD INFE**: financial literacy rates by country
 - **ECB / Frankfurter API**: exchange rates (remittance lessons)
 - **Central bank and regulator sites** (RBI, Banxico, CBK, BaFin, CFPB): facts for region packs

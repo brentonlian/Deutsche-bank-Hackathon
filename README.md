@@ -2,7 +2,7 @@
 
 Rooted teaches money skills adapted to your **country, language and stage of life**.
 
-**Demo script:** go through the normal onboarding and pick one of these. The app recognises the combination and loads that persona's fixed life events and saved lessons. `/demo` has one-tap buttons as a backup.
+**Demo script:** go through the normal onboarding and pick one of these. The app recognizes the combination and loads that persona's fixed life events and saved lessons. `/demo` has one-tap buttons as a backup.
 
 | Persona | Pick in onboarding | Language | Lessons |
 |---|---|---|---|
@@ -23,7 +23,7 @@ Each persona has fixed life events, so the demo plays the same every time.
    - **Money story:** for each stretch of years, where every unit of money went (pay, spending, savings, interest, market years, debt interest).
    - **Mini-games:** *Scam or Legit?* and an investing pick with news and metrics.
 4. **Results:** your line beside the green **express line** (the optimal path). Tap any station for the better choice, a what-if on the chart, or a replay from there.
-5. **Colours:** Light, Dark, High contrast or Calm, from the top-right button.
+5. **Colors:** Light, Dark, High contrast or Calm, from the top-right button.
 
 Countries: United States, India, Germany and Mexico. Languages: English, Deutsch, Español and हिन्दी; any language works with any country.
 
@@ -57,7 +57,7 @@ npm run dev                  # http://localhost:3000
 - [Approach and concept](docs/APPROACH.md): the challenge, scoring strategy, concept, MVP scope, pitch outline
 - [Decision log](docs/DECISIONS.md): every idea and decision so far, plus parked ideas and open questions
 - [Productionizing in a bank](docs/PRODUCTION_SECURITY.md): security, compliance, architecture, DevSecOps, SDLC
-- [Tailoring to Deutsche Bank](docs/DEUTSCHE_BANK_ALIGNMENT.md): values mapping, technology fit, existing DB programmes
+- [Tailoring to Deutsche Bank](docs/DEUTSCHE_BANK_ALIGNMENT.md): values mapping, technology fit, existing DB programs
 - [Product record](PRODUCT.md) and [design brief](design/BRIEF.md)
 
 The original hackathon prompt is internal-use and kept locally in `reference/`, which git ignores.

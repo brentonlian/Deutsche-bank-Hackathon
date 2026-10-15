@@ -117,7 +117,7 @@ describe("Life Path engine", () => {
     }
   });
 
-  it("never recommends a gamble, even when the dice favour it", () => {
+  it("never recommends a gamble, even when the dice favor it", () => {
     for (const seed of [1, 2, 3, 4, 5, 6, 7, 8]) {
       for (const id of REGION_IDS) {
         const ctx = ctxFor(id, "young", seed);

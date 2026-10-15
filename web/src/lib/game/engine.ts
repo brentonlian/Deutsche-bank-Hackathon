@@ -115,7 +115,7 @@ export function simulate(ctx: GameContext, choices: string[]): GameResult {
 }
 
 /**
- * Options the optimiser may pick. Failing the scam quiz is never worth recommending, and neither is a
+ * Options the optimizer may pick. Failing the scam quiz is never worth recommending, and neither is a
  * gamble: with a fixed seed a lucky bet could look "optimal", which is the wrong lesson.
  */
 const choosable = (stageIndex: number, ctx: GameContext) =>

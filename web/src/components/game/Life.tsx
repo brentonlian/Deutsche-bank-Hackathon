@@ -237,7 +237,7 @@ export function ActivitiesPanel({ profile, region, periods, onStory }: { profile
           ))}
       </ul>
 
-      <h3 className="mt-6 text-lg font-extrabold">{t("life.practiseTitle")}</h3>
+      <h3 className="mt-6 text-lg font-extrabold">{t("life.practiceTitle")}</h3>
       <ul className="mt-2 grid gap-2 sm:grid-cols-3">
         {TOOLS.map((id) => (
           <li key={id}>

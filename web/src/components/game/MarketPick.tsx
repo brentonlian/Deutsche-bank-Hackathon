@@ -16,7 +16,7 @@ interface Metric {
 
 /**
  * The investing life event as a small practice market. The fund and savings figures come from the
- * country's data; the hyped stock and coin are fictional and labelled as such.
+ * country's data; the hyped stock and coin are fictional and labeled as such.
  */
 export function MarketPick({ region, onDone }: { region: RegionPack; onDone: (optionId: CardId) => void }) {
   const { t, percent } = useApp();

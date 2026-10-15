@@ -20,7 +20,7 @@ function Wordmark() {
   );
 }
 
-/** Colour scheme picker: light, dark, high contrast or calm. Country line colours stay the same. */
+/** Color scheme picker: light, dark, high contrast or calm. Country line colors stay the same. */
 function ThemeMenu() {
   const { settings, setSettings, t } = useApp();
   const [open, setOpen] = useState(false);

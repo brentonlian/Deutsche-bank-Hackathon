@@ -33,7 +33,7 @@ export function Onboarding() {
   const uiLang = lang ?? app.lang;
   const t = (key: string, vars?: Record<string, string | number>) => translate(uiLang, key, vars);
 
-  // Preview the chosen country's line colour across the whole shell.
+  // Preview the chosen country's line color across the whole shell.
   useEffect(() => {
     if (regionId) document.body.dataset.region = regionId;
   }, [regionId]);

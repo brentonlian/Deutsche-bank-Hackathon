@@ -99,7 +99,9 @@ export function Play() {
   };
   const ageUp = () => app.setGame({ ...game, revealed: revealed + 1 });
   const skip = () => app.setGame({ ...game, revealed: yearsInLast });
-  const eventDue = !aging && current < stages.length && panel?.kind !== "result";
+  // A new life opens on the life screen; the first event waits for "Start your life".
+  const started = game.started || current > 0;
+  const eventDue = started && !aging && current < stages.length && panel?.kind !== "result";
 
   return (
     <div className="mx-auto max-w-4xl">
@@ -118,7 +120,16 @@ export function Play() {
         <button type="button" onClick={() => setPanel({ kind: "assets" })} className="flex flex-col items-center gap-1 rounded-sign px-2 py-2 font-bold hover:bg-panel sm:flex-row sm:justify-center sm:gap-2">
           <Gem aria-hidden="true" size={22} /> {t("life.assets")}
         </button>
-        {finished ? (
+        {!started ? (
+          <button
+            type="button"
+            onClick={() => app.setGame({ ...game, started: true })}
+            className="flex size-24 flex-col items-center justify-center rounded-full border-[5px] border-ink bg-line px-2 text-center text-line-ink hover:brightness-110 sm:size-28"
+          >
+            <Plus aria-hidden="true" size={26} strokeWidth={3} />
+            <span className="text-sm font-extrabold leading-tight sm:text-base">{t("life.begin")}</span>
+          </button>
+        ) : finished ? (
           <button
             type="button"
             onClick={() => {

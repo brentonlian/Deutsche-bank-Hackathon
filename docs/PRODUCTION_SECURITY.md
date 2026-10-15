@@ -11,7 +11,7 @@
 ## 2. Regulatory map (EU / Germany)
 | Regulation | Why it applies | How we address it |
 |---|---|---|
-| **GDPR** | Profile data, progress, optional account | Data minimisation, local-first storage, EU data residency, DPIA, consent management, data-subject request endpoints (export/delete) |
+| **GDPR** | Profile data, progress, optional account | Data minimization, local-first storage, EU data residency, DPIA, consent management, data-subject request endpoints (export/delete) |
 | **DORA** (EU Digital Operational Resilience Act, applies from Jan 2025) | ICT risk management for financial entities | Resilience testing, incident reporting process, ICT third-party register (cloud and LLM provider), exit strategy |
 | **BaFin MaRisk / EBA outsourcing guidelines** | Cloud and AI providers are outsourcing arrangements | Provider risk assessment, contractual audit rights, documented exit plan |
 | **EU AI Act** | AI-generated educational content | Likely limited risk: transparency labels ("AI-generated, reviewed on …"), human oversight, logging, model documentation |
@@ -30,7 +30,7 @@ Users ─► Cloud CDN + Cloud Armor (WAF, DDoS, rate limits, geo rules)
                        ├─► AI gateway ─────── Vertex AI (Claude and/or Gemini, EU endpoint)
                        │                       + Sensitive Data Protection (PII redaction)
                        ├─► Open-data fetcher ─ Cloud Scheduler job → World Bank / ECB APIs → Cloud SQL
-                       └─► Analytics ──────── BigQuery (anonymised, aggregated events only)
+                       └─► Analytics ──────── BigQuery (anonymized, aggregated events only)
 Secrets: Secret Manager · Keys: Cloud KMS (CMEK) · Perimeter: VPC Service Controls
 Identity: OIDC to the bank's identity provider (IAM / Workload Identity for services)
 Observability: Cloud Logging + Monitoring + OpenTelemetry traces, alerting to on-call
@@ -106,7 +106,7 @@ IaC: Terraform · Images: Artifact Registry (signed) · Deploy: Cloud Deploy / G
    - Backups with tested restores.
    - Chaos and failover tests at least yearly.
 7. **Security testing:** annual penetration test before go-live and after major changes; a vulnerability disclosure process.
-8. **Data lifecycle:** retention schedule, anonymised analytics only, deletion on request.
+8. **Data lifecycle:** retention schedule, anonymized analytics only, deletion on request.
 
 ## 6. One-slide summary for the presentation
 - **Secure by design:** local-first privacy, zero trust, OIDC, strict CSP, WAF.

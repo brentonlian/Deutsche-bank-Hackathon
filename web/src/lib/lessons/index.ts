@@ -89,7 +89,7 @@ export function regionFacts(r: RegionPack): Fact[] {
 
 const GROUP_CONTEXT: Record<AgeGroup, string> = {
   young: "a young adult aged 18-30 with a first job or studying, possibly new to banking",
-  middle: "an adult aged 31-54 managing a family budget, children, maybe a car and ageing parents",
+  middle: "an adult aged 31-54 managing a family budget, children, maybe a car and aging parents",
   senior: "a senior aged 55+ living mainly on a pension, careful with savings and often targeted by scams",
 };
 

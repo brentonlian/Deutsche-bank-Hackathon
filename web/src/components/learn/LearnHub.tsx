@@ -8,7 +8,7 @@ import { RequireProfile } from "../RequireProfile";
 
 const KIND_ICON = { guide: Landmark, lesson: BookOpen, tool: Calculator, game: Route } as const;
 
-/** The home after onboarding: one line of stations from understanding the system to practising it. */
+/** The home after onboarding: one line of stations from understanding the system to practicing it. */
 export function LearnHub() {
   const { t, region, profile, progress } = useApp();
   if (!profile || !region) return <RequireProfile>{null}</RequireProfile>;

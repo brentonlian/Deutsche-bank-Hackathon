@@ -18,7 +18,7 @@ const curve = (ctx: GameContext, r: GameResult) => [
 ];
 
 /**
- * The end of the line. Your line (country colour) runs beside the express line (the optimal
+ * The end of the line. Your line (country color) runs beside the express line (the optimal
  * path, green). Where both took the same choice the stations merge into an interchange.
  */
 export function Results({ ctx, choices }: { ctx: GameContext; choices: string[] }) {

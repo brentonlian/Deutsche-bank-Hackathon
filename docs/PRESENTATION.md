@@ -16,7 +16,7 @@ All three use the app's own palette and font, so they match the demo. Open them 
 ## 1. How we approached the problem
 - **Read the rubric first.** Prompt accuracy is 50 of 100 points, so every feature had to map to one of the prompt's three key considerations: dynamic localization, AI adapted to regulation, economy and culture, and multilingual access. Anything that didn't map was cut ([APPROACH.md](APPROACH.md)).
 - **"Write once, localize everywhere."** Universal lessons and life events, filled in by per-country **region packs**: real products, institutions, deposit insurance, scams, informal savings groups, unemployment cover and rates, each with a source and a "verified" month.
-- **Learn first, then practise.** A learning line (country guide, lessons with quizzes, calculators) leads into the Life Path game, where people live through about 10 decisions and see the consequences in their country's money.
+- **Learn first, then practice.** A learning line (country guide, lessons with quizzes, calculators) leads into the Life Path game, where people live through about 10 decisions and see the consequences in their country's money.
 - **AI only where it helps.** The model writes lessons and drafts translations from the vetted facts. It is never the source of a number, and the demo runs offline from saved, reviewed output.
 - **Every decision is logged** with its reason ([DECISIONS.md](DECISIONS.md)), so this deck is a summary of that log.
 
@@ -27,7 +27,7 @@ All three use the app's own palette and font, so they match the demo. Open them 
 | **TypeScript** | One language from the game engine to the API to the build scripts. Region packs and lessons are typed end to end |
 | **Zod** | Validates region packs at load, API requests, AI output and the World Bank snapshot. Bad data fails loudly instead of reaching a learner |
 | **Vitest** | 78 fast unit tests: engine maths, calculators, every pack has sources, every translation has every key and placeholder, lessons cite only real facts, tracing, World Bank drift |
-| **Tailwind CSS v4** | Design tokens (country line colours, themes) as CSS variables; four colour themes without duplicated styles |
+| **Tailwind CSS v4** | Design tokens (country line colors, themes) as CSS variables; four color themes without duplicated styles |
 | **Provider-agnostic LLM layer** | Gemini by default with model fallback, Ollama for on-premises, OpenAI optional. Production swaps in Vertex AI (EU) by config, not a rewrite |
 | **Langfuse (optional)** | Open-source LLM tracing that can be self-hosted in the EU. Records model, prompt version, latency, tokens, fallback, schema pass or fail and the facts cited. Off when no keys are set |
 | **JSON region packs in Git** | Content is reviewable in pull requests, versioned, and needs no database for the MVP |
@@ -47,7 +47,7 @@ All three use the app's own palette and font, so they match the demo. Open them 
 ## 4. Adding a country or a language
 **A new country** is mostly data:
 1. Add one region-pack JSON in `web/src/content/regions/` (rates, products with their official source links, institutions, scams, culture). The Zod schema rejects anything missing.
-2. List it in `web/src/lib/regions/index.ts` and give it a line colour: one CSS block in `globals.css`.
+2. List it in `web/src/lib/regions/index.ts` and give it a line color: one CSS block in `globals.css`.
 3. Run `npm run worldbank` to add its open-data figures, and `npm run localize` to draft its text in the other languages.
 4. Tests then check it: sources on every product, scam and legit examples, local currency formatting, translation overlays, World Bank drift.
 
@@ -59,7 +59,7 @@ All three use the app's own palette and font, so they match the demo. Open them 
 ## 5. Long-term security
 Built on [PRODUCTION_SECURITY.md](PRODUCTION_SECURITY.md); shown in the production diagram.
 - **Privacy by design:** anonymous by default, the profile stays in the browser, lesson requests carry no personal data, and tracing sends none either.
-- **Regulation:** GDPR (EU residency, minimisation, export and delete), DORA (ICT risk, incident reporting, provider exit plan), EU AI Act (AI labels, human oversight, logging), European Accessibility Act (WCAG 2.1 AA as a release gate), BaFin MaRisk for cloud and LLM outsourcing.
+- **Regulation:** GDPR (EU residency, minimization, export and delete), DORA (ICT risk, incident reporting, provider exit plan), EU AI Act (AI labels, human oversight, logging), European Accessibility Act (WCAG 2.1 AA as a release gate), BaFin MaRisk for cloud and LLM outsourcing.
 - **Responsible AI:** grounded only in vetted facts, schema-validated output, PII redaction before the model (Sensitive Data Protection), compliance review before a lesson is published, every generation traced.
 - **Platform:** Google Cloud in Frankfurt, Vertex AI EU endpoint, zero trust (VPC Service Controls, Secret Manager, customer-managed keys, Workload Identity), Cloud Armor WAF.
 - **Delivery:** Terraform environments, four-eyes review on code and content, gitleaks, CodeQL, dependency scanning, SBOM, signed images, OWASP ZAP, axe accessibility checks, canary releases.

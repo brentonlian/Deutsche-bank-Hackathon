@@ -43,7 +43,7 @@ function Big({ label, value, tone, note }: { label: string; value: string; tone?
 
 function ToolFrame({ tool, children }: { tool: ToolId; children: ReactNode }) {
   const { t, markDone } = useApp();
-  // Opening a tool and seeing your own numbers counts as practising it.
+  // Opening a tool and seeing your own numbers counts as practicing it.
   useEffect(() => {
     const id = window.setTimeout(() => markDone(`tool:${tool}`), 4000);
     return () => window.clearTimeout(id);

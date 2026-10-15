@@ -37,7 +37,7 @@
       "middle": {
         "label": "Middle age",
         "range": "31 to 54",
-        "about": "Family budget, car, children, ageing parents."
+        "about": "Family budget, car, children, aging parents."
       },
       "senior": {
         "label": "Senior",
@@ -94,12 +94,13 @@
     "activities": "Activities",
     "activitiesIntro": "Learn something, then come back. Your life waits where you left it.",
     "learnTitle": "Learn",
-    "practiseTitle": "Practise with your numbers",
+    "practiceTitle": "Practice with your numbers",
     "lookBackTitle": "Look back",
     "lookBackEmpty": "Live a few years first.",
     "actions": "Life actions",
     "summary": "See your life line",
     "ageUp": "Age +1",
+    "begin": "Start your life",
     "ageRange": "Age {from}–{to}",
     "skip": "Skip to next event",
     "event": "Life event",
@@ -420,7 +421,7 @@
     },
     "child-education": {
       "title": "Your child's education",
-      "body": "Your child is starting secondary school. How do you pay for it?",
+      "body": "Your child is starting high school. How do you pay for it?",
       "options": {
         "private": {
           "label": "Private school, paid from savings",
@@ -532,7 +533,7 @@
       "options": {
         "stay": {
           "label": "Stay where you are",
-          "hint": "Familiar neighbours, higher costs."
+          "hint": "Familiar neighbors, higher costs."
         },
         "downsize": {
           "label": "Move somewhere smaller",
@@ -598,7 +599,7 @@
     }
   },
   "theme": {
-    "button": "Colours",
+    "button": "Colors",
     "light": "Light",
     "dark": "Dark",
     "contrast": "High contrast",

@@ -115,7 +115,7 @@
   },
   "culture": {
     "bigLifeEvent": {
-      "name": "Moving into your first own flat (rental deposit + furniture)",
+      "name": "Moving into your first apartment (rental deposit + furniture)",
       "typicalCostMonths": 3,
       "note": "Landlords can ask for a rental deposit (Mietkaution) of up to three months' base rent."
     },
@@ -123,7 +123,7 @@
     "familySupport": "Your sibling has an unexpected bill",
     "notes": [
       "Germans traditionally prefer saving over borrowing; overdraft (Dispo) debt is expensive.",
-      "Your Schufa score affects renting a flat, phone contracts and loans."
+      "Your Schufa score affects renting an apartment, phone contracts and loans."
     ]
   },
   "scams": [
@@ -131,7 +131,7 @@
       "id": "de-enkeltrick",
       "channel": "sms",
       "sender": "Unknown number",
-      "message": "Hi Mum, my phone broke, this is my new number. Can you quickly transfer €1,450 for a bill? I'll pay you back tomorrow.",
+      "message": "Hi Mom, my phone broke, this is my new number. Can you quickly transfer €1,450 for a bill? I'll pay you back tomorrow.",
       "isScam": true,
       "tell": "The classic 'grandchild trick' (Enkeltrick): new number, urgency, money request. Call the old number to check."
     },

@@ -9,7 +9,7 @@ import { REGIONS } from "@/lib/regions";
 import { useApp } from "./AppState";
 
 /**
- * The demo's front door: three people, each a line in their own country's colour.
+ * The demo's front door: three people, each a line in their own country's color.
  * One tap loads their profile, language and fixed life events, then starts the Life Path.
  */
 export function PersonaPicker() {
@@ -34,7 +34,7 @@ export function PersonaPicker() {
           const name = t(`personas.${p.id}.name`);
           return (
             <li key={p.id} data-region={p.regionId} className="grid gap-x-8 gap-y-4 py-8 md:grid-cols-[auto_minmax(0,1fr)_auto] md:items-center">
-              {/* Their line: a short run of track with a station, in the country's colour. */}
+              {/* Their line: a short run of track with a station, in the country's color. */}
               <span aria-hidden="true" className="relative hidden h-24 w-12 md:block">
                 <span className="absolute left-1/2 top-0 h-full w-2 -translate-x-1/2 rounded-full bg-line" />
                 <span className="absolute left-1/2 top-1/2 size-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-[5px] border-ink bg-line" />

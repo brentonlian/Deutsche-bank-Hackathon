@@ -17,7 +17,7 @@
   ],
   "example": {
     "title": "Rohan and the Fake Sofa Sale",
-    "body": "Rohan decided to sell his old sofa online. A buyer messaged him, saying they wanted to pay ₹4,999 via UPI. The buyer then sent Rohan a UPI 'collect request' for ₹4,999, with a note saying 'Payment for sofa'. The request asked Rohan to enter his UPI PIN to 'receive' the money. Rohan almost entered his PIN, but then remembered a friend's warning about this scam. He realised he never needs a PIN to receive money and ignored the request, saving himself from losing ₹4,999."
+    "body": "Rohan decided to sell his old sofa online. A buyer messaged him, saying they wanted to pay ₹4,999 via UPI. The buyer then sent Rohan a UPI 'collect request' for ₹4,999, with a note saying 'Payment for sofa'. The request asked Rohan to enter his UPI PIN to 'receive' the money. Rohan almost entered his PIN, but then remembered a friend's warning about this scam. He realized he never needs a PIN to receive money and ignored the request, saving himself from losing ₹4,999."
   },
   "takeaway": "Never share your UPI PIN or OTP with anyone, and always be suspicious of messages demanding urgent action or asking you to enter your PIN to receive money.",
   "factsUsed": [

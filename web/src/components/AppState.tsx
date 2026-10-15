@@ -24,6 +24,8 @@ export interface GameSave {
   choices: string[];
   /** Years of the latest period the player has lived through with "Age +1". Missing means all of them. */
   revealed?: number;
+  /** The player tapped "Start your life"; until then a new game shows the life screen without an event. */
+  started?: boolean;
 }
 
 export const THEMES = ["light", "dark", "contrast", "calm"] as const;
@@ -97,7 +99,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = LANGUAGES[lang].bcp47;
     document.documentElement.dir = LANGUAGES[lang].dir;
-    // Without a profile, onboarding owns the colour (it previews the country being picked).
+    // Without a profile, onboarding owns the color (it previews the country being picked).
     if (stored.profile) document.body.dataset.region = stored.profile.regionId;
   }, [lang, stored.profile]);
 

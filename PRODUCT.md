@@ -9,12 +9,12 @@ web
 ## Users
 People who want practical money skills that fit the country they live in. At onboarding they pick an **age group**, and the experience adapts to it:
 - **Young adults (18–30):** first job or studies, often on a phone, possibly new to banking.
-- **Middle age (31–54):** family budgets, car or home, children's education, ageing parents, catching up on retirement.
+- **Middle age (31–54):** family budgets, car or home, children's education, aging parents, catching up on retirement.
 - **Seniors (55+):** living on a pension, drawing down savings, health costs, being targeted by scams, family requests, estate planning.
 
 Secondary audiences:
 - Hackathon judges (Deutsche Bank) watching a projected demo.
-- Volunteers teaching money lessons in schools, as in Deutsche Bank's *So geht Geld* programme.
+- Volunteers teaching money lessons in schools, as in Deutsche Bank's *So geht Geld* program.
 
 ## Product Purpose
 Rooted teaches financial literacy adapted to local languages, financial systems, regulations and cultural norms. Users:
@@ -41,7 +41,7 @@ Success means the user understands why a decision matters in their country and c
 
 ## Brand Commitments
 - Name: **Rooted**.
-- Its own identity that's friendly to Deutsche Bank: calm and trustworthy, suited to a bank's partner programme.
+- Its own identity that's friendly to Deutsche Bank: calm and trustworthy, suited to a bank's partner program.
 - No Deutsche Bank logo or brand assets.
 
 ## Evidence on Hand

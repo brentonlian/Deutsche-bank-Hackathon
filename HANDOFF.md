@@ -42,7 +42,7 @@ Other scripts:
 **Dev server gotcha:** don't run `next build` while `next dev` is running, because it corrupts the dev cache and serves stale CSS. Stop dev first, or let CI build.
 
 ## 4. Demo script (default paths)
-Go through the normal onboarding. The app recognises these combinations and loads a fixed persona: a fixed random seed, pre-filled money and 2 saved lessons with quizzes. `/demo` has one-tap buttons as a backup.
+Go through the normal onboarding. The app recognizes these combinations and loads a fixed persona: a fixed random seed, pre-filled money and 2 saved lessons with quizzes. `/demo` has one-tap buttons as a backup.
 
 | Persona | Pick in onboarding | Language | Lessons | Tools |
 |---|---|---|---|---|
@@ -67,16 +67,16 @@ Any other combination still works: random events, and the nearest saved lesson a
 5. **Calculators** (`/tools/...`): budget (50/30/20 plus emergency cushion), savings growth (cash vs savings vs index fund, inflation-adjusted) and debt payoff (card vs double payment vs lender). The math is tested in `web/src/lib/tools.ts`.
 6. **Life Path game** (`/play`), played like BitLife: 10–11 life events per age group.
    - **Life screen:** character card (name, age, city, net worth), a life log grouped by age, and four stat bars (wellbeing, credit, cash cushion, know-how from the learning line).
-   - **Age +1:** each tap lives one year and adds that year's real ledger lines to the log (pay and savings, interest at the real rate, market year, pension growth, debt interest, theft, inflation). "Skip to next event" jumps ahead. A part-year at the end of a stretch is folded into the step before it and labelled "Age 59–60".
+   - **Age +1:** each tap lives one year and adds that year's real ledger lines to the log (pay and savings, interest at the real rate, market year, pension growth, debt interest, theft, inflation). "Skip to next event" jumps ahead. A part-year at the end of a stretch is folded into the step before it and labeled "Age 59–60".
    - **Life events** pop up as locked dialogs when their age arrives (same choices, local facts, sources and mini-games as before), followed by a short "what changed right away" pop-up.
    - **Assets** sheet: balances plus the real product behind each one, with rates and source links. **Activities** sheet: country guide, lessons, calculators, and the full money story for each finished stretch of years.
    - **No spoilers:** only a progress bar; the log never shows years you haven't lived.
    - **Money story:** the full ledger for each stretch (earned, spent, saved, interest, market years, debt interest, inflation), opened from the log or Activities.
-   - **Mini-games:** *Scam or Legit?* uses local scams. The investing pick shows 4 cards: the index fund and savings use real figures, NovaGrid and ZapCoin are labelled fictional, and the reveal explains why the index fund is the best long-term pick.
+   - **Mini-games:** *Scam or Legit?* uses local scams. The investing pick shows 4 cards: the index fund and savings use real figures, NovaGrid and ZapCoin are labeled fictional, and the reveal explains why the index fund is the best long-term pick.
 7. **Results:** your line beside the green express line (the optimal path from exhaustive search, which never picks gambles), what-if on a chart, and replay from any station.
 
 **Options available on every screen:**
-- **Colours:** Light, Dark, High contrast or Calm (top-right button).
+- **Colors:** Light, Dark, High contrast or Calm (top-right button).
 - **Simple-language toggle:** falls back to the saved lesson if no simple version exists.
 - **Languages:** en, de, es, hi.
 - **Countries:** US, IN, DE, MX.
@@ -95,7 +95,7 @@ Any other combination still works: random events, and the nearest saved lesson a
 - `web/src/lib/learning.ts`: the learning line. `web/src/content/personas.ts`: demo personas.
 - `web/src/content/i18n/`: UI strings and region overlays. Tests enforce every key and placeholder in all 4 languages.
 
-**Design:** transit-line world (life as a metro line, express line = optimal path), Atkinson Hyperlegible font, one line colour per country. See `PRODUCT.md`, `DESIGN.md` and `design/BRIEF.md`. The design skills (Impeccable, taste-skill) are vendored as instruction files only, in `.claude/skills/`.
+**Design:** transit-line world (life as a metro line, express line = optimal path), Atkinson Hyperlegible font, one line color per country. See `PRODUCT.md`, `DESIGN.md` and `design/BRIEF.md`. The design skills (Impeccable, taste-skill) are vendored as instruction files only, in `.claude/skills/`.
 
 **Docs:** `docs/PRESENTATION.md` (slide material), `docs/APPROACH.md`, `docs/PRODUCTION_SECURITY.md`, `docs/DEUTSCHE_BANK_ALIGNMENT.md`, `docs/DECISIONS.md`. Diagrams in `docs/diagrams/`: MVP architecture, production architecture, data flow.
 
@@ -107,7 +107,7 @@ Any other combination still works: random events, and the nearest saved lesson a
 - **Next.js 16 changes:** params must be read inside `<Suspense>`; React lint forbids setState in effects, so storage is read via `useSyncExternalStore`; running build during dev served stale CSS.
 - **Localization bugs:**
   - "In Vereinigte Staaten" / "In United States": fixed with a `nameIn` field per country and language.
-  - Picking a language reset the previewed country colour.
+  - Picking a language reset the previewed country color.
   - A fallback English lesson was read aloud with a German voice: the API now returns the language it served.
 - **Mobile overflow:** the station strip widened the grid. Fixed with `min-w-0`.
 - **Spoilers:** the side list of upcoming events let players see an emergency coming. Removed.
@@ -122,7 +122,7 @@ Kept for reference. What was built: A → `docs/PRESENTATION.md` and the three d
 2. **Technical flow / data-flow diagram:** `docs/diagrams/data-flow.svg`, rendered and checked.
 3. **Technologies used and why** (Next.js, TypeScript, Zod, Vitest, Tailwind, the provider-agnostic LLM layer, JSON region packs, localStorage).
 4. **Scalability** of what we used: static pre-rendering and CDN, stateless API, lessons generated once and cached, a client-side engine (no server cost per game), and a JSON → database path in production.
-5. **Ease of adding languages and countries:** a new country is one region-pack JSON (schema-checked) plus a line colour. A new language is `npm run localize` plus native review. Tests catch missing keys and placeholders.
+5. **Ease of adding languages and countries:** a new country is one region-pack JSON (schema-checked) plus a line color. A new language is `npm run localize` plus native review. Tests catch missing keys and placeholders.
 6. **Long-term security:** build on `docs/PRODUCTION_SECURITY.md` (GDPR, DORA, EU AI Act, European Accessibility Act, Vertex AI in the EU, zero trust, DevSecOps, four-eyes review).
 7. **How we approached the problem** and **problems we had**: use section 6 above and `docs/DECISIONS.md`.
 

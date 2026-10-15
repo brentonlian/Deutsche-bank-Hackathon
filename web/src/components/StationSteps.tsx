@@ -1,4 +1,4 @@
-/** A short horizontal line with labelled stations: the onboarding progress, drawn as the product's own map. */
+/** A short horizontal line with labeled stations: the onboarding progress, drawn as the product's own map. */
 export function StationSteps({ labels, current }: { labels: string[]; current: number }) {
   const n = labels.length;
   const edge = `${50 / n}%`;

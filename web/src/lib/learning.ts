@@ -13,7 +13,7 @@ const DEFAULT_TOPICS: Record<AgeGroup, [Topic, Topic]> = {
   senior: ["retirement", "scams-and-fraud"],
 };
 
-/** The calculator that best practises each topic. */
+/** The calculator that best practices each topic. */
 const TOOL_FOR_TOPIC: Partial<Record<Topic, ToolId>> = {
   budgeting: "budget",
   "emergency-fund": "budget",
@@ -34,7 +34,7 @@ export function lessonTopics(profile: { personaId?: string; group: AgeGroup }): 
 }
 
 /**
- * The learning line: understand your country's money system, learn and test two topics, practise
+ * The learning line: understand your country's money system, learn and test two topics, practice
  * each with a calculator on your own numbers, then try it all in the Life Path game.
  */
 export function learningLine(profile: { personaId?: string; group: AgeGroup }): Station[] {

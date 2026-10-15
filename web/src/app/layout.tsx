@@ -21,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" suppressHydrationWarning className={`${atkinson.variable} ${devanagari.variable} antialiased`}>
       <body className="min-h-dvh" suppressHydrationWarning>
-        {/* Paint the saved country's line colour before hydration, so the header never flashes. */}
+        {/* Paint the saved country's line color before hydration, so the header never flashes. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `try{var s=JSON.parse(localStorage.getItem("rooted:v1"));if(s&&s.profile)document.body.dataset.region=s.profile.regionId;if(s&&s.settings&&s.settings.theme)document.documentElement.dataset.theme=s.settings.theme}catch(e){}`,

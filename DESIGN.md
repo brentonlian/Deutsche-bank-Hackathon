@@ -2,7 +2,7 @@
 
 **World:** life as a transit line. Each decision is a station, alternatives are branches, and the optimal path is the express line. The look borrows from metro maps and Olympic wayfinding pictograms (Mexico 1968, Munich 1972). That signage was built for people who don't share a language, which is this product's audience.
 
-## Colour
+## Color
 Tokens live in `web/src/app/globals.css` and are exposed to Tailwind as `bg-*` / `text-*`.
 
 | Token | Value | Use |
@@ -39,7 +39,7 @@ A new country adds one block of these three variables.
 - **Icons:** pictograms from lucide-react at stroke 2.25, one per life event (`StageIcon`).
 
 ## Components
-- `AppShell`: country-coloured header rail with wordmark (two stations on a line), nav, language select, simple-language toggle.
+- `AppShell`: country-colored header rail with wordmark (two stations on a line), nav, language select, simple-language toggle.
 - `StationSteps`: horizontal onboarding progress as stations.
 - `LineRail`: the player's line during play. Vertical on desktop, a scrolling strip on phones.
 - `MoneyPanel`: money figures in local currency with green or red change from the last decision; net worth on an ink tile.

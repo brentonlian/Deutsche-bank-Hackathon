@@ -14,7 +14,7 @@ const W = 720;
 const H = 300;
 const PAD = { top: 16, right: 16, bottom: 36, left: 76 };
 
-/** Net worth in today's money across the player's ages. Hand-drawn SVG so it themes with the line colours. */
+/** Net worth in today's money across the player's ages. Hand-drawn SVG so it themes with the line colors. */
 export function NetWorthChart({ series, title }: { series: Series[]; title: string }) {
   const { money } = useApp();
   const all = series.flatMap((s) => s.points);

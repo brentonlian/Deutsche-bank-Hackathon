@@ -8,17 +8,17 @@ Deutsche Bank already invests in financial literacy:
 - **"So geht Geld" ("How money works"):** employees volunteer to teach money basics in German schools.
 - **"Modern Finance" in the US:** a curriculum run with the nonprofit W!se.
 
-**Our fit:** we designed the app as a **digital companion to these programmes**, not a replacement.
+**Our fit:** we designed the app as a **digital companion to these programs**, not a replacement.
 - Volunteers can run the Life Path game in a classroom and let students rewind decisions together.
 - Lessons can be exported for a teacher-led session.
-- A programme can reach students in other countries and languages without rewriting its curriculum. Adding a new region pack is enough.
+- A program can reach students in other countries and languages without rewriting its curriculum. Adding a new region pack is enough.
 
 ## 2. Mapping to Deutsche Bank's values
 Deutsche Bank's code of conduct names six values. Here is how each one shaped a product decision.
 
 | DB value | Product decision |
 |---|---|
-| **Integrity** | Education only, never product sales or advice. Every fact cites a source and shows a "verified on" date, and AI-generated content is labelled. |
+| **Integrity** | Education only, never product sales or advice. Every fact cites a source and shows a "verified on" date, and AI-generated content is labeled. |
 | **Client centricity** | Onboarding starts from the user's real situation (age, country, language, budget), and lessons build on financial habits people already use, such as savings groups. |
 | **Innovation** | AI localization grounded in vetted data, plus a Game-of-Life-style simulator with rewind, what-if and optimal-path views. Risk is managed through compliance review and output checks. |
 | **Sustainable performance** | Long-term thinking is built into the game: compounding, inflation, resilience and retirement are scored, not just short-term cash. |
@@ -51,7 +51,7 @@ Deutsche Bank's code of conduct names six values. Here is how each one shaped a 
   These can feed into Deutsche Bank's social-impact reporting.
 
 ## 6. Talking points for the presentation
-1. "We didn't build a new programme. We built a **digital multiplier for Born to Be and So geht Geld**."
+1. "We didn't build a new program. We built a **digital multiplier for Born to Be and So geht Geld**."
 2. "Every value in Deutsche Bank's code of conduct maps to a feature."
 3. "Production-ready path: **Google Cloud in Frankfurt, Vertex AI, DORA- and AI-Act-aware**, four-eyes reviews on code and content."
 4. "Germany first, then any country: adding a region is a reviewed data file, not a rewrite."
