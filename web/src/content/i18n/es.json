@@ -5,15 +5,16 @@
     "disclaimer": "Educación, no asesoramiento financiero. Las cifras están simplificadas y verificadas con las fuentes mostradas."
   },
   "nav": {
-    "play": "Camino de vida",
-    "learn": "Lecciones",
+    "play": "Juego Camino de vida",
+    "learn": "Aprender",
     "restart": "Empezar de nuevo",
     "language": "Idioma",
     "country": "País",
     "simple": "Lenguaje sencillo",
     "readAloud": "Leer en voz alta",
     "stopReading": "Dejar de leer",
-    "skip": "Saltar al contenido"
+    "skip": "Saltar al contenido",
+    "tools": "Herramientas"
   },
   "onboarding": {
     "stationCountry": "País",
@@ -533,7 +534,7 @@
   "personas": {
     "maya": {
       "name": "Maya",
-      "where": "Columbus, Ohio, Estados Unidos",
+      "where": "Nueva York, Estados Unidos",
       "about": "24 años, primer trabajo de tiempo completo en logística. Debe en su tarjeta de crédito y tiene un 401(k) nuevo en el trabajo."
     },
     "ananya": {
@@ -546,5 +547,202 @@
       "where": "Colonia, Alemania",
       "about": "68 años, maestra jubilada que vive de su pensión y sus ahorros. Juega en alemán."
     }
+  },
+  "theme": {
+    "button": "Colores",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "contrast": "Alto contraste",
+    "calm": "Tranquilo"
+  },
+  "hub": {
+    "title": "Tu línea de dinero en {countryIn}",
+    "intro": "Seis estaciones: entiende cómo funciona el dinero donde vives, aprende dos temas, pruébalos con tus propios números y júntalo todo en el juego Camino de vida.",
+    "progress": "{done} de {total} estaciones completadas",
+    "kind": {
+      "guide": "Guía del país",
+      "lesson": "Lección y quiz",
+      "tool": "Pruébalo con tus números",
+      "game": "Práctica"
+    },
+    "guideTitle": "Cómo funciona el dinero en {countryIn}",
+    "guideAbout": "Bancos, intereses, inflación, crédito, protección y estafas locales, con fuentes.",
+    "lessonAbout": "Una lección corta para tu país y tu etapa de vida, y luego tres preguntas rápidas.",
+    "gameTitle": "Juego Camino de vida",
+    "gameAbout": "Vive las decisiones de las próximas décadas y mira a dónde va tu dinero.",
+    "quizScore": "Quiz: {score} de 3 correctas",
+    "start": "Empezar",
+    "review": "Repasar"
+  },
+  "guide": {
+    "back": "Tu línea de dinero",
+    "intro": "Lo básico del sistema financiero de tu país en una página. Cada cifra es un dato verificado con su fuente.",
+    "pricesTitle": "Precios y tasas de interés",
+    "inflation": "Los precios suben alrededor de {rate} al año (inflación).",
+    "policyRate": "La tasa de referencia del banco central ({bank}) está alrededor de {rate}. Las tasas de ahorro y préstamos la siguen.",
+    "pricesWhy": "Si tu dinero gana menos que la inflación, cada año alcanza para comprar un poco menos.",
+    "keepTitle": "Dónde guardar el dinero",
+    "colProduct": "Opción",
+    "colRate": "Gana al año",
+    "colAccess": "Acceso",
+    "colRisk": "Riesgo",
+    "access": {
+      "instant": "Inmediato",
+      "days": "Unos días",
+      "locked": "Bloqueado hasta el retiro"
+    },
+    "risk": {
+      "none": "Ninguno",
+      "low": "Bajo",
+      "medium": "Sube y baja",
+      "high": "Alto"
+    },
+    "depositInsurance": "Seguro de depósitos:",
+    "borrowTitle": "Préstamos y crédito",
+    "creditBureau": "Tu historial de crédito lo guarda: {bureau}.",
+    "cardApr": "Tarjetas de crédito y sobregiros",
+    "lenderApr": "Prestamistas informales o de día de pago",
+    "payTitle": "Pagar y enviar dinero",
+    "regulator": "Los bancos y servicios de pago los supervisa: {regulator}.",
+    "safetyTitle": "Redes de protección",
+    "retirement": "Retiro:",
+    "unemployment": "Si pierdes tu trabajo:",
+    "scamsTitle": "Estafas comunes aquí y mensajes reales",
+    "markDone": "Ya lo leí",
+    "done": "Listo"
+  },
+  "tools": {
+    "title": "Herramientas",
+    "intro": "Prueba las ideas de las lecciones con tus propios números y las tasas reales de tu país.",
+    "months": "{n} meses",
+    "budget": {
+      "title": "Planificador de presupuesto",
+      "about": "Divide tu ingreso mensual con la regla 50/30/20 y mira qué tan rápido puedes juntar un colchón.",
+      "income": "Ingreso mensual neto",
+      "needs": "Necesidades (50%)",
+      "needsNote": "Renta, comida, cuentas, transporte",
+      "wants": "Gustos (30%)",
+      "wantsNote": "Salir a comer, pasatiempos, viajes",
+      "save": "Ahorro (20%)",
+      "saveNote": "Primero el colchón, luego metas a largo plazo",
+      "cushionTitle": "Tu colchón de emergencia",
+      "cushionBody": "Una meta común es de 3 a 6 meses de necesidades: de {low} a {high}.",
+      "afterYear": "Ahorrado un año en {name} al {rate}",
+      "monthsToCushion": "Tiempo para un colchón de 3 meses"
+    },
+    "growth": {
+      "title": "Crecimiento del ahorro",
+      "about": "Mira en qué se convierte ahorrar una cantidad fija cada mes: en efectivo, en ahorro y en un fondo indexado.",
+      "monthly": "Ahorro mensual",
+      "years": "Años",
+      "paidIn": "Aportas {total} en total.",
+      "today": "Equivale a {value} en dinero de hoy (precios subiendo {rate} al año)",
+      "chart": "Cómo crece, año con año",
+      "note": "Las tasas de ahorro y del fondo son las de este país. Los fondos indexados suben y bajan; la línea usa su promedio a largo plazo, no una promesa."
+    },
+    "debt": {
+      "title": "Pagar deudas",
+      "about": "Mira cuánto tardas en liquidar un saldo y cuánto cuestan de verdad los intereses.",
+      "balance": "Lo que debes",
+      "payment": "Pago mensual",
+      "card": "Tarjeta al {rate}",
+      "cardDouble": "Tarjeta al {rate}, pagando el doble",
+      "lender": "Prestamista al {rate}",
+      "interest": "Intereses pagados:",
+      "never": "Nunca se liquida: el pago no cubre los intereses.",
+      "note": "Pagar más cada mes reduce el tiempo y los intereses. Con tasas muy altas, un pago pequeño puede hacer que la deuda nunca desaparezca."
+    }
+  },
+  "quiz": {
+    "title": "Revisa lo que aprendiste",
+    "next": "Siguiente pregunta",
+    "result": "Acertaste {score} de {total}.",
+    "finish": "Guardar mi resultado",
+    "continue": "Volver a tu línea de dinero"
+  },
+  "story": {
+    "decisionTitle": "Tu decisión cambió",
+    "yearsTitle": "Los próximos {years} años",
+    "pricesRose": "Los precios subieron {pct} en ese tiempo.",
+    "earned": "Ganado por trabajo o pensión",
+    "earnedDetail": "Unos {monthly} al mes",
+    "living": "Gastado en vivir",
+    "fixed": "Seguro y apoyo a la familia",
+    "saved": "Ahorrado",
+    "savedDetail": "{share} de lo que entró",
+    "pension": "Aportado a tu retiro",
+    "drawdown": "Tomado de tus ahorros para vivir",
+    "interest": "Intereses ganados en ahorro",
+    "interestDetail": "Al {rate} al año",
+    "market": "Tus inversiones subieron o bajaron",
+    "marketDetail": "Año con año: {returns}",
+    "pensionGrowth": "Crecimiento del retiro",
+    "pensionGrowthDetail": "Al {rate} al año",
+    "debtInterest": "Intereses pagados por deudas",
+    "debtInterestDetail": "Al {rate} al año",
+    "debtRepaid": "Deuda pagada",
+    "lost": "Perdido",
+    "lostDetail": "El efectivo en casa o en una tanda puede desaparecer.",
+    "standingTitle": "Dónde estás a los {age} años",
+    "sourceNote": "Cada cifra se calcula con las tasas reales de {countryIn} que aparecen en la guía del país; las subidas y bajadas anuales del mercado se sortean al azar, pero se repiten igual si vuelves a jugar."
+  },
+  "market": {
+    "title": "Elige a dónde van tus ahorros extra",
+    "intro": "Hay cuatro opciones sobre la mesa. Mira las noticias y los números, y elige una.",
+    "index": {
+      "kind": "Fondo · es dueño de cientos de empresas",
+      "news": "Los mercados cerraron el año mixtos; quienes ahorran a largo plazo siguieron comprando cada mes."
+    },
+    "savings": {
+      "kind": "Ahorro · protegido",
+      "news": "Las tasas siguen al banco central, ahora en {rate}."
+    },
+    "stock": {
+      "name": "NovaGrid Energy",
+      "kind": "Una sola empresa · startup de baterías",
+      "news": "\"Lo próximo grande\": las acciones se disparan tras pedidos récord, pero la empresa aún pierde dinero."
+    },
+    "coin": {
+      "name": "ZapCoin",
+      "kind": "Token cripto · consejo de un compañero",
+      "news": "Influencer: \"¡100 veces para el verano!\" Sin empresa, producto ni ganancias detrás."
+    },
+    "metric": {
+      "longRun": "Promedio a largo plazo",
+      "holds": "Repartido en",
+      "swings": "Subidas y bajadas",
+      "fees": "Comisiones",
+      "rate": "Interés",
+      "inflation": "Suben los precios",
+      "protection": "Protección",
+      "lastYear": "Últimos 12 meses",
+      "lastMonth": "Último mes",
+      "biggestDrop": "Mayor caída",
+      "profit": "Ganancias",
+      "business": "Negocio detrás"
+    },
+    "value": {
+      "perYear": "{rate} al año",
+      "hundreds": "Cientos de empresas",
+      "oneCompany": "Una empresa",
+      "medium": "Medias",
+      "none": "Ninguna",
+      "low": "Bajas",
+      "protected": "Seguro de depósitos",
+      "notYet": "Todavía no",
+      "noBusiness": "Ninguno"
+    },
+    "fictional": "Empresa ficticia, números de ejemplo.",
+    "bestBadge": "Mejor opción a largo plazo",
+    "youPickedBest": "Buena elección: el fondo indexado suele ser el mejor lugar para el dinero a largo plazo.",
+    "bestIs": "La mejor opción a largo plazo aquí es: {name}.",
+    "whyIndex": "Reparte tu dinero en cientos de empresas, cuesta poco y tiene años para recuperarse de las malas rachas. El dinero que necesitas pronto sigue yendo al ahorro.",
+    "why": {
+      "keep-saving": "Ahorrar es seguro, pero a lo largo de muchos años apenas sigue el ritmo de los precios.",
+      "single-stock": "Una sola empresa puede caer a la mitad en un mal año. Las grandes ganancias recientes dicen poco del futuro.",
+      "crypto-tip": "Sin un negocio detrás, su precio depende solo de la moda. Los consejos de redes sociales son una forma común de perder dinero."
+    },
+    "seeResult": "Ver qué pasa",
+    "note": "Mercado de práctica. Las cifras del fondo y del ahorro son reales de {countryIn}; NovaGrid y ZapCoin son inventados para mostrar trampas comunes."
   }
 }

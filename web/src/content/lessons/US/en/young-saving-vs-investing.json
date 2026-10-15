@@ -20,5 +20,46 @@
     "body": "Maya takes home $3,200 a month and has about $450 left after essentials. She first builds a cushion of three months' expenses in a high-yield savings account. At work, she raises her 401(k) contribution just enough to get her employer's full match. Once the cushion is full, she sends $150 a month into a broad index fund and doesn't check it every day."
   },
   "takeaway": "Cushion first, match second, invest the rest for the long run: each pot has its own job.",
-  "factsUsed": ["savings-account", "deposit-insurance", "inflation", "everyday-account", "index-fund", "retirement-product", "culture-2", "retirement-system"]
+  "factsUsed": [
+    "savings-account",
+    "deposit-insurance",
+    "inflation",
+    "everyday-account",
+    "index-fund",
+    "retirement-product",
+    "culture-2",
+    "retirement-system"
+  ],
+  "quiz": [
+    {
+      "question": "Where should the money for next month's rent live?",
+      "options": [
+        "A broad stock index fund",
+        "A high-yield savings account",
+        "A 401(k)"
+      ],
+      "answer": 1,
+      "why": "You need it soon and it must not drop in value. Savings are instant and FDIC-insured; index funds go up and down."
+    },
+    {
+      "question": "Your employer matches 401(k) contributions. What happens if you don't contribute?",
+      "options": [
+        "Nothing changes",
+        "You leave part of your pay on the table",
+        "You pay a 10% penalty"
+      ],
+      "answer": 1,
+      "why": "The match is extra pay you only get by contributing yourself."
+    },
+    {
+      "question": "A broad index fund fell 15% this year. What does that tell you about long-term money?",
+      "options": [
+        "Sell everything now",
+        "Ups and downs are normal; it suits money you won't need for years",
+        "Index funds never recover"
+      ],
+      "answer": 1,
+      "why": "Its value swings, but the long-term average has historically been positive, which is why it's for long-term goals."
+    }
+  ]
 }

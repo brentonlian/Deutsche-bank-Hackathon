@@ -20,5 +20,46 @@
     "body": "Brigitte bekommt 1.650 € Rente im Monat. Sechs Monatsausgaben liegen als Puffer auf ihrem Tagesgeldkonto. Jeden Monat nimmt sie einen festen Betrag von 150 € aus ihrem Ersparten für Reisen und Geschenke für die Enkel. Den Rest lässt sie in Ruhe, damit das Geld auch in zehn Jahren noch reicht."
   },
   "takeaway": "Die Rente deckt den Alltag, ein Tagesgeld-Puffer die Überraschungen, und vom Ersparten entnehmen Sie nur einen festen, maßvollen Betrag.",
-  "factsUsed": ["retirement-system", "savings-account", "deposit-insurance", "inflation", "index-fund", "expensive-credit", "culture-1", "currency"]
+  "factsUsed": [
+    "retirement-system",
+    "savings-account",
+    "deposit-insurance",
+    "inflation",
+    "index-fund",
+    "expensive-credit",
+    "culture-1",
+    "currency"
+  ],
+  "quiz": [
+    {
+      "question": "Wo liegt der Notgroschen für unerwartete Ausgaben am besten?",
+      "options": [
+        "In einem ETF",
+        "Auf einem Tagesgeldkonto",
+        "Im Dispo"
+      ],
+      "answer": 1,
+      "why": "Tagesgeld ist sofort verfügbar und durch die Einlagensicherung bis 100.000 € geschützt; ein ETF schwankt im Wert."
+    },
+    {
+      "question": "Die Inflation liegt bei etwa 2,8 %. Was bedeutet das für Bargeld, das nur herumliegt?",
+      "options": [
+        "Es wird mehr wert",
+        "Es verliert langsam an Kaufkraft",
+        "Nichts"
+      ],
+      "answer": 1,
+      "why": "Steigen die Preise schneller als die Zinsen, kann man sich mit demselben Geld jedes Jahr etwas weniger kaufen."
+    },
+    {
+      "question": "Warum hilft ein fester monatlicher Betrag aus dem Ersparten?",
+      "options": [
+        "Damit das Ersparte länger reicht",
+        "Weil die Bank es verlangt",
+        "Weil es Steuern spart"
+      ],
+      "answer": 0,
+      "why": "Ein maßvoller, fester Betrag schützt davor, das Ersparte zu schnell aufzubrauchen."
+    }
+  ]
 }

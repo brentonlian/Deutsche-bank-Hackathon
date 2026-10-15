@@ -24,5 +24,45 @@
     "body": "Ananya's father receives a video call from a man in uniform saying a parcel with drugs was booked on his Aadhaar and he is under 'digital arrest'. Because Ananya had explained this scam at dinner, he hangs up, calls her, and they report it together on 1930. No money leaves his account."
   },
   "takeaway": "Never enter your UPI PIN or share an OTP because someone asked: hang up, check for yourself, and report on 1930.",
-  "factsUsed": ["scam-in-upi-collect", "scam-in-kyc", "scam-in-digital-arrest", "scam-in-job", "scam-in-upi-debit", "scam-in-otp", "payment-rails"]
+  "factsUsed": [
+    "scam-in-upi-collect",
+    "scam-in-kyc",
+    "scam-in-digital-arrest",
+    "scam-in-job",
+    "scam-in-upi-debit",
+    "scam-in-otp",
+    "payment-rails"
+  ],
+  "quiz": [
+    {
+      "question": "A buyer sends a UPI request and asks you to enter your PIN to receive ₹4,999. What do you do?",
+      "options": [
+        "Enter the PIN",
+        "Decline: a PIN only ever sends money",
+        "Ask them to send it again"
+      ],
+      "answer": 1,
+      "why": "You never need your UPI PIN to receive money. Entering it sends money out."
+    },
+    {
+      "question": "A 'CBI officer' on a video call says you're under digital arrest. What's true?",
+      "options": [
+        "You must transfer money to prove innocence",
+        "Digital arrest doesn't exist; hang up and report on 1930",
+        "Stay on the call until it's resolved"
+      ],
+      "answer": 1,
+      "why": "Police never ask you to transfer money. Report it at cybercrime.gov.in or call 1930."
+    },
+    {
+      "question": "Which message is normal?",
+      "options": [
+        "'Your account will be blocked today, update KYC at this link'",
+        "'₹250 debited for your Swiggy order via UPI', with no link",
+        "'Pay ₹999 to start earning ₹5,000 a day'"
+      ],
+      "answer": 1,
+      "why": "A debit alert for a payment you made, with no link or request, is a normal bank message."
+    }
+  ]
 }

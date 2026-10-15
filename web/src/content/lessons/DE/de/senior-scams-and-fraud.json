@@ -24,5 +24,44 @@
     "body": "Brigitte bekommt eine WhatsApp: „Hallo Mama, das ist meine neue Nummer. Kannst du schnell 1.450 € für eine Rechnung überweisen?“ Statt zu zahlen, ruft sie ihren Sohn unter seiner alten Nummer an. Er sitzt gerade beim Frühstück, sein Handy ist heil, und Brigitte meldet die Nachricht."
   },
   "takeaway": "Wenn jemand per Nachricht oder Telefon Geld will: auflegen, selbst unter der bekannten Nummer zurückrufen und niemals Bargeld oder Karten herausgeben.",
-  "factsUsed": ["scam-de-enkeltrick", "scam-de-police", "scam-de-pushtan", "scam-de-parcel", "scam-de-salary", "scam-de-schufa"]
+  "factsUsed": [
+    "scam-de-enkeltrick",
+    "scam-de-police",
+    "scam-de-pushtan",
+    "scam-de-parcel",
+    "scam-de-salary",
+    "scam-de-schufa"
+  ],
+  "quiz": [
+    {
+      "question": "„Hallo Mama, das ist meine neue Nummer. Kannst du schnell Geld überweisen?“ Was tun Sie?",
+      "options": [
+        "Sofort überweisen",
+        "Ihr Kind unter der alten, bekannten Nummer anrufen",
+        "Antworten und nach dem Grund fragen"
+      ],
+      "answer": 1,
+      "why": "Das ist der Enkeltrick. Ein Anruf unter der bekannten Nummer klärt es sofort."
+    },
+    {
+      "question": "Die „Polizei“ ruft an und will Ihr Bargeld abholen, um es zu schützen. Was stimmt?",
+      "options": [
+        "Die echte Polizei holt niemals Geld oder Karten ab",
+        "Das ist ein normaler Service",
+        "Man sollte die Karten mitgeben, das Geld aber nicht"
+      ],
+      "answer": 0,
+      "why": "Die echte Polizei holt niemals Geld oder Karten ab und ruft nicht von der 110 an."
+    },
+    {
+      "question": "Welche Nachricht ist normal?",
+      "options": [
+        "Eine SMS mit Link, um pushTAN neu zu registrieren",
+        "Eine Mitteilung in Ihrer Banking-App ohne Link und ohne Aufforderung",
+        "Eine SMS, die 1,99 € Zollgebühr per Link verlangt"
+      ],
+      "answer": 1,
+      "why": "Banken schicken keine Links zur TAN-Registrierung, und DHL verlangt keine Gebühren per SMS-Link."
+    }
+  ]
 }

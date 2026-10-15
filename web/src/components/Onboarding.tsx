@@ -39,7 +39,7 @@ export function Onboarding() {
   }, [regionId]);
 
   useEffect(() => {
-    if (app.ready && app.profile && app.game) router.replace("/play");
+    if (app.ready && app.profile && app.game) router.replace("/learn");
   }, [app.ready, app.profile, app.game, router]);
 
   const region = regionId ? localizeRegion(REGIONS[regionId], uiLang) : null;
@@ -70,7 +70,7 @@ export function Onboarding() {
       personaId: persona?.id,
     });
     app.setGame({ seed: persona?.seed ?? Math.floor(Math.random() * 2 ** 31), choices: [] });
-    router.push("/play");
+    router.push("/learn");
   }
 
   const labels = [t("onboarding.stationCountry"), t("onboarding.stationLanguage"), t("onboarding.stationAge"), t("onboarding.stationMoney")];

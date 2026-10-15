@@ -20,5 +20,44 @@
     "body": "Maya owes $1,800 on her card. At about 22.4% a year, carrying it costs her roughly $400 in interest over a year. She moves $150 a month from her budget to the card and stops using it for now. In a little over a year the balance is gone, and that $150 starts going into savings instead."
   },
   "takeaway": "Pay your card in full whenever you can: a balance at 22.4% grows faster than almost any savings can earn.",
-  "factsUsed": ["credit-bureau", "culture-1", "expensive-credit", "informal-lender", "informal-savings", "currency"]
+  "factsUsed": [
+    "credit-bureau",
+    "culture-1",
+    "expensive-credit",
+    "informal-lender",
+    "informal-savings",
+    "currency"
+  ],
+  "quiz": [
+    {
+      "question": "Your card statement shows a $600 balance. What keeps the interest at zero?",
+      "options": [
+        "Paying the minimum on time",
+        "Paying the full statement balance",
+        "Paying half now, half next month"
+      ],
+      "answer": 1,
+      "why": "Interest of about 22.4% a year is only charged on balances you carry. Paying the full statement means nothing is carried."
+    },
+    {
+      "question": "Which of these builds your FICO score over time?",
+      "options": [
+        "Checking your score often",
+        "Paying every bill on time, month after month",
+        "Opening many new cards at once"
+      ],
+      "answer": 1,
+      "why": "On-time payment history is the core of your record at Equifax, Experian and TransUnion."
+    },
+    {
+      "question": "You're $300 short before payday. Which option is usually the most expensive?",
+      "options": [
+        "Asking your bank about options",
+        "A payday loan",
+        "Waiting and cutting spending for a week"
+      ],
+      "answer": 1,
+      "why": "Payday lenders can charge about 390% a year or more, far above even a credit card."
+    }
+  ]
 }

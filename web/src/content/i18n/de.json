@@ -5,15 +5,16 @@
     "disclaimer": "Bildung, keine Finanzberatung. Zahlen sind vereinfacht und mit den angegebenen Quellen abgeglichen."
   },
   "nav": {
-    "play": "Lebensweg",
-    "learn": "Lektionen",
+    "play": "Lebensweg-Spiel",
+    "learn": "Lernen",
     "restart": "Neu starten",
     "language": "Sprache",
     "country": "Land",
     "simple": "Einfache Sprache",
     "readAloud": "Vorlesen",
     "stopReading": "Vorlesen stoppen",
-    "skip": "Zum Inhalt springen"
+    "skip": "Zum Inhalt springen",
+    "tools": "Rechner"
   },
   "onboarding": {
     "stationCountry": "Land",
@@ -533,7 +534,7 @@
   "personas": {
     "maya": {
       "name": "Maya",
-      "where": "Columbus, Ohio, USA",
+      "where": "New York, USA",
       "about": "24, erster Vollzeitjob in der Logistik. Hat Schulden auf der Kreditkarte und einen neuen 401(k) bei der Arbeit."
     },
     "ananya": {
@@ -546,5 +547,202 @@
       "where": "Köln, Deutschland",
       "about": "68, pensionierte Lehrerin, lebt von Rente und Erspartem. Spielt auf Deutsch."
     }
+  },
+  "theme": {
+    "button": "Farben",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "contrast": "Hoher Kontrast",
+    "calm": "Ruhig"
+  },
+  "hub": {
+    "title": "Deine Geld-Linie in {countryIn}",
+    "intro": "Sechs Stationen: Verstehe, wie Geld in deinem Land funktioniert, lerne zwei Themen, probiere sie mit deinen eigenen Zahlen aus und bring alles im Lebensweg-Spiel zusammen.",
+    "progress": "{done} von {total} Stationen geschafft",
+    "kind": {
+      "guide": "Länderüberblick",
+      "lesson": "Lektion und Quiz",
+      "tool": "Mit deinen Zahlen ausprobieren",
+      "game": "Üben"
+    },
+    "guideTitle": "So funktioniert Geld in {countryIn}",
+    "guideAbout": "Banken, Zinsen, Inflation, Kredite, Absicherung und typische Betrugsmaschen, mit Quellen.",
+    "lessonAbout": "Eine kurze Lektion für dein Land und deine Lebensphase, danach drei schnelle Fragen.",
+    "gameTitle": "Lebensweg-Spiel",
+    "gameAbout": "Erlebe die Entscheidungen der nächsten Jahrzehnte und sieh, wohin dein Geld fließt.",
+    "quizScore": "Quiz: {score} von 3 richtig",
+    "start": "Starten",
+    "review": "Ansehen"
+  },
+  "guide": {
+    "back": "Deine Geld-Linie",
+    "intro": "Die Grundlagen des Geldsystems deines Landes auf einer Seite. Jede Zahl ist ein geprüfter Fakt mit Quelle.",
+    "pricesTitle": "Preise und Zinsen",
+    "inflation": "Die Preise steigen um etwa {rate} pro Jahr (Inflation).",
+    "policyRate": "Der Leitzins der Zentralbank ({bank}) liegt bei etwa {rate}. Spar- und Kreditzinsen folgen ihm.",
+    "pricesWhy": "Bringt dein Geld weniger Zinsen als die Inflation, kannst du dir jedes Jahr etwas weniger davon kaufen.",
+    "keepTitle": "Wo du Geld aufbewahrst",
+    "colProduct": "Möglichkeit",
+    "colRate": "Bringt pro Jahr",
+    "colAccess": "Zugriff",
+    "colRisk": "Risiko",
+    "access": {
+      "instant": "Sofort",
+      "days": "Einige Tage",
+      "locked": "Gebunden bis zur Rente"
+    },
+    "risk": {
+      "none": "Keins",
+      "low": "Gering",
+      "medium": "Schwankungen",
+      "high": "Hoch"
+    },
+    "depositInsurance": "Einlagensicherung:",
+    "borrowTitle": "Kredite und Bonität",
+    "creditBureau": "Deine Kreditgeschichte speichert: {bureau}.",
+    "cardApr": "Kreditkarten und Dispo",
+    "lenderApr": "Private Geldverleiher und Kurzzeitkredite",
+    "payTitle": "Bezahlen und Geld senden",
+    "regulator": "Banken und Zahlungsdienste werden beaufsichtigt von: {regulator}.",
+    "safetyTitle": "Absicherung",
+    "retirement": "Rente:",
+    "unemployment": "Wenn du deinen Job verlierst:",
+    "scamsTitle": "Betrugsmaschen hier im Land und echte Nachrichten",
+    "markDone": "Gelesen",
+    "done": "Erledigt"
+  },
+  "tools": {
+    "title": "Rechner",
+    "intro": "Probiere die Ideen aus den Lektionen mit deinen eigenen Zahlen und den echten Zinsen deines Landes aus.",
+    "months": "{n} Monate",
+    "budget": {
+      "title": "Budgetplaner",
+      "about": "Teile dein Monatseinkommen nach der 50/30/20-Regel auf und sieh, wie schnell du einen Notgroschen aufbaust.",
+      "income": "Monatliches Nettoeinkommen",
+      "needs": "Bedarf (50 %)",
+      "needsNote": "Miete, Essen, Rechnungen, Fahrten",
+      "wants": "Wünsche (30 %)",
+      "wantsNote": "Essen gehen, Hobbys, Reisen",
+      "save": "Sparen (20 %)",
+      "saveNote": "Erst der Notgroschen, dann langfristige Ziele",
+      "cushionTitle": "Dein Notgroschen",
+      "cushionBody": "Ein übliches Ziel sind 3 bis 6 Monate Bedarf: {low} bis {high}.",
+      "afterYear": "Ein Jahr gespart auf {name} zu {rate}",
+      "monthsToCushion": "Zeit bis zu 3 Monaten Notgroschen"
+    },
+    "growth": {
+      "title": "Sparwachstum",
+      "about": "Sieh, was aus einem festen monatlichen Betrag wird: als Bargeld, auf dem Sparkonto und in einem Indexfonds.",
+      "monthly": "Monatlich gespart",
+      "years": "Jahre",
+      "paidIn": "Insgesamt eingezahlt: {total}.",
+      "today": "Entspricht {value} in heutigem Geld (Preise steigen {rate} pro Jahr)",
+      "chart": "So wächst es, Jahr für Jahr",
+      "note": "Spar- und Fondszinsen sind die Zahlen dieses Landes. Indexfonds schwanken; die Linie zeigt ihren langfristigen Durchschnitt, kein Versprechen."
+    },
+    "debt": {
+      "title": "Schulden abbezahlen",
+      "about": "Sieh, wie lange es dauert, eine Schuld abzuzahlen, und was die Zinsen wirklich kosten.",
+      "balance": "Was du schuldest",
+      "payment": "Monatliche Rate",
+      "card": "Karte zu {rate}",
+      "cardDouble": "Karte zu {rate}, doppelte Rate",
+      "lender": "Geldverleiher zu {rate}",
+      "interest": "Gezahlte Zinsen:",
+      "never": "Nie abbezahlt: Die Rate deckt nicht einmal die Zinsen.",
+      "note": "Eine höhere monatliche Rate spart Zeit und Zinsen. Bei sehr hohen Zinsen kann eine kleine Rate bedeuten, dass die Schuld nie verschwindet."
+    }
+  },
+  "quiz": {
+    "title": "Prüfe, was du gelernt hast",
+    "next": "Nächste Frage",
+    "result": "{score} von {total} richtig.",
+    "finish": "Ergebnis speichern",
+    "continue": "Zurück zu deiner Geld-Linie"
+  },
+  "story": {
+    "decisionTitle": "Deine Entscheidung hat verändert",
+    "yearsTitle": "Die nächsten {years} Jahre",
+    "pricesRose": "Die Preise sind in dieser Zeit um {pct} gestiegen.",
+    "earned": "Verdient durch Arbeit oder Rente",
+    "earnedDetail": "Etwa {monthly} im Monat",
+    "living": "Für den Lebensunterhalt ausgegeben",
+    "fixed": "Versicherung und Unterstützung der Familie",
+    "saved": "Zurückgelegt",
+    "savedDetail": "{share} der Einnahmen",
+    "pension": "In die Altersvorsorge eingezahlt",
+    "drawdown": "Aus dem Ersparten zum Leben entnommen",
+    "interest": "Zinsen auf Ersparnisse",
+    "interestDetail": "Zu {rate} pro Jahr",
+    "market": "Investitionen gestiegen oder gefallen",
+    "marketDetail": "Jahr für Jahr: {returns}",
+    "pensionGrowth": "Wachstum der Altersvorsorge",
+    "pensionGrowthDetail": "Zu {rate} pro Jahr",
+    "debtInterest": "Zinsen auf Schulden gezahlt",
+    "debtInterestDetail": "Zu {rate} pro Jahr",
+    "debtRepaid": "Schulden zurückgezahlt",
+    "lost": "Verloren",
+    "lostDetail": "Bargeld zu Hause oder in einer privaten Spargruppe kann verschwinden.",
+    "standingTitle": "Dein Stand mit {age} Jahren",
+    "sourceNote": "Jede Zahl ist mit den echten Zinsen in {countryIn} berechnet, die im Länderüberblick stehen; die jährlichen Schwankungen des Marktes werden zufällig gezogen, bleiben beim Wiederholen aber gleich."
+  },
+  "market": {
+    "title": "Wähle, wohin deine zusätzlichen Ersparnisse gehen",
+    "intro": "Vier Möglichkeiten liegen auf dem Tisch. Sieh dir die Nachrichten und Zahlen an und wähle eine aus.",
+    "index": {
+      "kind": "Fonds · besitzt Hunderte Unternehmen",
+      "news": "Die Märkte beendeten das Jahr gemischt; langfristige Sparer kauften jeden Monat weiter."
+    },
+    "savings": {
+      "kind": "Sparen · abgesichert",
+      "news": "Die Zinsen folgen der Zentralbank, derzeit {rate}."
+    },
+    "stock": {
+      "name": "NovaGrid Energy",
+      "kind": "Einzelnes Unternehmen · Batterie-Start-up",
+      "news": "„Das nächste große Ding“: Die Aktie steigt nach Rekordaufträgen, doch das Unternehmen macht noch Verluste."
+    },
+    "coin": {
+      "name": "ZapCoin",
+      "kind": "Krypto-Token · Tipp von einem Kollegen",
+      "news": "Influencer: „100-fach bis zum Sommer!“ Kein Unternehmen, kein Produkt, keine Gewinne dahinter."
+    },
+    "metric": {
+      "longRun": "Langfristiger Durchschnitt",
+      "holds": "Verteilt auf",
+      "swings": "Schwankungen",
+      "fees": "Gebühren",
+      "rate": "Zinsen",
+      "inflation": "Preisanstieg",
+      "protection": "Schutz",
+      "lastYear": "Letzte 12 Monate",
+      "lastMonth": "Letzter Monat",
+      "biggestDrop": "Größter Absturz",
+      "profit": "Gewinn",
+      "business": "Geschäft dahinter"
+    },
+    "value": {
+      "perYear": "{rate} pro Jahr",
+      "hundreds": "Hunderte Unternehmen",
+      "oneCompany": "Ein Unternehmen",
+      "medium": "Mittel",
+      "none": "Keine",
+      "low": "Niedrig",
+      "protected": "Einlagensicherung",
+      "notYet": "Noch nicht",
+      "noBusiness": "Keins"
+    },
+    "fictional": "Erfundenes Unternehmen, Beispielzahlen.",
+    "bestBadge": "Beste langfristige Wahl",
+    "youPickedBest": "Gute Wahl: Der Indexfonds ist meist das beste Zuhause für langfristiges Geld.",
+    "bestIs": "Die beste langfristige Wahl hier ist: {name}.",
+    "whyIndex": "Er verteilt dein Geld auf Hunderte Unternehmen, kostet wenig und hat Jahre Zeit, sich von schlechten Phasen zu erholen. Geld, das du bald brauchst, gehört trotzdem aufs Sparkonto.",
+    "why": {
+      "keep-saving": "Sparen ist sicher, hält über viele Jahre aber kaum mit den Preisen mit.",
+      "single-stock": "Ein einzelnes Unternehmen kann in einem schlechten Jahr die Hälfte verlieren. Große Gewinne der Vergangenheit sagen wenig über die Zukunft.",
+      "crypto-tip": "Ohne Geschäft dahinter hängt der Preis nur vom Hype ab. Tipps aus sozialen Medien sind ein häufiger Weg, Geld zu verlieren."
+    },
+    "seeResult": "Sieh, was passiert",
+    "note": "Übungsmarkt. Fonds- und Sparzahlen sind echte Werte aus {countryIn}; NovaGrid und ZapCoin sind erfunden, um typische Fallen zu zeigen."
   }
 }

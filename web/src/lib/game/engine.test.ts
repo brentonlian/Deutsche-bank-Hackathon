@@ -85,6 +85,29 @@ describe("Life Path engine", () => {
     expect(r.final.credit).toBe(0);
   });
 
+  it("records a ledger that explains each period", () => {
+    const ctx = ctxFor("US");
+    const r = simulate(ctx, ["balanced", "savings"]);
+    const [first, second] = r.timeline.map((s) => s.ledger);
+    expect(first.years).toBeCloseTo(ctx.yearsPerStage, 5);
+    expect(first.earned).toBeGreaterThan(0);
+    // Saving 15% means about 15% of pay was put aside.
+    expect(first.saved / first.earned).toBeCloseTo(0.15, 2);
+    expect(second.savingsRatePct).toBe(REGIONS.US.products.savingsAccount.ratePct);
+    expect(second.cashInterest).toBeGreaterThan(0);
+    expect(first.marketReturns.length).toBe(Math.ceil(ctx.yearsPerStage - 0.01));
+  });
+
+  it("never recommends a gamble, even when the dice favour it", () => {
+    for (const seed of [1, 2, 3, 4, 5, 6, 7, 8]) {
+      for (const id of REGION_IDS) {
+        const ctx = ctxFor(id, "young", seed);
+        const pick = pickFrom(ctx, optimalPath(ctx).path);
+        expect(["index", "keep-saving"]).toContain(pick("invest"));
+      }
+    }
+  });
+
   it("seniors draw down savings rather than saving", () => {
     const ctx = ctxFor("DE", "senior");
     const r = simulate(ctx, ["comfortable"]);

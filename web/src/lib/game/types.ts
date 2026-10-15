@@ -53,6 +53,8 @@ export interface GameContext {
 
 export interface OptionDef {
   id: string;
+  /** A gamble whose payoff depends on luck. The express line never recommends one. */
+  speculative?: boolean;
   /** Apply the decision. rng is the stage's own deterministic stream. */
   apply: (s: GameState, ctx: GameContext, rng: () => number) => GameState;
 }
@@ -60,10 +62,37 @@ export interface OptionDef {
 export interface StageDef {
   id: string;
   /** Mini-games appear as life events; their result is recorded as an option id. */
-  minigame?: "scam";
+  minigame?: "scam" | "market";
   /** Lesson topic the "learn why" link points to. */
   topic: string;
   options: (ctx: GameContext) => OptionDef[];
+}
+
+/** Where the money went during the years after one decision. All amounts nominal, local currency. */
+export interface Ledger {
+  years: number;
+  earned: number;
+  livingCosts: number;
+  /** Insurance premiums, family support and other fixed commitments. */
+  fixedCosts: number;
+  /** Put aside after paying debts (savings and investments). */
+  saved: number;
+  toPension: number;
+  /** Taken out of savings to live on (seniors drawing down). */
+  drawdown: number;
+  debtInterest: number;
+  debtRepaid: number;
+  newDebt: number;
+  cashInterest: number;
+  marketChange: number;
+  pensionGrowth: number;
+  /** Cash lost to theft or a savings group collapsing. */
+  lost: number;
+  /** The index fund's actual return in each year of the period. */
+  marketReturns: number[];
+  savingsRatePct: number;
+  /** How much prices rose over the period. */
+  inflationPct: number;
 }
 
 export interface Snapshot {
@@ -71,7 +100,10 @@ export interface Snapshot {
   choice: string;
   age: number;
   before: GameState;
+  /** Right after the decision, before time passes: shows the decision's own cost. */
+  decided: GameState;
   after: GameState;
+  ledger: Ledger;
   netWorthReal: number;
 }
 

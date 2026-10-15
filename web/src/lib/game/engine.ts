@@ -1,8 +1,8 @@
 import type { RegionPack } from "@/lib/regions/schema";
-import { advance, clamp, monthlyExpenses } from "./money";
+import { advance, clamp, emptyLedger, monthlyExpenses } from "./money";
 import { stageRng } from "./rng";
 import { STAGE_SETS } from "./stages";
-import type { AgeGroup, GameContext, GameResult, GameState, ScoreBreakdown, Snapshot } from "./types";
+import type { AgeGroup, GameContext, GameResult, GameState, Ledger, ScoreBreakdown, Snapshot } from "./types";
 
 export const AGE_GROUPS: Record<AgeGroup, { min: number; max: number; defaultAge: number }> = {
   young: { min: 18, max: 30, defaultAge: 23 },
@@ -67,12 +67,17 @@ export function initialState(ctx: GameContext): GameState {
 export const netWorthReal = (s: GameState) => (s.cash + s.invested + s.pension - s.debt) / s.priceLevel;
 
 /** Option streams and market streams are separate so every option at a stage faces the same market. */
-export function step(s: GameState, stageIndex: number, choice: string, ctx: GameContext): GameState {
+export function step(s: GameState, stageIndex: number, choice: string, ctx: GameContext, ledger?: Ledger): GameState {
+  return stepDetailed(s, stageIndex, choice, ctx, ledger).after;
+}
+
+function stepDetailed(s: GameState, stageIndex: number, choice: string, ctx: GameContext, ledger?: Ledger) {
   const stage = ctx.stages[stageIndex];
   const option = stage.options(ctx).find((o) => o.id === choice);
   if (!option) throw new Error(`Unknown option "${choice}" for stage "${stage.id}"`);
   const decided = option.apply(s, ctx, stageRng(ctx.seed, stageIndex * 2));
-  return advance(decided, ctx, ctx.yearsPerStage, stageRng(ctx.seed, stageIndex * 2 + 1));
+  const after = advance(decided, ctx, ctx.yearsPerStage, stageRng(ctx.seed, stageIndex * 2 + 1), ledger);
+  return { decided, after };
 }
 
 export function breakdown(s: GameState, ctx: GameContext): ScoreBreakdown {
@@ -100,16 +105,21 @@ export function simulate(ctx: GameContext, choices: string[]): GameResult {
   const timeline: Snapshot[] = [];
   choices.forEach((choice, i) => {
     const before = s;
-    s = step(s, i, choice, ctx);
-    timeline.push({ stageId: ctx.stages[i].id, choice, age: before.age, before, after: s, netWorthReal: netWorthReal(s) });
+    const ledger = emptyLedger();
+    const { decided, after } = stepDetailed(s, i, choice, ctx, ledger);
+    s = after;
+    timeline.push({ stageId: ctx.stages[i].id, choice, age: before.age, before, decided, after, ledger, netWorthReal: netWorthReal(s) });
   });
   const b = breakdown(s, ctx);
   return { timeline, final: s, score: score(b), breakdown: b };
 }
 
-/** Options the optimiser may pick. Failing the scam quiz is never a "choice" worth recommending. */
+/**
+ * Options the optimiser may pick. Failing the scam quiz is never worth recommending, and neither is a
+ * gamble: with a fixed seed a lucky bet could look "optimal", which is the wrong lesson.
+ */
 const choosable = (stageIndex: number, ctx: GameContext) =>
-  ctx.stages[stageIndex].options(ctx).filter((o) => !(ctx.stages[stageIndex].minigame && o.id === "fail"));
+  ctx.stages[stageIndex].options(ctx).filter((o) => !o.speculative && !(ctx.stages[stageIndex].minigame && o.id === "fail"));
 
 function bestFrom(s: GameState, stageIndex: number, ctx: GameContext): { score: number; path: string[] } {
   if (stageIndex === ctx.stages.length) return { score: score(breakdown(s, ctx)), path: [] };

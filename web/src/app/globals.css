@@ -22,29 +22,67 @@
   /* Country line, overridden per region. */
   --line: #1f5fbf;
   --line-ink: #ffffff;
-  --line-soft: #dbe5f5;
+  --line-soft: color-mix(in srgb, var(--line) 22%, var(--ground));
+}
+
+/* Colour themes (header button). Country line colours stay; ground, ink and panels change. */
+:root[data-theme="dark"] {
+  --ground: #0e1726;
+  --panel: #18233a;
+  --panel-strong: #2a3854;
+  --ink: #eef1f5;
+  --ink-2: #b8c1cf;
+  --ink-3: #8d97a8;
+  --express: #46c287;
+  --express-soft: #173a2a;
+  --whatif: #9aa5b6;
+  --danger: #ff7a6b;
+  --danger-soft: #4a1f1c;
+  --focus: #eef1f5;
+}
+:root[data-theme="contrast"] {
+  --ground: #ffffff;
+  --panel: #f1f1f1;
+  --panel-strong: #000000;
+  --ink: #000000;
+  --ink-2: #1a1a1a;
+  --ink-3: #333333;
+  --express: #00663a;
+  --express-soft: #d9f0e3;
+  --whatif: #333333;
+  --danger: #a00000;
+  --focus: #000000;
+}
+:root[data-theme="calm"] {
+  --ground: #eaf0ec;
+  --panel: #dce6df;
+  --panel-strong: #c4d2c8;
+  --ink: #12241b;
+  --ink-2: #33473c;
+  --ink-3: #55685d;
+  --focus: #12241b;
 }
 
 [data-region="DE"] {
   --line: #1f5fbf;
   --line-ink: #ffffff;
-  --line-soft: #dbe5f5;
+  --line-soft: color-mix(in srgb, var(--line) 22%, var(--ground));
 }
 [data-region="IN"] {
   --line: #f2b705;
   --line-ink: #0f1b2d;
-  --line-soft: #fcefc4;
+  --line-soft: color-mix(in srgb, var(--line) 22%, var(--ground));
 }
 /* NYC subway orange (B/D/F/M); navy text keeps contrast above 4.5:1. */
 [data-region="US"] {
   --line: #ff6319;
   --line-ink: #0f1b2d;
-  --line-soft: #ffe1d3;
+  --line-soft: color-mix(in srgb, var(--line) 22%, var(--ground));
 }
 [data-region="MX"] {
   --line: #d6006f;
   --line-ink: #ffffff;
-  --line-soft: #f9d6e6;
+  --line-soft: color-mix(in srgb, var(--line) 22%, var(--ground));
 }
 
 @theme inline {
@@ -69,12 +107,19 @@
 }
 
 html {
+  color-scheme: light;
   background: var(--ground);
   color: var(--ink);
   -webkit-text-size-adjust: 100%;
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
 body {
+  background: var(--ground);
+  transition: background-color 0.3s;
   font-family: var(--font-sans);
   font-feature-settings: "tnum" 1;
   caret-color: var(--line);
@@ -147,4 +192,18 @@ a {
   .draw-line {
     animation: none;
   }
+}
+
+/* Swatches in the theme menu show each scheme's ground and ink. */
+.theme-swatch-light {
+  background: linear-gradient(135deg, #f2f3f0 50%, #0f1b2d 50%);
+}
+.theme-swatch-dark {
+  background: linear-gradient(135deg, #0e1726 50%, #eef1f5 50%);
+}
+.theme-swatch-contrast {
+  background: linear-gradient(135deg, #ffffff 50%, #000000 50%);
+}
+.theme-swatch-calm {
+  background: linear-gradient(135deg, #eaf0ec 50%, #12241b 50%);
 }

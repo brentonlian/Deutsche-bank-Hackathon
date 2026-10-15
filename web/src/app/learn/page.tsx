@@ -1,5 +1,5 @@
-import { LessonIndex } from "@/components/learn/LessonIndex";
+import { LearnHub } from "@/components/learn/LearnHub";
 
 export default function LearnPage() {
-  return <LessonIndex />;
+  return <LearnHub />;
 }

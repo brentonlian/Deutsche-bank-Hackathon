@@ -6,16 +6,23 @@ Rooted teaches money skills adapted to your **country, language and stage of lif
 
 | Persona | Pick in onboarding | Language | Lessons |
 |---|---|---|---|
-| Maya | United States · Columbus, Ohio · Young adult · 24 | English | Credit and debt · Saving vs investing |
+| Maya | United States · New York · Young adult · 24 | English | Credit and debt · Saving vs investing |
 | Ananya | India · Bengaluru · Middle age · 42 | English | Budgeting · Scams and fraud |
 | Brigitte | Germany · Köln · Senior · 68 | Deutsch | Retirement · Scams and fraud |
 
 Each persona has fixed life events, so the demo plays the same every time.
 
 1. **Onboarding:** country and city, language, age group and monthly budget. Everything stays in the browser.
-2. **Life Path:** a Game-of-Life-style series of 10–11 decisions drawn as a metro line. Each country's real products, rates, scams, savings groups and safety nets change the outcome. A *Scam or Legit?* mini-game appears as a life event.
-3. **Results:** your line beside the green **express line** (the optimal path). Tap any station to see the best choice from where you stood, show the what-if on the chart, or replay from there.
-4. **Lessons:** 13 topics written by AI **only from vetted country facts**, with sources. *Compare countries* shows the same lesson for Germany, India and Mexico side by side.
+2. **Learning line (home):** 6 stations.
+   - **Country guide:** how money works in your country, every figure sourced.
+   - **Lessons with quizzes:** two lessons, each followed by a short quiz.
+   - **Calculators:** budget planner, savings growth, debt payoff, using your numbers and your country's real rates.
+   - **Life Path game:** the last station, for practice.
+3. **Life Path game:** 10–11 life decisions with no spoilers about what's coming.
+   - **Money story:** after each decision a full screen shows what it cost and where every unit of money went (pay, spending, savings, interest, market years, debt interest).
+   - **Mini-games:** *Scam or Legit?* and an investing pick with news and metrics.
+4. **Results:** your line beside the green **express line** (the optimal path). Tap any station for the better choice, a what-if on the chart, or a replay from there.
+5. **Colours:** Light, Dark, High contrast or Calm, from the top-right button.
 
 Countries: United States, India, Germany and Mexico. Languages: English, Deutsch, Español and हिन्दी; any language works with any country.
 

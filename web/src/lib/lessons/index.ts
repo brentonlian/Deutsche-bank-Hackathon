@@ -30,6 +30,17 @@ export const lessonSchema = z.object({
   takeaway: z.string(),
   /** Keys of the facts the lesson relied on, so the page can show sources. */
   factsUsed: z.array(z.string()),
+  /** A short check for understanding, written in the lesson's language. */
+  quiz: z
+    .array(
+      z.object({
+        question: z.string(),
+        options: z.array(z.string()).min(2).max(4),
+        answer: z.number().int().min(0),
+        why: z.string(),
+      }),
+    )
+    .optional(),
 });
 
 export type Lesson = z.infer<typeof lessonSchema>;

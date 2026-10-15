@@ -25,7 +25,7 @@ export const PERSONAS: Persona[] = [
   {
     id: "maya",
     regionId: "US",
-    city: "Columbus, Ohio",
+    city: "New York",
     lang: "en",
     group: "young",
     age: 24,

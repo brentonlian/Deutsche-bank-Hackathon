@@ -24,9 +24,15 @@ export interface GameSave {
   choices: string[];
 }
 
+export const THEMES = ["light", "dark", "contrast", "calm"] as const;
+export type Theme = (typeof THEMES)[number];
+
 interface Settings {
   simple: boolean;
+  theme: Theme;
 }
+
+const DEFAULT_SETTINGS: Settings = { simple: false, theme: "light" };
 
 interface AppState {
   ready: boolean;
@@ -41,6 +47,9 @@ interface AppState {
   setLang: (l: Lang) => void;
   setGame: (g: GameSave | null) => void;
   setSettings: (s: Partial<Settings>) => void;
+  /** Learning progress: lessons read, quizzes passed, tools tried, game finished. */
+  progress: Record<string, number>;
+  markDone: (key: string, value?: number) => void;
   reset: () => void;
   t: (key: string, vars?: Vars) => string;
   money: (value: number, opts?: { compact?: boolean }) => string;
@@ -54,10 +63,11 @@ interface Stored {
   profile: Profile | null;
   game: GameSave | null;
   settings: Settings;
+  progress: Record<string, number>;
   lang?: Lang;
 }
 
-const EMPTY: Stored = { profile: null, game: null, settings: { simple: false } };
+const EMPTY: Stored = { profile: null, game: null, settings: DEFAULT_SETTINGS, progress: {} };
 
 const store = createLocalStore<Stored>(KEY, EMPTY, (raw) => {
   const parsed = raw as Stored;
@@ -65,7 +75,8 @@ const store = createLocalStore<Stored>(KEY, EMPTY, (raw) => {
   return {
     profile: profileOk ? parsed.profile : null,
     game: profileOk ? (parsed.game ?? null) : null,
-    settings: parsed.settings ?? { simple: false },
+    settings: { ...DEFAULT_SETTINGS, ...parsed.settings },
+    progress: profileOk ? (parsed.progress ?? {}) : {},
     lang: parsed.lang && isLang(parsed.lang) ? parsed.lang : undefined,
   };
 });
@@ -88,7 +99,16 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     if (stored.profile) document.body.dataset.region = stored.profile.regionId;
   }, [lang, stored.profile]);
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = stored.settings.theme;
+  }, [stored.settings.theme]);
+
   const t = useCallback((key: string, vars?: Vars) => translate(lang, key, vars), [lang]);
+  const markDone = useCallback(
+    (key: string, v = 1) =>
+      setStored((s) => (s.progress[key] >= v ? s : { ...s, progress: { ...s.progress, [key]: v } })),
+    [setStored],
+  );
 
   const numberLocale = region ? `${LANGUAGES[lang].bcp47}-${region.id}` : LANGUAGES[lang].bcp47;
   const money = useCallback(
@@ -113,14 +133,16 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     settings: stored.settings,
     lang,
     region,
-    setProfile: (profile) => setStored((s) => ({ ...s, profile, game: null })),
+    setProfile: (profile) => setStored((s) => ({ ...s, profile, game: null, progress: {} })),
     updateProfile: (p) => setStored((s) => (s.profile ? { ...s, profile: { ...s.profile, ...p } } : s)),
     setLang: (l) => setStored((s) => ({ ...s, lang: l, profile: s.profile ? { ...s.profile, lang: l } : null })),
     setGame: (game) => setStored((s) => ({ ...s, game })),
     setSettings: (p) => setStored((s) => ({ ...s, settings: { ...s.settings, ...p } })),
+    progress: stored.progress,
+    markDone,
     reset: () => {
       delete document.body.dataset.region;
-      setStored((s) => ({ profile: null, game: null, settings: s.settings, lang: s.profile?.lang ?? s.lang }));
+      setStored((s) => ({ profile: null, game: null, settings: s.settings, progress: {}, lang: s.profile?.lang ?? s.lang }));
     },
     t,
     money,

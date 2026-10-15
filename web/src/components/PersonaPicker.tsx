@@ -20,7 +20,7 @@ export function PersonaPicker() {
   function start(p: Persona) {
     app.setProfile({ regionId: p.regionId, lang: p.lang, group: p.group, age: p.age, income: p.income, free: p.free, city: p.city, personaId: p.id });
     app.setGame({ seed: p.seed, choices: [] });
-    router.push("/play");
+    router.push("/learn");
   }
 
   return (

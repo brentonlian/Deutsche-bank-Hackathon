@@ -20,5 +20,50 @@
     "body": "Ananya's household takes home ₹95,000. Rent, school fees and bills take ₹50,000, daily spending ₹25,000, and ₹5,000 goes to her parents. The last ₹15,000 is split before the month starts: ₹6,000 into a recurring deposit for a cousin's wedding next year, ₹6,000 into a Nifty 50 SIP for her children's college, and ₹3,000 into PPF."
   },
   "takeaway": "Decide where every rupee goes before the month starts, and give each big family cost its own pot.",
-  "factsUsed": ["payment-rails", "big-life-event", "savings-account", "deposit-insurance", "inflation", "everyday-account", "culture-1", "index-fund", "retirement-product", "expensive-credit", "informal-lender", "currency"]
+  "factsUsed": [
+    "payment-rails",
+    "big-life-event",
+    "savings-account",
+    "deposit-insurance",
+    "inflation",
+    "everyday-account",
+    "culture-1",
+    "index-fund",
+    "retirement-product",
+    "expensive-credit",
+    "informal-lender",
+    "currency"
+  ],
+  "quiz": [
+    {
+      "question": "A cousin's wedding is a year away. What's the best way to prepare?",
+      "options": [
+        "Put it on a credit card later",
+        "Save a fixed amount monthly in a recurring deposit",
+        "Borrow from a money lender when it comes"
+      ],
+      "answer": 1,
+      "why": "A recurring deposit earns about 6.5% and is protected by DICGC, while cards cost about 42% and lenders 60% or more."
+    },
+    {
+      "question": "Inflation is about 5.2%. What happens to money left in a 2.7% savings account?",
+      "options": [
+        "It grows faster than prices",
+        "It slowly loses buying power",
+        "Nothing at all"
+      ],
+      "answer": 1,
+      "why": "Prices rise faster than the interest it earns, so it buys a little less each year."
+    },
+    {
+      "question": "Why give support for your parents its own line in the budget?",
+      "options": [
+        "So it doesn't eat into savings each time it's needed",
+        "Because the bank requires it",
+        "It's cheaper that way"
+      ],
+      "answer": 0,
+      "why": "Planned in advance, family support stops being a surprise that drains your savings."
+    }
+  ]
 }

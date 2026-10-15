@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { PERSONAS, getPersona } from "@/content/personas";
@@ -11,6 +11,7 @@ import { REGIONS, REGION_IDS, type RegionId } from "@/lib/regions";
 import { useApp } from "../AppState";
 import { ReadAloud } from "../ReadAloud";
 import { RequireProfile } from "../RequireProfile";
+import { Quiz } from "./Quiz";
 
 type Load = { status: "loading" } | { status: "error" } | { status: "ready"; lesson: Lesson; lang: Lang };
 
@@ -45,8 +46,9 @@ function useLesson(req: { topic: Topic; regionId: RegionId; lang: Lang; group: A
   return state?.key === key ? state.load : ({ status: "loading" } as Load);
 }
 
-function LessonBody({ lesson, slot, compact }: { lesson: Lesson; slot: Slot; compact?: boolean }) {
-  const { t, lang: uiLang } = useApp();
+function LessonBody({ lesson, slot, topic, compact }: { lesson: Lesson; slot: Slot; topic: Topic; compact?: boolean }) {
+  const { t, lang: uiLang, progress, markDone } = useApp();
+  const key = `lesson:${topic}`;
   const facts = regionFacts(REGIONS[slot.regionId]).filter((f) => lesson.factsUsed.includes(f.key));
   const text = [lesson.title, lesson.summary, ...lesson.sections.flatMap((s) => [s.heading, s.body]), lesson.example.title, lesson.example.body, lesson.takeaway].join(". ");
   const region = localizeRegion(REGIONS[slot.regionId], uiLang);
@@ -100,6 +102,23 @@ function LessonBody({ lesson, slot, compact }: { lesson: Lesson; slot: Slot; com
       <p className="mt-6 text-sm text-ink-3" lang={LANGUAGES[uiLang].bcp47}>
         {t("learn.aiLabel")}
       </p>
+      {!compact &&
+        (lesson.quiz?.length ? (
+          <Quiz questions={lesson.quiz} lang={LANGUAGES[slot.lang].bcp47} onFinish={(score) => markDone(key, score + 1)} />
+        ) : (
+          <button
+            type="button"
+            onClick={() => markDone(key, 1)}
+            className="mt-10 rounded-sign bg-ink px-6 py-3 text-lg font-bold text-ground hover:bg-ink-2"
+          >
+            {t("guide.markDone")}
+          </button>
+        ))}
+      {!compact && progress[key] ? (
+        <Link href="/learn" className="mt-6 inline-flex items-center gap-2 rounded-sign bg-line px-6 py-3 text-lg font-extrabold text-line-ink ring-[3px] ring-ink">
+          {t("quiz.continue")} <ArrowRight aria-hidden="true" size={20} />
+        </Link>
+      ) : null}
     </article>
   );
 }
@@ -125,7 +144,7 @@ function LessonSlot({ topic, slot, compact }: { topic: Topic; slot: Slot; compac
       </div>
     );
   // The server may have served a saved lesson in another language; label and read it in that language.
-  return <LessonBody lesson={load.lesson} slot={{ ...slot, lang: load.lang }} compact={compact} />;
+  return <LessonBody lesson={load.lesson} slot={{ ...slot, lang: load.lang }} topic={topic} compact={compact} />;
 }
 
 export function LessonView({ topic }: { topic: Topic }) {
@@ -151,7 +170,7 @@ export function LessonView({ topic }: { topic: Topic }) {
     <RequireProfile>
       <div className="flex flex-wrap items-center justify-between gap-4">
         <Link href="/learn" className="inline-flex items-center gap-2 font-bold text-ink-2 underline hover:text-ink">
-          <ArrowLeft aria-hidden="true" size={18} /> {t("learn.back")}
+          <ArrowLeft aria-hidden="true" size={18} /> {t("guide.back")}
         </Link>
         {others.length > 0 && (
           <button

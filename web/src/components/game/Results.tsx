@@ -1,7 +1,7 @@
 "use client";
 
 import { RotateCcw } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { adviceForPath, netWorthReal, optimalPath, percentOfOptimal, simulate, whatIf } from "@/lib/game/engine";
 import type { GameContext, GameResult } from "@/lib/game/types";
 import { stageVars } from "@/lib/game/vars";
@@ -22,7 +22,9 @@ const curve = (ctx: GameContext, r: GameResult) => [
  * path, green). Where both took the same choice the stations merge into an interchange.
  */
 export function Results({ ctx, choices }: { ctx: GameContext; choices: string[] }) {
-  const { t, region, money, percent, game, setGame, profile } = useApp();
+  const { t, region, money, percent, game, setGame, profile, markDone } = useApp();
+  // Reaching the end of the line completes the practice station.
+  useEffect(() => markDone("game"), [markDone]);
   const [selected, setSelected] = useState<number | null>(null);
   const [showWhatIf, setShowWhatIf] = useState(false);
 

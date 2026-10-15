@@ -116,15 +116,30 @@ const emergency: StageDef = {
 
 const invest: StageDef = {
   id: "invest",
+  minigame: "market",
   topic: "saving-vs-investing",
   options: () => [
     opt("keep-saving", (s) => ({ ...s, investShare: 0 })),
     opt("index", (s) => ({ ...s, investShare: 0.6 })),
-    opt("crypto-tip", (s, _c, rng) => {
-      const stake = s.cash * 0.5;
-      const outcome = rng() < 0.2 ? 3 : 0.15;
-      return feel({ ...s, cash: s.cash - stake + stake * outcome }, outcome > 1 ? 10 : -8);
-    }),
+    {
+      id: "single-stock",
+      speculative: true,
+      // Putting a big share of savings into one hyped company: sometimes it soars, usually it doesn't.
+      apply: (s, _c, rng) => {
+        const stake = s.cash * 0.4;
+        const outcome = rng() < 0.3 ? 2.2 : 0.45;
+        return feel({ ...s, cash: s.cash - stake + stake * outcome }, outcome > 1 ? 8 : -6);
+      },
+    },
+    {
+      id: "crypto-tip",
+      speculative: true,
+      apply: (s, _c, rng) => {
+        const stake = s.cash * 0.5;
+        const outcome = rng() < 0.2 ? 3 : 0.15;
+        return feel({ ...s, cash: s.cash - stake + stake * outcome }, outcome > 1 ? 10 : -8);
+      },
+    },
   ],
 };
 
@@ -190,11 +205,15 @@ const nestEgg: StageDef = {
   options: () => [
     opt("all-cash", (s) => ({ ...s, cash: s.cash + s.invested, invested: 0, investShare: 0 })),
     opt("balanced", (s) => s),
-    opt("guaranteed-scheme", (s, _c, rng) => {
+    {
+      id: "guaranteed-scheme",
+      speculative: true,
       // "Guaranteed 12% a year" from a friendly adviser: usually too good to be true.
-      const collapsed = rng() < 0.7;
-      return feel({ ...s, invested: collapsed ? s.invested * 0.4 : s.invested * 1.3 }, collapsed ? -12 : 4);
-    }),
+      apply: (s, _c, rng) => {
+        const collapsed = rng() < 0.7;
+        return feel({ ...s, invested: collapsed ? s.invested * 0.4 : s.invested * 1.3 }, collapsed ? -12 : 4);
+      },
+    },
   ],
 };
 

@@ -5,15 +5,16 @@
     "disclaimer": "Education, not financial advice. Figures are simplified and checked against the sources shown."
   },
   "nav": {
-    "play": "Life Path",
-    "learn": "Lessons",
+    "play": "Life Path game",
+    "learn": "Learn",
     "restart": "Start over",
     "language": "Language",
     "country": "Country",
     "simple": "Simple language",
     "readAloud": "Read aloud",
     "stopReading": "Stop reading",
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "tools": "Tools"
   },
   "onboarding": {
     "stationCountry": "Country",
@@ -533,7 +534,7 @@
   "personas": {
     "maya": {
       "name": "Maya",
-      "where": "Columbus, Ohio, United States",
+      "where": "New York, United States",
       "about": "24, first full-time job in logistics. Has a credit card balance and a new 401(k) at work."
     },
     "ananya": {
@@ -546,5 +547,202 @@
       "where": "Köln, Germany",
       "about": "68, retired teacher living on her pension and savings. Plays in German."
     }
+  },
+  "theme": {
+    "button": "Colours",
+    "light": "Light",
+    "dark": "Dark",
+    "contrast": "High contrast",
+    "calm": "Calm"
+  },
+  "hub": {
+    "title": "Your money line in {countryIn}",
+    "intro": "Six stations: understand how money works where you live, learn two topics, try them on your own numbers, then put it all together in the Life Path game.",
+    "progress": "{done} of {total} stations done",
+    "kind": {
+      "guide": "Country guide",
+      "lesson": "Lesson and quiz",
+      "tool": "Try it with your numbers",
+      "game": "Practice"
+    },
+    "guideTitle": "How money works in {countryIn}",
+    "guideAbout": "Banks, interest, inflation, borrowing, safety nets and local scams, with sources.",
+    "lessonAbout": "A short lesson written for your country and stage of life, then three quick questions.",
+    "gameTitle": "Life Path game",
+    "gameAbout": "Live through the next decades of decisions and see where your money goes.",
+    "quizScore": "Quiz: {score} of 3 correct",
+    "start": "Start",
+    "review": "Review"
+  },
+  "guide": {
+    "back": "Your money line",
+    "intro": "The basics of your country's money system in one page. Every figure is a checked fact with its source.",
+    "pricesTitle": "Prices and interest rates",
+    "inflation": "Prices rise by about {rate} a year (inflation).",
+    "policyRate": "The central bank ({bank}) key interest rate is about {rate}. Savings and loan rates follow it.",
+    "pricesWhy": "If your money earns less than inflation, it buys a little less every year.",
+    "keepTitle": "Where to keep money",
+    "colProduct": "Option",
+    "colRate": "Earns a year",
+    "colAccess": "Access",
+    "colRisk": "Risk",
+    "access": {
+      "instant": "Instant",
+      "days": "A few days",
+      "locked": "Locked until retirement"
+    },
+    "risk": {
+      "none": "None",
+      "low": "Low",
+      "medium": "Ups and downs",
+      "high": "High"
+    },
+    "depositInsurance": "Deposit insurance:",
+    "borrowTitle": "Borrowing and credit",
+    "creditBureau": "Your credit record is kept by: {bureau}.",
+    "cardApr": "Credit cards and overdrafts",
+    "lenderApr": "Informal or payday lenders",
+    "payTitle": "Paying and sending money",
+    "regulator": "Banks and payment providers are supervised by {regulator}.",
+    "safetyTitle": "Safety nets",
+    "retirement": "Retirement:",
+    "unemployment": "If you lose your job:",
+    "scamsTitle": "Scams people here fall for, and real messages",
+    "markDone": "I've read this",
+    "done": "Done"
+  },
+  "tools": {
+    "title": "Tools",
+    "intro": "Try the ideas from the lessons on your own numbers, with your country's real rates.",
+    "months": "{n} months",
+    "budget": {
+      "title": "Budget planner",
+      "about": "Split your monthly income with the 50/30/20 rule and see how fast you can build a cushion.",
+      "income": "Monthly take-home income",
+      "needs": "Needs (50%)",
+      "needsNote": "Rent, food, bills, transport",
+      "wants": "Wants (30%)",
+      "wantsNote": "Eating out, hobbies, trips",
+      "save": "Savings (20%)",
+      "saveNote": "Cushion first, then long-term goals",
+      "cushionTitle": "Your emergency cushion",
+      "cushionBody": "A common goal is 3 to 6 months of needs: {low} to {high}.",
+      "afterYear": "Saved for a year in a {name} at {rate}",
+      "monthsToCushion": "Time to a 3-month cushion"
+    },
+    "growth": {
+      "title": "Savings growth",
+      "about": "See what saving a fixed amount every month becomes in cash, in savings, and in an index fund.",
+      "monthly": "Saved each month",
+      "years": "Years",
+      "paidIn": "You put in {total} in total.",
+      "today": "Worth {value} in today's money (prices rising {rate} a year)",
+      "chart": "How it grows, year by year",
+      "note": "Savings and fund rates are this country's figures. Index funds go up and down; the line uses their long-term average, not a promise."
+    },
+    "debt": {
+      "title": "Debt payoff",
+      "about": "See how long a balance takes to clear, and what the interest really costs.",
+      "balance": "What you owe",
+      "payment": "Monthly payment",
+      "card": "Card at {rate}",
+      "cardDouble": "Card at {rate}, paying double",
+      "lender": "Lender at {rate}",
+      "interest": "Interest paid:",
+      "never": "Never paid off: the payment doesn't cover the interest.",
+      "note": "Paying more each month cuts both the time and the interest. At very high rates, a small payment can mean the debt never goes away."
+    }
+  },
+  "quiz": {
+    "title": "Check what you learned",
+    "next": "Next question",
+    "result": "You got {score} of {total} right.",
+    "finish": "Save my result",
+    "continue": "Back to your money line"
+  },
+  "story": {
+    "decisionTitle": "Your decision changed",
+    "yearsTitle": "The next {years} years",
+    "pricesRose": "Prices rose {pct} in that time.",
+    "earned": "Earned from work or pension",
+    "earnedDetail": "About {monthly} a month",
+    "living": "Spent on living costs",
+    "fixed": "Insurance and family support",
+    "saved": "Put aside",
+    "savedDetail": "{share} of what came in",
+    "pension": "Paid into your pension",
+    "drawdown": "Taken from savings to live on",
+    "interest": "Interest earned on savings",
+    "interestDetail": "At {rate} a year",
+    "market": "Investments went up or down",
+    "marketDetail": "Year by year: {returns}",
+    "pensionGrowth": "Pension growth",
+    "pensionGrowthDetail": "At {rate} a year",
+    "debtInterest": "Interest paid on debt",
+    "debtInterestDetail": "At {rate} a year",
+    "debtRepaid": "Debt paid back",
+    "lost": "Lost",
+    "lostDetail": "Cash at home or in an informal group can disappear.",
+    "standingTitle": "Where you stand at age {age}",
+    "sourceNote": "Every figure is calculated from the real rates in {countryIn} shown in the country guide; the market's yearly ups and downs are drawn at random but stay the same if you replay."
+  },
+  "market": {
+    "title": "Choose where your extra savings go",
+    "intro": "Four options are on the table. Look at the news and the numbers, then pick one.",
+    "index": {
+      "kind": "Fund · owns hundreds of companies",
+      "news": "Markets ended the year mixed; long-term savers kept buying every month."
+    },
+    "savings": {
+      "kind": "Savings · protected",
+      "news": "Rates follow the central bank, now at {rate}."
+    },
+    "stock": {
+      "name": "NovaGrid Energy",
+      "kind": "Single company · battery start-up",
+      "news": "\"Next big thing\": shares soar after record orders, but the company still loses money."
+    },
+    "coin": {
+      "name": "ZapCoin",
+      "kind": "Crypto token · tip from a colleague",
+      "news": "Social media influencer: \"100x by summer!\" No company, product or profits behind it."
+    },
+    "metric": {
+      "longRun": "Long-term average",
+      "holds": "Spread across",
+      "swings": "Ups and downs",
+      "fees": "Fees",
+      "rate": "Interest",
+      "inflation": "Prices rising",
+      "protection": "Protection",
+      "lastYear": "Last 12 months",
+      "lastMonth": "Last month",
+      "biggestDrop": "Biggest drop",
+      "profit": "Profit",
+      "business": "Business behind it"
+    },
+    "value": {
+      "perYear": "{rate} a year",
+      "hundreds": "Hundreds of companies",
+      "oneCompany": "One company",
+      "medium": "Medium",
+      "none": "None",
+      "low": "Low",
+      "protected": "Deposit insurance",
+      "notYet": "Not yet",
+      "noBusiness": "None"
+    },
+    "fictional": "Fictional company, illustrative numbers.",
+    "bestBadge": "Best long-term pick",
+    "youPickedBest": "Good pick: the index fund is usually the best home for long-term money.",
+    "bestIs": "The best long-term pick here is the {name}.",
+    "whyIndex": "It spreads your money over hundreds of companies, costs little, and has years to recover from bad patches. Money you need soon still belongs in savings.",
+    "why": {
+      "keep-saving": "Savings are safe, but over many years they barely keep up with prices.",
+      "single-stock": "One company can fall by half in a bad year. Big recent gains say little about the future.",
+      "crypto-tip": "With no business behind it, its price depends only on hype. Tips from social media are how many people lose money."
+    },
+    "seeResult": "See what happens",
+    "note": "Practice market. The fund and savings figures are real figures from {countryIn}; NovaGrid and ZapCoin are made up to show common traps."
   }
 }
