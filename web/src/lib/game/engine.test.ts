@@ -127,6 +127,15 @@ describe("Life Path engine", () => {
     }
   });
 
+  it("a new phone costs a real local price, not a month of pay", () => {
+    const ctx = ctxFor("US");
+    const snap = simulate(ctx, ["balanced", "savings", "save-up"]).timeline[2];
+    const paid = snap.before.cash - snap.decided.cash;
+    // $1,000 in today's prices, grown with inflation by the time the phone breaks.
+    expect(paid).toBeCloseTo(REGIONS.US.prices.phone * snap.before.priceLevel, 6);
+    expect(paid).toBeLessThan(snap.before.income / 2);
+  });
+
   it("seniors draw down savings rather than saving", () => {
     const ctx = ctxFor("DE", "senior");
     const r = simulate(ctx, ["comfortable"]);

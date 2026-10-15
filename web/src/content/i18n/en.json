@@ -286,15 +286,15 @@
       "options": {
         "credit": {
           "label": "Buy it on credit",
-          "hint": "Pay later, with interest."
+          "hint": "About {phoneLatest} on a card at {creditApr} a year."
         },
         "save-up": {
           "label": "Pay from savings",
-          "hint": "No interest, a smaller cushion."
+          "hint": "About {phonePrice} from savings, no interest."
         },
         "skip": {
           "label": "Fix the old one",
-          "hint": "Cheapest, a little annoying."
+          "hint": "About {repairPrice} for a repair."
         }
       }
     },

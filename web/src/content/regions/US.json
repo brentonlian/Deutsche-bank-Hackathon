@@ -112,6 +112,10 @@
     "description": "Friends or community members each pay in a fixed amount every month and take turns receiving the pot, a tradition in many immigrant communities (tandas, susus, huis). Some nonprofits run lending circles that report payments to credit bureaus.",
     "ratePct": 0
   },
+  "prices": {
+    "phone": 1000,
+    "phoneRepair": 150
+  },
   "culture": {
     "bigLifeEvent": {
       "name": "A wedding",

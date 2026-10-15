@@ -286,15 +286,15 @@
       "options": {
         "credit": {
           "label": "Auf Kredit kaufen",
-          "hint": "Später bezahlen, mit Zinsen."
+          "hint": "Etwa {phoneLatest} auf Karte zu {creditApr} pro Jahr."
         },
         "save-up": {
           "label": "Aus Ersparnissen bezahlen",
-          "hint": "Keine Zinsen, ein kleineres Polster."
+          "hint": "Etwa {phonePrice} aus dem Ersparten, ohne Zinsen."
         },
         "skip": {
           "label": "Das alte reparieren",
-          "hint": "Am günstigsten, etwas nervig."
+          "hint": "Etwa {repairPrice} für die Reparatur."
         }
       }
     },

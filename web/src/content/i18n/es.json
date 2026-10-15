@@ -286,15 +286,15 @@
       "options": {
         "credit": {
           "label": "Cómpralo a crédito",
-          "hint": "Paga después, con intereses."
+          "hint": "Unos {phoneLatest} con tarjeta al {creditApr} anual."
         },
         "save-up": {
           "label": "Paga con ahorros",
-          "hint": "Sin intereses, un colchón más pequeño."
+          "hint": "Unos {phonePrice} de tus ahorros, sin intereses."
         },
         "skip": {
           "label": "Repara el viejo",
-          "hint": "Lo más barato, un poco molesto."
+          "hint": "Unos {repairPrice} por la reparación."
         }
       }
     },

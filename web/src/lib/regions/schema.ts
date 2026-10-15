@@ -82,6 +82,13 @@ export const regionPackSchema = z.object({
       ratePct: z.number(),
     })
     .nullable(),
+  /** Everyday prices in local currency today, used by life events (inflated as the game's years pass). */
+  prices: z.object({
+    /** A good mid-range smartphone. */
+    phone: z.number().positive(),
+    /** Repairing a broken screen or battery. */
+    phoneRepair: z.number().positive(),
+  }),
   culture: z.object({
     bigLifeEvent: z.object({ name: z.string(), typicalCostMonths: z.number(), note: z.string() }),
     /** A grandchild's milestone families celebrate, used in the senior game. */

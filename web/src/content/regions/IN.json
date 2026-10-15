@@ -112,6 +112,10 @@
     "description": "A group pools a fixed amount every month and one member takes the pot each month, often by auction. Registered chit funds are regulated under the Chit Funds Act; unregistered ones carry fraud risk.",
     "ratePct": 5
   },
+  "prices": {
+    "phone": 30000,
+    "phoneRepair": 4000
+  },
   "culture": {
     "bigLifeEvent": {
       "name": "Family wedding",

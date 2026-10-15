@@ -113,6 +113,10 @@
     "description": "A traditional savings club, often based in a local pub, where members pay into numbered boxes and get their savings paid out at year end.",
     "ratePct": 0
   },
+  "prices": {
+    "phone": 900,
+    "phoneRepair": 150
+  },
   "culture": {
     "bigLifeEvent": {
       "name": "Moving into your first apartment (rental deposit + furniture)",

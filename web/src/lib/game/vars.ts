@@ -1,4 +1,5 @@
 import type { RegionPack } from "@/lib/regions/schema";
+import { phonePrices } from "./stages";
 import type { GameState } from "./types";
 
 /**
@@ -12,11 +13,15 @@ export function stageVars(
   percent: (v: number) => string,
 ): Record<string, string> {
   const p = region.products;
+  const phone = phonePrices(s, { region });
   return {
     country: region.name,
     countryIn: region.nameIn,
     income: money(s.income),
     cash: money(s.cash),
+    phonePrice: money(phone.phone),
+    phoneLatest: money(phone.latest),
+    repairPrice: money(phone.repair),
     cashName: p.cashAtHome.name,
     cashRate: percent(p.cashAtHome.ratePct),
     everydayName: p.everydayAccount.name,

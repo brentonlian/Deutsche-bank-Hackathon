@@ -144,9 +144,11 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     setSettings: (p) => setStored((s) => ({ ...s, settings: { ...s.settings, ...p } })),
     progress: stored.progress,
     markDone,
+    // Start over means the very first screen: no country, English, standard reading level.
+    // Only the color theme survives, since it's a display preference (e.g. high contrast on a projector).
     reset: () => {
       delete document.body.dataset.region;
-      setStored((s) => ({ profile: null, game: null, settings: s.settings, progress: {}, lang: s.profile?.lang ?? s.lang }));
+      setStored((s) => ({ profile: null, game: null, settings: { ...DEFAULT_SETTINGS, theme: s.settings.theme }, progress: {} }));
     },
     t,
     money,

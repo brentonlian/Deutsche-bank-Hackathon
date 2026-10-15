@@ -43,15 +43,24 @@ const whereToSave: StageDef = {
   ],
 };
 
+/** Real local prices, grown with inflation so a phone costs more at 30 than at 24. */
+export const phonePrices = (s: GameState, ctx: Pick<GameContext, "region">) => {
+  const { phone, phoneRepair } = ctx.region.prices;
+  return { phone: phone * s.priceLevel, latest: phone * LATEST_MODEL_MARKUP * s.priceLevel, repair: phoneRepair * s.priceLevel };
+};
+/** The shop's "latest model on credit" is a pricier phone than the one you'd buy outright. */
+export const LATEST_MODEL_MARKUP = 1.3;
+
 const phoneOffer: StageDef = {
   id: "phone-offer",
   topic: "credit-and-debt",
   options: (ctx) => [
     opt("credit", (s) =>
-      feel({ ...addDebt(s, s.income * 1.25, ctx.region.products.expensiveCreditApr), credit: clamp(s.credit - 5, 0, 100) }, 5),
+      feel({ ...addDebt(s, phonePrices(s, ctx).latest, ctx.region.products.expensiveCreditApr), credit: clamp(s.credit - 5, 0, 100) }, 5),
     ),
-    opt("save-up", (s) => (s.cash >= s.income ? feel({ ...s, cash: s.cash - s.income }, 6) : feel({ ...s, cash: s.cash * 0.5 }, 3))),
-    opt("skip", (s) => feel(s, -2)),
+    // Paid from savings; anything savings can't cover goes on the card.
+    opt("save-up", (s) => feel(payFromSavings(s, phonePrices(s, ctx).phone, ctx), 6)),
+    opt("skip", (s) => feel(payFromSavings(s, phonePrices(s, ctx).repair, ctx), -2)),
   ],
 };
 
