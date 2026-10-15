@@ -27,14 +27,20 @@
     "scams.0.tell": "Der klassische Enkeltrick: neue Nummer, Dringlichkeit, Geldforderung. Ruf die alte Nummer an, um es zu überprüfen.",
     "scams.1.message": "Dein pushTAN-Verfahren läuft heute ab. Registriere dich jetzt neu: sparkasse-verify-tan.com",
     "scams.1.tell": "Banken senden niemals Links zum 'Neu-Registrieren' von TAN-Apps. Die Domain gehört nicht deiner Bank.",
-    "scams.2.message": "Dein Paket konnte nicht zugestellt werden. Zahle hier 1,99 € Zollgebühr: dhl-zoll-paket.info",
-    "scams.2.tell": "Gefälschte Zollgebühr mit einer ähnlich aussehenden Domain. DHL fragt nicht per SMS-Link nach Gebühren.",
+    "scams.2.message": "Dein Paket wartet! Es fehlt nur noch die Zollgebühr von 1,99 €. Zahl jetzt, sonst geht es zurück in die Gartenzwergfabrik. dhl-zoll-paket.info",
+    "scams.2.tell": "Ein nachgemachter Link und eine winzige Gebühr: Sie wollen deine Kartendaten, nicht deine 1,99 €.",
     "scams.3.message": "Hier ist die Polizei. In deiner Straße sind Einbrecher aktiv. Gib unserem Beamten dein Bargeld und deine Karten zur sicheren Aufbewahrung.",
     "scams.3.tell": "Echte Polizisten sammeln niemals Geld oder Karten ein und rufen niemals von der 110 an.",
     "scams.4.message": "Eingang: Gehalt Oktober, 2.214,50 €.",
     "scams.4.tell": "Eine Benachrichtigung in deiner Banking-App ohne Link oder Aufforderung ist normal.",
     "scams.5.message": "Deine angeforderte kostenlose Datenkopie (Datenkopie nach Art. 15 DSGVO) ist in deinem Konto bereit.",
-    "scams.5.tell": "Du hast sie angefordert; die DSGVO gibt dir eine kostenlose Kopie deiner Schufa-Daten. Logge dich direkt ein, nicht über E-Mail-Links."
+    "scams.5.tell": "Du hast sie angefordert; die DSGVO gibt dir eine kostenlose Kopie deiner Schufa-Daten. Logge dich direkt ein, nicht über E-Mail-Links.",
+    "scams.6.message": "Gute Nachricht: Ihnen steht eine Steuerrückerstattung von 847,32 € zu! Fordern Sie sie bis Sonntag an. Bitte bereithalten: vollständige Kartennummer, Ablaufdatum und die 3 kleinen Zahlen auf der Rückseite.",
+    "scams.6.tell": "Das Finanzamt überweist Erstattungen direkt auf dein Bankkonto. Es fragt nie nach Kartendaten und setzt keine Frist bis zum Wochenende.",
+    "scams.7.message": "Hallo, hier ist Microsoft. Ihr Computer hat uns angerufen. Er hat einen Virus. Bitte installieren Sie AnyDesk und loggen Sie sich dann ins Online-Banking ein, damit wir prüfen können, ob der Virus Ihr Geld gefressen hat.",
+    "scams.7.tell": "Microsoft ruft dich nie an. Fernzugriff plus Online-Banking heißt: Gleich räumt jemand dein Konto leer.",
+    "scams.8.message": "Ihre jährliche Renteninformation ist da. Sie ist 4 Seiten lang, enthält kein einziges Bild und verlangt von Ihnen absolut nichts.",
+    "scams.8.tell": "Echte Behördenbriefe informieren dich. Sie fordern keine eilige Zahlung und schicken keine Links."
   },
   "IN": {
     "nameIn": "Indien",
@@ -71,7 +77,15 @@
     "scams.4.message": "₹250 von Konto XX1234 an Swiggy über UPI abgebucht. Nicht du? Ruf die Nummer auf deiner Karte an.",
     "scams.4.tell": "Eine Abbuchungsbenachrichtigung für eine von dir getätigte Zahlung, ohne Link, ist normal. Wenn du unsicher bist, ruf die Nummer auf deiner Karte an.",
     "scams.5.message": "OTP 482913 für dein Login bei iMobile. Teile es NICHT mit jemandem, auch nicht mit Bankmitarbeitern.",
-    "scams.5.tell": "Ein OTP, das du selbst angefordert hast, ist legitim. Die Nachricht selbst warnt dich davor, es zu teilen."
+    "scams.5.tell": "Ein OTP, das du selbst angefordert hast, ist legitim. Die Nachricht selbst warnt dich davor, es zu teilen.",
+    "scams.6.message": "Teilzeitjob!! Einfach 3 YouTube-Videos liken, 150 ₹ pro Like verdienen. Täglich 5.000 ₹ GARANTIERT. Zuerst 1.000 ₹ 'Registrierung' zahlen, um die VIP-Aufgabengruppe freizuschalten.",
+    "scams.6.tell": "Das ist ein Aufgaben-Betrug. Ein echter Arbeitgeber verlangt nie Geld, damit du anfangen darfst.",
+    "scams.7.message": "Lieber Kunde, Ihr Strom wird HEUTE NACHT um 21:30 Uhr abgestellt, weil die Rechnung vom letzten Monat nicht aktualisiert wurde. Rufen Sie sofort den Strombeamten auf seinem privaten Handy an.",
+    "scams.7.tell": "Zeitdruck, holprige Sprache und ein 'Beamter' mit privater Nummer. Prüf deine Rechnung lieber in der offiziellen App deines Stromanbieters.",
+    "scams.8.message": "Herzlichen Glückwunsch! Ihre Nummer hat 25 Lakh ₹ bei der KBC-Verlosung gewonnen. Amitabh persönlich gratuliert Ihnen. Zahlen Sie nur 12.500 ₹ GST, um Ihren Gewinn freizugeben.",
+    "scams.8.tell": "Du kannst keine Verlosung gewinnen, an der du nie teilgenommen hast, und echte Gewinne verlangen keine 'Steuer' vorab. Ein berühmter Name macht es nicht echt.",
+    "scams.9.message": "349 ₹ von Konto XX4821 abgebucht für deine Biryani-Bestellung um 23:47 Uhr. Nicht du? Ruf die Nummer auf der Rückseite deiner Karte an. Gib nie deinen OTP weiter.",
+    "scams.9.tell": "Sie passt zu etwas, das du wirklich getan hast, hat keinen Link und verweist auf die Nummer auf deiner eigenen Karte."
   },
   "MX": {
     "nameIn": "Mexiko",
@@ -108,7 +122,15 @@
     "scams.4.message": "SPEI-Überweisung erhalten: 1.200 Pesos von Ana López, Verwendungszweck 'tanda Woche 3'.",
     "scams.4.tell": "Eine Überweisungsbenachrichtigung in deiner eigenen App, ohne dass du sie angefordert hast, ist normal.",
     "scams.5.message": "Dein Beschwerdefolio 2026-04817 wurde erhalten und einem Berater zugewiesen.",
-    "scams.5.tell": "Eine Antwort auf eine Beschwerde, die du eingereicht hast, von der offiziellen .gob.mx-Domain, ohne Zahlungsaufforderung."
+    "scams.5.tell": "Eine Antwort auf eine Beschwerde, die du eingereicht hast, von der offiziellen .gob.mx-Domain, ohne Zahlungsaufforderung.",
+    "scams.6.message": "Mijo, ich bin's, deine Tía Lupe, ich hab eine neue Nummer. Leih mir 4.500 Pesos für die Tanda der Tamal-Frau, ich zahl's dir Freitag zurück. Überweis auf dieses Konto, das gehört meiner Comadre.",
+    "scams.6.tell": "Neue Nummer, dringendes Geld und das Konto einer anderen Person. Ruf erst ihre alte Nummer an, bevor du einen Peso schickst.",
+    "scams.7.message": "CFE: Sie haben eine Erstattung von 1.284 Pesos wegen zu hoher Abrechnung. Ja, wirklich. Innerhalb von 24 Stunden anfordern: cfe-reembolsos.mx-app.info",
+    "scams.7.tell": "Ein nachgemachter Link plus 24-Stunden-Frist, gemacht, um deine Kartendaten abzugreifen. Die CFE verschickt keine Erstattungslinks per SMS.",
+    "scams.8.message": "Investiere 1.000, bekomm 3.000 in einer Woche. Mein Cousin hat's gemacht und sich einen Pick-up gekauft. 300 % garantiert. Nur per SPEI-Überweisung auf ein Privatkonto.",
+    "scams.8.tell": "Garantierte Renditen und ein Privatkonto sind Zeichen eines Schneeballsystems. Prüf vor dem Anlegen, ob die Firma bei der CNBV zugelassen ist.",
+    "scams.9.message": "Du hast 2.350 Pesos von JUAN PÉREZ erhalten. Verwendungszweck: 'mein Anteil an der Pizza (und der Limo)'.",
+    "scams.9.tell": "Eine eingehende Zahlung in deiner eigenen Banking-App, ohne Link und ohne Frage nach deinen Daten."
   },
   "US": {
     "nameIn": "den Vereinigten Staaten",
@@ -145,6 +167,14 @@
     "scams.4.message": "Gehaltseingang: 1.604,22 $ von ACME Logistics.",
     "scams.4.tell": "Eine Mitteilung in deiner eigenen Banking-App ohne Link oder Aufforderung ist normal.",
     "scams.5.message": "Hast du gerade 48,20 $ in einem Supermarkt bezahlt? Antworte mit JA oder NEIN. Wir fragen nie nach deiner PIN oder deinem Passwort.",
-    "scams.5.tell": "Eine Ja/Nein-Betrugsprüfung ohne Codes oder Links ist eine normale Bankwarnung. Im Zweifel ruf die Nummer auf deiner Karte an."
+    "scams.5.tell": "Eine Ja/Nein-Betrugsprüfung ohne Codes oder Links ist eine normale Bankwarnung. Im Zweifel ruf die Nummer auf deiner Karte an.",
+    "scams.6.message": "USPS: Dein Paket steckt in unserem Lager fest, weil die Adresse 'unvollständig' ist. Zahl in 12 Std. 0,30 $ Zustellgebühr, sonst geht es zurück an den Absender (auch wir). usps-redeliver-help.top",
+    "scams.6.tell": "USPS schickt keine SMS wegen Gebühren. Ein seltsamer '.top'-Link, eine Gebühr, die zu klein zum Nachdenken ist, und ein Paket, das du nie bestellt hast: Sie wollen deine Kartennummer.",
+    "scams.7.message": "Bro, ich hab mit meinem KI-Trading-Bot in 9 Tagen aus 200 $ 48.000 $ gemacht. Nur noch 3 Plätze in meiner privaten Gruppe. Schick 500 $ in Bitcoin und ich verzehnfache sie bis Freitag. Keine Finanzberatung (doch).",
+    "scams.7.tell": "Garantierte Renditen, nur Krypto und ein Countdown für 'Plätze': der klassische Anlagebetrug. Echte Geldanlagen versprechen nie das Zehnfache.",
+    "scams.8.message": "Oma, ich bin's, dein Lieblingsenkel. Frag nicht welcher. Ich sitze in Cancún im Gefängnis, brauche 2.000 $ in Apple-Geschenkkarten, und sag Mama NICHTS.",
+    "scams.8.tell": "Der Enkeltrick: Geheimhaltung, Panik und Geschenkkarten. Leg auf und ruf deinen Enkel unter der Nummer an, die du schon hast.",
+    "scams.9.message": "Betrugswarnung: Hast du gerade um 3:12 Uhr 1.239,99 $ bei Hot Tub Emporium ausgegeben? Antworte mit JA oder NEIN. Wir fragen nie nach deiner PIN oder deinem Passwort.",
+    "scams.9.tell": "Echte Betrugswarnungen stellen eine Ja/Nein-Frage, enthalten keinen Link und fragen nie nach deiner PIN. Im Zweifel ruf die Nummer auf der Rückseite deiner Karte an."
   }
 }

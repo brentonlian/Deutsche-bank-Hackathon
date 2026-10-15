@@ -171,6 +171,38 @@
       "message": "Your complaint folio 2026-04817 has been received and assigned to an advisor.",
       "isScam": false,
       "tell": "A reply to a complaint you filed, from the official .gob.mx domain, with no payment request."
+    },
+    {
+      "id": "mx-tia-lupe",
+      "channel": "social",
+      "sender": "WhatsApp: \"Tía Lupe (new number)\"",
+      "message": "Mijo, it's your Tía Lupe, I changed my number. Lend me 4,500 pesos for the tamal lady's tanda, I'll pay you back Friday. Deposit to this account, it's my comadre's.",
+      "isScam": true,
+      "tell": "A new number, urgent money and someone else's account. Call her old number before you send a peso."
+    },
+    {
+      "id": "mx-cfe-refund",
+      "channel": "sms",
+      "sender": "\"CFE\"",
+      "message": "CFE: You have a 1,284-peso refund for overcharging. Yes, really. Claim it within 24 hours: cfe-reembolsos.mx-app.info",
+      "isScam": true,
+      "tell": "A lookalike link plus a 24-hour deadline, built to harvest your card details. CFE doesn't send refund links by text."
+    },
+    {
+      "id": "mx-el-tigre",
+      "channel": "social",
+      "sender": "Facebook: Inversiones El Tigre",
+      "message": "Invest 1,000, get 3,000 in one week. My cousin did it and bought a truck. 300% guaranteed. SPEI transfer to a personal account only.",
+      "isScam": true,
+      "tell": "Guaranteed returns and a personal account are the signs of a pyramid scheme. Check whether a company is authorized with the CNBV before investing."
+    },
+    {
+      "id": "mx-spei-pizza",
+      "channel": "app",
+      "sender": "Your bank app (SPEI)",
+      "message": "You received 2,350 pesos from JUAN PÉREZ. Concept: 'my share of the pizza (and the soda)'.",
+      "isScam": false,
+      "tell": "An incoming payment shown inside your own bank app, with no link and no request for your data."
     }
   ],
   "glossaryKeep": [

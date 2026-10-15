@@ -143,7 +143,8 @@
       "app": "App notification",
       "email": "Email",
       "social": "Social / WhatsApp",
-      "in-person": "In person"
+      "in-person": "In person",
+      "letter": "Letter"
     }
   },
   "results": {

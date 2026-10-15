@@ -27,14 +27,20 @@
     "scams.0.tell": "El clásico 'engaño del nieto' (Enkeltrick): número nuevo, urgencia, solicitud de dinero. Llama al número anterior para verificar.",
     "scams.1.message": "Tu procedimiento pushTAN vence hoy. Regístrate de nuevo ahora: sparkasse-verify-tan.com",
     "scams.1.tell": "Los bancos nunca envían enlaces para 'volver a registrar' aplicaciones TAN. El dominio no es el de tu banco.",
-    "scams.2.message": "Tu paquete no pudo ser entregado. Paga 1.99 € de tarifa de aduana aquí: dhl-zoll-paket.info",
-    "scams.2.tell": "Tarifa de aduana falsa con un dominio parecido. DHL no pide tarifas por enlace de SMS.",
+    "scams.2.message": "¡Tu paquete te espera! Solo falta el cargo de aduana de €1.99. Paga ahora o regresa a la fábrica de gnomos de jardín. dhl-zoll-paket.info",
+    "scams.2.tell": "Un enlace de imitación y un cobro diminuto: quieren los datos de tu tarjeta, no tus €1.99.",
     "scams.3.message": "Aquí la policía. Hay ladrones activos en tu calle. Entrega tu efectivo y tarjetas a nuestro oficial para su custodia.",
     "scams.3.tell": "La policía real nunca recoge dinero o tarjetas, y nunca llama desde el 110.",
     "scams.4.message": "Transferencia entrante: Salario octubre, 2,214.50 €.",
     "scams.4.tell": "Una notificación dentro de tu propia aplicación bancaria sin enlace ni solicitud es normal.",
     "scams.5.message": "Tu copia de datos gratuita (Datenkopie nach Art. 15 DSGVO) que solicitaste está lista en tu cuenta.",
-    "scams.5.tell": "Tú la solicitaste; el GDPR te da una copia gratuita de tus datos Schufa. Inicia sesión directamente, no a través de enlaces de correo electrónico."
+    "scams.5.tell": "Tú la solicitaste; el GDPR te da una copia gratuita de tus datos Schufa. Inicia sesión directamente, no a través de enlaces de correo electrónico.",
+    "scams.6.message": "Buenas noticias: ¡tienes una devolución de impuestos de €847.32! Reclámala antes del domingo. Ten a la mano: número completo de tarjeta, fecha de vencimiento y los 3 numeritos de atrás.",
+    "scams.6.tell": "El Finanzamt deposita las devoluciones directo en tu cuenta bancaria. Nunca pide datos de tarjeta ni pone plazos para el fin de semana.",
+    "scams.7.message": "Hola, habla Microsoft. Su computadora nos llamó. Tiene un virus. Instale AnyDesk y luego entre a su banca en línea para revisar si el virus se comió su dinero.",
+    "scams.7.tell": "Microsoft nunca te llama. Acceso remoto más banca en línea significa que alguien está por vaciar tu cuenta.",
+    "scams.8.message": "Llegó su Renteninformation anual. Tiene 4 páginas, cero imágenes y no le pide hacer absolutamente nada.",
+    "scams.8.tell": "Las cartas oficiales reales te informan. No exigen pagos urgentes ni mandan enlaces."
   },
   "IN": {
     "nameIn": "India",
@@ -71,7 +77,15 @@
     "scams.4.message": "Se debitaron ₹250 de la cuenta XX1234 a Swiggy vía UPI. ¿No fuiste tú? Llama al número de tu tarjeta.",
     "scams.4.tell": "Una alerta de débito por un pago que hiciste, sin enlace, es normal. Si no estás seguro, llama al número de tu tarjeta.",
     "scams.5.message": "OTP 482913 para tu inicio de sesión en iMobile. NO lo compartas con nadie, ni siquiera con el personal del banco.",
-    "scams.5.tell": "Un OTP que tú mismo pediste es legítimo. El mensaje mismo te advierte que no lo compartas."
+    "scams.5.tell": "Un OTP que tú mismo pediste es legítimo. El mensaje mismo te advierte que no lo compartas.",
+    "scams.6.message": "¡¡Trabajo de medio tiempo!! Solo dale like a 3 videos de YouTube y gana ₹150 por like. ₹5,000 diarios GARANTIZADOS. Primero paga ₹1,000 de 'registro' para entrar al grupo VIP de tareas.",
+    "scams.6.tell": "Es un fraude de tareas. Un empleador real nunca te cobra para empezar a trabajar.",
+    "scams.7.message": "Estimado cliente, su luz será cortada HOY a las 9:30 PM porque el recibo del mes pasado no fue actualizar. Llame de inmediato al Oficial de Electricidad a su celular personal.",
+    "scams.7.tell": "Urgencia, mala gramática y un 'oficial' con número personal. Mejor revisa tu recibo en la app oficial de tu compañía de luz.",
+    "scams.8.message": "¡Felicidades! Su número ganó ₹25 lakh en el sorteo de KBC. Amitabh en persona lo felicita. Solo pague ₹12,500 de impuesto para liberar su premio.",
+    "scams.8.tell": "No puedes ganar un sorteo en el que nunca participaste, y los premios reales no cobran 'impuestos' por adelantado. Un nombre famoso no lo hace real.",
+    "scams.9.message": "Se cargaron ₹349 a la cuenta XX4821 por tu pedido de biryani de las 11:47 PM. ¿No fuiste tú? Llama al número de atrás de tu tarjeta. Nunca compartas tu código OTP.",
+    "scams.9.tell": "Coincide con algo que de verdad hiciste, no trae enlace y te manda al número de tu propia tarjeta."
   },
   "MX": {
     "nameIn": "México",
@@ -108,7 +122,15 @@
     "scams.4.message": "Transferencia SPEI recibida: 1,200 pesos de Ana López, concepto 'tanda semana 3'.",
     "scams.4.tell": "Una notificación de transferencia dentro de tu propia aplicación, sin que la hayas solicitado, es normal.",
     "scams.5.message": "Tu folio de queja 2026-04817 ha sido recibido y asignado a un asesor.",
-    "scams.5.tell": "Una respuesta a una queja que presentaste, desde el dominio oficial .gob.mx, sin solicitud de pago."
+    "scams.5.tell": "Una respuesta a una queja que presentaste, desde el dominio oficial .gob.mx, sin solicitud de pago.",
+    "scams.6.message": "Mijo, soy tu tía Lupe, cambié de número. Préstame 4,500 pesos para la tanda de la señora de los tamales, te los regreso el viernes. Deposita a esta cuenta, es de mi comadre.",
+    "scams.6.tell": "Número nuevo, dinero urgente y la cuenta de otra persona. Llama a su número de siempre antes de mandar un solo peso.",
+    "scams.7.message": "CFE: Tienes un reembolso de 1,284 pesos por cobro excesivo. Sí, en serio. Reclámalo en menos de 24 horas: cfe-reembolsos.mx-app.info",
+    "scams.7.tell": "Un enlace de imitación y un plazo de 24 horas, hechos para robar los datos de tu tarjeta. La CFE no manda enlaces de reembolso por mensaje.",
+    "scams.8.message": "Invierte 1,000 y recibe 3,000 en una semana. Mi primo lo hizo y se compró una troca. 300% garantizado. Solo por transferencia SPEI a cuenta personal.",
+    "scams.8.tell": "Ganancias garantizadas y una cuenta personal son señales de un esquema piramidal. Antes de invertir, revisa si la empresa está autorizada por la CNBV.",
+    "scams.9.message": "Recibiste 2,350 pesos de JUAN PÉREZ. Concepto: 'mi parte de la pizza (y el refresco)'.",
+    "scams.9.tell": "Un pago recibido dentro de la app de tu propio banco, sin enlaces y sin pedirte datos."
   },
   "US": {
     "nameIn": "Estados Unidos",
@@ -145,6 +167,14 @@
     "scams.4.message": "Depósito directo recibido: 1,604.22 dólares de nómina de ACME Logistics.",
     "scams.4.tell": "Una notificación dentro de tu propia app del banco, sin enlace ni petición, es normal.",
     "scams.5.message": "¿Intentaste una compra de 48.20 dólares en un supermercado? Responde SÍ o NO. Nunca te pediremos tu NIP ni tu contraseña.",
-    "scams.5.tell": "Una verificación de fraude de sí o no, sin códigos ni enlaces, es una alerta normal del banco. Si dudas, llama al número de tu tarjeta."
+    "scams.5.tell": "Una verificación de fraude de sí o no, sin códigos ni enlaces, es una alerta normal del banco. Si dudas, llama al número de tu tarjeta.",
+    "scams.6.message": "USPS: Tu paquete está atorado en nuestra bodega porque la dirección está 'incompleta'. Paga $0.30 de reenvío en 12 h o lo regresamos al... remitente (también nosotros). usps-redeliver-help.top",
+    "scams.6.tell": "USPS no te manda mensajes para cobrar. Un enlace raro '.top', un cobro tan pequeño que ni lo piensas y un paquete que nunca pediste: quieren tu número de tarjeta.",
+    "scams.7.message": "Bro, convertí $200 en $48,000 en 9 días con mi bot de trading con IA. Solo quedan 3 lugares en mi grupo privado. Mándame $500 en Bitcoin y te los multiplico por 10 para el viernes. No es asesoría financiera (sí lo es).",
+    "scams.7.tell": "Ganancias garantizadas, solo cripto y una cuenta regresiva de 'lugares': el clásico fraude de inversión. Las inversiones reales nunca prometen multiplicar por 10.",
+    "scams.8.message": "Abuela, soy yo, tu nieto favorito. No preguntes cuál. Estoy en la cárcel en Cancún, necesito $2,000 en tarjetas de regalo de Apple, y NO le digas a mi mamá.",
+    "scams.8.tell": "El fraude del nieto: secreto, pánico y tarjetas de regalo. Cuelga y llama a tu nieto al número que ya tienes.",
+    "scams.9.message": "Alerta de fraude: ¿acabas de gastar $1,239.99 en Hot Tub Emporium a las 3:12 AM? Responde SÍ o NO. Nunca te pediremos tu NIP ni tu contraseña.",
+    "scams.9.tell": "Las alertas reales hacen una pregunta de sí o no, no traen enlaces y nunca piden tu NIP. Si dudas, llama al número que está atrás de tu tarjeta."
   }
 }

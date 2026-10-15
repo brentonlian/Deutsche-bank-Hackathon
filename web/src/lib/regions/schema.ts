@@ -23,7 +23,7 @@ const savingsVehicle = z.object({
 
 const scamCard = z.object({
   id: z.string(),
-  channel: z.enum(["sms", "call", "app", "email", "social", "in-person"]),
+  channel: z.enum(["sms", "call", "app", "email", "social", "in-person", "letter"]),
   sender: z.string(),
   message: z.string(),
   isScam: z.boolean(),

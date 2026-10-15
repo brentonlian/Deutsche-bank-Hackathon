@@ -143,7 +143,8 @@
       "app": "App-Benachrichtigung",
       "email": "E-Mail",
       "social": "Soziale Medien / WhatsApp",
-      "in-person": "Persönlich"
+      "in-person": "Persönlich",
+      "letter": "Brief"
     }
   },
   "results": {

@@ -146,10 +146,10 @@
     {
       "id": "de-parcel",
       "channel": "sms",
-      "sender": "DHL",
-      "message": "Your parcel could not be delivered. Pay €1.99 customs fee here: dhl-zoll-paket.info",
+      "sender": "\"DHL\"",
+      "message": "Your parcel is waiting! Only the €1.99 customs fee is missing. Pay now or it goes back to the garden gnome factory. dhl-zoll-paket.info",
       "isScam": true,
-      "tell": "Fake customs fee with a lookalike domain. DHL does not ask for fees by SMS link."
+      "tell": "A lookalike link and a tiny fee: they want your card details, not your €1.99."
     },
     {
       "id": "de-police",
@@ -174,6 +174,30 @@
       "message": "Your free data copy (Datenkopie nach Art. 15 DSGVO) you requested is ready in your account.",
       "isScam": false,
       "tell": "You requested it; GDPR gives you one free copy of your Schufa data. Log in directly, not via email links."
+    },
+    {
+      "id": "de-finanzamt-refund",
+      "channel": "email",
+      "sender": "\"Finanzamt\"",
+      "message": "Good news: you are owed a €847.32 tax refund! Claim it before Sunday. Please have ready: full card number, expiry date and the 3 little numbers on the back.",
+      "isScam": true,
+      "tell": "The Finanzamt pays refunds straight into your bank account. It never asks for card details or sets a weekend deadline."
+    },
+    {
+      "id": "de-microsoft-call",
+      "channel": "call",
+      "sender": "\"Microsoft Support\"",
+      "message": "Hello, this is Microsoft. Your computer called us. It has a virus. Please install AnyDesk, then log into online banking so we can check whether the virus ate your money.",
+      "isScam": true,
+      "tell": "Microsoft never calls you. Remote access plus online banking means someone is about to empty your account."
+    },
+    {
+      "id": "de-renteninfo",
+      "channel": "letter",
+      "sender": "Deutsche Rentenversicherung",
+      "message": "Your annual Renteninformation is here. It is 4 pages long, contains zero pictures, and asks you to do absolutely nothing.",
+      "isScam": false,
+      "tell": "Real official letters inform you. They don't demand urgent payment or send you links."
     }
   ],
   "glossaryKeep": [

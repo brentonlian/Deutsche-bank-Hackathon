@@ -173,6 +173,38 @@
       "message": "OTP 482913 for your login on iMobile. Do NOT share it with anyone, including bank staff.",
       "isScam": false,
       "tell": "An OTP you requested yourself is legitimate. The message itself warns you not to share it."
+    },
+    {
+      "id": "in-task-job",
+      "channel": "social",
+      "sender": "WhatsApp: \"HR Priya\"",
+      "message": "Part-time job!! Just like 3 YouTube videos, earn ₹150 per like. Daily ₹5,000 GUARANTEED. First pay ₹1,000 'registration' to unlock the VIP task group.",
+      "isScam": true,
+      "tell": "This is a task scam. A real employer never charges you money to start working."
+    },
+    {
+      "id": "in-electricity",
+      "channel": "sms",
+      "sender": "VK-ELCTRC",
+      "message": "Dear Consumer, your electricity will be disconnected TONIGHT 9:30 PM because previous month bill was not update. Immediately call Electricity Officer on his personal mobile.",
+      "isScam": true,
+      "tell": "Urgency, broken grammar and an 'officer' with a personal number. Check your bill in your electricity provider's official app instead."
+    },
+    {
+      "id": "in-kbc-lottery",
+      "channel": "call",
+      "sender": "\"KBC Lucky Draw\"",
+      "message": "Congratulations! Your number has won ₹25 lakh in the KBC lucky draw. Amitabh sir personally congratulates you. Just pay ₹12,500 GST to release your prize.",
+      "isScam": true,
+      "tell": "You can't win a draw you never entered, and real prizes don't charge 'GST' upfront. A famous name doesn't make it real."
+    },
+    {
+      "id": "in-biryani-debit",
+      "channel": "sms",
+      "sender": "AX-YOURBK",
+      "message": "₹349 debited from A/c XX4821 for your 11:47 PM biryani order. Not you? Call the number on the back of your card. Never share your OTP.",
+      "isScam": false,
+      "tell": "It matches something you actually did, has no link, and sends you to the number on your own card."
     }
   ],
   "glossaryKeep": [

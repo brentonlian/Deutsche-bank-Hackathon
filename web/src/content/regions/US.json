@@ -173,6 +173,38 @@
       "message": "Did you attempt a $48.20 purchase at a grocery store? Reply YES or NO. We will never ask for your PIN or password.",
       "isScam": false,
       "tell": "A yes/no fraud check that asks for no codes or links is a normal bank alert. If unsure, call the number on your card."
+    },
+    {
+      "id": "us-usps-fee",
+      "channel": "sms",
+      "sender": "+1 (209) 555-0199",
+      "message": "USPS: Ur package is stuck in our warehouse bc the address is 'incomplete'. Pay $0.30 redelivery fee in 12 hrs or we send it back to... the sender (also us). usps-redeliver-help.top",
+      "isScam": true,
+      "tell": "USPS doesn't text you for fees. A strange '.top' link, a fee too small to question, and a package you never ordered: they want your card number."
+    },
+    {
+      "id": "us-crypto-coach",
+      "channel": "social",
+      "sender": "DM: Crypto Coach Brad",
+      "message": "Bro I turned $200 into $48,000 in 9 days with my AI trading bot. Only 3 spots left in my private group. Send $500 in Bitcoin and I'll 10x it by Friday. Not financial advice (it is).",
+      "isScam": true,
+      "tell": "Guaranteed returns, crypto only and a countdown on 'spots' is the classic investment scam. Real investments never promise 10x."
+    },
+    {
+      "id": "us-grandson",
+      "channel": "call",
+      "sender": "\"Your favorite grandson\"",
+      "message": "Grandma it's me, your favorite grandson. Don't ask which one. I'm in jail in Cancún, I need $2,000 in Apple gift cards, and DON'T tell Mom.",
+      "isScam": true,
+      "tell": "The grandparent scam: secrecy, panic and gift cards. Hang up and call your grandson on the number you already have."
+    },
+    {
+      "id": "us-hot-tub-alert",
+      "channel": "sms",
+      "sender": "Your bank (short code)",
+      "message": "Fraud alert: did you just spend $1,239.99 at Hot Tub Emporium at 3:12 AM? Reply YES or NO. We will never ask for your PIN or password.",
+      "isScam": false,
+      "tell": "Real fraud alerts ask a yes/no question, contain no link and never ask for your PIN. If unsure, call the number on the back of your card."
     }
   ],
   "glossaryKeep": [
