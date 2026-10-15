@@ -6,7 +6,20 @@ import { GoogleGenAI } from "@google/genai";
  */
 export interface LLMProvider {
   readonly name: string;
-  generateJson(request: { system: string; prompt: string }): Promise<string>;
+  generateJson(request: LLMRequest): Promise<string>;
+}
+
+/** What a call actually used, reported for tracing. `attempts` > 1 means a fallback model served it. */
+export interface LLMCallInfo {
+  model: string;
+  attempts: number;
+  usage?: { input?: number; output?: number; total?: number };
+}
+
+export interface LLMRequest {
+  system: string;
+  prompt: string;
+  onInfo?: (info: LLMCallInfo) => void;
 }
 
 /** Quota exhausted or model overloaded: worth trying the next model. */
@@ -20,9 +33,9 @@ class GeminiProvider implements LLMProvider {
     this.client = new GoogleGenAI({ apiKey });
     this.name = `gemini:${models.join("|")}`;
   }
-  async generateJson({ system, prompt }: { system: string; prompt: string }) {
+  async generateJson({ system, prompt, onInfo }: LLMRequest) {
     let lastError: unknown;
-    for (const model of this.models) {
+    for (const [i, model] of this.models.entries()) {
       try {
         const res = await this.client.models.generateContent({
           model,
@@ -30,6 +43,8 @@ class GeminiProvider implements LLMProvider {
           config: { systemInstruction: system, responseMimeType: "application/json", temperature: 0.3 },
         });
         if (!res.text) throw new Error("Gemini returned no text");
+        const u = res.usageMetadata;
+        onInfo?.({ model, attempts: i + 1, usage: { input: u?.promptTokenCount, output: u?.candidatesTokenCount, total: u?.totalTokenCount } });
         return res.text;
       } catch (err) {
         lastError = err;
@@ -45,7 +60,7 @@ class OllamaProvider implements LLMProvider {
   constructor(private baseUrl: string, private model: string) {
     this.name = `ollama:${model}`;
   }
-  async generateJson({ system, prompt }: { system: string; prompt: string }) {
+  async generateJson({ system, prompt, onInfo }: LLMRequest) {
     const res = await fetch(`${this.baseUrl}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -60,8 +75,9 @@ class OllamaProvider implements LLMProvider {
       }),
     });
     if (!res.ok) throw new Error(`Ollama error ${res.status}`);
-    const data = (await res.json()) as { message?: { content?: string } };
+    const data = (await res.json()) as { message?: { content?: string }; prompt_eval_count?: number; eval_count?: number };
     if (!data.message?.content) throw new Error("Ollama returned no content");
+    onInfo?.({ model: this.model, attempts: 1, usage: { input: data.prompt_eval_count, output: data.eval_count } });
     return data.message.content;
   }
 }
@@ -71,7 +87,7 @@ class OpenAIProvider implements LLMProvider {
   constructor(private apiKey: string, private model: string) {
     this.name = `openai:${model}`;
   }
-  async generateJson({ system, prompt }: { system: string; prompt: string }) {
+  async generateJson({ system, prompt, onInfo }: LLMRequest) {
     const res = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${this.apiKey}` },
@@ -85,9 +101,13 @@ class OpenAIProvider implements LLMProvider {
       }),
     });
     if (!res.ok) throw new Error(`OpenAI error ${res.status}`);
-    const data = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+    const data = (await res.json()) as {
+      choices?: { message?: { content?: string } }[];
+      usage?: { prompt_tokens?: number; completion_tokens?: number; total_tokens?: number };
+    };
     const text = data.choices?.[0]?.message?.content;
     if (!text) throw new Error("OpenAI returned no content");
+    onInfo?.({ model: this.model, attempts: 1, usage: { input: data.usage?.prompt_tokens, output: data.usage?.completion_tokens, total: data.usage?.total_tokens } });
     return text;
   }
 }

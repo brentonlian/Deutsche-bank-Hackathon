@@ -54,7 +54,9 @@
       "liquidity": "instant",
       "risk": "medium",
       "insured": false,
-      "note": "Loses value to inflation and can be lost or stolen."
+      "note": "Loses value to inflation and can be lost or stolen.",
+      "source": "https://www.fdic.gov/resources/deposit-insurance",
+      "verified": "2026-10"
     },
     "everydayAccount": {
       "id": "checking",
@@ -63,7 +65,9 @@
       "liquidity": "instant",
       "risk": "none",
       "insured": true,
-      "note": "For your paycheck and debit card, usually little or no interest."
+      "note": "For your paycheck and debit card, usually little or no interest.",
+      "source": "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+      "verified": "2026-10"
     },
     "savingsAccount": {
       "id": "hysa",
@@ -72,7 +76,9 @@
       "liquidity": "instant",
       "risk": "none",
       "insured": true,
-      "note": "Interest roughly follows the Fed rate; FDIC-insured at insured banks."
+      "note": "Interest roughly follows the Fed rate; FDIC-insured at insured banks.",
+      "source": "https://www.fdic.gov/resources/deposit-insurance",
+      "verified": "2026-10"
     },
     "indexFund": {
       "id": "index-fund",
@@ -81,7 +87,9 @@
       "liquidity": "days",
       "risk": "medium",
       "insured": false,
-      "note": "Owns small pieces of hundreds of companies. Value goes up and down; long-term average historically positive."
+      "note": "Owns small pieces of hundreds of companies. Value goes up and down; long-term average historically positive.",
+      "source": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1",
+      "verified": "2026-10"
     },
     "retirementProduct": {
       "id": "401k",
@@ -90,10 +98,14 @@
       "liquidity": "locked",
       "risk": "medium",
       "insured": false,
-      "note": "Paid in from your paycheck before tax. Many employers add a match. Early withdrawals before age 59½ usually cost a 10% penalty plus tax."
+      "note": "Paid in from your paycheck before tax. Many employers add a match. Early withdrawals before age 59½ usually cost a 10% penalty plus tax.",
+      "source": "https://www.irs.gov/retirement-plans/401k-plans",
+      "verified": "2026-10"
     },
     "expensiveCreditApr": 22.4,
-    "informalLenderApr": 390
+    "expensiveCreditSource": "https://www.federalreserve.gov/releases/g19/current/",
+    "informalLenderApr": 390,
+    "informalLenderSource": "https://www.consumerfinance.gov/consumer-tools/payday-loans/"
   },
   "informalSavings": {
     "name": "Lending circle",

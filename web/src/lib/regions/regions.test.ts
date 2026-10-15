@@ -15,6 +15,17 @@ describe("region packs", () => {
     expect(formatted).toMatch(/\d/);
   });
 
+  it.each(REGION_IDS)("%s links every product and borrowing rate to an official source", (id) => {
+    const p = REGIONS[id].products;
+    const vehicles = [p.cashAtHome, p.everydayAccount, p.savingsAccount, p.indexFund, p.retirementProduct];
+    for (const v of vehicles) {
+      expect(v.source, v.id).toMatch(/^https:\/\//);
+      expect(v.verified, v.id).toMatch(/^\d{4}-\d{2}$/);
+    }
+    expect(p.expensiveCreditSource).toMatch(/^https:\/\//);
+    expect(p.informalLenderSource).toMatch(/^https:\/\//);
+  });
+
   it("uses Indian digit grouping for India", () => {
     const r = REGIONS.IN;
     expect(new Intl.NumberFormat(r.locale).format(123456)).toBe("1,23,456");

@@ -2,6 +2,7 @@ import "server-only";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { getProvider, parseJson } from "@/lib/ai/provider";
+import { generateValidated, LESSON_PROMPT_VERSION } from "@/lib/ai/tracing";
 import type { AgeGroup } from "@/lib/game/types";
 import type { Lang } from "@/lib/i18n";
 import { REGIONS, type RegionId } from "@/lib/regions";
@@ -65,7 +66,13 @@ async function getExactLesson(req: LessonRequest, opts: { allowGenerate?: boolea
   const llm = getProvider();
   if (!llm) return null;
   const { system, prompt } = lessonPrompt({ ...req, region: REGIONS[req.regionId] });
-  const lesson = lessonSchema.parse(parseJson(await llm.generateJson({ system, prompt })));
+  const lesson = await generateValidated(llm, { system, prompt }, {
+    name: "lesson",
+    promptVersion: LESSON_PROMPT_VERSION,
+    metadata: { topic: req.topic, region: req.regionId, lang: req.lang, group: req.group, simple: req.simple },
+    parse: (text) => lessonSchema.parse(parseJson(text)),
+    cited: (l) => l.factsUsed,
+  });
 
   try {
     await mkdir(path.dirname(file), { recursive: true });

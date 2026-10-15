@@ -579,6 +579,8 @@
     "intro": "Die Grundlagen des Geldsystems deines Landes auf einer Seite. Jede Zahl ist ein geprüfter Fakt mit Quelle.",
     "pricesTitle": "Preise und Zinsen",
     "inflation": "Die Preise steigen um etwa {rate} pro Jahr (Inflation).",
+    "worldBankInflation": "Zahl der Weltbank für {year}: {rate}. Offizielle Statistiken erscheinen mit Verzögerung, deshalb ist diese Zahl älter als die oben.",
+    "accountOwnership": "{share} der Erwachsenen hier haben ein Bank- oder Mobile-Money-Konto (Weltbank, Global Findex {year}).",
     "policyRate": "Der Leitzins der Zentralbank ({bank}) liegt bei etwa {rate}. Spar- und Kreditzinsen folgen ihm.",
     "pricesWhy": "Bringt dein Geld weniger Zinsen als die Inflation, kannst du dir jedes Jahr etwas weniger davon kaufen.",
     "keepTitle": "Wo du Geld aufbewahrst",

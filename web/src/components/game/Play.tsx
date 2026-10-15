@@ -6,10 +6,11 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { getPersona } from "@/content/personas";
 import { createContext, initialState, simulate } from "@/lib/game/engine";
-import { stageVars } from "@/lib/game/vars";
+import { stageSources, stageVars } from "@/lib/game/vars";
 import { REGIONS } from "@/lib/regions";
 import { useApp } from "../AppState";
 import { ReadAloud } from "../ReadAloud";
+import { SourceLink } from "../SourceLink";
 import { MarketPick } from "./MarketPick";
 import { MoneyPanel } from "./MoneyPanel";
 import { MoneyStory } from "./MoneyStory";
@@ -88,6 +89,7 @@ export function Play() {
 
   const stage = stages[current];
   const vars = stageVars(region, state, money, percent);
+  const sources = stageSources(region, stage.id, { card: t("guide.cardApr"), lender: t("guide.lenderApr") });
   const title = t(`stages.${stage.id}.title`, vars);
   const body = t(`stages.${stage.id}.body`, vars);
   const options = stage.options(ctx);
@@ -157,6 +159,15 @@ export function Play() {
                   </button>
                 ))}
               </div>
+              {sources.length > 0 && (
+                <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1">
+                  {sources.map((s) => (
+                    <li key={s.name}>
+                      <SourceLink href={s.source} date={s.verified} label={s.name} />
+                    </li>
+                  ))}
+                </ul>
+              )}
             </fieldset>
           )}
         </div>

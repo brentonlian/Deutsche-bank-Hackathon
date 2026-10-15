@@ -579,6 +579,8 @@
     "intro": "The basics of your country's money system in one page. Every figure is a checked fact with its source.",
     "pricesTitle": "Prices and interest rates",
     "inflation": "Prices rise by about {rate} a year (inflation).",
+    "worldBankInflation": "World Bank figure for {year}: {rate}. Official statistics take time to publish, so this is older than the figure above.",
+    "accountOwnership": "{share} of adults here have a bank or mobile-money account (World Bank Global Findex, {year}).",
     "policyRate": "The central bank ({bank}) key interest rate is about {rate}. Savings and loan rates follow it.",
     "pricesWhy": "If your money earns less than inflation, it buys a little less every year.",
     "keepTitle": "Where to keep money",

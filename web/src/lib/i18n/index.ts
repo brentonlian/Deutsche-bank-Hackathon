@@ -65,6 +65,7 @@ export function localizeRegion(region: RegionPack, lang: Lang): RegionPack {
 /** Region-pack fields that are user-facing prose (everything else is ids, codes, names to keep, or numbers). */
 const SKIP_FIELDS = new Set([
   "id", "flag", "locale", "currency", "languages", "cities", "source", "sources", "verified", "worldBankCode",
+  "expensiveCreditSource", "informalLenderSource",
   "glossaryKeep", "paymentRails", "creditBureau", "centralBank", "regulator", "sender", "channel", "liquidity", "risk",
 ]);
 

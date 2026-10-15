@@ -52,7 +52,9 @@
       "liquidity": "instant",
       "risk": "medium",
       "insured": false,
-      "note": "Loses value to inflation and can be lost or stolen."
+      "note": "Loses value to inflation and can be lost or stolen.",
+      "source": "https://www.gob.mx/ipab",
+      "verified": "2026-10"
     },
     "everydayAccount": {
       "id": "debito",
@@ -61,7 +63,9 @@
       "liquidity": "instant",
       "risk": "none",
       "insured": true,
-      "note": "For payments and SPEI transfers, usually no interest."
+      "note": "For payments and SPEI transfers, usually no interest.",
+      "source": "https://www.condusef.gob.mx",
+      "verified": "2026-10"
     },
     "savingsAccount": {
       "id": "cetes",
@@ -70,7 +74,9 @@
       "liquidity": "days",
       "risk": "none",
       "insured": true,
-      "note": "Government treasury bills you can buy from 100 pesos; backed by the federal government."
+      "note": "Government treasury bills you can buy from 100 pesos; backed by the federal government.",
+      "source": "https://www.cetesdirecto.com",
+      "verified": "2026-10"
     },
     "indexFund": {
       "id": "index-fund",
@@ -79,7 +85,9 @@
       "liquidity": "days",
       "risk": "medium",
       "insured": false,
-      "note": "Broad index fund bought monthly. Value goes up and down; long-term average historically positive."
+      "note": "Broad index fund bought monthly. Value goes up and down; long-term average historically positive.",
+      "source": "https://www.gob.mx/cnbv",
+      "verified": "2026-10"
     },
     "retirementProduct": {
       "id": "afore-voluntary",
@@ -88,10 +96,14 @@
       "liquidity": "locked",
       "risk": "low",
       "insured": false,
-      "note": "Extra savings into your Afore; may give tax deductions."
+      "note": "Extra savings into your Afore; may give tax deductions.",
+      "source": "https://www.gob.mx/consar",
+      "verified": "2026-10"
     },
     "expensiveCreditApr": 65,
-    "informalLenderApr": 120
+    "expensiveCreditSource": "https://www.condusef.gob.mx",
+    "informalLenderApr": 120,
+    "informalLenderSource": "https://www.condusef.gob.mx"
   },
   "informalSavings": {
     "name": "Tanda",

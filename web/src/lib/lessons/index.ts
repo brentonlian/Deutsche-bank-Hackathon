@@ -59,7 +59,8 @@ export function regionFacts(r: RegionPack): Fact[] {
   const product = (key: string, v: RegionPack["products"]["savingsAccount"]) => ({
     key,
     text: `${v.name}: about ${v.ratePct}% a year, ${v.liquidity === "locked" ? "locked until retirement" : `access ${v.liquidity}`}, risk ${v.risk}${v.insured ? ", protected" : ""}. ${v.note}`,
-    ...econ,
+    source: v.source,
+    verified: v.verified,
   });
   return [
     { key: "currency", text: `Currency: ${r.currency}.` },
@@ -76,8 +77,8 @@ export function regionFacts(r: RegionPack): Fact[] {
     product("savings-account", p.savingsAccount),
     product("index-fund", p.indexFund),
     product("retirement-product", p.retirementProduct),
-    { key: "expensive-credit", text: `Credit cards and overdrafts cost about ${p.expensiveCreditApr}% a year.`, ...econ },
-    { key: "informal-lender", text: `Informal money lenders can charge about ${p.informalLenderApr}% a year or more.` },
+    { key: "expensive-credit", text: `Credit cards and overdrafts cost about ${p.expensiveCreditApr}% a year.`, source: p.expensiveCreditSource, verified: r.economy.verified },
+    { key: "informal-lender", text: `Informal money lenders can charge about ${p.informalLenderApr}% a year or more.`, source: p.informalLenderSource, verified: r.economy.verified },
     ...(r.informalSavings ? [{ key: "informal-savings", text: `${r.informalSavings.name}: ${r.informalSavings.description}` }] : []),
     { key: "big-life-event", text: `${r.culture.bigLifeEvent.name}: ${r.culture.bigLifeEvent.note}` },
     { key: "family-support", text: `Family support: ${r.culture.familySupport}.` },

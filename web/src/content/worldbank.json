@@ -1,0 +1,53 @@
+{
+  "fetched": "2026-10-15",
+  "countries": {
+    "DE": {
+      "inflation": {
+        "value": 2.2,
+        "year": 2025,
+        "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=DE"
+      },
+      "accountOwnership": {
+        "value": 98.3,
+        "year": 2024,
+        "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=DE"
+      }
+    },
+    "IN": {
+      "inflation": {
+        "value": 2.4,
+        "year": 2025,
+        "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=IN"
+      },
+      "accountOwnership": {
+        "value": 89,
+        "year": 2024,
+        "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=IN"
+      }
+    },
+    "MX": {
+      "inflation": {
+        "value": 3.8,
+        "year": 2025,
+        "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MX"
+      },
+      "accountOwnership": {
+        "value": 53,
+        "year": 2024,
+        "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=MX"
+      }
+    },
+    "US": {
+      "inflation": {
+        "value": 2.9,
+        "year": 2024,
+        "source": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=US"
+      },
+      "accountOwnership": {
+        "value": 97,
+        "year": 2024,
+        "source": "https://data.worldbank.org/indicator/FX.OWN.TOTL.ZS?locations=US"
+      }
+    }
+  }
+}

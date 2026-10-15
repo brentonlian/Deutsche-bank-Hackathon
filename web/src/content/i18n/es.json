@@ -579,6 +579,8 @@
     "intro": "Lo básico del sistema financiero de tu país en una página. Cada cifra es un dato verificado con su fuente.",
     "pricesTitle": "Precios y tasas de interés",
     "inflation": "Los precios suben alrededor de {rate} al año (inflación).",
+    "worldBankInflation": "Dato del Banco Mundial para {year}: {rate}. Las estadísticas oficiales tardan en publicarse, por eso este dato es más antiguo que el de arriba.",
+    "accountOwnership": "{share} de los adultos aquí tienen una cuenta bancaria o de dinero móvil (Banco Mundial, Global Findex {year}).",
     "policyRate": "La tasa de referencia del banco central ({bank}) está alrededor de {rate}. Las tasas de ahorro y préstamos la siguen.",
     "pricesWhy": "Si tu dinero gana menos que la inflación, cada año alcanza para comprar un poco menos.",
     "keepTitle": "Dónde guardar el dinero",

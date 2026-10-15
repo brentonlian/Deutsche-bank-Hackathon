@@ -8,12 +8,16 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "localize": "tsx scripts/localize.ts",
-    "lessons": "tsx --conditions=react-server scripts/generate-lessons.ts"
+    "lessons": "tsx --conditions=react-server scripts/generate-lessons.ts",
+    "worldbank": "tsx scripts/worldbank.ts"
   },
   "dependencies": {
     "@google/genai": "^2.30.0",
+    "@langfuse/otel": "5.11.1",
+    "@langfuse/tracing": "5.11.1",
+    "@opentelemetry/sdk-trace-node": "2.11.0",
     "lucide-react": "^1.57.0",
     "next": "16.4.1",
     "react": "19.3.0",

@@ -55,7 +55,9 @@
       "liquidity": "instant",
       "risk": "medium",
       "insured": false,
-      "note": "Loses value to inflation and can be lost or stolen."
+      "note": "Loses value to inflation and can be lost or stolen.",
+      "source": "https://www.edb-banken.de",
+      "verified": "2026-10"
     },
     "everydayAccount": {
       "id": "girokonto",
@@ -64,7 +66,9 @@
       "liquidity": "instant",
       "risk": "none",
       "insured": true,
-      "note": "For salary and payments, usually no interest."
+      "note": "For salary and payments, usually no interest.",
+      "source": "https://www.bafin.de/DE/Verbraucher/Bank/Produkte/Basiskonto/basiskonto_node.html",
+      "verified": "2026-10"
     },
     "savingsAccount": {
       "id": "tagesgeld",
@@ -73,7 +77,9 @@
       "liquidity": "instant",
       "risk": "none",
       "insured": true,
-      "note": "Interest follows the ECB rate; protected by deposit insurance."
+      "note": "Interest follows the ECB rate; protected by deposit insurance.",
+      "source": "https://www.edb-banken.de",
+      "verified": "2026-10"
     },
     "indexFund": {
       "id": "etf-sparplan",
@@ -82,7 +88,9 @@
       "liquidity": "days",
       "risk": "medium",
       "insured": false,
-      "note": "Broad global index fund bought monthly. Value goes up and down; long-term average historically positive."
+      "note": "Broad global index fund bought monthly. Value goes up and down; long-term average historically positive.",
+      "source": "https://www.verbraucherzentrale.de/wissen/geld-versicherungen/sparen-und-anlegen",
+      "verified": "2026-10"
     },
     "retirementProduct": {
       "id": "private-pension",
@@ -91,10 +99,14 @@
       "liquidity": "locked",
       "risk": "low",
       "insured": false,
-      "note": "Locked until retirement; may come with employer or state top-ups."
+      "note": "Locked until retirement; may come with employer or state top-ups.",
+      "source": "https://www.deutsche-rentenversicherung.de",
+      "verified": "2026-10"
     },
     "expensiveCreditApr": 11.5,
-    "informalLenderApr": 30
+    "expensiveCreditSource": "https://www.bundesbank.de/de/statistiken/geld-und-kapitalmaerkte/zinssaetze-und-renditen",
+    "informalLenderApr": 30,
+    "informalLenderSource": "https://www.bafin.de/DE/Verbraucher/verbraucher_node.html"
   },
   "informalSavings": {
     "name": "Sparverein",

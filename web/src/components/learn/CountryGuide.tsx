@@ -1,20 +1,15 @@
 "use client";
 
-import { ArrowLeft, Check, ExternalLink, ShieldAlert, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Check, ShieldAlert, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { worldBankFor } from "@/lib/worldbank";
 import { useApp } from "../AppState";
 import { RequireProfile } from "../RequireProfile";
+import { SourceLink } from "../SourceLink";
 
 function Source({ href, date }: { href?: string; date?: string }) {
-  const { t } = useApp();
-  if (!href) return null;
-  return (
-    <a href={href} target="_blank" rel="noreferrer" className="ml-1 inline-flex items-center gap-1 text-sm text-ink-2 underline">
-      {t("game.source")} <ExternalLink aria-hidden="true" size={13} />
-      {date && <span> · {t("game.verified", { date })}</span>}
-    </a>
-  );
+  return <SourceLink href={href} date={date} className="ml-1" />;
 }
 
 function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
@@ -37,6 +32,7 @@ export function CountryGuide() {
   if (!region) return <RequireProfile>{null}</RequireProfile>;
   const p = region.products;
   const e = region.economy;
+  const wb = worldBankFor(region.id);
 
   const accounts = [p.everydayAccount, p.savingsAccount, p.indexFund, p.retirementProduct, p.cashAtHome];
 
@@ -55,6 +51,11 @@ export function CountryGuide() {
           <p>
             {t("guide.inflation", { rate: percent(e.inflationPct) })} <Source href={e.sources[1]} date={e.verified} />
           </p>
+          {wb.inflation && (
+            <p className="text-base text-ink-2">
+              {t("guide.worldBankInflation", { year: wb.inflation.year, rate: percent(wb.inflation.value) })} <Source href={wb.inflation.source} />
+            </p>
+          )}
           <p>
             {t("guide.policyRate", { bank: region.institutions.centralBank, rate: percent(e.policyRatePct) })} <Source href={e.sources[0]} date={e.verified} />
           </p>
@@ -62,6 +63,11 @@ export function CountryGuide() {
         </Section>
 
         <Section id="g-keep" title={t("guide.keepTitle")}>
+          {wb.accountOwnership && (
+            <p>
+              {t("guide.accountOwnership", { year: wb.accountOwnership.year, share: percent(wb.accountOwnership.value) })} <Source href={wb.accountOwnership.source} />
+            </p>
+          )}
           <table className="w-full text-left text-base">
             <thead>
               <tr className="text-sm text-ink-2">
@@ -77,6 +83,7 @@ export function CountryGuide() {
                   <th scope="row" className="py-3 pr-3">
                     <span className="block font-extrabold">{a.name}</span>
                     <span className="block font-normal text-ink-2">{a.note}</span>
+                    <Source href={a.source} date={a.verified} />
                   </th>
                   <td className="py-3 pr-3 font-extrabold tabular-nums">{percent(a.ratePct)}</td>
                   <td className="py-3 pr-3">{t(`guide.access.${a.liquidity}`)}</td>
@@ -102,10 +109,12 @@ export function CountryGuide() {
             <li className="rounded-sign bg-panel px-5 py-4">
               <span className="block text-ink-2">{t("guide.cardApr")}</span>
               <span className="text-3xl font-extrabold tabular-nums">{t("market.value.perYear", { rate: percent(p.expensiveCreditApr) })}</span>
+              <Source href={p.expensiveCreditSource} date={e.verified} />
             </li>
             <li className="rounded-sign bg-panel px-5 py-4">
               <span className="block text-ink-2">{t("guide.lenderApr")}</span>
               <span className="text-3xl font-extrabold tabular-nums text-danger">{t("market.value.perYear", { rate: percent(p.informalLenderApr) })}</span>
+              <Source href={p.informalLenderSource} date={e.verified} />
             </li>
           </ul>
           {region.culture.notes.map((n) => (

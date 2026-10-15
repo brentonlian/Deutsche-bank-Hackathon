@@ -41,3 +41,31 @@ export function stageVars(
     grandchildMilestone: region.culture.grandchildMilestone,
   };
 }
+
+export interface ProductSource {
+  name: string;
+  source: string;
+  verified: string;
+}
+
+/** Official sources for the products a stage's options name, shown under the choices. */
+export function stageSources(region: RegionPack, stageId: string, borrowLabels: { card: string; lender: string }): ProductSource[] {
+  const p = region.products;
+  const v = (x: RegionPack["products"]["savingsAccount"]) => ({ name: x.name, source: x.source, verified: x.verified });
+  const verified = region.economy.verified;
+  switch (stageId) {
+    case "where-to-save":
+      return [v(p.cashAtHome), v(p.everydayAccount), v(p.savingsAccount)];
+    case "invest":
+      return [v(p.indexFund)];
+    case "pension":
+      return [v(p.retirementProduct)];
+    case "emergency":
+      return [
+        { name: borrowLabels.card, source: p.expensiveCreditSource, verified },
+        { name: borrowLabels.lender, source: p.informalLenderSource, verified },
+      ];
+    default:
+      return [];
+  }
+}

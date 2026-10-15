@@ -16,6 +16,9 @@ const savingsVehicle = z.object({
   risk: z.enum(["none", "low", "medium", "high"]),
   insured: z.boolean(),
   note: z.string(),
+  /** Official page (regulator, deposit insurer or provider) where users can check this product. */
+  source: z.url(),
+  verified: z.string(),
 });
 
 const scamCard = z.object({
@@ -67,8 +70,10 @@ export const regionPackSchema = z.object({
     retirementProduct: savingsVehicle,
     /** Annual percentage rate on expensive consumer credit (card, overdraft, BNPL arrears). */
     expensiveCreditApr: z.number(),
+    expensiveCreditSource: z.url(),
     /** Informal / predatory lender APR. */
     informalLenderApr: z.number(),
+    informalLenderSource: z.url(),
   }),
   informalSavings: z
     .object({

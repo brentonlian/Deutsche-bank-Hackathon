@@ -7,6 +7,7 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { registerTracing } from "../src/lib/ai/tracing";
 import { AGE_GROUPS } from "../src/lib/game/engine";
 import type { AgeGroup } from "../src/lib/game/types";
 import { isLang, type Lang } from "../src/lib/i18n";
@@ -35,6 +36,7 @@ const jobs = regions.flatMap((regionId) => {
 });
 
 async function main() {
+  const flushTraces = await registerTracing();
   console.log(`${jobs.length} lessons to check`);
   let done = 0;
   let generated = 0;
@@ -66,6 +68,7 @@ async function main() {
     if (done % 5 === 0 || done === jobs.length) console.log(`  ${done}/${jobs.length} (${generated} generated)`);
   }
   if (failed.length) console.warn(`Failed:\n - ${failed.join("\n - ")}`);
+  await flushTraces?.();
   console.log("Done.");
 }
 

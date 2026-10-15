@@ -4,6 +4,7 @@ import { ArrowRight, Check, Newspaper } from "lucide-react";
 import { useState } from "react";
 import type { RegionPack } from "@/lib/regions/schema";
 import { useApp } from "../AppState";
+import { SourceLink } from "../SourceLink";
 
 type CardId = "index" | "keep-saving" | "single-stock" | "crypto-tip";
 
@@ -128,6 +129,10 @@ export function MarketPick({ region, onDone }: { region: RegionPack; onDone: (op
           <p className="text-2xl font-extrabold">{picked === "index" ? t("market.youPickedBest") : t("market.bestIs", { name: p.indexFund.name })}</p>
           <p className="mt-2 text-lg">{t("market.whyIndex")}</p>
           {picked !== "index" && <p className="mt-2 text-lg text-ink-2">{t(`market.why.${picked}`)}</p>}
+          <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+            <SourceLink href={p.indexFund.source} date={p.indexFund.verified} label={p.indexFund.name} />
+            <SourceLink href={p.savingsAccount.source} date={p.savingsAccount.verified} label={p.savingsAccount.name} />
+          </p>
           <button
             type="button"
             autoFocus

@@ -54,7 +54,9 @@
       "liquidity": "instant",
       "risk": "medium",
       "insured": false,
-      "note": "Loses value to inflation and can be lost or stolen."
+      "note": "Loses value to inflation and can be lost or stolen.",
+      "source": "https://www.dicgc.org.in",
+      "verified": "2026-10"
     },
     "everydayAccount": {
       "id": "savings-ac",
@@ -63,7 +65,9 @@
       "liquidity": "instant",
       "risk": "none",
       "insured": true,
-      "note": "Linked to UPI for daily payments; low interest."
+      "note": "Linked to UPI for daily payments; low interest.",
+      "source": "https://www.rbi.org.in",
+      "verified": "2026-10"
     },
     "savingsAccount": {
       "id": "recurring-deposit",
@@ -72,7 +76,9 @@
       "liquidity": "days",
       "risk": "none",
       "insured": true,
-      "note": "Fixed monthly deposit at a bank; protected up to ₹5 lakh by DICGC."
+      "note": "Fixed monthly deposit at a bank; protected up to ₹5 lakh by DICGC.",
+      "source": "https://www.dicgc.org.in",
+      "verified": "2026-10"
     },
     "indexFund": {
       "id": "nifty-sip",
@@ -81,7 +87,9 @@
       "liquidity": "days",
       "risk": "medium",
       "insured": false,
-      "note": "Systematic Investment Plan into an index fund. Value goes up and down; long-term average historically positive."
+      "note": "Systematic Investment Plan into an index fund. Value goes up and down; long-term average historically positive.",
+      "source": "https://www.amfiindia.com/investor",
+      "verified": "2026-10"
     },
     "retirementProduct": {
       "id": "ppf",
@@ -90,10 +98,14 @@
       "liquidity": "locked",
       "risk": "none",
       "insured": true,
-      "note": "Government-backed, 15-year lock-in, tax benefits."
+      "note": "Government-backed, 15-year lock-in, tax benefits.",
+      "source": "https://www.nsiindia.gov.in/",
+      "verified": "2026-10"
     },
     "expensiveCreditApr": 42,
-    "informalLenderApr": 60
+    "expensiveCreditSource": "https://www.rbi.org.in",
+    "informalLenderApr": 60,
+    "informalLenderSource": "https://www.rbi.org.in"
   },
   "informalSavings": {
     "name": "Chit fund",

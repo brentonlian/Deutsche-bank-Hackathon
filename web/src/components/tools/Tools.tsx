@@ -8,6 +8,7 @@ import { budgetSplit, futureValue, growthPath, inTodaysMoney, payoff } from "@/l
 import { useApp } from "../AppState";
 import { NetWorthChart } from "../game/NetWorthChart";
 import { RequireProfile } from "../RequireProfile";
+import { SourceLink } from "../SourceLink";
 
 function NumberField(props: { label: string; value: number; onChange: (v: number) => void; suffix?: string; min?: number; max?: number; step?: number }) {
   return (
@@ -85,6 +86,9 @@ function BudgetTool() {
         />
         <Big label={t("tools.budget.monthsToCushion")} value={t("tools.months", { n: Math.ceil((split.needs * 3) / Math.max(split.save, 1)) })} />
       </div>
+      <p className="mt-3">
+        <SourceLink href={region.products.savingsAccount.source} date={region.products.savingsAccount.verified} label={region.products.savingsAccount.name} />
+      </p>
     </ToolFrame>
   );
 }
@@ -97,9 +101,9 @@ function GrowthTool() {
   const p = region.products;
   const infl = region.economy.inflationPct;
   const rows = [
-    { id: "cash", name: p.cashAtHome.name, rate: p.cashAtHome.ratePct, color: "var(--danger)" },
-    { id: "savings", name: p.savingsAccount.name, rate: p.savingsAccount.ratePct, color: "var(--line)" },
-    { id: "index", name: p.indexFund.name, rate: p.indexFund.ratePct, color: "var(--express)" },
+    { id: "cash", name: p.cashAtHome.name, rate: p.cashAtHome.ratePct, color: "var(--danger)", product: p.cashAtHome },
+    { id: "savings", name: p.savingsAccount.name, rate: p.savingsAccount.ratePct, color: "var(--line)", product: p.savingsAccount },
+    { id: "index", name: p.indexFund.name, rate: p.indexFund.ratePct, color: "var(--express)", product: p.indexFund },
   ];
   return (
     <ToolFrame tool="growth">
@@ -129,6 +133,13 @@ function GrowthTool() {
         />
       </div>
       <p className="mt-4 max-w-[65ch] text-ink-2">{t("tools.growth.note")}</p>
+      <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+        {rows.map((r) => (
+          <li key={r.id}>
+            <SourceLink href={r.product.source} date={r.product.verified} label={r.name} />
+          </li>
+        ))}
+      </ul>
     </ToolFrame>
   );
 }
@@ -173,6 +184,10 @@ function DebtTool() {
         })}
       </div>
       <p className="mt-6 max-w-[65ch] text-lg">{t("tools.debt.note")}</p>
+      <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+        <SourceLink href={region.products.expensiveCreditSource} date={region.economy.verified} label={t("guide.cardApr")} />
+        <SourceLink href={region.products.informalLenderSource} date={region.economy.verified} label={t("guide.lenderApr")} />
+      </p>
     </ToolFrame>
   );
 }
