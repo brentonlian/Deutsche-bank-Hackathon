@@ -75,6 +75,8 @@ export const regionPackSchema = z.object({
     .nullable(),
   culture: z.object({
     bigLifeEvent: z.object({ name: z.string(), typicalCostMonths: z.number(), note: z.string() }),
+    /** A grandchild's milestone families celebrate, used in the senior game. */
+    grandchildMilestone: z.string(),
     familySupport: z.string(),
     notes: z.array(z.string()),
   }),

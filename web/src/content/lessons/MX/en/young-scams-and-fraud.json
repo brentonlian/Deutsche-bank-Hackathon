@@ -1,0 +1,30 @@
+{
+  "title": "Beware of Online Scams",
+  "summary": "Learn to spot common scams that try to trick you into sending money or giving away personal information.",
+  "sections": [
+    {
+      "heading": "Fake Prize Scams",
+      "body": "If you get a message saying you won a prize like a gift card, but you have to pay a fee for shipping or handling, it's likely a scam. You never entered for these prizes, and they want your money before you realize it's fake."
+    },
+    {
+      "heading": "Phishing for Your Details",
+      "body": "Scammers might pretend to be from SAT or your bank. They could send fake emails about tax debts or suspicious charges. They want you to click links to download files or give them your PIN (NIP) or token codes. Never share this information."
+    },
+    {
+      "heading": "Fake Kidnapping Calls",
+      "body": "Be careful of calls claiming a relative is in danger and demanding money be sent immediately, often through places like OXXO. This is a scam called virtual kidnapping. Always hang up and call your relative directly to check if they are safe."
+    }
+  ],
+  "example": {
+    "title": "The Fake Gift Card",
+    "body": "Maria received a WhatsApp message: 'Congratulations Maria! You won a 10,000 peso gift card from Super Tienda! To claim, just pay 299 pesos for shipping.' Maria had never entered any contest. She ignored the message, knowing it was a scam to get her money."
+  },
+  "takeaway": "Always verify requests for money or personal information, especially if they come unexpectedly or seem too good to be true.",
+  "factsUsed": [
+    "scam-mx-premio",
+    "scam-mx-sat",
+    "scam-mx-token",
+    "scam-mx-extorsion",
+    "payment-rails"
+  ]
+}

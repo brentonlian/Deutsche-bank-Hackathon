@@ -1,0 +1,32 @@
+{
+  "title": "Spotting Scams: Protect Your Money in Germany",
+  "summary": "Scammers try to trick you into giving them money or personal details. Learning to spot their tricks can help keep your finances safe.",
+  "sections": [
+    {
+      "heading": "Common Tricks Scammers Use",
+      "body": "Scammers often pretend to be someone you trust, like family or your bank. For example, the Enkeltrick might involve a message saying \"Hi Mum, my phone broke, this is my new number. Can you quickly transfer €1,450 for a bill?\" They create urgency and ask for money. Other scams involve fake SMS messages about your pushTAN expiring or a parcel delivery, asking you to click suspicious links. Remember, real banks never send links to 're-register' your TAN app."
+    },
+    {
+      "heading": "How to Protect Yourself",
+      "body": "Always be suspicious of urgent requests for money or personal details, especially if they come with links. If you get a message from a \"new number\" claiming to be family, call their old number to check. Never click on links in suspicious SMS messages. If you're unsure about a message from your bank, contact them directly using a number from their official website, not from the message itself. Real police never call from 110 or ask you to hand over cash or cards for \"safekeeping.\""
+    },
+    {
+      "heading": "What Real Messages Look Like",
+      "body": "Legitimate messages from your bank or official services usually don't ask you to click links for urgent actions. For example, a notification inside your own banking app about an \"Incoming transfer: Salary October, €2,214.50\" is normal and safe. If you requested a free data copy from Schufa, an email saying it's ready in your account is also legitimate, but you should log in directly to your Schufa account, not through a link in the email."
+    }
+  ],
+  "example": {
+    "title": "Lena's Close Call with the Enkeltrick",
+    "body": "Lena received an SMS: \"Hi Mum, my phone broke, this is my new number. Can you quickly transfer €1,450 for a bill? I'll pay you back tomorrow.\" Lena almost sent the money, but then remembered hearing about the Enkeltrick. She called her mother's old number, and her mother answered, confirming her phone was fine and she hadn't sent any such message. Lena realized it was a scam and didn't lose her €1,450."
+  },
+  "takeaway": "Always double-check unexpected requests for money or personal information, especially if they create urgency or ask you to click links.",
+  "factsUsed": [
+    "scam-de-enkeltrick",
+    "scam-de-pushtan",
+    "scam-de-parcel",
+    "scam-de-police",
+    "scam-de-salary",
+    "scam-de-schufa",
+    "currency"
+  ]
+}

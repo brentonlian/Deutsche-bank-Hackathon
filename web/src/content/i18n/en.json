@@ -1,0 +1,525 @@
+{
+  "app": {
+    "name": "Rooted",
+    "tagline": "Money skills that start from where you live.",
+    "disclaimer": "Education, not financial advice. Figures are simplified and checked against the sources shown."
+  },
+  "nav": {
+    "play": "Life Path",
+    "learn": "Lessons",
+    "restart": "Start over",
+    "language": "Language",
+    "country": "Country",
+    "simple": "Simple language",
+    "readAloud": "Read aloud",
+    "stopReading": "Stop reading",
+    "skip": "Skip to content"
+  },
+  "onboarding": {
+    "stationCountry": "Country",
+    "stationLanguage": "Language",
+    "stationAge": "Age",
+    "stationMoney": "Money",
+    "countryQuestion": "Where do you live and bank?",
+    "countryHelp": "Products, rules, prices and scams change with the country.",
+    "languageQuestion": "Which language do you want?",
+    "languageHelp": "You can change this at any time from the top bar.",
+    "ageQuestion": "Which stage of life are you in?",
+    "ageHelp": "Your life events and the advice change with your age.",
+    "ageExact": "Your age",
+    "groups": {
+      "young": {
+        "label": "Young adult",
+        "range": "18 to 30",
+        "about": "First job, first account, first big choices."
+      },
+      "middle": {
+        "label": "Middle age",
+        "range": "31 to 54",
+        "about": "Family budget, car, children, ageing parents."
+      },
+      "senior": {
+        "label": "Senior",
+        "range": "55 and over",
+        "about": "Pension income, savings, health, family."
+      }
+    },
+    "moneyQuestion": "What comes in each month?",
+    "moneyHelp": "A rough figure is enough. It stays on this device.",
+    "incomeLabel": "Monthly take-home income",
+    "incomeLabelSenior": "Monthly pension and other income",
+    "freeLabel": "Left over after essentials (rent, food, bills)",
+    "typical": "A typical figure here is {amount}.",
+    "back": "Back",
+    "next": "Next",
+    "start": "Start my Life Path",
+    "privacy": "Nothing you enter leaves this browser."
+  },
+  "game": {
+    "stationOf": "Station {current} of {total}",
+    "age": "Age {age}",
+    "savings": "Savings",
+    "invested": "Investments",
+    "pension": "Pension",
+    "debt": "Debt",
+    "wellbeing": "Wellbeing",
+    "netWorth": "Net worth",
+    "inTodaysMoney": "in today's money",
+    "choose": "What do you do?",
+    "yearsPass": "{years} years pass…",
+    "learnWhy": "Learn why",
+    "localFact": "In {country}",
+    "source": "Source",
+    "verified": "checked {date}",
+    "minigame": "Mini-game"
+  },
+  "scam": {
+    "intro": "Messages are arriving. Is each one a scam or legitimate?",
+    "scam": "Scam",
+    "legit": "Legitimate",
+    "correct": "Correct.",
+    "wrong": "Not quite.",
+    "next": "Next message",
+    "finish": "See how you did",
+    "result": "You spotted {correct} of {total}.",
+    "passed": "Your savings are safe.",
+    "failed": "One of these got through. You lost part of your savings.",
+    "keys": "Tip: press S for scam, L for legitimate.",
+    "channel": {
+      "sms": "Text message",
+      "call": "Phone call",
+      "app": "App notification",
+      "email": "Email",
+      "social": "Social / WhatsApp",
+      "in-person": "In person"
+    }
+  },
+  "results": {
+    "title": "Your line",
+    "subtitle": "From age {start} to {end} in {country}.",
+    "yourLine": "Your line",
+    "express": "Express line (optimal)",
+    "whatIf": "What if",
+    "percent": "You reached {percent}% of the best possible outcome.",
+    "stationsDiffer": "Your line and the express line split at {count} stations.",
+    "tapStation": "Select a station to see what happened there.",
+    "youChose": "You chose",
+    "bestChoice": "Best choice from where you stood",
+    "sameAsBest": "This was already the best choice.",
+    "difference": "Changing only this decision: {points} points, and {money} net worth in today's money.",
+    "showWhatIf": "Show this what-if on the line",
+    "hideWhatIf": "Hide what-if",
+    "replayFrom": "Replay from this station",
+    "playAgain": "Play again",
+    "chartTitle": "Net worth over time, in today's money",
+    "breakdown": "How the outcome is scored",
+    "scoreNetWorth": "Net worth",
+    "scoreCushion": "Emergency cushion",
+    "scoreDebt": "Debt",
+    "scoreCredit": "Credit standing",
+    "scoreWellbeing": "Wellbeing along the way",
+    "months": "{value} months of income",
+    "outOf": "{value} / 100",
+    "scoreNote": "The score rewards a balanced life, not just the biggest pile of money."
+  },
+  "learn": {
+    "title": "Lessons for {country}",
+    "intro": "Short lessons written for your country, language and stage of life, using only checked facts.",
+    "compare": "Compare countries",
+    "compareTitle": "The same lesson in three countries",
+    "loading": "Writing your lesson…",
+    "error": "This lesson could not be loaded. Try again, or read a saved version.",
+    "retry": "Try again",
+    "aiLabel": "Written by AI from the checked facts below. Reviewed facts, not reviewed wording.",
+    "facts": "Facts this lesson uses",
+    "back": "All lessons",
+    "keyTakeaway": "Remember"
+  },
+  "topics": {
+    "budgeting": "Budgeting",
+    "banking-basics": "Banking basics",
+    "credit-and-debt": "Credit and debt",
+    "retirement": "Retirement",
+    "insurance": "Insurance",
+    "scams-and-fraud": "Scams and fraud",
+    "emergency-fund": "Emergency fund",
+    "saving-vs-investing": "Saving vs investing",
+    "inflation": "Interest and inflation",
+    "digital-payments": "Digital payments",
+    "informal-savings": "Savings groups",
+    "taxes": "Tax basics",
+    "remittances": "Sending money home"
+  },
+  "stages": {
+    "first-paycheck": {
+      "title": "First pay day",
+      "body": "Your first salary of {income} lands in your account. How much do you put aside each month?",
+      "options": {
+        "spend": {
+          "label": "Enjoy it, save 5%",
+          "hint": "More fun now, thin cushion."
+        },
+        "balanced": {
+          "label": "Save 15%",
+          "hint": "A common rule of thumb."
+        },
+        "frugal": {
+          "label": "Save 25%",
+          "hint": "Grows fast, but life feels tight."
+        }
+      }
+    },
+    "family-budget": {
+      "title": "The family budget",
+      "body": "With a household of {income} a month, bills and children compete for every unit. How much do you put aside?",
+      "options": {
+        "spend": {
+          "label": "Whatever is left, about 3%",
+          "hint": "Comfortable now, exposed later."
+        },
+        "balanced": {
+          "label": "A fixed 12%",
+          "hint": "Paid in first, before spending."
+        },
+        "frugal": {
+          "label": "An ambitious 22%",
+          "hint": "Strong savings, fewer treats."
+        }
+      }
+    },
+    "retirement-budget": {
+      "title": "Living on a pension",
+      "body": "Your pension pays {income} a month and you have savings put by. How much of your savings do you spend?",
+      "options": {
+        "travel": {
+          "label": "Travel and enjoy it",
+          "hint": "Draw a lot from savings each month."
+        },
+        "comfortable": {
+          "label": "A comfortable top-up",
+          "hint": "Draw a moderate amount."
+        },
+        "careful": {
+          "label": "Live on the pension only",
+          "hint": "Savings stay untouched."
+        }
+      }
+    },
+    "where-to-save": {
+      "title": "Where does the money live?",
+      "body": "Your savings need a home. In {country}, people choose between these.",
+      "options": {
+        "cash": {
+          "label": "{cashName}",
+          "hint": "Earns {cashRate}. Can be lost or stolen."
+        },
+        "everyday": {
+          "label": "{everydayName}",
+          "hint": "Earns {everydayRate}. Easy to spend by accident."
+        },
+        "savings": {
+          "label": "{savingsName}",
+          "hint": "Earns {savingsRate}. {savingsInsured}"
+        },
+        "informal": {
+          "label": "Join a {informalName}",
+          "hint": "Earns {informalRate}. Built on trust in the group."
+        }
+      }
+    },
+    "phone-offer": {
+      "title": "The new phone",
+      "body": "Your phone breaks. A shop offers the latest model now, on credit at {creditApr} a year.",
+      "options": {
+        "credit": {
+          "label": "Buy it on credit",
+          "hint": "Pay later, with interest."
+        },
+        "save-up": {
+          "label": "Pay from savings",
+          "hint": "No interest, a smaller cushion."
+        },
+        "skip": {
+          "label": "Fix the old one",
+          "hint": "Cheapest, a little annoying."
+        }
+      }
+    },
+    "car": {
+      "title": "Getting around",
+      "body": "Commuting is getting hard. A dealer offers a new car on a loan at {loanApr} a year.",
+      "options": {
+        "new-car-loan": {
+          "label": "New car on a loan",
+          "hint": "Comfortable, years of payments."
+        },
+        "used-car": {
+          "label": "Buy used, pay cash",
+          "hint": "Cheaper, uses savings."
+        },
+        "no-car": {
+          "label": "Stay on public transport",
+          "hint": "Cheapest, less flexible."
+        }
+      }
+    },
+    "pension": {
+      "title": "Thinking about later",
+      "body": "In {country}, the system is: {retirementSystem}. Do you add your own savings to a {retirementName}?",
+      "options": {
+        "none": {
+          "label": "Not now",
+          "hint": "More money today."
+        },
+        "five": {
+          "label": "5% of income",
+          "hint": "Locked until retirement, earns {retirementRate}."
+        },
+        "ten": {
+          "label": "10% of income",
+          "hint": "Strong future, tighter today."
+        }
+      }
+    },
+    "insurance": {
+      "title": "Insurance",
+      "body": "An insurer offers cover for illness and accidents for about 1% of your income.",
+      "options": {
+        "insure": {
+          "label": "Take the cover",
+          "hint": "A small cost every month."
+        },
+        "skip": {
+          "label": "Skip it",
+          "hint": "Keep the money, carry the risk."
+        }
+      }
+    },
+    "scam": {
+      "title": "Your phone keeps buzzing",
+      "body": "Fraudsters target people in {country} with very local tricks. Can you tell which messages are real?",
+      "options": {
+        "pass": {
+          "label": "Spotted them",
+          "hint": ""
+        },
+        "fail": {
+          "label": "Got caught",
+          "hint": ""
+        }
+      }
+    },
+    "emergency": {
+      "title": "Something goes wrong",
+      "body": "A medical bill and a repair arrive in the same month. You have {cash} in savings. How do you pay?",
+      "options": {
+        "savings": {
+          "label": "Use savings first",
+          "hint": "Anything missing goes on a card at {creditApr}."
+        },
+        "lender": {
+          "label": "Borrow from a money lender",
+          "hint": "Fast, at about {lenderApr} a year."
+        },
+        "family": {
+          "label": "Ask family",
+          "hint": "No interest, but it costs goodwill."
+        },
+        "sell-investments": {
+          "label": "Sell investments",
+          "hint": "Selling in a hurry often means selling low."
+        }
+      }
+    },
+    "invest": {
+      "title": "A little extra",
+      "body": "Your savings are growing. A colleague says a new coin will triple. A bank offers a {indexName}.",
+      "options": {
+        "keep-saving": {
+          "label": "Keep it all in savings",
+          "hint": "Safe, grows slowly."
+        },
+        "index": {
+          "label": "Invest monthly in the {indexName}",
+          "hint": "Ups and downs, historically about {indexRate} a year."
+        },
+        "crypto-tip": {
+          "label": "Put half into the coin",
+          "hint": "Could triple. Usually doesn't."
+        }
+      }
+    },
+    "big-life-event": {
+      "title": "{bigEvent}",
+      "body": "{bigEventNote} How big do you go?",
+      "options": {
+        "lavish": {
+          "label": "Go big",
+          "hint": "A day everyone will remember."
+        },
+        "moderate": {
+          "label": "Something in between",
+          "hint": "Celebrate within reason."
+        },
+        "simple": {
+          "label": "Keep it small",
+          "hint": "Cheapest, some disappointment."
+        }
+      }
+    },
+    "child-education": {
+      "title": "Your child's education",
+      "body": "Your child is starting secondary school. How do you pay for it?",
+      "options": {
+        "private": {
+          "label": "Private school, paid from savings",
+          "hint": "Expensive, many options."
+        },
+        "public-plus": {
+          "label": "Public school plus tutoring",
+          "hint": "Moderate cost."
+        },
+        "education-loan": {
+          "label": "Take an education loan",
+          "hint": "Pay over years, at {loanApr} a year."
+        }
+      }
+    },
+    "family-support": {
+      "title": "Family asks for help",
+      "body": "{familySupport}. They ask if you can help.",
+      "options": {
+        "monthly": {
+          "label": "Help every month",
+          "hint": "About 5% of income, ongoing."
+        },
+        "one-off": {
+          "label": "One payment",
+          "hint": "About 1.5 months of income."
+        },
+        "decline": {
+          "label": "Say no this time",
+          "hint": "Your savings stay, the relationship strains."
+        }
+      }
+    },
+    "parents-care": {
+      "title": "Your parents need care",
+      "body": "Your parents are getting older and their costs are rising. How do you support them?",
+      "options": {
+        "monthly": {
+          "label": "A monthly contribution",
+          "hint": "About 5% of income, ongoing."
+        },
+        "one-off": {
+          "label": "Pay for one big need",
+          "hint": "About 1.5 months of income."
+        },
+        "decline": {
+          "label": "Siblings will handle it",
+          "hint": "Savings stay, the family strains."
+        }
+      }
+    },
+    "job-loss": {
+      "title": "Your job ends",
+      "body": "Your employer closes your department. {unemploymentNote}",
+      "options": {
+        "quick-job": {
+          "label": "Take the first job offered",
+          "hint": "Back to work fast, slightly lower pay."
+        },
+        "upskill": {
+          "label": "Retrain for six months",
+          "hint": "Costs savings, better pay after."
+        },
+        "wait": {
+          "label": "Wait for a similar job",
+          "hint": "About four months without pay."
+        }
+      }
+    },
+    "nest-egg": {
+      "title": "Your nest egg",
+      "body": "Part of your savings is invested. A friendly adviser offers a scheme that is \"guaranteed 12% a year\".",
+      "options": {
+        "all-cash": {
+          "label": "Move everything to cash",
+          "hint": "No ups and downs, loses to inflation."
+        },
+        "balanced": {
+          "label": "Keep a balanced mix",
+          "hint": "Some growth, some safety."
+        },
+        "guaranteed-scheme": {
+          "label": "Join the guaranteed scheme",
+          "hint": "Too good to be true?"
+        }
+      }
+    },
+    "family-request": {
+      "title": "A family milestone",
+      "body": "A grandchild's {grandchildMilestone} is coming up and the family hopes you will help.",
+      "options": {
+        "gift-large": {
+          "label": "A generous gift",
+          "hint": "About 6 months of pension."
+        },
+        "gift-small": {
+          "label": "A modest gift",
+          "hint": "About 1.5 months of pension."
+        },
+        "decline": {
+          "label": "Explain you can't",
+          "hint": "Savings stay, feelings are hurt."
+        }
+      }
+    },
+    "housing": {
+      "title": "A home that is too big",
+      "body": "The children have moved out. Your home costs a lot to heat and keep up.",
+      "options": {
+        "stay": {
+          "label": "Stay where you are",
+          "hint": "Familiar neighbours, higher costs."
+        },
+        "downsize": {
+          "label": "Move somewhere smaller",
+          "hint": "Frees money, a hard goodbye."
+        }
+      }
+    },
+    "late-work": {
+      "title": "Still able to work",
+      "body": "A local business would love your experience part-time.",
+      "options": {
+        "part-time": {
+          "label": "Work part-time",
+          "hint": "More income, less free time."
+        },
+        "volunteer": {
+          "label": "Volunteer instead",
+          "hint": "No pay, lots of meaning."
+        },
+        "rest": {
+          "label": "Enjoy full retirement",
+          "hint": "Time for yourself."
+        }
+      }
+    },
+    "estate": {
+      "title": "Putting things in order",
+      "body": "Friends talk about wills and who decides if they fall ill.",
+      "options": {
+        "make-will": {
+          "label": "Write a will and set a power of attorney",
+          "hint": "A small fee, peace of mind."
+        },
+        "skip": {
+          "label": "Leave it for now",
+          "hint": "Free, but family may argue later."
+        }
+      }
+    }
+  }
+}

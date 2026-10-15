@@ -54,12 +54,24 @@ export function advance(state: GameState, ctx: GameContext, years: number, rng: 
   const whole = Math.floor(years);
   const fractions = [...Array(whole).fill(1), ...(years - whole > 0.01 ? [years - whole] : [])];
   for (const f of fractions) {
-    const flow = Math.max(0, s.savingRate - s.fixedCostRate);
-    const pensionPart = Math.min(s.pensionRate, flow);
+    const flow = s.savingRate - s.fixedCostRate;
+    const pensionPart = clamp(s.pensionRate, 0, Math.max(0, flow));
     let toSave = s.income * 12 * f * (flow - pensionPart);
     s.pension += s.income * 12 * f * pensionPart;
 
     s.debt *= 1 + (s.debtApr / 100) * f;
+    if (toSave < 0) {
+      // Drawing down: spend cash first, then sell investments, then borrow.
+      let need = -toSave;
+      const fromCash = Math.min(s.cash, need);
+      s.cash -= fromCash;
+      need -= fromCash;
+      const fromInvested = Math.min(s.invested, need);
+      s.invested -= fromInvested;
+      need -= fromInvested;
+      if (need > 0) s = addDebt(s, need, p.expensiveCreditApr);
+      toSave = 0;
+    }
     const repay = Math.min(s.debt, toSave);
     s.debt -= repay;
     toSave -= repay;
@@ -76,13 +88,13 @@ export function advance(state: GameState, ctx: GameContext, years: number, rng: 
     s.pension *= 1 + (p.retirementProduct.ratePct / 100) * f;
 
     s.priceLevel *= 1 + inflation * f;
-    s.income *= 1 + (inflation + 0.01) * f; // pay keeps up with prices plus modest real growth
+    s.income *= 1 + (inflation + ctx.realIncomeGrowth) * f; // pay keeps up with prices, plus career growth
     s.age += f;
 
     const debtMonths = s.debt / s.income;
     s.credit = clamp(s.credit + (s.debt === 0 ? 3 : debtMonths > 3 ? -6 : 0) * f, 0, 100);
     const target = clamp(
-      60 + s.contentment - (s.savingRate - 0.15) * 120 - Math.min(20, debtMonths * 3) + (s.insured ? 3 : 0),
+      60 + s.contentment - (s.savingRate - ctx.baselineSaving) * 120 -Math.min(20, debtMonths * 3) + (s.insured ? 3 : 0),
       0,
       100,
     );

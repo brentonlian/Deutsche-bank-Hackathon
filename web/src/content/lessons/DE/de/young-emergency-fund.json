@@ -1,0 +1,30 @@
+{
+  "title": "Der Notgroschen: Dein finanzielles Sicherheitsnetz",
+  "summary": "Ein Notgroschen ist Geld, das du für unerwartete Ausgaben zurücklegst, damit du nicht in Schulden gerätst. Er ist dein finanzielles Polster für Notfälle.",
+  "sections": [
+    {
+      "heading": "Warum ein Notgroschen wichtig ist",
+      "body": "Das Leben ist unvorhersehbar. Dein Auto könnte kaputtgehen, du könntest deinen Job verlieren oder eine unerwartete Arztrechnung bekommen. Ohne ein finanzielles Polster müsstest du vielleicht einen teuren Kredit aufnehmen oder deinen Dispo nutzen, was dich viel Geld kostet."
+    },
+    {
+      "heading": "Wo du deinen Notgroschen aufbewahren kannst",
+      "body": "Am besten eignet sich ein Tagesgeldkonto. Dort ist dein Geld sicher und du bekommst sogar ein bisschen Zinsen (aktuell ca. 2,3% pro Jahr). Es ist durch die Einlagensicherung bis 100.000 € pro Bank geschützt und du kommst sofort ran, wenn du es brauchst."
+    },
+    {
+      "heading": "Wie viel du sparen solltest",
+      "body": "Als Faustregel gilt: Versuche, Geld für 3 bis 6 Monate deiner nötigsten Ausgaben anzusparen. Das beinhaltet Miete, Essen und andere wichtige Rechnungen. Wenn du noch keine Miete zahlen musst, starte kleiner, aber fang an!"
+    }
+  ],
+  "example": {
+    "title": "Annas Notgroschen",
+    "body": "Anja hat gerade ihren ersten Job angefangen und verdient 2.200 € netto im Monat. Sie weiß, dass sie eine Mietkaution von 900 € für ihre neue Wohnung braucht. Sie beschließt, jeden Monat 100 € auf ein Tagesgeldkonto zu legen, um diese Kaution anzusparen. Zusätzlich legt sie weitere 50 € für einen Notgroschen beiseite, falls mal etwas Unerwartetes passiert."
+  },
+  "takeaway": "Lege Geld für unerwartete Ausgaben beiseite, um finanzielle Engpässe zu vermeiden und Schulden zu umgehen.",
+  "factsUsed": [
+    "Tagesgeld",
+    "Einlagensicherung",
+    "Mietkaution",
+    "Dispo",
+    "Girokonto"
+  ]
+}

@@ -46,7 +46,8 @@
   },
   "culture": {
     "bigLifeEvent": { "name": "Moving into your first own flat (rental deposit + furniture)", "typicalCostMonths": 3, "note": "Landlords can ask for a rental deposit (Mietkaution) of up to three months' base rent." },
-    "familySupport": "Helping a sibling or parent with an unexpected bill",
+    "grandchildMilestone": "start at university",
+    "familySupport": "Your sibling has an unexpected bill",
     "notes": [
       "Germans traditionally prefer saving over borrowing; overdraft (Dispo) debt is expensive.",
       "Your Schufa score affects renting a flat, phone contracts and loans."

@@ -1,0 +1,30 @@
+{
+  "title": "Budgeting Basics for Your First Job",
+  "summary": "Learn how to manage your money with a budget, track your spending, and save for your goals.",
+  "sections": [
+    {
+      "heading": "Why Budget?",
+      "body": "A budget is a plan for your money. It helps you see where your money is going and make sure you have enough for what's important. With inflation around 5.2% a year, your money's buying power can decrease, making a budget even more crucial."
+    },
+    {
+      "heading": "Tracking Your Spending",
+      "body": "The first step is to track where your money goes. Use your bank account statements, UPI transactions, or a simple notebook. Knowing your spending habits helps you identify areas where you can save."
+    },
+    {
+      "heading": "Saving for Goals",
+      "body": "Once you know your spending, you can set savings goals. A bank savings account offers safety and instant access, though it earns only about 2.7% interest. For longer-term goals, consider options like a Recurring Deposit/Fixed Deposit (FD) offering around 6.5% or a SIP in a Nifty 50 index fund, which has historically averaged around 11% but carries medium risk."
+    }
+  ],
+  "example": {
+    "title": "Rohan's First Budget",
+    "body": "Rohan just got his first job and earns ₹30,000 per month. He decides to create a budget. He allocates ₹10,000 for rent, ₹5,000 for food and transport, ₹3,000 for fun, and ₹2,000 for family support, as his parents need money for his sibling's education. This leaves him with ₹10,000. He decides to put ₹5,000 into a Recurring Deposit and ₹5,000 into a SIP for his future goals."
+  },
+  "takeaway": "A budget helps you control your money, save for the future, and avoid debt.",
+  "factsUsed": [
+    "inflation",
+    "everyday-account",
+    "savings-account",
+    "index-fund",
+    "family-support"
+  ]
+}

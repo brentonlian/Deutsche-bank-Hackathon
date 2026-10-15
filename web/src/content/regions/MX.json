@@ -46,7 +46,8 @@
   },
   "culture": {
     "bigLifeEvent": { "name": "Quinceañera or wedding", "typicalCostMonths": 6, "note": "Big celebrations are important family moments and are often paid for with credit." },
-    "familySupport": "Helping family members, including through remittances",
+    "grandchildMilestone": "quinceañera",
+    "familySupport": "A cousin abroad lost their job and family back home needs support",
     "notes": [
       "Many households save through tandas because of trust and habit.",
       "Credit card CAT (total annual cost) is often very high."

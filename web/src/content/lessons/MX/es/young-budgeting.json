@@ -1,0 +1,26 @@
+{
+  "title": "Haz un presupuesto para tu dinero",
+  "summary": "Un presupuesto te ayuda a saber a dónde va tu dinero para que puedas alcanzar tus metas financieras.",
+  "sections": [
+    {
+      "heading": "¿Qué es un presupuesto?",
+      "body": "Un presupuesto es un plan para tu dinero. Te dice cuánto dinero ganas y cuánto gastas. Hacer un presupuesto te ayuda a controlar tus gastos y a ahorrar para cosas importantes, como un viaje o un celular nuevo."
+    },
+    {
+      "heading": "Registra tus ingresos y gastos",
+      "body": "Anota todo el dinero que recibes cada mes, como tu sueldo. Luego, anota todos tus gastos, desde la renta hasta las salidas con amigos. Así sabrás cuánto dinero te queda realmente."
+    },
+    {
+      "heading": "Ajusta tu plan",
+      "body": "Si gastas más de lo que ganas, busca dónde puedes recortar. Tal vez puedas cocinar más en casa o buscar opciones de entretenimiento gratuitas. Si te sobra dinero, ¡felicidades! Decide si quieres ahorrarlo, invertirlo o gastarlo en algo que te haga feliz."
+    }
+  ],
+  "example": {
+    "title": "El plan de Carlos",
+    "body": "Carlos acaba de empezar su primer trabajo y gana 8,000 pesos al mes. Decide hacer un presupuesto. Gasta 3,000 pesos en renta, 1,500 en transporte y comida, y 1,000 en salidas. Le sobran 2,500 pesos. Decide ahorrar 1,500 pesos en su cuenta de ahorro para el futuro y usar los 1,000 pesos restantes para darse un gusto o para imprevistos."
+  },
+  "takeaway": "Un presupuesto te da el control de tu dinero y te acerca a tus metas.",
+  "factsUsed": [
+    "currency"
+  ]
+}

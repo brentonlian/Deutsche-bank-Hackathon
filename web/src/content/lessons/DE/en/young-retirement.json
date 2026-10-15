@@ -1,0 +1,36 @@
+{
+  "title": "Your Future Self Will Thank You: Saving for Retirement in Germany",
+  "summary": "Saving for retirement means putting money aside now so you have enough to live comfortably when you stop working. In Germany, this usually involves a mix of state, company, and private savings.",
+  "sections": [
+    {
+      "heading": "The German Retirement System",
+      "body": "In Germany, your retirement income comes from a few places. The main one is the statutory pension (Deutsche Rentenversicherung), which most employees pay into. However, this alone might not be enough to keep your living standard high later on. Many people also have company pensions through their employer or set up their own private pensions to add to this."
+    },
+    {
+      "heading": "Smart Ways to Save for Your Future",
+      "body": "For long-term goals like retirement, simply keeping money in your Girokonto (which usually pays about 0% interest) or even a Tagesgeld account (about 2.3% interest) might not be enough to beat inflation, which is about 2.8% a year. A good option for long-term growth is an ETF-Sparplan, where you invest a fixed amount monthly into a broad global index fund, historically offering about 7% a year, though its value can go up and down. Private pension products can also be an option, offering about 6% a year, often with employer or state top-ups, but your money is locked until retirement. Remember, your savings up to €100,000 per person per bank are protected by deposit insurance for accounts like Tagesgeld."
+    },
+    {
+      "heading": "Why Starting Early Matters",
+      "body": "The earlier you start saving, the more time your money has to grow, especially with investments like an ETF-Sparplan. Even small amounts saved regularly can add up significantly over many years. While it's tempting to use expensive credit like Dispo (about 11.5% a year), Germans traditionally prefer saving over borrowing, which is a good habit for long-term goals. Always make sure your savings are with regulated institutions, overseen by BaFin, to keep your money safe."
+    }
+  ],
+  "example": {
+    "title": "Lena's Retirement Journey",
+    "body": "Lena, 22, just started her first job in Berlin. She heard about retirement savings and decided to start an ETF-Sparplan, putting aside €50 each month. She knows it's a long-term plan, but by starting early, her money has more time to grow. She also makes sure her Girokonto and Tagesgeld savings are with a bank protected by deposit insurance up to €100,000. She avoids using her Dispo, knowing it's an expensive way to borrow money."
+  },
+  "takeaway": "Start saving for retirement early, even small amounts, to give your money the best chance to grow over time.",
+  "factsUsed": [
+    "retirement-system",
+    "everyday-account",
+    "savings-account",
+    "inflation",
+    "index-fund",
+    "retirement-product",
+    "deposit-insurance",
+    "expensive-credit",
+    "culture-1",
+    "regulator",
+    "currency"
+  ]
+}

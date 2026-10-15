@@ -1,0 +1,28 @@
+{
+  "title": "Your Emergency Fund: A Safety Net for Unexpected Costs",
+  "summary": "An emergency fund is money set aside for unexpected expenses, like job loss or medical bills. It's a crucial part of financial security.",
+  "sections": [
+    {
+      "heading": "Why You Need an Emergency Fund",
+      "body": "Life throws curveballs. You might lose your job, face a medical emergency, or have an unexpected repair. Without savings, these events can force you into expensive debt, like credit cards with a CAT of about 65%."
+    },
+    {
+      "heading": "How Much to Save",
+      "body": "A common goal is to save enough to cover 3 to 6 months of your essential living expenses. This amount will vary based on your personal situation and job stability."
+    },
+    {
+      "heading": "Where to Keep Your Emergency Fund",
+      "body": "Your emergency fund should be easily accessible but separate from your daily spending money. Keeping it in cash at home (bajo el colchón) means it loses value to inflation (about 3.4% a year) and risks theft. A regular bank account offers safety but no growth."
+    }
+  ],
+  "example": {
+    "title": "Sofia's Savings Goal",
+    "body": "Sofia earns MXN 8,000 a month and her essential expenses are MXN 5,000. She decides to save for 3 months of expenses, aiming for MXN 15,000. She plans to put MXN 500 from each paycheck into a separate savings account, aiming to reach her goal in about 15 months."
+  },
+  "takeaway": "An emergency fund provides financial stability by covering unexpected costs without resorting to high-interest debt.",
+  "factsUsed": [
+    "expensive-credit",
+    "inflation",
+    "cash"
+  ]
+}

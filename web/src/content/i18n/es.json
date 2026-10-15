@@ -1,0 +1,525 @@
+{
+  "app": {
+    "name": "Rooted",
+    "tagline": "Habilidades de dinero que empiezan donde vives.",
+    "disclaimer": "Educación, no asesoramiento financiero. Las cifras están simplificadas y verificadas con las fuentes mostradas."
+  },
+  "nav": {
+    "play": "Camino de vida",
+    "learn": "Lecciones",
+    "restart": "Empezar de nuevo",
+    "language": "Idioma",
+    "country": "País",
+    "simple": "Lenguaje sencillo",
+    "readAloud": "Leer en voz alta",
+    "stopReading": "Dejar de leer",
+    "skip": "Saltar al contenido"
+  },
+  "onboarding": {
+    "stationCountry": "País",
+    "stationLanguage": "Idioma",
+    "stationAge": "Edad",
+    "stationMoney": "Dinero",
+    "countryQuestion": "¿Dónde vives y manejas tu banco?",
+    "countryHelp": "Los productos, reglas, precios y estafas cambian según el país.",
+    "languageQuestion": "¿Qué idioma quieres?",
+    "languageHelp": "Puedes cambiar esto en cualquier momento desde la barra superior.",
+    "ageQuestion": "¿En qué etapa de la vida estás?",
+    "ageHelp": "Tus eventos de vida y los consejos cambian con tu edad.",
+    "ageExact": "Tu edad",
+    "groups": {
+      "young": {
+        "label": "Adulto joven",
+        "range": "18 a 30",
+        "about": "Primer trabajo, primera cuenta, primeras grandes decisiones."
+      },
+      "middle": {
+        "label": "Edad adulta",
+        "range": "31 a 54",
+        "about": "Presupuesto familiar, coche, hijos, padres mayores."
+      },
+      "senior": {
+        "label": "Adulto mayor",
+        "range": "55 años o más",
+        "about": "Ingresos de pensión, ahorros, salud, familia."
+      }
+    },
+    "moneyQuestion": "¿Cuánto dinero recibes cada mes?",
+    "moneyHelp": "Una cifra aproximada es suficiente. Se guarda en este dispositivo.",
+    "incomeLabel": "Ingreso mensual neto",
+    "incomeLabelSenior": "Pensión mensual y otros ingresos",
+    "freeLabel": "Lo que te queda después de lo esencial (renta, comida, recibos)",
+    "typical": "Una cifra típica aquí es {amount}.",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "start": "Empezar mi Camino de vida",
+    "privacy": "Nada de lo que ingreses sale de este navegador."
+  },
+  "game": {
+    "stationOf": "Estación {current} de {total}",
+    "age": "Edad {age}",
+    "savings": "Ahorros",
+    "invested": "Inversiones",
+    "pension": "Pensión",
+    "debt": "Deuda",
+    "wellbeing": "Bienestar",
+    "netWorth": "Patrimonio neto",
+    "inTodaysMoney": "en dinero de hoy",
+    "choose": "¿Qué haces?",
+    "yearsPass": "Pasan {years} años…",
+    "learnWhy": "Aprende por qué",
+    "localFact": "En {country}",
+    "source": "Fuente",
+    "verified": "verificado el {date}",
+    "minigame": "Mini-juego"
+  },
+  "scam": {
+    "intro": "Están llegando mensajes. ¿Cada uno es una estafa o es legítimo?",
+    "scam": "Estafa",
+    "legit": "Legítimo",
+    "correct": "Correcto.",
+    "wrong": "No del todo.",
+    "next": "Siguiente mensaje",
+    "finish": "Ver cómo te fue",
+    "result": "Identificaste {correct} de {total}.",
+    "passed": "Tus ahorros están seguros.",
+    "failed": "Uno de estos pasó. Perdiste parte de tus ahorros.",
+    "keys": "Consejo: presiona S para estafa, L para legítimo.",
+    "channel": {
+      "sms": "Mensaje de texto",
+      "call": "Llamada telefónica",
+      "app": "Notificación de app",
+      "email": "Correo electrónico",
+      "social": "Red social / WhatsApp",
+      "in-person": "En persona"
+    }
+  },
+  "results": {
+    "title": "Tu línea",
+    "subtitle": "Desde los {start} hasta los {end} años en {country}.",
+    "yourLine": "Tu línea",
+    "express": "Línea exprés (óptima)",
+    "whatIf": "¿Qué pasaría si...?",
+    "percent": "Alcanzaste el {percent}% del mejor resultado posible.",
+    "stationsDiffer": "Tu línea y la línea exprés se separan en {count} estaciones.",
+    "tapStation": "Selecciona una estación para ver qué pasó allí.",
+    "youChose": "Tú elegiste",
+    "bestChoice": "La mejor opción desde tu posición",
+    "sameAsBest": "Esta ya era la mejor opción.",
+    "difference": "Cambiar solo esta decisión: {points} puntos y {money} de patrimonio neto en dinero de hoy.",
+    "showWhatIf": "Mostrar este 'qué pasaría si' en la línea",
+    "hideWhatIf": "Ocultar 'qué pasaría si'",
+    "replayFrom": "Volver a jugar desde esta estación",
+    "playAgain": "Jugar de nuevo",
+    "chartTitle": "Patrimonio neto a lo largo del tiempo, en dinero de hoy",
+    "breakdown": "Cómo se califica el resultado",
+    "scoreNetWorth": "Patrimonio neto",
+    "scoreCushion": "Colchón de emergencia",
+    "scoreDebt": "Deuda",
+    "scoreCredit": "Historial crediticio",
+    "scoreWellbeing": "Bienestar a lo largo del camino",
+    "months": "{value} meses de ingresos",
+    "outOf": "{value} / 100",
+    "scoreNote": "La puntuación recompensa una vida equilibrada, no solo la mayor cantidad de dinero."
+  },
+  "learn": {
+    "title": "Lecciones para {country}",
+    "intro": "Lecciones cortas escritas para tu país, idioma y etapa de vida, usando solo datos verificados.",
+    "compare": "Comparar países",
+    "compareTitle": "La misma lección en tres países",
+    "loading": "Escribiendo tu lección…",
+    "error": "Esta lección no pudo cargarse. Intenta de nuevo, o lee una versión guardada.",
+    "retry": "Intentar de nuevo",
+    "aiLabel": "Escrito por IA a partir de los datos verificados a continuación. Datos revisados, no redacción revisada.",
+    "facts": "Datos que usa esta lección",
+    "back": "Todas las lecciones",
+    "keyTakeaway": "Recuerda"
+  },
+  "topics": {
+    "budgeting": "Presupuesto",
+    "banking-basics": "Conceptos básicos de banca",
+    "credit-and-debt": "Crédito y deuda",
+    "retirement": "Jubilación",
+    "insurance": "Seguros",
+    "scams-and-fraud": "Estafas y fraudes",
+    "emergency-fund": "Fondo de emergencia",
+    "saving-vs-investing": "Ahorrar vs invertir",
+    "inflation": "Intereses e inflación",
+    "digital-payments": "Pagos digitales",
+    "informal-savings": "Grupos de ahorro",
+    "taxes": "Conceptos básicos de impuestos",
+    "remittances": "Envío de dinero a casa"
+  },
+  "stages": {
+    "first-paycheck": {
+      "title": "Primer día de pago",
+      "body": "Tu primer salario de {income} llega a tu cuenta. ¿Cuánto apartas cada mes?",
+      "options": {
+        "spend": {
+          "label": "Disfrútalo, ahorra 5%",
+          "hint": "Más diversión ahora, colchón delgado."
+        },
+        "balanced": {
+          "label": "Ahorra 15%",
+          "hint": "Una regla general común."
+        },
+        "frugal": {
+          "label": "Ahorra 25%",
+          "hint": "Crece rápido, pero la vida se siente apretada."
+        }
+      }
+    },
+    "family-budget": {
+      "title": "El presupuesto familiar",
+      "body": "Con un ingreso familiar de {income} al mes, los recibos y los hijos compiten por cada unidad. ¿Cuánto apartas?",
+      "options": {
+        "spend": {
+          "label": "Lo que quede, alrededor del 3%",
+          "hint": "Cómodo ahora, expuesto después."
+        },
+        "balanced": {
+          "label": "Un 12% fijo",
+          "hint": "Se paga primero, antes de gastar."
+        },
+        "frugal": {
+          "label": "Un ambicioso 22%",
+          "hint": "Ahorros fuertes, menos gustos."
+        }
+      }
+    },
+    "retirement-budget": {
+      "title": "Vivir de una pensión",
+      "body": "Tu pensión paga {income} al mes y tienes ahorros guardados. ¿Cuánto de tus ahorros gastas?",
+      "options": {
+        "travel": {
+          "label": "Viaja y disfrútalo",
+          "hint": "Saca mucho de los ahorros cada mes."
+        },
+        "comfortable": {
+          "label": "Un complemento cómodo",
+          "hint": "Saca una cantidad moderada."
+        },
+        "careful": {
+          "label": "Vive solo de la pensión",
+          "hint": "Los ahorros se quedan intactos."
+        }
+      }
+    },
+    "where-to-save": {
+      "title": "¿Dónde guardas el dinero?",
+      "body": "Tus ahorros necesitan un lugar. En {country}, la gente elige entre estas opciones.",
+      "options": {
+        "cash": {
+          "label": "{cashName}",
+          "hint": "Gana {cashRate}. Se puede perder o robar."
+        },
+        "everyday": {
+          "label": "{everydayName}",
+          "hint": "Gana {everydayRate}. Fácil de gastar por accidente."
+        },
+        "savings": {
+          "label": "{savingsName}",
+          "hint": "Gana {savingsRate}. {savingsInsured}"
+        },
+        "informal": {
+          "label": "Join a {informalName}",
+          "hint": "Gana {informalRate}. Se basa en la confianza del grupo."
+        }
+      }
+    },
+    "phone-offer": {
+      "title": "El nuevo teléfono",
+      "body": "Tu teléfono se rompe. Una tienda te ofrece el modelo más nuevo ahora, a crédito con un {creditApr} al año.",
+      "options": {
+        "credit": {
+          "label": "Cómpralo a crédito",
+          "hint": "Paga después, con intereses."
+        },
+        "save-up": {
+          "label": "Paga con ahorros",
+          "hint": "Sin intereses, un colchón más pequeño."
+        },
+        "skip": {
+          "label": "Repara el viejo",
+          "hint": "Lo más barato, un poco molesto."
+        }
+      }
+    },
+    "car": {
+      "title": "Moverse",
+      "body": "Ir al trabajo se está volviendo difícil. Un concesionario te ofrece un coche nuevo con un préstamo al {loanApr} al año.",
+      "options": {
+        "new-car-loan": {
+          "label": "Coche nuevo con un préstamo",
+          "hint": "Cómodo, años de pagos."
+        },
+        "used-car": {
+          "label": "Compra uno usado, paga en efectivo",
+          "hint": "Más barato, usa ahorros."
+        },
+        "no-car": {
+          "label": "Sigue usando el transporte público",
+          "hint": "Lo más barato, menos flexible."
+        }
+      }
+    },
+    "pension": {
+      "title": "Pensando en el futuro",
+      "body": "En {country}, el sistema es: {retirementSystem}. ¿Añades tus propios ahorros a una {retirementName}?",
+      "options": {
+        "none": {
+          "label": "Ahora no",
+          "hint": "Más dinero hoy."
+        },
+        "five": {
+          "label": "5% de tus ingresos",
+          "hint": "Bloqueado hasta la jubilación, gana {retirementRate}."
+        },
+        "ten": {
+          "label": "10% de tus ingresos",
+          "hint": "Futuro fuerte, más apretado hoy."
+        }
+      }
+    },
+    "insurance": {
+      "title": "Seguro",
+      "body": "Una aseguradora te ofrece cobertura por enfermedad y accidentes por alrededor del 1% de tus ingresos.",
+      "options": {
+        "insure": {
+          "label": "Contrata la cobertura",
+          "hint": "Un pequeño costo cada mes."
+        },
+        "skip": {
+          "label": "No lo contrates",
+          "hint": "Quédate con el dinero, asume el riesgo."
+        }
+      }
+    },
+    "scam": {
+      "title": "Tu teléfono no deja de sonar",
+      "body": "Los estafadores atacan a la gente en {country} con trucos muy locales. ¿Puedes decir qué mensajes son reales?",
+      "options": {
+        "pass": {
+          "label": "Los detectaste",
+          "hint": ""
+        },
+        "fail": {
+          "label": "Te atraparon",
+          "hint": ""
+        }
+      }
+    },
+    "emergency": {
+      "title": "Algo sale mal",
+      "body": "Una factura médica y una reparación llegan el mismo mes. Tienes {cash} en ahorros. ¿Cómo pagas?",
+      "options": {
+        "savings": {
+          "label": "Usa los ahorros primero",
+          "hint": "Cualquier cosa que falte va a una tarjeta con un {creditApr}."
+        },
+        "lender": {
+          "label": "Pide prestado a un prestamista",
+          "hint": "Rápido, a un {lenderApr} al año."
+        },
+        "family": {
+          "label": "Pide a la familia",
+          "hint": "Sin intereses, pero cuesta buena voluntad."
+        },
+        "sell-investments": {
+          "label": "Vende inversiones",
+          "hint": "Vender con prisa a menudo significa vender barato."
+        }
+      }
+    },
+    "invest": {
+      "title": "Un poco extra",
+      "body": "Tus ahorros están creciendo. Un colega dice que una nueva moneda se triplicará. Un banco te ofrece un {indexName}.",
+      "options": {
+        "keep-saving": {
+          "label": "Mantenlo todo en ahorros",
+          "hint": "Seguro, crece lentamente."
+        },
+        "index": {
+          "label": "Invierte mensualmente en el {indexName}",
+          "hint": "Altibajos, históricamente alrededor del {indexRate} al año."
+        },
+        "crypto-tip": {
+          "label": "Pon la mitad en la moneda",
+          "hint": "Podría triplicarse. Usualmente no lo hace."
+        }
+      }
+    },
+    "big-life-event": {
+      "title": "{bigEvent}",
+      "body": "{bigEventNote} ¿Qué tan grande lo haces?",
+      "options": {
+        "lavish": {
+          "label": "Hazlo en grande",
+          "hint": "Un día que todos recordarán."
+        },
+        "moderate": {
+          "label": "Algo intermedio",
+          "hint": "Celebra con moderación."
+        },
+        "simple": {
+          "label": "Hazlo pequeño",
+          "hint": "Lo más barato, algo de decepción."
+        }
+      }
+    },
+    "child-education": {
+      "title": "La educación de tu hijo",
+      "body": "Tu hijo está empezando la secundaria. ¿Cómo pagas por ella?",
+      "options": {
+        "private": {
+          "label": "Escuela privada, pagada con ahorros",
+          "hint": "Cara, muchas opciones."
+        },
+        "public-plus": {
+          "label": "Escuela pública más clases particulares",
+          "hint": "Costo moderado."
+        },
+        "education-loan": {
+          "label": "Pide un préstamo educativo",
+          "hint": "Paga en años, a un {loanApr} al año."
+        }
+      }
+    },
+    "family-support": {
+      "title": "La familia pide ayuda",
+      "body": "{familySupport}. Te preguntan si puedes ayudar.",
+      "options": {
+        "monthly": {
+          "label": "Ayuda cada mes",
+          "hint": "Alrededor del 5% de tus ingresos, de forma continua."
+        },
+        "one-off": {
+          "label": "Un solo pago",
+          "hint": "Alrededor de 1.5 meses de ingresos."
+        },
+        "decline": {
+          "label": "Di que no esta vez",
+          "hint": "Tus ahorros se quedan, la relación se tensa."
+        }
+      }
+    },
+    "parents-care": {
+      "title": "Tus padres necesitan cuidados",
+      "body": "Tus padres están envejeciendo y sus gastos aumentan. ¿Cómo los apoyas?",
+      "options": {
+        "monthly": {
+          "label": "Una contribución mensual",
+          "hint": "Alrededor del 5% de tus ingresos, de forma continua."
+        },
+        "one-off": {
+          "label": "Paga por una necesidad grande",
+          "hint": "Alrededor de 1.5 meses de ingresos."
+        },
+        "decline": {
+          "label": "Tus hermanos se encargarán",
+          "hint": "Los ahorros se quedan, la familia se tensa."
+        }
+      }
+    },
+    "job-loss": {
+      "title": "Tu trabajo termina",
+      "body": "Tu empleador cierra tu departamento. {unemploymentNote}",
+      "options": {
+        "quick-job": {
+          "label": "Toma el primer trabajo que te ofrezcan",
+          "hint": "Vuelve a trabajar rápido, sueldo un poco más bajo."
+        },
+        "upskill": {
+          "label": "Capacítate por seis meses",
+          "hint": "Cuesta ahorros, mejor sueldo después."
+        },
+        "wait": {
+          "label": "Espera por un trabajo similar",
+          "hint": "Alrededor de cuatro meses sin sueldo."
+        }
+      }
+    },
+    "nest-egg": {
+      "title": "Tu guardadito",
+      "body": "Parte de tus ahorros está invertida. Un asesor amable te ofrece un plan que está \"garantizado al 12% anual\".",
+      "options": {
+        "all-cash": {
+          "label": "Mueve todo a efectivo",
+          "hint": "Sin altibajos, pierde valor por la inflación."
+        },
+        "balanced": {
+          "label": "Mantén una mezcla equilibrada",
+          "hint": "Algo de crecimiento, algo de seguridad."
+        },
+        "guaranteed-scheme": {
+          "label": "Únete al plan garantizado",
+          "hint": "¿Demasiado bueno para ser verdad?"
+        }
+      }
+    },
+    "family-request": {
+      "title": "Un evento familiar importante",
+      "body": "Se acerca el {grandchildMilestone} de un nieto y la familia espera que ayudes.",
+      "options": {
+        "gift-large": {
+          "label": "Un regalo generoso",
+          "hint": "Alrededor de 6 meses de pensión."
+        },
+        "gift-small": {
+          "label": "Un regalo modesto",
+          "hint": "Alrededor de 1.5 meses de pensión."
+        },
+        "decline": {
+          "label": "Explica que no puedes",
+          "hint": "Los ahorros se quedan, los sentimientos se hieren."
+        }
+      }
+    },
+    "housing": {
+      "title": "Una casa demasiado grande",
+      "body": "Los hijos se han ido de casa. Tu casa cuesta mucho de calentar y mantener.",
+      "options": {
+        "stay": {
+          "label": "Quédate donde estás",
+          "hint": "Vecinos conocidos, costos más altos."
+        },
+        "downsize": {
+          "label": "Muévete a un lugar más pequeño",
+          "hint": "Libera dinero, una despedida difícil."
+        }
+      }
+    },
+    "late-work": {
+      "title": "Todavía puedes trabajar",
+      "body": "A un negocio local le encantaría tu experiencia a tiempo parcial.",
+      "options": {
+        "part-time": {
+          "label": "Trabaja a tiempo parcial",
+          "hint": "Más ingresos, menos tiempo libre."
+        },
+        "volunteer": {
+          "label": "Haz voluntariado en su lugar",
+          "hint": "Sin pago, mucho significado."
+        },
+        "rest": {
+          "label": "Disfruta la jubilación completa",
+          "hint": "Tiempo para ti."
+        }
+      }
+    },
+    "estate": {
+      "title": "Poniendo las cosas en orden",
+      "body": "Los amigos hablan de testamentos y quién decide si se enferman.",
+      "options": {
+        "make-will": {
+          "label": "Haz un testamento y establece un poder notarial",
+          "hint": "Una pequeña tarifa, tranquilidad."
+        },
+        "skip": {
+          "label": "Déjalo para después",
+          "hint": "Gratis, pero la familia podría discutir más tarde."
+        }
+      }
+    }
+  }
+}

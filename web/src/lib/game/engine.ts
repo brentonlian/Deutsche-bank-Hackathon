@@ -1,28 +1,56 @@
 import type { RegionPack } from "@/lib/regions/schema";
 import { advance, clamp, monthlyExpenses } from "./money";
 import { stageRng } from "./rng";
-import { STAGES } from "./stages";
-import type { GameContext, GameResult, GameState, ScoreBreakdown, Snapshot } from "./types";
+import { STAGE_SETS } from "./stages";
+import type { AgeGroup, GameContext, GameResult, GameState, ScoreBreakdown, Snapshot } from "./types";
 
-export const END_AGE = 60;
-export const MIN_YEARS = 15;
+export const AGE_GROUPS: Record<AgeGroup, { min: number; max: number; defaultAge: number }> = {
+  young: { min: 18, max: 30, defaultAge: 23 },
+  middle: { min: 31, max: 54, defaultAge: 42 },
+  senior: { min: 55, max: 85, defaultAge: 66 },
+};
 
-export function createContext(region: RegionPack, startAge: number, startIncome: number, seed: number): GameContext {
-  const years = Math.max(MIN_YEARS, END_AGE - startAge);
-  return { region, seed, startAge, startIncome, yearsPerStage: years / STAGES.length };
+export const groupForAge = (age: number): AgeGroup => (age <= 30 ? "young" : age <= 54 ? "middle" : "senior");
+
+/** Working-age games run to 60; seniors play the next 15 years of retirement. */
+function horizonYears(group: AgeGroup, startAge: number): number {
+  return group === "senior" ? 15 : Math.max(15, 60 - startAge);
+}
+
+export function createContext(
+  region: RegionPack,
+  group: AgeGroup,
+  startAge: number,
+  startIncome: number,
+  seed: number,
+): GameContext {
+  const stages = STAGE_SETS[group];
+  return {
+    region,
+    group,
+    stages,
+    seed,
+    startAge,
+    startIncome,
+    yearsPerStage: horizonYears(group, startAge) / stages.length,
+    baselineSaving: group === "senior" ? -0.15 : 0.15,
+    realIncomeGrowth: group === "young" ? 0.01 : group === "middle" ? 0.005 : 0,
+  };
 }
 
 export function initialState(ctx: GameContext): GameState {
+  // Seniors start with a nest egg; younger players start with a small buffer.
+  const nestEgg = { young: [0.5, 0], middle: [3, 6], senior: [6, 18] }[ctx.group];
   return {
     age: ctx.startAge,
     income: ctx.startIncome,
-    savingRate: 0.1,
+    savingRate: ctx.group === "senior" ? -0.1 : 0.1,
     pensionRate: 0,
-    investShare: 0,
+    investShare: ctx.group === "young" ? 0 : 0.4,
     fixedCostRate: 0,
     vehicle: "everyday",
-    cash: ctx.startIncome * 0.5,
-    invested: 0,
+    cash: ctx.startIncome * nestEgg[0],
+    invested: ctx.startIncome * nestEgg[1],
     pension: 0,
     debt: 0,
     debtApr: 0,
@@ -40,7 +68,7 @@ export const netWorthReal = (s: GameState) => (s.cash + s.invested + s.pension -
 
 /** Option streams and market streams are separate so every option at a stage faces the same market. */
 export function step(s: GameState, stageIndex: number, choice: string, ctx: GameContext): GameState {
-  const stage = STAGES[stageIndex];
+  const stage = ctx.stages[stageIndex];
   const option = stage.options(ctx).find((o) => o.id === choice);
   if (!option) throw new Error(`Unknown option "${choice}" for stage "${stage.id}"`);
   const decided = option.apply(s, ctx, stageRng(ctx.seed, stageIndex * 2));
@@ -73,7 +101,7 @@ export function simulate(ctx: GameContext, choices: string[]): GameResult {
   choices.forEach((choice, i) => {
     const before = s;
     s = step(s, i, choice, ctx);
-    timeline.push({ stageId: STAGES[i].id, choice, age: before.age, before, after: s, netWorthReal: netWorthReal(s) });
+    timeline.push({ stageId: ctx.stages[i].id, choice, age: before.age, before, after: s, netWorthReal: netWorthReal(s) });
   });
   const b = breakdown(s, ctx);
   return { timeline, final: s, score: score(b), breakdown: b };
@@ -81,10 +109,10 @@ export function simulate(ctx: GameContext, choices: string[]): GameResult {
 
 /** Options the optimiser may pick. Failing the scam quiz is never a "choice" worth recommending. */
 const choosable = (stageIndex: number, ctx: GameContext) =>
-  STAGES[stageIndex].options(ctx).filter((o) => !(STAGES[stageIndex].minigame && o.id === "fail"));
+  ctx.stages[stageIndex].options(ctx).filter((o) => !(ctx.stages[stageIndex].minigame && o.id === "fail"));
 
 function bestFrom(s: GameState, stageIndex: number, ctx: GameContext): { score: number; path: string[] } {
-  if (stageIndex === STAGES.length) return { score: score(breakdown(s, ctx)), path: [] };
+  if (stageIndex === ctx.stages.length) return { score: score(breakdown(s, ctx)), path: [] };
   let best = { score: -Infinity, path: [] as string[] };
   for (const o of choosable(stageIndex, ctx)) {
     const sub = bestFrom(step(s, stageIndex, o.id, ctx), stageIndex + 1, ctx);
@@ -117,7 +145,7 @@ export function adviceForPath(ctx: GameContext, choices: string[]): StepAdvice[]
     }
     const best = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
     s = step(s, i, chosen, ctx);
-    return { stageId: STAGES[i].id, chosen, best, scores };
+    return { stageId: ctx.stages[i].id, chosen, best, scores };
   });
 }
 

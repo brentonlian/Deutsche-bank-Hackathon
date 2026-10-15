@@ -1,0 +1,30 @@
+{
+  "title": "Dein erster Budget-Plan",
+  "summary": "Lerne, wie du dein Geld in Deutschland am besten einteilst, damit du deine Ziele erreichst und unerwartete Ausgaben meistern kannst.",
+  "sections": [
+    {
+      "heading": "Was ist ein Budget?",
+      "body": "Ein Budget ist wie eine Schatzkarte für dein Geld. Du planst, wie viel Geld du für Miete, Essen, Hobbys und Sparen ausgibst. So siehst du genau, wohin dein Geld fließt und kannst besser entscheiden, wo du vielleicht sparen kannst."
+    },
+    {
+      "heading": "Deine Einnahmen und Ausgaben im Blick",
+      "body": "Schreibe alles auf, was du im Monat verdienst (Gehalt, Nebenjob). Dann notiere deine festen Kosten wie Miete und Handyvertrag. Danach kommen variable Kosten wie Essen, Freizeit und Kleidung. So siehst du, wie viel Geld dir übrig bleibt."
+    },
+    {
+      "heading": "Sparen für deine Ziele",
+      "body": "Lege jeden Monat einen festen Betrag zur Seite. Das kann für eine größere Anschaffung sein, für den Notfall oder für später. Ein Tagesgeld-Konto ist gut für Geld, das du schnell brauchst, und ein ETF-Sparplan für langfristige Ziele wie die Rente."
+    }
+  ],
+  "example": {
+    "title": "Annas Monatsbudget",
+    "body": "Annas erstes Gehalt nach der Ausbildung beträgt 2.200 EUR. Ihre Miete kostet 700 EUR, und sie braucht 300 EUR für Lebensmittel. Für Freizeit und Hobbys plant sie 400 EUR ein. Sie möchte 100 EUR auf ihr Tagesgeld-Konto legen und 50 EUR in einen ETF-Sparplan investieren. So hat sie noch 650 EUR für andere Dinge oder als Puffer übrig."
+  },
+  "takeaway": "Ein Budget hilft dir, die Kontrolle über dein Geld zu behalten und deine finanziellen Ziele zu erreichen.",
+  "factsUsed": [
+    "currency",
+    "everyday-account",
+    "savings-account",
+    "index-fund",
+    "scam-de-salary"
+  ]
+}

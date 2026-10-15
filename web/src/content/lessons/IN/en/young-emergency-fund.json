@@ -1,0 +1,34 @@
+{
+  "title": "Your Emergency Fund: A Safety Net for Unexpected Events",
+  "summary": "An emergency fund is money set aside for unexpected costs, like job loss or medical needs, to avoid debt.",
+  "sections": [
+    {
+      "heading": "Why You Need an Emergency Fund",
+      "body": "Life in India can bring unexpected events. Job loss is common as there are no general unemployment benefits. Family support is important, but your own savings provide a crucial safety net. An emergency fund helps you cover costs without borrowing at high rates like 42% from credit cards or 60% from informal lenders."
+    },
+    {
+      "heading": "How Much to Save",
+      "body": "Aim to save enough to cover 3 to 6 months of your essential living expenses. This fund should be easily accessible, like in a bank savings account, which offers instant access and no risk. While it earns low interest (around 2.7%), its main purpose is safety, not high returns."
+    },
+    {
+      "heading": "Where to Keep Your Emergency Fund",
+      "body": "A regular bank savings account is ideal for instant access and zero risk. For slightly better returns (around 6.5%) with easy access, consider a Recurring Deposit or Fixed Deposit, protected up to ₹5 lakh by DICGC. Avoid locking money in long-term products like PPF or investments like Nifty 50 index funds for your emergency fund."
+    }
+  ],
+  "example": {
+    "title": "Rohan's Rainy Day Savings",
+    "body": "Rohan, who just started his first job, earns ₹30,000 per month. He decides to build an emergency fund. He calculates his essential monthly expenses at ₹15,000 and aims for 3 months of coverage, meaning ₹45,000. He sets up a recurring deposit (RD) at his bank, depositing ₹5,000 each month. After 9 months, he will have his ₹45,000 emergency fund ready, earning about 6.5% interest."
+  },
+  "takeaway": "An emergency fund is your first financial priority, providing security against job loss, medical issues, or other unforeseen expenses.",
+  "factsUsed": [
+    "unemployment",
+    "culture-1",
+    "expensive-credit",
+    "informal-lender",
+    "everyday-account",
+    "savings-account",
+    "deposit-insurance",
+    "index-fund",
+    "retirement-product"
+  ]
+}

@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
+/*
+ * Rooted: life as a transit line.
+ * Ground and ink are fixed; each country commits its own line colour (set on <body> per region).
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ground: #f2f3f0;
+  --panel: #e6e8e3;
+  --panel-strong: #d9dcd5;
+  --ink: #0f1b2d;
+  --ink-2: #3b4656;
+  --ink-3: #5a6474;
+  --express: #127a4b;
+  --express-soft: #d6ebdf;
+  --whatif: #6b7686;
+  --danger: #b42318;
+  --danger-soft: #f8dcd8;
+  --warn: #9a4a00;
+  --focus: #0f1b2d;
+
+  /* Country line, overridden per region. */
+  --line: #1f5fbf;
+  --line-ink: #ffffff;
+  --line-soft: #dbe5f5;
+}
+
+[data-region="DE"] {
+  --line: #1f5fbf;
+  --line-ink: #ffffff;
+  --line-soft: #dbe5f5;
+}
+[data-region="IN"] {
+  --line: #f2b705;
+  --line-ink: #0f1b2d;
+  --line-soft: #fcefc4;
+}
+[data-region="MX"] {
+  --line: #d6006f;
+  --line-ink: #ffffff;
+  --line-soft: #f9d6e6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ground: var(--ground);
+  --color-panel: var(--panel);
+  --color-panel-strong: var(--panel-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-ink: var(--line-ink);
+  --color-line-soft: var(--line-soft);
+  --color-express: var(--express);
+  --color-express-soft: var(--express-soft);
+  --color-whatif: var(--whatif);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warn: var(--warn);
+  --font-sans: var(--font-atkinson), var(--font-devanagari), system-ui, sans-serif;
+  --radius-sign: 4px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--ground);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 1;
+  caret-color: var(--line);
+}
+
+::selection {
+  background: var(--line);
+  color: var(--line-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1.5px;
+}
+
+* {
+  scrollbar-color: var(--ink-3) transparent;
+  scrollbar-width: thin;
+}
+
+/* Station that is currently being decided: a slow pulse, the map's "you are here". */
+@keyframes here {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--line) 55%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 14px color-mix(in srgb, var(--line) 0%, transparent);
+  }
+}
+.station-here {
+  animation: here 1.8s var(--ease-out-expo) infinite;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.5s var(--ease-out-expo) both;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--len, 2000);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.draw-line {
+  stroke-dasharray: var(--len, 2000);
+  animation: draw 1.4s var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .station-here,
+  .rise,
+  .draw-line {
+    animation: none;
+  }
 }

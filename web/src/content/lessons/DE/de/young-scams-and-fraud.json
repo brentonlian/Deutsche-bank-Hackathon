@@ -1,0 +1,30 @@
+{
+  "title": "Vorsicht vor Betrugsmaschen: So schützt du dich",
+  "summary": "Lerne die häufigsten Betrugsmaschen kennen und wie du deine Finanzen und persönlichen Daten schützen kannst. Sei besonders vorsichtig bei unerwarteten Nachrichten, die nach Geld oder persönlichen Informationen fragen.",
+  "sections": [
+    {
+      "heading": "Die Enkeltrick-Masche",
+      "body": "Eine beliebte Masche ist der Enkeltrick, oft per SMS. Du erhältst eine Nachricht von einer unbekannten Nummer, angeblich von einem Verwandten, der dringend Geld braucht, weil sein Handy kaputt ist. Die Betrüger bitten um eine schnelle Überweisung, z.B. 1.450 EUR. Rufe immer die bekannte Nummer des Verwandten an, um das zu überprüfen."
+    },
+    {
+      "heading": "Gefälschte Zahlungsaufforderungen",
+      "body": "Sei misstrauisch bei SMS, die angeblich von deiner Bank oder einem Paketdienst kommen. Sie fordern dich auf, Gebühren zu zahlen oder dein pushTAN-Verfahren zu reaktivieren, indem du auf einen Link klickst. Deine Bank oder offizielle Dienste senden dir niemals Links per SMS, um dich zur Neuregistrierung aufzufordern. Überprüfe immer die Absenderadresse und die Domain."
+    },
+    {
+      "heading": "Betrug durch falsche Polizisten oder Paketzusteller",
+      "body": "Betrüger geben sich am Telefon als Polizisten aus und behaupten, sie müssten dein Geld oder deine Karten zur Sicherheit abholen. Die echte Polizei tut das niemals und ruft dich nicht von der 110 an. Ebenso werden gefälschte Paketzustellungsgebühren per SMS verlangt. Sei wachsam und gib niemals persönliche Daten oder Geld heraus."
+    }
+  ],
+  "example": {
+    "title": "Lena und die gefälschte DHL-Nachricht",
+    "body": "Lena erwartet ein Paket und erhält plötzlich eine SMS: 'Ihr Paket konnte nicht zugestellt werden. Bitte zahlen Sie 1,99 EUR Zollgebühren hier: dhl-zoll-paket.info'. Lena ist verwundert, da sie keine Zollgebühren erwartet. Sie erinnert sich an die Warnung vor solchen Betrugsmaschen und öffnet den Link nicht. Stattdessen geht sie direkt auf die offizielle DHL-Webseite und findet dort keine Information über offene Gebühren für sie. Sie hat sich und ihr Geld geschützt."
+  },
+  "takeaway": "Sei immer skeptisch bei unerwarteten Nachrichten, die dich unter Druck setzen, Geld zu senden oder persönliche Daten preiszugeben.",
+  "factsUsed": [
+    "scam-de-enkeltrick",
+    "scam-de-pushtan",
+    "scam-de-parcel",
+    "scam-de-police",
+    "currency"
+  ]
+}

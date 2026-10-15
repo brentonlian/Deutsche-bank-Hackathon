@@ -46,7 +46,8 @@
   },
   "culture": {
     "bigLifeEvent": { "name": "Family wedding", "typicalCostMonths": 12, "note": "Weddings are major family expenses and a common reason households take on debt." },
-    "familySupport": "Supporting parents or a sibling's education",
+    "grandchildMilestone": "wedding",
+    "familySupport": "Your parents need money for a sibling's education",
     "notes": [
       "Supporting parents financially is a widely shared expectation.",
       "Gold is a traditional store of value, especially for women's savings."

@@ -34,13 +34,21 @@ export interface GameState {
   periods: number;
 }
 
+export type AgeGroup = "young" | "middle" | "senior";
+
 export interface GameContext {
   region: RegionPack;
+  group: AgeGroup;
+  stages: StageDef[];
   seed: number;
   startAge: number;
   startIncome: number;
   /** Years that pass after each stage. */
   yearsPerStage: number;
+  /** Saving rate that feels "normal" for this life stage (seniors draw down savings). */
+  baselineSaving: number;
+  /** Real income growth per year on top of inflation. */
+  realIncomeGrowth: number;
 }
 
 export interface OptionDef {

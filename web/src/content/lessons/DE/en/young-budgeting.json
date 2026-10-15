@@ -1,0 +1,37 @@
+{
+  "title": "Your Money, Your Plan: Budgeting in Germany",
+  "summary": "Budgeting helps you understand where your money goes and plan for your future. It's about making smart choices today to reach your financial goals tomorrow.",
+  "sections": [
+    {
+      "heading": "Where Does Your Money Go?",
+      "body": "Your salary usually arrives in your Girokonto, which is also where you make most payments. To budget effectively, you need to track all money coming in and going out. This helps you see how much you spend on things like rent, food, and fun. Understanding these patterns is the first step to taking control of your finances."
+    },
+    {
+      "heading": "Saving Smart for What Matters",
+      "body": "Once you know your spending, you can set money aside for future goals. A common big goal is saving for a Mietkaution when moving into your first flat. For short-term savings, a Tagesgeld account offers about 2.3% interest and keeps your money safe. For longer-term goals, an ETF-Sparplan could offer higher potential returns, around 7% a year, but the value can go up and down. Keeping cash at home earns nothing and loses value to inflation."
+    },
+    {
+      "heading": "Steer Clear of Costly Debt",
+      "body": "In Germany, saving is often preferred over borrowing. Using your Dispo or credit cards can be very expensive, costing around 11.5% a year. Informal money lenders charge even more, sometimes 30% or higher. Also, remember that your Schufa score is important for things like renting a flat or getting a phone contract, so managing your money well helps keep it healthy."
+    }
+  ],
+  "example": {
+    "title": "Lena's First Budget",
+    "body": "Lena just started her first job and gets her salary of €2,200 into her Girokonto each month. She wants to save for a Mietkaution of €1,500 for her own flat. She tracks her spending for a month and sees she spends €800 on rent, €300 on food, and €400 on other things. This leaves her with €700. She decides to put €400 into a Tagesgeld account each month to save for her Mietkaution, and keeps €300 for unexpected costs or fun. By sticking to her budget, she knows she can reach her goal in less than four months."
+  },
+  "takeaway": "A good budget helps you make informed decisions about your money, avoid unnecessary debt, and achieve your financial dreams.",
+  "factsUsed": [
+    "everyday-account",
+    "currency",
+    "big-life-event",
+    "savings-account",
+    "index-fund",
+    "cash",
+    "inflation",
+    "culture-1",
+    "expensive-credit",
+    "informal-lender",
+    "credit-bureau",
+    "culture-2"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "The Silent Money Eater: Understanding Inflation",
+  "summary": "Inflation means things generally cost more over time, so your money buys less than it used to. It's important to understand how inflation affects your savings and spending power.",
+  "sections": [
+    {
+      "heading": "What is Inflation?",
+      "body": "Inflation is like a hidden cost that makes everything a little more expensive each year. Currently, inflation is about 2.8% a year in Germany. This means something that cost €100 today might cost around €102.80 next year. Your money loses some of its buying power over time."
+    },
+    {
+      "heading": "How Inflation Affects Your Money",
+      "body": "If you keep your money as cash at home or in a Girokonto, it usually earns about 0% interest. With inflation at 2.8% a year, your money effectively loses buying power. For example, €1,000 in cash would only buy what €972 bought a year ago. Even a Tagesgeld account, which offers about 2.3% interest, helps, but your money still loses a little buying power after inflation."
+    },
+    {
+      "heading": "Protecting Your Savings from Inflation",
+      "body": "To help your money keep its value, you need to find ways for it to grow. A Tagesgeld account can help, offering about 2.3% interest, which often follows the central bank's policy rate of 2.5%. Your money in a Tagesgeld account is also protected by law up to €100,000 per person per bank. For longer-term goals, an ETF-Sparplan, which has historically averaged about 7% a year, could potentially grow your money faster than inflation, though its value can go up and down."
+    }
+  ],
+  "example": {
+    "title": "Lena's Savings Dilemma",
+    "body": "Lena saved €500 in cash for a new pair of headphones. A year ago, the headphones cost €500. With inflation at 2.8% a year, those same headphones now cost about €514. Lena's €500 in cash can no longer buy them, and she needs to save an extra €14. If she had put her money in a Tagesgeld account, she would have earned about 2.3% interest, so her €500 would have grown to about €511.50, almost enough to cover the new price."
+  },
+  "takeaway": "Understanding inflation helps you make smart choices about where to keep your money so it doesn't lose value over time.",
+  "factsUsed": [
+    "inflation",
+    "currency",
+    "cash",
+    "everyday-account",
+    "savings-account",
+    "deposit-insurance",
+    "index-fund",
+    "policy-rate"
+  ]
+}

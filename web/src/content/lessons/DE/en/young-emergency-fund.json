@@ -1,0 +1,40 @@
+{
+  "title": "Your Financial Safety Net: The Emergency Fund",
+  "summary": "An emergency fund is money saved specifically for unexpected costs, helping you avoid expensive debt. It acts as a financial safety net for life's surprises.",
+  "sections": [
+    {
+      "heading": "Why an Emergency Fund is Essential",
+      "body": "Life is full of surprises, like a broken washing machine or an unexpected bill for a sibling. While Germany has social support like Arbeitslosengeld I, which pays about 60% of your previous net pay, it might not be enough for all situations. Without an emergency fund, you might need to use expensive credit, like a Dispo, which can cost about 11.5% a year, or even informal lenders who charge 30% or more. Having savings helps you avoid these high costs and protects your Schufa score, which is important for renting a flat or getting phone contracts."
+    },
+    {
+      "heading": "How Much Should You Save?",
+      "body": "A common goal is to save enough to cover 3 to 6 months of your essential living expenses. This includes things like rent, food, and transport. Don't forget potential big costs, like a Mietkaution of up to three months' base rent when moving into your first flat. Start small, even €25 a month, and build up your fund over time. Every bit you save in EUR helps create a buffer against unforeseen events."
+    },
+    {
+      "heading": "Where to Keep Your Emergency Fund",
+      "body": "Your emergency fund needs to be safe and easy to access. A Tagesgeld account is ideal, offering instant access and about 2.3% interest a year, protected by deposit insurance up to €100,000 per person per bank. While a Girokonto offers instant access, it usually pays 0% interest. Avoid keeping large amounts as cash at home, as it earns 0% and can be lost or stolen, losing value to inflation (about 2.8% a year). Investments like an ETF-Sparplan or private pensions are not suitable, as they have medium risk, access delays, or are locked until retirement."
+    }
+  ],
+  "example": {
+    "title": "Lena's Unexpected Repair",
+    "body": "Lena, a student working part-time, had saved €1,500 in her Tagesgeld account for emergencies. One month, her laptop, essential for her studies, suddenly broke down. The repair cost €450. Instead of panicking or asking her parents, Lena was able to quickly transfer the money from her Tagesgeld to her Girokonto and pay for the repair. She avoided using her Dispo, which would have cost her 11.5% interest, and could continue her studies without financial stress. She then focused on rebuilding her emergency fund."
+  },
+  "takeaway": "Building an emergency fund in a safe, accessible account like a Tagesgeld helps you manage unexpected costs without falling into expensive debt.",
+  "factsUsed": [
+    "currency",
+    "deposit-insurance",
+    "inflation",
+    "unemployment",
+    "cash",
+    "everyday-account",
+    "savings-account",
+    "index-fund",
+    "retirement-product",
+    "expensive-credit",
+    "informal-lender",
+    "big-life-event",
+    "family-support",
+    "culture-1",
+    "culture-2"
+  ]
+}

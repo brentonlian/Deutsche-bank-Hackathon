@@ -1,0 +1,30 @@
+{
+  "title": "Cuidado con las estafas: protege tu dinero",
+  "summary": "Aprende a identificar y evitar las estafas comunes que buscan robar tu dinero. Mantente alerta y protege tu información personal.",
+  "sections": [
+    {
+      "heading": "Estafas por teléfono y correo electrónico",
+      "body": "Ten cuidado con mensajes que te piden descargar archivos o dar información sensible. Por ejemplo, un correo que dice ser del SAT y te pide descargar un archivo .zip es una estafa. El SAT usa dominios oficiales como sat.gob.mx y nunca pide descargar archivos así."
+    },
+    {
+      "heading": "Estafas de premios y extorsión",
+      "body": "Si te dicen que ganaste un premio que no solicitaste y te piden dinero para enviártelo, es una estafa. Tampoco creas en llamadas de extorsión que te piden depositar dinero rápido en tiendas como OXXO para 'liberar' a un familiar. Cuelga y llama a tu familiar para verificar."
+    },
+    {
+      "heading": "Estafas bancarias y de tarjetas",
+      "body": "Los bancos nunca te pedirán tu NIP (Número de Identificación Personal) o códigos de seguridad por teléfono. Si recibes una llamada o mensaje sospechoso sobre un cargo, cuelga y llama tú al número que aparece en tu tarjeta bancaria para aclarar."
+    }
+  ],
+  "example": {
+    "title": "El falso premio de la tía Elena",
+    "body": "Tu tía Elena recibió un mensaje diciendo que ganó una tarjeta de regalo de 10,000 pesos, pero que debía pagar 299 pesos de envío. Ella casi cae, pero recordó que nunca participó en ninguna rifa. Le dijimos que era una estafa y que no enviara nada de dinero."
+  },
+  "takeaway": "Desconfía de ofertas o solicitudes de dinero inesperadas y nunca compartas tu información personal o bancaria sensible.",
+  "factsUsed": [
+    "scam-mx-sat",
+    "scam-mx-premio",
+    "scam-mx-extorsion",
+    "scam-mx-token",
+    "payment-rails"
+  ]
+}

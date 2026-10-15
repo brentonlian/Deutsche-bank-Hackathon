@@ -1,0 +1,36 @@
+{
+  "title": "Saving vs. Investing: What's the Difference for Your Money?",
+  "summary": "Saving keeps your money safe and accessible for short-term goals, while investing aims to grow your money over the long term, potentially beating inflation. Both are important for your financial future.",
+  "sections": [
+    {
+      "heading": "The Power of Saving for Today and Tomorrow",
+      "body": "Saving means putting money aside for goals you'll need soon, like an emergency fund or a Mietkaution for your first flat. Your Girokonto is for daily payments and salary, but usually offers no interest. For savings you might need quickly, a Tagesgeld account is a good option, offering about 2.3% interest a year and instant access. Your money in these accounts is safe, protected by deposit insurance up to €100,000 per person per bank. However, with inflation at about 2.8% a year, money kept as cash at home or in a Girokonto can lose value over time."
+    },
+    {
+      "heading": "Investing for Long-Term Growth",
+      "body": "Investing is about making your money work harder for you over many years. While it comes with some risk, it offers the chance for higher returns than traditional savings. For example, an ETF-Sparplan, where you regularly buy parts of a broad global index fund, has historically offered about 7% a year on average, though its value can go up and down. For very long-term goals like retirement, private pensions or company pensions might offer around 6% a year and are locked until retirement, sometimes with extra top-ups. The goal of investing is often to grow your money faster than inflation, so its buying power increases over time."
+    },
+    {
+      "heading": "Balancing Your Money Goals",
+      "body": "Deciding whether to save or invest depends on your goals and when you need the money. For short-term needs, like an emergency fund or a specific purchase within a few years, saving in a Tagesgeld account is usually best because it's safe and accessible. For long-term goals, like building wealth for retirement or a future big purchase many years away, investing through an ETF-Sparplan can help your money grow significantly. It's smart to have an emergency fund saved first before you start investing, as using expensive credit like a Dispo, which costs about 11.5% a year, can quickly eat into your finances."
+    }
+  ],
+  "example": {
+    "title": "Lena's Financial Journey",
+    "body": "Lena, 22, just started her first job in Berlin. Her landlord asked for a Mietkaution of €1,500. She decided to save this amount first in a Tagesgeld account, knowing it was safe and she'd need it soon. Once she had her Mietkaution saved, she started putting €50 a month into an ETF-Sparplan. She understood that while the value of her ETF could go up and down, over many years, it had the potential to grow more than her savings account, helping her build wealth for her future. She also made sure to keep some extra savings for unexpected costs, so she wouldn't have to rely on her expensive Dispo."
+  },
+  "takeaway": "Saving provides security and accessibility for short-term needs, while investing offers the potential for significant long-term growth to outpace inflation.",
+  "factsUsed": [
+    "everyday-account",
+    "savings-account",
+    "deposit-insurance",
+    "inflation",
+    "cash",
+    "big-life-event",
+    "index-fund",
+    "retirement-product",
+    "expensive-credit",
+    "culture-1",
+    "currency"
+  ]
+}

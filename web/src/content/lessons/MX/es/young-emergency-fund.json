@@ -1,0 +1,28 @@
+{
+  "title": "Tu Fondo de Emergencia: El Colchón Contra Imprevistos",
+  "summary": "Un fondo de emergencia es dinero guardado para gastos inesperados, como perder tu empleo o una enfermedad. Te da tranquilidad y evita que te endeudes.",
+  "sections": [
+    {
+      "heading": "¿Por qué tener un fondo de emergencia?",
+      "body": "La vida está llena de sorpresas, y no todas son buenas. Si pierdes tu trabajo, te enfermas o tu coche se descompone, un fondo de emergencia te ayuda a cubrir esos gastos sin tener que pedir prestado o vender algo importante. Sin él, podrías caer en deudas caras o tener que pedir ayuda a tu familia."
+    },
+    {
+      "heading": "¿Cuánto dinero necesito?",
+      "body": "Lo ideal es tener ahorrado el equivalente a 3 a 6 meses de tus gastos básicos. Piensa en cuánto gastas al mes en renta, comida, transporte y servicios. Si tus ingresos son inestables, podrías necesitar un poco más. Empieza poco a poco, cada peso cuenta."
+    },
+    {
+      "heading": "¿Dónde guardar tu fondo de emergencia?",
+      "body": "Busca un lugar seguro y de fácil acceso, pero no tanto como para gastarlo en cosas que no necesitas. Guardarlo 'bajo el colchón' es rápido, pero pierde valor por la inflación y corre riesgo de robo. Una cuenta de ahorro sencilla o invertir en CETES (a través de cetesdirecto) son opciones protegidas y que te dan un poquito de rendimiento."
+    }
+  ],
+  "example": {
+    "title": "El ahorro de Sofía",
+    "body": "Sofía acaba de empezar su primer trabajo y gana 10,000 pesos al mes. Sus gastos fijos son 6,000 pesos. Decidió que su meta será ahorrar 3 meses de gastos, o sea 18,000 pesos. Cada mes, aparta 1,000 pesos de su sueldo y los manda a su cuenta de CETES en cetesdirecto. Planea tardar 18 meses en alcanzar su meta, pero sabe que ese dinero estará seguro y le dará un pequeño rendimiento."
+  },
+  "takeaway": "Un fondo de emergencia te da seguridad financiera para enfrentar imprevistos sin endeudarte.",
+  "factsUsed": [
+    "cash",
+    "savings-account",
+    "unemployment"
+  ]
+}

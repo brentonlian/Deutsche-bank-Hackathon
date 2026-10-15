@@ -1,17 +1,24 @@
 import { describe, expect, it } from "vitest";
-import { REGIONS, REGION_IDS } from "@/lib/regions";
-import { adviceForPath, createContext, optimalPath, simulate, whatIf } from "./engine";
+import { REGIONS, REGION_IDS, type RegionId } from "@/lib/regions";
+import { AGE_GROUPS, adviceForPath, createContext, optimalPath, simulate, whatIf } from "./engine";
 import { mulberry32 } from "./rng";
-import { STAGES } from "./stages";
+import type { AgeGroup, GameContext } from "./types";
 
-const ctxFor = (id: keyof typeof REGIONS, age = 22, seed = 42) =>
-  createContext(REGIONS[id], age, REGIONS[id].typicalMonthlyIncome, seed);
+const GROUPS = Object.keys(AGE_GROUPS) as AgeGroup[];
 
-const randomPath = (ctx: ReturnType<typeof ctxFor>, rnd: () => number) =>
-  STAGES.map((st) => {
+const ctxFor = (id: RegionId, group: AgeGroup = "young", seed = 42) =>
+  createContext(REGIONS[id], group, AGE_GROUPS[group].defaultAge, REGIONS[id].typicalMonthlyIncome, seed);
+
+const randomPath = (ctx: GameContext, rnd: () => number) =>
+  ctx.stages.map((st) => {
     const opts = st.options(ctx);
     return opts[Math.floor(rnd() * opts.length)].id;
   });
+
+const pickFrom = (ctx: GameContext, path: string[]) => (stageId: string) =>
+  path[ctx.stages.findIndex((s) => s.id === stageId)];
+
+const cases = REGION_IDS.flatMap((id) => GROUPS.map((g) => [id, g] as const));
 
 describe("Life Path engine", () => {
   it("is deterministic for the same seed and choices", () => {
@@ -27,45 +34,46 @@ describe("Life Path engine", () => {
     alt.timeline.forEach((snap, i) => {
       if (i !== 2) expect(snap.choice).toBe(path[i]);
     });
-    // Everything before the change is identical.
     expect(alt.timeline[1].after).toEqual(simulate(ctx, path).timeline[1].after);
   });
 
-  it.each(REGION_IDS)("optimal path in %s beats 200 random lives", (id) => {
-    const ctx = ctxFor(id);
+  it.each(cases)("optimal path in %s (%s) beats 150 random lives", (id, group) => {
+    const ctx = ctxFor(id, group);
     const best = optimalPath(ctx);
-    expect(best.path).toHaveLength(STAGES.length);
+    expect(best.path).toHaveLength(ctx.stages.length);
     const rnd = mulberry32(99);
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 150; i++) {
       expect(simulate(ctx, randomPath(ctx, rnd)).score).toBeLessThanOrEqual(best.score + 1e-9);
     }
   });
 
-  it.each(REGION_IDS)("optimal path in %s teaches the core habits", (id) => {
-    const { path } = optimalPath(ctxFor(id));
-    const pick = (stageId: string) => path[STAGES.findIndex((s) => s.id === stageId)];
+  it.each(cases)("optimal path in %s (%s) teaches the core habits", (id, group) => {
+    const ctx = ctxFor(id, group);
+    const pick = pickFrom(ctx, optimalPath(ctx).path);
     expect(pick("scam")).toBe("pass");
-    expect(pick("phone-offer")).not.toBe("credit");
     expect(pick("where-to-save")).toBe("savings");
-    expect(pick("invest")).toBe("index");
     expect(pick("emergency")).not.toBe("lender");
+    if (group === "senior") {
+      expect(pick("nest-egg")).not.toBe("guaranteed-scheme");
+    } else {
+      expect(pick("invest")).toBe("index");
+    }
+    if (group === "young") expect(pick("phone-offer")).not.toBe("credit");
   });
 
   it("advice scores every option and marks the best one", () => {
-    const ctx = ctxFor("DE");
-    const path = randomPath(ctx, mulberry32(3));
-    const advice = adviceForPath(ctx, path);
-    expect(advice).toHaveLength(STAGES.length);
+    const ctx = ctxFor("DE", "middle");
+    const advice = adviceForPath(ctx, randomPath(ctx, mulberry32(3)));
+    expect(advice).toHaveLength(ctx.stages.length);
     for (const a of advice) {
-      const top = Math.max(...Object.values(a.scores));
-      expect(a.scores[a.best]).toBe(top);
+      expect(a.scores[a.best]).toBe(Math.max(...Object.values(a.scores)));
     }
   });
 
   it("unemployment benefits soften a job loss (Germany vs. no cover)", () => {
     const de = ctxFor("DE");
     const noCover = { ...de, region: { ...de.region, institutions: { ...de.region.institutions, unemploymentCover: 0 } } };
-    const path = optimalPath(de).path.map((c, i) => (STAGES[i].id === "job-loss" ? "wait" : c));
+    const path = optimalPath(de).path.map((c, i) => (de.stages[i].id === "job-loss" ? "wait" : c));
     expect(simulate(de, path).score).toBeGreaterThan(simulate(noCover, path).score);
   });
 
@@ -75,5 +83,11 @@ describe("Life Path engine", () => {
     const r = simulate(ctx, worst);
     expect(r.breakdown.debtMonths).toBeLessThan(80);
     expect(r.final.credit).toBe(0);
+  });
+
+  it("seniors draw down savings rather than saving", () => {
+    const ctx = ctxFor("DE", "senior");
+    const r = simulate(ctx, ["comfortable"]);
+    expect(r.final.cash + r.final.invested).toBeLessThan(ctx.startIncome * 24);
   });
 });
