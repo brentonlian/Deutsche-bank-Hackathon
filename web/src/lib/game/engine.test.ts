@@ -98,6 +98,25 @@ describe("Life Path engine", () => {
     expect(first.marketReturns.length).toBe(Math.ceil(ctx.yearsPerStage - 0.01));
   });
 
+  it("splits each period into years that add up to the period", () => {
+    for (const id of REGION_IDS) {
+      const ctx = ctxFor(id, "young", 7);
+      const r = simulate(ctx, ["spend", "cash", "credit", "none"]);
+      for (const snap of r.timeline) {
+        const L = snap.ledger;
+        const sum = (k: "earned" | "saved" | "cashInterest" | "marketChange" | "debtInterest" | "lost" | "years") =>
+          L.yearly.reduce((a, y) => a + y[k], 0);
+        for (const k of ["earned", "saved", "cashInterest", "marketChange", "debtInterest", "lost", "years"] as const) {
+          expect(sum(k), `${id} ${snap.stageId} ${k}`).toBeCloseTo(L[k], 4);
+        }
+        const last = L.yearly.at(-1)!;
+        expect(last.age).toBeCloseTo(snap.after.age, 5);
+        expect(last.end.cash).toBeCloseTo(snap.after.cash, 4);
+        expect(last.end.debt).toBeCloseTo(snap.after.debt, 4);
+      }
+    }
+  });
+
   it("never recommends a gamble, even when the dice favour it", () => {
     for (const seed of [1, 2, 3, 4, 5, 6, 7, 8]) {
       for (const id of REGION_IDS) {

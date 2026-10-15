@@ -1,6 +1,6 @@
 # Claude handoff: Rooted (Innovate with DB 2026)
 
-Read this first, then `docs/DECISIONS.md` (the full decision log, rows 1–38). Last updated 2026-10-15. Section 7 (tasks A–D) is done; see rows 34–38.
+Read this first, then `docs/DECISIONS.md` (the full decision log, rows 1–39). Last updated 2026-10-15. Section 7 (tasks A–D) is done; see rows 34–38.
 
 ## 1. What this is
 **Rooted** is a hackathon MVP for the prompt "Localized Financial Education". It adapts financial education to a user's country, language and stage of life.
@@ -30,7 +30,7 @@ cd web
 npm install
 cp .env.example .env.local   # GEMINI_API_KEY (optional: saved lessons work offline)
 npm run dev                  # http://localhost:3000
-npm test                     # 78 tests
+npm test                     # 84 tests
 npm run typecheck && npm run lint
 ```
 Other scripts:
@@ -65,9 +65,13 @@ Any other combination still works: random events, and the nearest saved lesson a
 3. **Country guide** (`/learn/guide`): built entirely from region-pack facts, with a source link and "verified" date on every figure and product, plus World Bank figures (inflation, account ownership) shown beside the pack's figures with their own year.
 4. **Lessons** (`/learn/[topic]`): grounded in country facts, with sources, read-aloud, a 3-question quiz, and a compare view across personas who share a topic.
 5. **Calculators** (`/tools/...`): budget (50/30/20 plus emergency cushion), savings growth (cash vs savings vs index fund, inflation-adjusted) and debt payoff (card vs double payment vs lender). The math is tested in `web/src/lib/tools.ts`.
-6. **Life Path game** (`/play`): 10–11 life events per age group.
-   - **No spoilers:** only a progress bar, no list of upcoming events.
-   - **Money story:** after each decision a full screen shows what it cost, then a ledger (earned, spent, saved, interest at the real rate, market return per year, debt interest, inflation).
+6. **Life Path game** (`/play`), played like BitLife: 10–11 life events per age group.
+   - **Life screen:** character card (name, age, city, net worth), a life log grouped by age, and four stat bars (wellbeing, credit, cash cushion, know-how from the learning line).
+   - **Age +1:** each tap lives one year and adds that year's real ledger lines to the log (pay and savings, interest at the real rate, market year, pension growth, debt interest, theft, inflation). "Skip to next event" jumps ahead. A part-year at the end of a stretch is folded into the step before it and labelled "Age 59–60".
+   - **Life events** pop up as locked dialogs when their age arrives (same choices, local facts, sources and mini-games as before), followed by a short "what changed right away" pop-up.
+   - **Assets** sheet: balances plus the real product behind each one, with rates and source links. **Activities** sheet: country guide, lessons, calculators, and the full money story for each finished stretch of years.
+   - **No spoilers:** only a progress bar; the log never shows years you haven't lived.
+   - **Money story:** the full ledger for each stretch (earned, spent, saved, interest, market years, debt interest, inflation), opened from the log or Activities.
    - **Mini-games:** *Scam or Legit?* uses local scams. The investing pick shows 4 cards: the index fund and savings use real figures, NovaGrid and ZapCoin are labelled fictional, and the reveal explains why the index fund is the best long-term pick.
 7. **Results:** your line beside the green express line (the optimal path from exhaustive search, which never picks gambles), what-if on a chart, and replay from any station.
 

@@ -19,7 +19,7 @@ interface Row {
  * The screen between decisions: what the choice cost, then where every unit of money went over
  * the following years. Every figure comes from the engine's ledger and the country's real rates.
  */
-export function MoneyStory({ snap, region, onNext }: { snap: Snapshot; region: RegionPack; onNext: () => void }) {
+export function MoneyStory({ snap, region, onNext, nextLabel }: { snap: Snapshot; region: RegionPack; onNext: () => void; nextLabel?: string }) {
   const { t, money, percent } = useApp();
   const { before, decided, after, ledger: L } = snap;
   const years = L.years.toLocaleString(region.locale, { maximumFractionDigits: 1 });
@@ -118,13 +118,8 @@ export function MoneyStory({ snap, region, onNext }: { snap: Snapshot; region: R
         <p className="mt-4 text-sm text-ink-2">{t("story.sourceNote", { countryIn: region.nameIn })}</p>
       </section>
 
-      <button
-        type="button"
-        autoFocus
-        onClick={onNext}
-        className="mt-8 flex items-center gap-2 rounded-sign bg-ink px-6 py-3 text-lg font-bold text-ground hover:bg-ink-2"
-      >
-        {t("onboarding.next")} <ArrowRight aria-hidden="true" size={20} />
+      <button type="button" onClick={onNext} className="mt-8 flex items-center gap-2 rounded-sign bg-ink px-6 py-3 text-lg font-bold text-ground hover:bg-ink-2">
+        {nextLabel ?? t("onboarding.next")} <ArrowRight aria-hidden="true" size={20} />
       </button>
     </div>
   );

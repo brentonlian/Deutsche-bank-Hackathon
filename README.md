@@ -18,8 +18,9 @@ Each persona has fixed life events, so the demo plays the same every time.
    - **Lessons with quizzes:** two lessons, each followed by a short quiz.
    - **Calculators:** budget planner, savings growth, debt payoff, using your numbers and your country's real rates.
    - **Life Path game:** the last station, for practice.
-3. **Life Path game:** 10–11 life decisions with no spoilers about what's coming.
-   - **Money story:** after each decision a full screen shows what it cost and where every unit of money went (pay, spending, savings, interest, market years, debt interest).
+3. **Life Path game**, played like BitLife: tap **Age +1** to live one year at a time and read what happened in your life log; life events pop up as you reach them. 10–11 decisions, no spoilers about what's coming.
+   - **Stats:** wellbeing, credit, cash cushion and know-how bars; **Assets** shows the real local products behind your money; **Activities** links to lessons and calculators.
+   - **Money story:** for each stretch of years, where every unit of money went (pay, spending, savings, interest, market years, debt interest).
    - **Mini-games:** *Scam or Legit?* and an investing pick with news and metrics.
 4. **Results:** your line beside the green **express line** (the optimal path). Tap any station for the better choice, a what-if on the chart, or a replay from there.
 5. **Colours:** Light, Dark, High contrast or Calm, from the top-right button.

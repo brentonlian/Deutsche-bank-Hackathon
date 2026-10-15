@@ -93,6 +93,33 @@ export interface Ledger {
   savingsRatePct: number;
   /** How much prices rose over the period. */
   inflationPct: number;
+  /** The same flows year by year, so the game can be played one year at a time. */
+  yearly: YearEntry[];
+}
+
+/** One year (or the last part of one) inside a period, with the player's position at its end. */
+export interface YearEntry {
+  /** 1 for a full year, less for the last part-year of a period. */
+  years: number;
+  /** Age at the end of this year. */
+  age: number;
+  earned: number;
+  saved: number;
+  toPension: number;
+  drawdown: number;
+  newDebt: number;
+  debtInterest: number;
+  debtRepaid: number;
+  cashInterest: number;
+  marketChange: number;
+  /** The index fund's return this year, e.g. 0.12 for +12%. */
+  marketReturn: number;
+  pensionGrowth: number;
+  /** Cash lost to theft or a savings group collapsing (only ever in a period's first year). */
+  lost: number;
+  inflationPct: number;
+  /** Where the player stands at the end of the year. */
+  end: Pick<GameState, "cash" | "invested" | "pension" | "debt" | "debtApr" | "wellbeing" | "credit" | "income" | "priceLevel" | "savingRate" | "vehicle">;
 }
 
 export interface Snapshot {

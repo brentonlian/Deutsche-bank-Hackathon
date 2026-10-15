@@ -101,7 +101,7 @@ export function Results({ ctx, choices }: { ctx: GameContext; choices: string[] 
               )}
               <button
                 type="button"
-                onClick={() => setGame({ ...game, choices: choices.slice(0, selected) })}
+                onClick={() => setGame({ ...game, choices: choices.slice(0, selected), revealed: undefined })}
                 className="mt-4 flex items-center gap-2 rounded-sign bg-ink px-4 py-2.5 font-bold text-ground hover:bg-ink-2"
               >
                 <RotateCcw aria-hidden="true" size={18} /> {t("results.replayFrom")}

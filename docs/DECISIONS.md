@@ -48,6 +48,8 @@ This file is a running log of ideas and decisions, so we can reference them in t
 | 37 | 2026-10-15 | `typecheck` now runs `next typegen` first | A clean CI checkout has no generated `PageProps` types, so `tsc` failed before the build step | `web/package.json` |
 | 38 | 2026-10-15 | Presentation material: MVP and production architecture diagrams, data-flow diagram, and a slide-by-slide write-up. Fixed the data-flow claim "~140k paths": the optimal search covers at most 46,656 safe paths (6,912 for seniors) | Separate from the app, for the pitch | [PRESENTATION.md](PRESENTATION.md), `docs/diagrams/` |
 
+| 39 | 2026-10-15 | **Life Path plays like BitLife.** A life screen with character card, life log and stat bars; **Age +1** reveals one year at a time from a new per-year breakdown in the engine's ledger (`yearly`), and decisions pop up as event dialogs. Assets and Activities sheets link the game to real products, lessons and calculators. The engine maths, score, express line, what-if and replay are unchanged; per-year records are only kept when a ledger is requested, so the optimal search isn't slowed | User request: make it feel like BitLife while keeping the real numbers and learning. Every log line is a real ledger figure at the country's rate | `Play.tsx`, `Life.tsx`, `lib/game/lifeLog.ts`, `YearEntry` in `types.ts` |
+
 ## Parked ideas (not in MVP, keep for roadmap slide)
 - Remittance Navigator: a migrant-focused tool for comparing home and host financial systems
 - Community-sourced region packs (a "Wikipedia for local finance" with reviewer approval)

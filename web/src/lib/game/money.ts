@@ -1,4 +1,4 @@
-import type { GameContext, GameState, Ledger } from "./types";
+import type { GameContext, GameState, Ledger, YearEntry } from "./types";
 
 /** An empty record of where the money went during one period. */
 export const emptyLedger = (): Ledger => ({
@@ -19,7 +19,12 @@ export const emptyLedger = (): Ledger => ({
   marketReturns: [],
   savingsRatePct: 0,
   inflationPct: 0,
+  yearly: [],
 });
+
+type Flow = Omit<YearEntry, "years" | "age" | "marketReturn" | "inflationPct" | "end">;
+const FLOW_KEYS = ["earned", "saved", "toPension", "drawdown", "newDebt", "debtInterest", "debtRepaid", "cashInterest", "marketChange", "pensionGrowth", "lost"] as const;
+const flowsOf = (L: Ledger): Flow => Object.fromEntries(FLOW_KEYS.map((k) => [k, L[k]])) as Flow;
 
 export const DEBT_CAP_MONTHS = 36;
 
@@ -81,7 +86,10 @@ export function advance(state: GameState, ctx: GameContext, years: number, rng: 
 
   const whole = Math.floor(years);
   const fractions = [...Array(whole).fill(1), ...(years - whole > 0.01 ? [years - whole] : [])];
+  // Theft counts toward the first year, so start the first year's totals from before it.
+  let yearStart: Flow | null = ledger ? { ...flowsOf(L), lost: L.lost - (cashBefore - s.cash) } : null;
   for (const f of fractions) {
+    const priceStart = s.priceLevel;
     const flow = s.savingRate - s.fixedCostRate;
     const pensionPart = clamp(s.pensionRate, 0, Math.max(0, flow));
     let toSave = s.income * 12 * f * (flow - pensionPart);
@@ -147,6 +155,23 @@ export function advance(state: GameState, ctx: GameContext, years: number, rng: 
       100,
     );
     s.wellbeing = s.wellbeing + (target - s.wellbeing) * Math.min(1, 0.35 * f);
+
+    if (yearStart) {
+      const totals = flowsOf(L);
+      const start = yearStart;
+      L.yearly.push({
+        ...(Object.fromEntries(FLOW_KEYS.map((k) => [k, totals[k] - start[k]])) as Flow),
+        years: f,
+        age: s.age,
+        marketReturn: marketFactor - 1,
+        inflationPct: (s.priceLevel / priceStart - 1) * 100,
+        end: {
+          cash: s.cash, invested: s.invested, pension: s.pension, debt: s.debt, debtApr: s.debtApr, wellbeing: s.wellbeing,
+          credit: s.credit, income: s.income, priceLevel: s.priceLevel, savingRate: s.savingRate, vehicle: s.vehicle,
+        },
+      });
+      yearStart = totals;
+    }
   }
   return { ...s, wellbeingSum: s.wellbeingSum + s.wellbeing, periods: s.periods + 1 };
 }

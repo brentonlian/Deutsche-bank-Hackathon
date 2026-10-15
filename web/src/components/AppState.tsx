@@ -22,6 +22,8 @@ export interface Profile {
 export interface GameSave {
   seed: number;
   choices: string[];
+  /** Years of the latest period the player has lived through with "Age +1". Missing means all of them. */
+  revealed?: number;
 }
 
 export const THEMES = ["light", "dark", "contrast", "calm"] as const;
